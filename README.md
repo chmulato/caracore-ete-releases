@@ -1,7 +1,7 @@
 # ETE-releases
 
 Repositório público de releases e portal do projeto ETE (Laboratório Ouro 4.0).  
-Conteúdo atualizado a partir do repositório [ETE](https://github.com/chmulato/ETE) por deploy/delivery (GitHub Actions ou scripts).
+Conteúdo atualizado a partir do repositório de desenvolvimento por deploy/delivery (GitHub Actions ou scripts).
 
 ## Estrutura
 
