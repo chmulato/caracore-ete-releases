@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://chmulato.github.io/ETE-releases/">
-    <title>Projeto chmulato/ETE — Simulador de Hidrometalurgia Seletiva</title>
+    <title>Projeto ETE — Simulador de Hidrometalurgia Seletiva | chmulato/ETE-releases</title>
+    <meta name="description" content="Portal do projeto ETE: simulador de ETE e hidrometalurgia seletiva de terras raras, Minerador 4.0, Laboratório Ouro 4.0, apostilas e artigo executivo. Site público chmulato/ETE-releases.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -71,6 +72,23 @@
             max-width: 640px;
             margin: 16px auto 0;
             line-height: 1.6;
+        }
+
+        header .hero-feedback {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 20px auto 0;
+            line-height: 1.6;
+        }
+        header .hero-feedback a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header .hero-feedback a:hover {
+            text-decoration: underline;
         }
 
         /* Metodologia */
@@ -169,6 +187,15 @@
         }
         .nav-card-campo-largo h3 { color: #f59e0b; }
 
+        .nav-card-feedback {
+            border-left: 4px solid #58a6ff;
+        }
+        .nav-card-feedback:hover {
+            border-color: var(--accent-blue);
+            background: rgba(88, 166, 255, 0.08);
+        }
+        .nav-card-feedback h3 { color: var(--accent-blue); }
+
         .nav-card .icon {
             width: 40px;
             height: 40px;
@@ -240,9 +267,10 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>Projeto chmulato/ETE</h1>
-            <p class="subtitle">Simulador de Hidrometalurgia Seletiva: Aplicando a Engenharia de Processos de Efluentes no Refino de Terras Raras.</p>
+            <h1>Projeto ETE</h1>
+            <p class="subtitle">Simulador de Hidrometalurgia Seletiva: Aplicando a Engenharia de Processos de Efluentes no Refino de Terras Raras. Raiz em <strong>Campo Largo, PR, Brasil</strong> — IFPR e Laboratório Ouro 4.0.</p>
             <p class="tagline">O Brasil possui o conhecimento e as reservas; este projeto entrega a ferramenta de simulação para viabilizar a separação seletiva com custos competitivos.</p>
+            <p class="hero-feedback">Sua sugestão ajuda a evoluir o Minerador 4.0 em Campo Largo. <a href="canal-feedback.html">Envie sua ideia, relato ou melhoria</a> — sua voz faz diferença.</p>
         </header>
 
         <section class="methodology">
@@ -258,6 +286,15 @@
 
         <p class="nav-section-title">Navegação Estratégica</p>
         <div class="nav-grid">
+            <a href="canal-feedback.html" class="nav-card nav-card-feedback" title="Canal de melhorias: sugestões, bugs e feedback para o simulador em Campo Largo, PR">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </span>
+                <h3>Sua voz melhora o simulador</h3>
+                <p>Canal de Melhorias: envie sugestões, bugs, desabafos e insights por WhatsApp, Telegram ou e-mail. A comunidade de Campo Largo, PR, constrói o Minerador 4.0 junto.</p>
+            </a>
             <a href="#" id="link-residencial" class="nav-card nav-card-ambiental" title="Abre o simulador ETE-Residual (tema verde/sustentável). Execute local: streamlit run src/ete_residencial/app_residencial.py">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -278,6 +315,13 @@
                 <h3>Refino Mineral</h3>
                 <p>Simulador ETE-Mineração: pureza comercial, ROI, g óxido/t, margem bruta (g/L, %). Tema industrial/sóbrio.</p>
             </a>
+            <a href="download.html" class="nav-card" title="Baixar instalador Windows do Minerador 4.0">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </span>
+                <h3>Download Minerador 4.0</h3>
+                <p>Instalador Windows do simulador: Terras Raras e ETE. Uma versão estável, validada por testes.</p>
+            </a>
             <a href="laboratorio_campo_largo.html" class="nav-card nav-card-campo-largo" title="Laboratório Campo Largo: Ouro 4.0 — Rochas, Python e Futuro">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -293,8 +337,17 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                     </svg>
                 </span>
-                <h3>Repositório</h3>
-                <p>Acesso ao código e instruções de execução (Streamlit).</p>
+                <h3>Portal e releases</h3>
+                <p>Site público (este portal), instalador Minerador 4.0 e documentação — chmulato/ETE-releases.</p>
+            </a>
+            <a href="https://github.com/chmulato/ETE" class="nav-card" target="_blank" rel="noopener">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                </span>
+                <h3>Código-fonte</h3>
+                <p>Repositório de desenvolvimento (Python, Streamlit, testes) — chmulato/ETE.</p>
             </a>
             <a href="index_v2.html" class="nav-card">
                 <span class="icon" aria-hidden="true">
@@ -340,10 +393,11 @@
         </script>
 
         <footer>
-            <p><a href="https://github.com/chmulato/ETE-releases" target="_blank" rel="noopener">Repositório GitHub: chmulato/ETE-releases</a></p>
+            <p>Portal e releases: <a href="https://github.com/chmulato/ETE-releases" target="_blank" rel="noopener">chmulato/ETE-releases</a> · Código-fonte: <a href="https://github.com/chmulato/ETE" target="_blank" rel="noopener">chmulato/ETE</a></p>
+            <p><strong>Sua voz importa:</strong> sugestões e melhorias do simulador são recebidas pelo <a href="canal-feedback.html">Canal de Melhorias</a> (Campo Largo, PR). Tratamos seus dados com respeito e em conformidade com a LGPD.</p>
             <p>Soberania Técnica: metodologia de processo (ETE) transferida para refino de concentrados minerais e PLS; não se aplica a tratamento de esgoto doméstico.</p>
-            <p class="soberania">Desenvolvido para o setor de Mineração e Hidrometalurgia Especializada.</p>
-            <p class="apostila-rodape">Material de apoio: <a href="assets/pdf/Manual_Iniciacao_Ouro40.pdf" target="_blank" rel="noopener">Manual de Iniciação — Ouro 4.0</a> (PDF) · <a href="laboratorio_campo_largo.html">Laboratório Campo Largo</a>.</p>
+            <p class="soberania">Desenvolvido para o setor de Mineração e Hidrometalurgia Especializada — raiz em Campo Largo, PR, Brasil.</p>
+            <p class="apostila-rodape">Material de apoio: <a href="assets/pdf/Manual_Iniciacao_Ouro40.pdf" target="_blank" rel="noopener">Manual de Iniciação — Ouro 4.0</a> (PDF) · <a href="laboratorio_campo_largo.html">Laboratório Campo Largo</a> · <a href="download.html">Download Minerador 4.0</a>.</p>
         </footer>
     </div>
 </body>

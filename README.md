@@ -1,18 +1,31 @@
-# ETE-releases
+# ETE-releases — Portal e releases do projeto ETE
 
-Repositório público de releases e portal do projeto ETE (Laboratório Ouro 4.0).  
-Conteúdo atualizado a partir do repositório de desenvolvimento por deploy/delivery (GitHub Actions ou scripts).
+Repositório **público** [chmulato/ETE-releases](https://github.com/chmulato/ETE-releases): portal estático (GitHub Pages) e releases do instalador Windows **Minerador 4.0**. Não contém código-fonte; apenas conteúdo de apresentação e artefatos publicados.
 
-## Estrutura
+## O projeto ETE
 
-- **Raiz:** apenas este `README.md` e `LICENSE`. Artefatos de release (Minerador40.exe, checksums, INSTALACAO.md) quando publicados.
-- **docs/:** portal (site) servido pelo GitHub Pages, com seus assets (css, imagens, js, pdf, etc.).
+- **Produto:** Simulador de dimensionamento de **ETE** — **Hidrometalurgia Seletiva de Terras Raras**. Metodologia que conecta saneamento (ETE) à viabilidade em mineração. Desenvolvido em Python + SQLite, **100% offline**.
+- **Aplicativo desktop:** **Minerador 4.0** — centro de controle gamificado (Campo, Lab, Mercado), motor ETE real, interface Sci-Fi/HUD, fases Ambiental e Mineração, Selo de Qualidade Pawlowsky, Biblioteca Digital, Galeria Estratégica, Coleta de Visão (feedback LGPD-compliant), paywall "The Golden Gate" para fase Premium.
 
-## Site
+O código-fonte, testes e documentação de desenvolvimento estão no repositório de desenvolvimento: **[chmulato/ETE](https://github.com/chmulato/ETE)**.
 
-Portal publicado em: **https://chmulato.github.io/ETE-releases/**  
-O site é o conteúdo da pasta `docs/` (branch `main`, folder `/docs`).
+## Conteúdo deste repositório
 
-## Releases
+| Onde | Conteúdo |
+|------|----------|
+| **Raiz** | `README.md`, `LICENSE`; artefatos de release quando publicados (Minerador40.exe, checksums, INSTALACAO.md). |
+| **docs/** | Site estático (portal): Laboratório Ouro 4.0, Manual de Iniciação em PDF, apostila, artigo executivo, Laboratório Campo Largo (IFPR), dedicatória ao Prof. Urivald Pawlowsky (UFPR). |
 
-Versões do Minerador 4.0 e documentação de instalação são publicadas nas [Releases](https://github.com/chmulato/ETE-releases/releases) deste repositório.
+## Links oficiais
+
+| Recurso | URL |
+|--------|-----|
+| **Site público (portal)** | https://chmulato.github.io/ETE-releases/ |
+| **Releases (instalador .exe)** | https://github.com/chmulato/ETE-releases/releases |
+| **Código-fonte (desenvolvimento)** | https://github.com/chmulato/ETE |
+
+## Como usar
+
+- **Navegar no portal:** acesse [chmulato.github.io/ETE-releases](https://chmulato.github.io/ETE-releases/).
+- **Baixar o Minerador 4.0:** vá em [Releases](https://github.com/chmulato/ETE-releases/releases), baixe `Minerador40.exe` e, se desejar, o `checksum.sha256` para verificar a integridade. Consulte o `INSTALACAO.md` do release para instalação e uso.
+- **Contribuir com código ou documentação do projeto:** use o repositório [chmulato/ETE](https://github.com/chmulato/ETE).

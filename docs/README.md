@@ -1,48 +1,24 @@
-# Páginas Web - GitHub Pages
+# Portal ETE-releases (GitHub Pages)
 
-Esta pasta contém os arquivos HTML que serão publicados no GitHub Pages.
+Esta pasta é o **site estático** do projeto ETE, publicado em **https://chmulato.github.io/ETE-releases/**.
 
-## Estrutura
+## Conteúdo
 
-- `index.html` - Apostila HTML (versão legada - ETE)
-- `index_v2.html` - Apostila HTML (versão atual - Terras Raras)
-- `artigo_ete_v3.html` - Artigo executivo (versão revisada e validada)
+- **index.html** — Página inicial do portal (Simulador de Hidrometalurgia Seletiva, links para Laboratório Ouro 4.0, apostilas, artigo, código-fonte e releases).
+- **index_v2.html** — Apostila: Fundamentos de Hidrometalurgia de Terras Raras.
+- **apostila_efluentes.html** — Apostila de Tratamento de Efluentes (lodos ativados, ETE).
+- **artigo_ete_v3.html** — Artigo executivo: convergência entre saneamento e hidrometalurgia de terras raras.
+- **laboratorio_campo_largo.html** — Laboratório Campo Largo: Ouro 4.0 (IFPR), dedicatória Prof. Pawlowsky (UFPR).
+- **download.html** — Página de download do instalador Minerador 4.0 (link para Releases).
+- **assets/** — CSS, imagens (`img/`, `images/`), JS, PDF (Manual de Iniciação Ouro 4.0).
 
-## Configuração do GitHub Pages
+## Configuração no GitHub
 
-### Método 1: Via Interface Web (Mais Simples)
+- **Settings → Pages:** Source = *Deploy from a branch*; Branch = `main`; **Folder = `/docs`**.
+- O site é servido na raiz da URL; não há subpasta `/docs` na URL.
 
-1. Acesse: **Settings → Pages**
-2. **Source:** `Deploy from a branch`
-3. **Branch:** `main` (ou `master`)
-4. **Folder:** `/web`
-5. Clique em **Save**
+## Links
 
-### Método 2: Via GitHub Actions (Automático)
-
-O workflow `.github/workflows/pages.yml` já está configurado. Basta:
-
-1. **Settings → Pages**
-2. **Source:** `GitHub Actions`
-3. Fazer commit e push (deploy automático)
-
-## URLs Resultantes
-
-Após configuração, as páginas estarão disponíveis em:
-
-- `https://[usuario].github.io/[repositorio]/` - Página inicial com links
-- `https://[usuario].github.io/[repositorio]/web/index_v2.html` - Apostila Técnica
-- `https://[usuario].github.io/[repositorio]/web/artigo_ete_v3.html` - Artigo Executivo
-- `https://[usuario].github.io/[repositorio]/web/index.html` - Apostila Legada
-
-## Caminhos de Imagens
-
-As imagens são referenciadas com caminhos relativos:
-- `../assets/images/artigos/` - Para artigos
-- `../assets/images/aulas/` - Para apostilas
-
-Estes caminhos funcionam porque o GitHub Pages serve tudo da raiz do repositório.
-
-## Documentação Completa
-
-Consulte `GUIA_GITHUB_PAGES.md` na raiz do projeto para instruções detalhadas.
+- Site: https://chmulato.github.io/ETE-releases/
+- Releases (.exe): https://github.com/chmulato/ETE-releases/releases
+- Código-fonte: https://github.com/chmulato/ETE
