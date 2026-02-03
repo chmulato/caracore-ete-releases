@@ -1,48 +1,18 @@
-# Páginas Web - GitHub Pages
+# ETE-releases
 
-Esta pasta contém os arquivos HTML que serão publicados no GitHub Pages.
+Repositório público de releases e portal do projeto ETE (Laboratório Ouro 4.0).  
+Conteúdo atualizado a partir do repositório [ETE](https://github.com/chmulato/ETE) por deploy/delivery (GitHub Actions ou scripts).
 
 ## Estrutura
 
-- `index.html` - Apostila HTML (versão legada - ETE)
-- `index_v2.html` - Apostila HTML (versão atual - Terras Raras)
-- `artigo_ete_v3.html` - Artigo executivo (versão revisada e validada)
+- **Raiz:** apenas este `README.md` e `LICENSE`. Artefatos de release (Minerador40.exe, checksums, INSTALACAO.md) quando publicados.
+- **docs/:** portal (site) servido pelo GitHub Pages, com seus assets (css, imagens, js, pdf, etc.).
 
-## Configuração do GitHub Pages
+## Site
 
-### Método 1: Via Interface Web (Mais Simples)
+Portal publicado em: **https://chmulato.github.io/ETE-releases/**  
+O site é o conteúdo da pasta `docs/` (branch `main`, folder `/docs`).
 
-1. Acesse: **Settings → Pages**
-2. **Source:** `Deploy from a branch`
-3. **Branch:** `main` (ou `master`)
-4. **Folder:** `/web`
-5. Clique em **Save**
+## Releases
 
-### Método 2: Via GitHub Actions (Automático)
-
-O workflow `.github/workflows/pages.yml` já está configurado. Basta:
-
-1. **Settings → Pages**
-2. **Source:** `GitHub Actions`
-3. Fazer commit e push (deploy automático)
-
-## URLs Resultantes
-
-Após configuração, as páginas estarão disponíveis em:
-
-- `https://[usuario].github.io/[repositorio]/` - Página inicial com links
-- `https://[usuario].github.io/[repositorio]/web/index_v2.html` - Apostila Técnica
-- `https://[usuario].github.io/[repositorio]/web/artigo_ete_v3.html` - Artigo Executivo
-- `https://[usuario].github.io/[repositorio]/web/index.html` - Apostila Legada
-
-## Caminhos de Imagens
-
-As imagens são referenciadas com caminhos relativos:
-- `../assets/images/artigos/` - Para artigos
-- `../assets/images/aulas/` - Para apostilas
-
-Estes caminhos funcionam porque o GitHub Pages serve tudo da raiz do repositório.
-
-## Documentação Completa
-
-Consulte `GUIA_GITHUB_PAGES.md` na raiz do projeto para instruções detalhadas.
+Versões do Minerador 4.0 e documentação de instalação são publicadas nas [Releases](https://github.com/chmulato/ETE-releases/releases) deste repositório.
