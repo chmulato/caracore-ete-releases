@@ -36,9 +36,9 @@ O workflow `.github/workflows/pages.yml` já está configurado. Basta:
 Após configuração, as páginas estarão disponíveis em:
 
 - `https://[usuario].github.io/[repositorio]/` - Página inicial com links
-- `https://[usuario].github.io/[repositorio]/web/index_v2.html` - Apostila Técnica
-- `https://[usuario].github.io/[repositorio]/web/artigo_ete_v3.html` - Artigo Executivo
-- `https://[usuario].github.io/[repositorio]/web/index.html` - Apostila Legada
+- `https://[usuario].github.io/[repositorio]/index_v2.html` - Apostila Técnica
+- `https://[usuario].github.io/[repositorio]/artigo_ete_v3.html` - Artigo Executivo
+- `https://[usuario].github.io/[repositorio]/index.html` - Apostila Legada
 
 ## Caminhos de Imagens
 
