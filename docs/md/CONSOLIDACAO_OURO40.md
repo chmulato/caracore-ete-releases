@@ -1,6 +1,6 @@
-# Consolidação: ETE Ambiental + ETE Mineração — Produto Único Ouro 4.0
+﻿# ConsolidaÃ§Ã£o: ETE Ambiental + ETE MineraÃ§Ã£o â€” Produto Ãšnico Ouro 4.0
 
-Documento de arquitetura e estratégia que consolida os ecossistemas ETE Ambiental e ETE Mineração em um único produto comercial e científico de alta performance para a **Cara-Core Informática**. Objetivo: ciência do Prof. Pawlowsky + viabilidade comercial, com UX fluida, segura e educativa.
+Documento de arquitetura e estratÃ©gia que consolida os ecossistemas ETE Ambiental e ETE MineraÃ§Ã£o em um Ãºnico produto comercial e cientÃ­fico de alta performance para a **Cara-Core InformÃ¡tica**. Objetivo: ciÃªncia do Prof. Pawlowsky + viabilidade comercial, com UX fluida, segura e educativa.
 
 ---
 
@@ -8,59 +8,60 @@ Documento de arquitetura e estratégia que consolida os ecossistemas ETE Ambient
 
 ### 1.1 Fluxo de dados
 
-- **Ambiental (Free):** Produz dados purificados ao final de cada simulação: volume de água tratada, pH residual, opcionalmente DQO/DBO e vazão.
-- **Persistência:** Esses dados são gravados em estado global (e, se desejado, em arquivo leve, ex.: `~/.ouro40/ambiental_last_run.json`).
-- **Mineração (Premium):** Ao abrir o módulo Mineração, o sistema **lê** o estado global. Os dados do Ambiental alimentam as **equações de precipitação** e decantação do refino (pH em cascata, volume, concentrações).
+- **Ambiental (Free):** Produz dados purificados ao final de cada simulaÃ§Ã£o: volume de Ã¡gua tratada, pH residual, opcionalmente DQO/DBO e vazÃ£o.
+- **PersistÃªncia:** Esses dados sÃ£o gravados em estado global (e, se desejado, em arquivo leve, ex.: `~/.ouro40/ambiental_last_run.json`).
+- **MineraÃ§Ã£o (Premium):** Ao abrir o mÃ³dulo MineraÃ§Ã£o, o sistema **lÃª** o estado global. Os dados do Ambiental alimentam as **equaÃ§Ãµes de precipitaÃ§Ã£o** e decantaÃ§Ã£o do refino (pH em cascata, volume, concentraÃ§Ãµes).
 
-### 1.2 Gatekeeper (Validação license.key)
+### 1.2 Gatekeeper (ValidaÃ§Ã£o license.key)
 
-- **Cálculo em tempo real:** O sistema **sempre** calcula o potencial de lucro (ex.: g de REE, kg equivalente) com base nos dados do Ambiental, mesmo quando o usuário não possui licença. Isso gera desejo e transparência.
-- **Controles de refino:** O acesso aos controles de refino (iniciar processo, ajustar parâmetros, exportar resultados) **só é liberado** após validação da `license.key`:
-  - Função central: `check_mining_authorization()` → lê HID da máquina, valida `license.key` (ou token persistido), retorna `True`/`False`.
-  - **Sem licença:** Dashboard “embaçado” ou com cadeados; exibição em modo **preview** do potencial (“Poderia extrair X g REE · Y kg eq.”); botão “Desbloquear” abre modal de pagamento.
-  - **Com licença:** HUD completo (âmbar/ouro), controles habilitados, cálculos reais de refino liberados.
+- **CÃ¡lculo em tempo real:** O sistema **sempre** calcula o potencial de lucro (ex.: g de REE, kg equivalente) com base nos dados do Ambiental, mesmo quando o usuÃ¡rio nÃ£o possui licenÃ§a. Isso gera desejo e transparÃªncia.
+- **Controles de refino:** O acesso aos controles de refino (iniciar processo, ajustar parÃ¢metros, exportar resultados) **sÃ³ Ã© liberado** apÃ³s validaÃ§Ã£o da `license.key`:
+  - FunÃ§Ã£o central: `check_mining_authorization()` â†’ lÃª HID da mÃ¡quina, valida `license.key` (ou token persistido), retorna `True`/`False`.
+  - **Sem licenÃ§a:** Dashboard â€œembaÃ§adoâ€ ou com cadeados; exibiÃ§Ã£o em modo **preview** do potencial (â€œPoderia extrair X g REE Â· Y kg eq.â€); botÃ£o â€œDesbloquearâ€ abre modal de pagamento.
+  - **Com licenÃ§a:** HUD completo (Ã¢mbar/ouro), controles habilitados, cÃ¡lculos reais de refino liberados.
 
-Referência de implementação: [ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md](ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md).
+ReferÃªncia de implementaÃ§Ã£o: [ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md](ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md).
 
 ---
 
 ## 2. Back-office (licencas_ete.html)
 
-- **Estrutura de auditoria:** A página lê fontes de pedidos (dados em memória/sessão ou **arquivo JSON** carregado via “Carregar log de pedidos”).
-- **LGPD Resguardo:** Em exibição pública/administrativa simplificada são mostrados **apenas**:
+- **Estrutura de auditoria:** A pÃ¡gina lÃª fontes de pedidos (dados em memÃ³ria/sessÃ£o ou **arquivo JSON** carregado via â€œCarregar log de pedidosâ€).
+- **LGPD Resguardo:** Em exibiÃ§Ã£o pÃºblica/administrativa simplificada sÃ£o mostrados **apenas**:
   - [Data/Hora]
-  - [Hardware ID Anônimo]
+  - [Hardware ID AnÃ´nimo]
   - [Status]
-  Não são exibidos nomes, CPFs, contatos nem ID de pedido/valor na tabela principal (resguardo máximo).
-- **Ordenação e agrupamento:** Pedidos em ordem **decrescente** (mais recentes primeiro), agrupados por **blocos mensais** (ex.: --- FEVEREIRO 2026 ---) para fechamento contábil da Cara-Core.
-- **Formato de log esperado (JSON):** Array de objetos com `dataHora`, `hardwareId`, `status` (e opcionalmente `id`, `chave`). O painel aceita também variações como `data_hora`, `hardware_id`, `hid`.
+  NÃ£o sÃ£o exibidos nomes, CPFs, contatos nem ID de pedido/valor na tabela principal (resguardo mÃ¡ximo).
+- **OrdenaÃ§Ã£o e agrupamento:** Pedidos em ordem **decrescente** (mais recentes primeiro), agrupados por **blocos mensais** (ex.: --- FEVEREIRO 2026 ---) para fechamento contÃ¡bil da Cara-Core.
+- **Formato de log esperado (JSON):** Array de objetos com `dataHora`, `hardwareId`, `status` (e opcionalmente `id`, `chave`). O painel aceita tambÃ©m variaÃ§Ãµes como `data_hora`, `hardware_id`, `hid`.
 
 ---
 
-## 3. Checkout R$ 29,90 (Automação)
+## 3. Checkout R$ 29,90 (AutomaÃ§Ã£o)
 
-- **Modal de upgrade (portal e protótipo):**
-  - **CNPJ exibido dinamicamente:** 23.969.028/0001-37 (configurável via constante).
-  - **Valor configurável:** Constante `PREMIUM_PRICE` ou `CONFIG.VALOR` (ex.: 29.90) exibida em “R$ 29,90”.
-- **Botão “Copiar Hardware ID para WhatsApp”:** Gera mensagem pronta (valor + ID de Ativação + texto para envio com comprovante PIX), reduzindo a fricção entre desejo de compra e confirmação do PIX.
-- Página estática de referência: [upgrade-ouro40.html](https://chmulato.github.io/caracore-ete-releases/upgrade-ouro40.html).
+- **Modal de upgrade (portal e protÃ³tipo):**
+  - **CNPJ exibido dinamicamente:** 23.969.028/0001-37 (configurÃ¡vel via constante).
+  - **Valor configurÃ¡vel:** Constante `PREMIUM_PRICE` ou `CONFIG.VALOR` (ex.: 29.90) exibida em â€œR$ 29,90â€.
+- **BotÃ£o â€œCopiar Hardware ID para WhatsAppâ€:** Gera mensagem pronta (valor + ID de AtivaÃ§Ã£o + texto para envio com comprovante PIX), reduzindo a fricÃ§Ã£o entre desejo de compra e confirmaÃ§Ã£o do PIX.
+- PÃ¡gina estÃ¡tica de referÃªncia: upgrade-ouro40.html.
 
 ---
 
-## 4. Visualização de dados e legado
+## 4. VisualizaÃ§Ã£o de dados e legado
 
-- **Gráficos de intersecção matemática:** No painel principal (protótipo [painel-simbiotico.html](https://chmulato.github.io/caracore-ete-releases/painel-simbiotico.html)) estão integrados:
-  - **Titulação pH** (curva pH × volume de titulante; ponto de equivalência).
-  - **Solubilidade × pH** (curva de solubilidade em função do pH).
-  Esses gráficos refletem as equações e o legado científico (Pawlowsky).
-- **Selo de Qualidade Pawlowsky:** Presente como assinatura de autoridade em **todas** as telas relevantes (Ambiental e Mineração, painel de convergência, upgrade).
-- **Barra de auditoria inferior (Log de Operação):** Cada ativação de licença (e, no protótipo, abertura do modal de upgrade) é registrada **localmente** (ex.: `localStorage` no navegador; no app, arquivo `~/.ouro40/audit.log` ou equivalente) para suporte técnico e auditoria, sem envio obrigatório a servidor (LGPD).
+- **GrÃ¡ficos de intersecÃ§Ã£o matemÃ¡tica:** No painel principal (protÃ³tipo painel-simbiotico.html) estÃ£o integrados:
+  - **TitulaÃ§Ã£o pH** (curva pH Ã— volume de titulante; ponto de equivalÃªncia).
+  - **Solubilidade Ã— pH** (curva de solubilidade em funÃ§Ã£o do pH).
+  Esses grÃ¡ficos refletem as equaÃ§Ãµes e o legado cientÃ­fico (Pawlowsky).
+- **Selo de Qualidade Pawlowsky:** Presente como assinatura de autoridade em **todas** as telas relevantes (Ambiental e MineraÃ§Ã£o, painel de convergÃªncia, upgrade).
+- **Barra de auditoria inferior (Log de OperaÃ§Ã£o):** Cada ativaÃ§Ã£o de licenÃ§a (e, no protÃ³tipo, abertura do modal de upgrade) Ã© registrada **localmente** (ex.: `localStorage` no navegador; no app, arquivo `~/.ouro40/audit.log` ou equivalente) para suporte tÃ©cnico e auditoria, sem envio obrigatÃ³rio a servidor (LGPD).
 
 ---
 
 ## 5. Objetivo final
 
-- **Sistema coeso:** Um único produto onde a ciência do Prof. Pawlowsky encontra a viabilidade comercial da Cara-Core.
-- **Experiência:** Fluida (fluxo Ambiental → Mineração claro), segura (license.key, LGPD, sem dados sensíveis na interface de auditoria) e educativa (gráficos de intersecção, selo de qualidade, narrativa “da água ao mineral”).
+- **Sistema coeso:** Um Ãºnico produto onde a ciÃªncia do Prof. Pawlowsky encontra a viabilidade comercial da Cara-Core.
+- **ExperiÃªncia:** Fluida (fluxo Ambiental â†’ MineraÃ§Ã£o claro), segura (license.key, LGPD, sem dados sensÃ­veis na interface de auditoria) e educativa (grÃ¡ficos de intersecÃ§Ã£o, selo de qualidade, narrativa â€œda Ã¡gua ao mineralâ€).
 
-Implementações de código (Python, Streamlit, HID, validador, audit log) ficam no repositório **chmulato/ETE**; o portal **caracore-ete-releases** mantém as páginas estáticas, o painel de licenças e os protótipos de referência.
+ImplementaÃ§Ãµes de cÃ³digo (Python, Streamlit, HID, validador, audit log) ficam no repositÃ³rio **chmulato/ETE**; o portal **caracore-ete-releases** mantÃ©m as pÃ¡ginas estÃ¡ticas, o painel de licenÃ§as e os protÃ³tipos de referÃªncia.
+

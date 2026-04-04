@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Série de Decantadores por pH — Mineração | Ouro 4.0</title>
-    <meta name="description" content="Visualização em cascata: tanques com pH controlado, precipitação por estágio (Fe/Al, metais base, terras raras), curvas de solubilidade e eficiência.">
+    <title>SÃ©rie de Decantadores por pH â€” MineraÃ§Ã£o | Ouro 4.0</title>
+    <meta name="description" content="VisualizaÃ§Ã£o em cascata: tanques com pH controlado, precipitaÃ§Ã£o por estÃ¡gio (Fe/Al, metais base, terras raras), curvas de solubilidade e eficiÃªncia.">
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,7 +135,7 @@
         .tank-control label { display: block; font-size: 0.75rem; color: var(--dim); margin-bottom: 4px; }
         .tank-control input[type="range"] { width: 100%; accent-color: var(--cyan); }
 
-        /* Gráfico solubilidade */
+        /* GrÃ¡fico solubilidade */
         .section-title {
             font-size: 1rem;
             font-weight: 600;
@@ -150,7 +150,7 @@
             border: 1px solid var(--border);
         }
 
-        /* Painel eficiência + log */
+        /* Painel eficiÃªncia + log */
         .efficiency-panel {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -197,11 +197,11 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>Série de Decantadores por pH Controlado</h1>
-            <p>Visualização em cascata (step-down): efluente do Tanque 1 → 2 → 3. Cada estágio tem pH alvo para precipitação seletiva. Ajuste os sliders e observe a decantação e a pureza por estágio.</p>
+            <h1>SÃ©rie de Decantadores por pH Controlado</h1>
+            <p>VisualizaÃ§Ã£o em cascata (step-down): efluente do Tanque 1 â†’ 2 â†’ 3. Cada estÃ¡gio tem pH alvo para precipitaÃ§Ã£o seletiva. Ajuste os sliders e observe a decantaÃ§Ã£o e a pureza por estÃ¡gio.</p>
         </header>
 
-        <div class="section-title">Cascata de tanques — pH por estágio</div>
+        <div class="section-title">Cascata de tanques â€” pH por estÃ¡gio</div>
         <div class="cascade">
             <div class="tank-wrap step1">
                 <div class="tank" id="tank1" data-stage="1">
@@ -210,13 +210,13 @@
                     <div class="particles" id="particles1"></div>
                     <div class="sludge" id="sludge1" style="height: 0%"></div>
                 </div>
-                <div class="tank-target">Remoção Fe / Al (pH 3–4)</div>
+                <div class="tank-target">RemoÃ§Ã£o Fe / Al (pH 3â€“4)</div>
                 <div class="tank-control">
                     <label>pH Tanque 1</label>
                     <input type="range" id="ph1" min="2" max="6" step="0.1" value="3.5">
                 </div>
             </div>
-            <span class="flow-arrow">→</span>
+            <span class="flow-arrow">â†’</span>
             <div class="tank-wrap step2">
                 <div class="tank" id="tank2" data-stage="2">
                     <span class="tank-label">Tanque 2</span>
@@ -224,13 +224,13 @@
                     <div class="particles" id="particles2"></div>
                     <div class="sludge" id="sludge2" style="height: 0%"></div>
                 </div>
-                <div class="tank-target">Metais base (pH 6–7)</div>
+                <div class="tank-target">Metais base (pH 6â€“7)</div>
                 <div class="tank-control">
                     <label>pH Tanque 2</label>
                     <input type="range" id="ph2" min="4" max="8" step="0.1" value="6.5">
                 </div>
             </div>
-            <span class="flow-arrow">→</span>
+            <span class="flow-arrow">â†’</span>
             <div class="tank-wrap step3">
                 <div class="tank" id="tank3" data-stage="3">
                     <span class="tank-label">Tanque 3</span>
@@ -246,17 +246,17 @@
             </div>
         </div>
 
-        <div class="section-title">Curvas de solubilidade (log S vs pH) — ponto de corte</div>
-        <p style="font-size: 0.85rem; color: var(--dim); margin-bottom: 8px;">Onde a solubilidade cai drasticamente = ponto de precipitação. A intersecção com a faixa de pH do tanque define a eficiência.</p>
+        <div class="section-title">Curvas de solubilidade (log S vs pH) â€” ponto de corte</div>
+        <p style="font-size: 0.85rem; color: var(--dim); margin-bottom: 8px;">Onde a solubilidade cai drasticamente = ponto de precipitaÃ§Ã£o. A intersecÃ§Ã£o com a faixa de pH do tanque define a eficiÃªncia.</p>
         <div id="chart-solubility" class="chart-solubility"></div>
 
-        <div class="section-title">Painel de eficiência e auditoria</div>
+        <div class="section-title">Painel de eficiÃªncia e auditoria</div>
         <div class="efficiency-panel">
             <div class="eff-card">
-                <h3>Pureza por estágio (%)</h3>
-                <div class="eff-row"><span>Tanque 1 (Fe/Al)</span><span class="eff-pct" id="purity1">—</span></div>
-                <div class="eff-row"><span>Tanque 2 (Base)</span><span class="eff-pct" id="purity2">—</span></div>
-                <div class="eff-row"><span>Tanque 3 (REE/Mg)</span><span class="eff-pct" id="purity3">—</span></div>
+                <h3>Pureza por estÃ¡gio (%)</h3>
+                <div class="eff-row"><span>Tanque 1 (Fe/Al)</span><span class="eff-pct" id="purity1">â€”</span></div>
+                <div class="eff-row"><span>Tanque 2 (Base)</span><span class="eff-pct" id="purity2">â€”</span></div>
+                <div class="eff-row"><span>Tanque 3 (REE/Mg)</span><span class="eff-pct" id="purity3">â€”</span></div>
             </div>
             <div class="eff-card">
                 <h3>Log de auditoria</h3>
@@ -265,7 +265,7 @@
         </div>
 
         <p class="nav-links">
-            <a href="index.html">← Portal</a> · <a href="painel-convergencia.html">Convergência Matemática</a> · <a href="laboratorio_campo_largo.html">Laboratório Ouro 4.0</a>
+            <a href="index.html">â† Portal</a> Â· <a href="painel-convergencia.html">ConvergÃªncia MatemÃ¡tica</a> Â· <a href="laboratorio_campo_largo.html">LaboratÃ³rio Ouro 4.0</a>
         </p>
     </div>
 
@@ -282,7 +282,7 @@
                 const el = document.getElementById('audit-log');
                 const entry = document.createElement('div');
                 entry.className = 'entry ' + (isContamination ? 'contamination' : 'ok');
-                entry.textContent = new Date().toLocaleTimeString('pt-BR') + ' — ' + msg;
+                entry.textContent = new Date().toLocaleTimeString('pt-BR') + ' â€” ' + msg;
                 el.appendChild(entry);
                 el.scrollTop = el.scrollHeight;
             }
@@ -346,12 +346,12 @@
                 updateSludge(2, 2, p2);
                 updateSludge(3, 3, p3);
 
-                if (p1 < 70 && lastPurity[0] >= 70) logAudit('Tanque 1: Contaminação cruzada — pH fora da faixa ideal para Fe/Al.', true);
-                if (p2 < 70 && lastPurity[1] >= 70) logAudit('Tanque 2: Contaminação cruzada — pH fora da faixa para metais base.', true);
-                if (p3 < 70 && lastPurity[2] >= 70) logAudit('Tanque 3: Contaminação cruzada — pH fora da faixa para REE/Mg.', true);
-                if (p1 >= 85 && lastPurity[0] < 85) logAudit('Tanque 1: pH em faixa ótima — precipitação Fe/Al.', false);
-                if (p2 >= 85 && lastPurity[1] < 85) logAudit('Tanque 2: pH em faixa ótima — precipitação metais base.', false);
-                if (p3 >= 85 && lastPurity[2] < 85) logAudit('Tanque 3: pH em faixa ótima — precipitação REE/Mg.', false);
+                if (p1 < 70 && lastPurity[0] >= 70) logAudit('Tanque 1: ContaminaÃ§Ã£o cruzada â€” pH fora da faixa ideal para Fe/Al.', true);
+                if (p2 < 70 && lastPurity[1] >= 70) logAudit('Tanque 2: ContaminaÃ§Ã£o cruzada â€” pH fora da faixa para metais base.', true);
+                if (p3 < 70 && lastPurity[2] >= 70) logAudit('Tanque 3: ContaminaÃ§Ã£o cruzada â€” pH fora da faixa para REE/Mg.', true);
+                if (p1 >= 85 && lastPurity[0] < 85) logAudit('Tanque 1: pH em faixa Ã³tima â€” precipitaÃ§Ã£o Fe/Al.', false);
+                if (p2 >= 85 && lastPurity[1] < 85) logAudit('Tanque 2: pH em faixa Ã³tima â€” precipitaÃ§Ã£o metais base.', false);
+                if (p3 >= 85 && lastPurity[2] < 85) logAudit('Tanque 3: pH em faixa Ã³tima â€” precipitaÃ§Ã£o REE/Mg.', false);
                 lastPurity = [p1, p2, p3];
             }
 
@@ -370,7 +370,7 @@
 
             setInterval(runParticles, 400);
 
-            // Gráfico solubilidade (log S vs pH) — ponto de corte onde S cai drasticamente
+            // GrÃ¡fico solubilidade (log S vs pH) â€” ponto de corte onde S cai drasticamente
             function logS_Fe(pH) {
                 const pH_cut = 3.5;
                 return pH < pH_cut ? 0.5 : -4 - 5 * (pH - pH_cut);
@@ -391,7 +391,7 @@
                     plot_bgcolor: '#1a2028',
                     font: { color: '#8b949e' },
                     xaxis: { title: 'pH', gridcolor: '#2d3748', range: [2, 12] },
-                    yaxis: { title: 'log₁₀(S) (relativo)', type: 'linear', gridcolor: '#2d3748' },
+                    yaxis: { title: 'logâ‚â‚€(S) (relativo)', type: 'linear', gridcolor: '#2d3748' },
                     margin: { t: 40, r: 40, b: 50, l: 60 },
                     showlegend: true,
                     legend: { orientation: 'h', y: 1.05, font: { color: '#8b949e' } },
@@ -402,7 +402,7 @@
                     ]
                 };
                 const data = [
-                    { x: pH, y: pH.map(logS_Fe), type: 'scatter', mode: 'lines', name: 'Fe³⁺ (hidróxido)', line: { color: '#c45c26', width: 2 } },
+                    { x: pH, y: pH.map(logS_Fe), type: 'scatter', mode: 'lines', name: 'FeÂ³âº (hidrÃ³xido)', line: { color: '#c45c26', width: 2 } },
                     { x: pH, y: pH.map(logS_Base), type: 'scatter', mode: 'lines', name: 'Metais base', line: { color: '#6b7b8c', width: 2 } },
                     { x: pH, y: pH.map(logS_REE), type: 'scatter', mode: 'lines', name: 'Terras raras / Mg', line: { color: '#e8e6e3', width: 2 } }
                 ];
@@ -410,12 +410,13 @@
             }
             buildSolubilityChart();
             updateUI();
-            logAudit('Sistema iniciado. Ajuste o pH de cada tanque para observar precipitação e pureza.', false);
+            logAudit('Sistema iniciado. Ajuste o pH de cada tanque para observar precipitaÃ§Ã£o e pureza.', false);
         })();
     </script>
     <script src="assets/js/loja.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Versão de teste oficial">Seed<span class="evo-beta-tooltip">Esta é uma versão oficial de teste da Cara Core Informática para parceiros do Plano Premium+.</span></span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Março/2026</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
-    <div class="evo-feedback-fab"><a href="https://wa.me/5541999097797?text=Olá!%20Sugestão%20de%20melhoria%20para%20a%20loja%20em%20fase%20Seed%20—%20Cara%20Core%20Informática." class="evo-feedback-btn" target="_blank" rel="noopener noreferrer" aria-label="Sugira uma melhoria pelo WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="VersÃ£o de teste oficial">Seed<span class="evo-beta-tooltip">Esta Ã© uma versÃ£o oficial de teste da Cara Core InformÃ¡tica para parceiros do Plano Premium+.</span></span></div>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">PrÃ³ximos passos</p><ul class="evo-roadmap-list"><li>DomÃ­nio prÃ³prio <span class="evo-roadmap-tag">MarÃ§o/2026</span></li><li>IntegraÃ§Ã£o PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" target="_blank" rel="noopener noreferrer" aria-label="Sugira uma melhoria pelo WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
+

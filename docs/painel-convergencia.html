@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Convergência Matemática — Ouro 4.0 | caracore-ete-releases</title>
-    <meta name="description" content="Visualize a intersecção de funções como o ponto de solução: titulação pH, saturação de O2. Equações do Prof. Pawlowsky em gráficos interativos.">
+    <title>Painel de ConvergÃªncia MatemÃ¡tica â€” Ouro 4.0 | caracore-ete-releases</title>
+    <meta name="description" content="Visualize a intersecÃ§Ã£o de funÃ§Ãµes como o ponto de soluÃ§Ã£o: titulaÃ§Ã£o pH, saturaÃ§Ã£o de O2. EquaÃ§Ãµes do Prof. Pawlowsky em grÃ¡ficos interativos.">
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -152,17 +152,17 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>Painel de Convergência Matemática</h1>
-            <p>Onde as equações do Prof. Pawlowsky ganham vida: a intersecção das curvas é o <strong>ponto de solução</strong> — pH, O₂ e precipitação revelados como revelação visual.</p>
+            <h1>Painel de ConvergÃªncia MatemÃ¡tica</h1>
+            <p>Onde as equaÃ§Ãµes do Prof. Pawlowsky ganham vida: a intersecÃ§Ã£o das curvas Ã© o <strong>ponto de soluÃ§Ã£o</strong> â€” pH, Oâ‚‚ e precipitaÃ§Ã£o revelados como revelaÃ§Ã£o visual.</p>
         </header>
 
         <section class="panel-section" id="secao-ph">
-            <h2>Curva de Titulação — pH vs Volume de Titulante</h2>
-            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 16px;">Múltiplas curvas para diferentes concentrações. O <strong>Ponto de Equivalência</strong> (pH 7.0) é a solução ideal de neutralização. Use o zoom do gráfico para aproximar o ponto exato.</p>
+            <h2>Curva de TitulaÃ§Ã£o â€” pH vs Volume de Titulante</h2>
+            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 16px;">MÃºltiplas curvas para diferentes concentraÃ§Ãµes. O <strong>Ponto de EquivalÃªncia</strong> (pH 7.0) Ã© a soluÃ§Ã£o ideal de neutralizaÃ§Ã£o. Use o zoom do grÃ¡fico para aproximar o ponto exato.</p>
             <div id="chart-ph" class="chart-container"></div>
             <div class="controls">
                 <div class="control-group">
-                    <label>Concentração ácido (mol/L)</label>
+                    <label>ConcentraÃ§Ã£o Ã¡cido (mol/L)</label>
                     <input type="range" id="slider-ph-conc" min="0.01" max="0.5" step="0.01" value="0.1">
                     <div class="value" id="val-ph-conc">0.10</div>
                 </div>
@@ -172,31 +172,31 @@
                     <div class="value" id="val-ph-vol">50 mL</div>
                 </div>
             </div>
-            <div id="badge-ph" class="solution-badge">Solução Ótima — Ponto de Equivalência pH 7.0</div>
+            <div id="badge-ph" class="solution-badge">SoluÃ§Ã£o Ã“tima â€” Ponto de EquivalÃªncia pH 7.0</div>
         </section>
 
         <section class="panel-section" id="secao-o2">
-            <h2>Eficiência do Oxigênio — Saturação O₂ vs Tempo / Fatores</h2>
-            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 16px;">Curva de concentração de O₂. A linha <strong>Concentração Crítica para Vida Aquática</strong> mostra o mínimo para ecossistemas saudáveis. Acima = vida prosperando; abaixo = em risco.</p>
+            <h2>EficiÃªncia do OxigÃªnio â€” SaturaÃ§Ã£o Oâ‚‚ vs Tempo / Fatores</h2>
+            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 16px;">Curva de concentraÃ§Ã£o de Oâ‚‚. A linha <strong>ConcentraÃ§Ã£o CrÃ­tica para Vida AquÃ¡tica</strong> mostra o mÃ­nimo para ecossistemas saudÃ¡veis. Acima = vida prosperando; abaixo = em risco.</p>
             <div id="chart-o2" class="chart-container"></div>
             <div class="controls">
                 <div class="control-group">
-                    <label>Taxa de aeração (relativo)</label>
+                    <label>Taxa de aeraÃ§Ã£o (relativo)</label>
                     <input type="range" id="slider-o2-aer" min="0.2" max="2" step="0.1" value="1">
                     <div class="value" id="val-o2-aer">1.0</div>
                 </div>
                 <div class="control-group">
-                    <label>Concentração crítica O₂ (mg/L)</label>
+                    <label>ConcentraÃ§Ã£o crÃ­tica Oâ‚‚ (mg/L)</label>
                     <input type="range" id="slider-o2-crit" min="4" max="10" step="0.5" value="5">
                     <div class="value" id="val-o2-crit">5.0 mg/L</div>
                 </div>
             </div>
-            <div id="badge-o2" class="solution-badge">Status: aguardando interseção</div>
-            <p class="sound-toggle"><label><input type="checkbox" id="sound-enabled" checked> Som de descoberta ao atingir a solução</label></p>
+            <div id="badge-o2" class="solution-badge">Status: aguardando interseÃ§Ã£o</div>
+            <p class="sound-toggle"><label><input type="checkbox" id="sound-enabled" checked> Som de descoberta ao atingir a soluÃ§Ã£o</label></p>
         </section>
 
         <p class="nav-links">
-            <a href="index.html">← Voltar ao portal</a> · <a href="laboratorio_campo_largo.html">Laboratório Campo Largo: Ouro 4.0</a> · <a href="canal-feedback.html">Canal de Melhorias</a>
+            <a href="index.html">â† Voltar ao portal</a> Â· <a href="laboratorio_campo_largo.html">LaboratÃ³rio Campo Largo: Ouro 4.0</a> Â· <a href="canal-feedback.html">Canal de Melhorias</a>
         </p>
     </div>
 
@@ -214,15 +214,15 @@
                 legend: { bgcolor: 'rgba(0,0,0,0)', font: { color: '#8b949e' }, orientation: 'h', y: 1.08 }
             };
 
-            // ---- Curva de Titulação (pH vs Volume) — modelo suave tipo sigmoide ----
+            // ---- Curva de TitulaÃ§Ã£o (pH vs Volume) â€” modelo suave tipo sigmoide ----
             function titrationCurve(V_acid, C_acid, V_titrant_max) {
                 const pts = [];
                 const n = 100;
                 const Veq = (C_acid * V_acid) / 0.1; // volume equivalente (base 0.1 M)
-                const steep = 8 / Math.max(Veq * 0.15, 5); // inclinação no ponto de equivalência
+                const steep = 8 / Math.max(Veq * 0.15, 5); // inclinaÃ§Ã£o no ponto de equivalÃªncia
                 for (let i = 0; i <= n; i++) {
                     const V = (V_titrant_max * i) / n;
-                    // Sigmóide suave: pH baixo -> alto ao passar por Veq
+                    // SigmÃ³ide suave: pH baixo -> alto ao passar por Veq
                     const xNorm = (V - Veq) * steep;
                     const pH = 2.5 + (11.5 / (1 + Math.exp(-xNorm)));
                     pts.push({ x: V, y: Math.max(1.5, Math.min(13, pH)) });
@@ -238,9 +238,9 @@
 
                 const V_max = 120;
                 const curves = [
-                    { c: conc, label: 'Concentração atual' },
-                    { c: conc * 0.5, label: 'Concentração 0.5×' },
-                    { c: Math.min(0.5, conc * 1.5), label: 'Concentração 1.5×' }
+                    { c: conc, label: 'ConcentraÃ§Ã£o atual' },
+                    { c: conc * 0.5, label: 'ConcentraÃ§Ã£o 0.5Ã—' },
+                    { c: Math.min(0.5, conc * 1.5), label: 'ConcentraÃ§Ã£o 1.5Ã—' }
                 ];
                 const data = curves.map((cur, i) => {
                     const pts = titrationCurve(vol, cur.c, V_max);
@@ -261,19 +261,19 @@
                     y: [pH_eq],
                     type: 'scatter',
                     mode: 'markers+text',
-                    name: 'Ponto de Equivalência',
+                    name: 'Ponto de EquivalÃªncia',
                     marker: { size: 16, color: '#00f5a0', symbol: 'diamond', line: { width: 2, color: '#fff' } },
                     text: ['pH 7.0'],
                     textposition: 'top center',
                     textfont: { color: '#00f5a0', size: 12 },
-                    hovertemplate: 'Solução Ótima — pH 7.0<extra></extra>'
+                    hovertemplate: 'SoluÃ§Ã£o Ã“tima â€” pH 7.0<extra></extra>'
                 });
                 const layout = {
                     ...darkLayout,
                     xaxis: { ...darkLayout.xaxis, title: 'Volume de titulante (mL)', titlefont: { color: '#e6edf3' } },
                     yaxis: { ...darkLayout.yaxis, title: 'pH', titlefont: { color: '#e6edf3' }, range: [1, 14] },
                     annotations: [{
-                        x: Veq, y: pH_eq, text: 'Solução Ótima — pH 7.0', showarrow: true, arrowhead: 2,
+                        x: Veq, y: pH_eq, text: 'SoluÃ§Ã£o Ã“tima â€” pH 7.0', showarrow: true, arrowhead: 2,
                         ax: 0, ay: -40, font: { color: '#00f5a0', size: 11 }, bgcolor: 'rgba(0,0,0,0.7)', borderpad: 6
                     }]
                 };
@@ -285,10 +285,10 @@
             document.getElementById('slider-ph-conc').addEventListener('input', updateChartPH);
             document.getElementById('slider-ph-vol').addEventListener('input', updateChartPH);
 
-            // ---- Curva de Saturação O2 ----
+            // ---- Curva de SaturaÃ§Ã£o O2 ----
             function o2SaturationCurve(aeration, tMax) {
                 const pts = [];
-                const O2_sat = 9.0; // mg/L saturação
+                const O2_sat = 9.0; // mg/L saturaÃ§Ã£o
                 const n = 60;
                 for (let i = 0; i <= n; i++) {
                     const t = (tMax * i) / n;
@@ -315,16 +315,16 @@
                         y: pts.map(p => p.y),
                         type: 'scatter',
                         mode: 'lines',
-                        name: 'Concentração O₂',
+                        name: 'ConcentraÃ§Ã£o Oâ‚‚',
                         line: { width: 3, color: '#00f5d4' },
-                        hovertemplate: 'Tempo: %{x:.1f} min<br>O₂: %{y:.2f} mg/L<extra></extra>'
+                        hovertemplate: 'Tempo: %{x:.1f} min<br>Oâ‚‚: %{y:.2f} mg/L<extra></extra>'
                     },
                     {
                         x: [0, tMax],
                         y: [crit, crit],
                         type: 'scatter',
                         mode: 'lines',
-                        name: 'Crítica para vida aquática',
+                        name: 'CrÃ­tica para vida aquÃ¡tica',
                         line: { width: 2, color: '#f72585', dash: 'dash' },
                         hovertemplate: 'Limiar: ' + crit + ' mg/L<extra></extra>'
                     }
@@ -335,20 +335,20 @@
                         y: [crit],
                         type: 'scatter',
                         mode: 'markers+text',
-                        name: 'Ponto de convergência',
+                        name: 'Ponto de convergÃªncia',
                         marker: { size: 18, color: '#00f5a0', symbol: 'diamond', line: { width: 2, color: '#fff' } },
                         text: ['Vida prosperando a partir daqui'],
                         textposition: 'top center',
                         textfont: { color: '#00f5a0', size: 10 },
-                        hovertemplate: 't ≈ ' + tIntersect.toFixed(1) + ' min<extra></extra>'
+                        hovertemplate: 't â‰ˆ ' + tIntersect.toFixed(1) + ' min<extra></extra>'
                     });
                 }
                 const layout = {
                     ...darkLayout,
                     xaxis: { ...darkLayout.xaxis, title: 'Tempo (min)', titlefont: { color: '#e6edf3' } },
-                    yaxis: { ...darkLayout.yaxis, title: 'O₂ (mg/L)', titlefont: { color: '#e6edf3' }, range: [0, 10] },
+                    yaxis: { ...darkLayout.yaxis, title: 'Oâ‚‚ (mg/L)', titlefont: { color: '#e6edf3' }, range: [0, 10] },
                     annotations: crosses ? [{
-                        x: tIntersect, y: crit, text: 'Solução: O₂ ≥ crítico', showarrow: true, arrowhead: 2,
+                        x: tIntersect, y: crit, text: 'SoluÃ§Ã£o: Oâ‚‚ â‰¥ crÃ­tico', showarrow: true, arrowhead: 2,
                         ax: 0, ay: -35, font: { color: '#00f5a0', size: 11 }, bgcolor: 'rgba(0,0,0,0.7)', borderpad: 6
                     }] : []
                 };
@@ -356,7 +356,7 @@
 
                 const badge = document.getElementById('badge-o2');
                 if (crosses) {
-                    badge.textContent = '✓ Vida prosperando — O₂ atinge concentração crítica em t ≈ ' + tIntersect.toFixed(1) + ' min';
+                    badge.textContent = 'âœ“ Vida prosperando â€” Oâ‚‚ atinge concentraÃ§Ã£o crÃ­tica em t â‰ˆ ' + tIntersect.toFixed(1) + ' min';
                     badge.classList.add('sparkle');
                     if (document.getElementById('sound-enabled').checked) {
                         try {
@@ -371,7 +371,7 @@
                         } catch (_) {}
                     }
                 } else {
-                    badge.textContent = crit > 9 ? 'Concentração crítica acima da saturação (ajuste o parâmetro)' : 'Aguarde: curva ainda não cruza o limiar no intervalo';
+                    badge.textContent = crit > 9 ? 'ConcentraÃ§Ã£o crÃ­tica acima da saturaÃ§Ã£o (ajuste o parÃ¢metro)' : 'Aguarde: curva ainda nÃ£o cruza o limiar no intervalo';
                 }
                 setTimeout(() => badge.classList.remove('sparkle'), 600);
             }
@@ -385,8 +385,9 @@
         })();
     </script>
     <script src="assets/js/loja.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Versão de teste oficial">Seed<span class="evo-beta-tooltip">Esta é uma versão oficial de teste da Cara Core Informática para parceiros do Plano Premium+.</span></span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Março/2026</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
-    <div class="evo-feedback-fab"><a href="https://wa.me/5541999097797?text=Olá!%20Sugestão%20de%20melhoria%20para%20a%20loja%20em%20fase%20Seed%20—%20Cara%20Core%20Informática." class="evo-feedback-btn" target="_blank" rel="noopener noreferrer" aria-label="Sugira uma melhoria pelo WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="VersÃ£o de teste oficial">Seed<span class="evo-beta-tooltip">Esta Ã© uma versÃ£o oficial de teste da Cara Core InformÃ¡tica para parceiros do Plano Premium+.</span></span></div>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">PrÃ³ximos passos</p><ul class="evo-roadmap-list"><li>DomÃ­nio prÃ³prio <span class="evo-roadmap-tag">MarÃ§o/2026</span></li><li>IntegraÃ§Ã£o PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" target="_blank" rel="noopener noreferrer" aria-label="Sugira uma melhoria pelo WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
+
