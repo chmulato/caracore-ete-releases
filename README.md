@@ -45,7 +45,7 @@ Ou seja: **portal + instalador + materiais**. Tudo pensado para você acessar, l
 ## Onde começar? (Seus próximos 20 minutos podem ser assim)
 
 1. **Abrir o portal**  
-   [chmulato.github.io/caracore-ete-releases](https://chmulato.github.io/caracore-ete-releases/)  
+   [ete.caracore.com.br](https://ete.caracore.com.br/)  
    Lá você encontra a página inicial, links para o Laboratório Campo Largo, apostilas, artigo e o **Canal de Melhorias**. Vale clicar à vontade e explorar.
 
 2. **Baixar o Minerador 4.0 (Windows)**  
@@ -53,7 +53,7 @@ Ou seja: **portal + instalador + materiais**. Tudo pensado para você acessar, l
    Na página de Releases tem o instalador e, se quiser conferir se o arquivo está íntegro, o checksum (SHA-256). Dentro do release também tem o **INSTALACAO.md** com o passo a passo.
 
 3. **Mandar sua opinião ou sugestão**  
-   [Canal de Melhorias](https://chmulato.github.io/caracore-ete-releases/canal-feedback.html)  
+   [Canal de Melhorias](https://ete.caracore.com.br/canal-feedback.html)  
    WhatsApp, Telegram ou e-mail. Sua voz ajuda a melhorar o simulador para todo mundo em Campo Largo e no Brasil. Seus dados são tratados com respeito e em conformidade com a LGPD.
 
 ---
@@ -70,7 +70,7 @@ O projeto nasce da ideia de que **Campo Largo, PR**, pode ser um polo de formaç
 
 - **O que é:** Portal público do projeto ETE + instalador do simulador Minerador 4.0 (terras raras, ETE, 100% offline).
 - **Para quem:** Jovens, futuros universitários ou técnicos e entusiastas que querem um primeiro contato leve e cativante.
-- **Onde:** Site em [chmulato.github.io/caracore-ete-releases](https://chmulato.github.io/caracore-ete-releases/), instalador em [Releases](https://github.com/chmulato/caracore-ete-releases/releases), feedback no [Canal de Melhorias](https://chmulato.github.io/caracore-ete-releases/canal-feedback.html).
+- **Onde:** Site em [ete.caracore.com.br](https://ete.caracore.com.br/), instalador em [Releases](https://github.com/chmulato/caracore-ete-releases/releases), feedback no [Canal de Melhorias](https://ete.caracore.com.br/canal-feedback.html).
 - **Código:** O simulador em si é software proprietário; aqui só há conteúdo de apresentação e o que você baixa para usar.
 
 Se algo não ficou claro ou você quiser sugerir uma melhoria, use o **Canal de Melhorias**. Boa leitura e boa jornada no Ouro 4.0.

@@ -10,10 +10,10 @@ Data da última atualização: 2026-02-08
 
 | Pilar | O que é | Onde |
 |-------|--------|------|
-| **Conhecimento (vitrine)** | Conteúdo HTML: ciência das terras raras, refino de óxidos, manifesto de descoberta. | docs/ → [chmulato.github.io/ETE](https://chmulato.github.io/ETE/) (GitHub Pages). |
+| **Conhecimento (vitrine)** | Conteúdo HTML: ciência das terras raras, refino de óxidos, manifesto de descoberta. | Publicação: [ete.caracore.com.br](https://ete.caracore.com.br/) (domínio institucional; espelho GitHub Pages opcional). |
 | **True Engine (ferramenta)** | Aplicativo desktop: cálculos reais em Python, química mineral e ambiental; interface de centro de refino. | minerador_40/; instalador Windows (.exe) via Releases. |
 
-- **Site público (releases):** [chmulato.github.io/ETE-releases](https://chmulato.github.io/ETE-releases/) — vitrine e download.
+- **Site público (releases):** [ete.caracore.com.br](https://ete.caracore.com.br/) — vitrine e download.
 - **Instalador Windows:** Minerador 4.0 (.exe) — [Releases ETE](https://github.com/chmulato/ETE/releases) / ETE-releases.
 
 ---
