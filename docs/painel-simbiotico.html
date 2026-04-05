@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Controle SimbiÃ³tico â€” Ambiental â†” MineraÃ§Ã£o | Ouro 4.0</title>
-    <meta name="description" content="ProtÃ³tipo: interface unificada ETE Ambiental e MineraÃ§Ã£o, fluxo Ã¡gua tratada, glassmorphism e upgrade Premium. Gatekeeper e grÃ¡ficos de intersecÃ§Ã£o Pawlowsky.">
+    <title>Painel de Controle Simbiótico — Ambiental ↔ Mineração | Ouro 4.0</title>
+    <meta name="description" content="Protótipo: interface unificada ETE Ambiental e Mineração, fluxo água tratada, glassmorphism e upgrade Premium. Gatekeeper e gráficos de intersecção Pawlowsky.">
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -389,10 +389,10 @@
             <h1 class="zone-title">ETE Ambiental</h1>
             <div class="zone-content">
                 <div class="ambiental-placeholder">
-                    Volume tratado e pH residual sÃ£o salvos aqui e fluem para o mÃ³dulo MineraÃ§Ã£o. (ProtÃ³tipo.)
+                    Volume tratado e pH residual são salvos aqui e fluem para o módulo Mineração. (Protótipo.)
                 </div>
             </div>
-            <a href="termos-uso-creditos.html" class="seal" title="Termos de Uso e CrÃ©ditos">
+            <a href="termos-uso-creditos.html" class="seal" title="Termos de Uso e Créditos">
                 <img src="assets/img/selo_pawlowsky_legado.png" alt="Selo Pawlowsky">
                 <span>Selo de Qualidade Pawlowsky</span>
             </a>
@@ -400,11 +400,11 @@
 
         <div class="flow-column">
             <div class="flow-line"></div>
-            <span class="flow-label">Ãgua tratada â†’</span>
+            <span class="flow-label">Água tratada →</span>
         </div>
 
         <section class="zone zone-mineracao">
-            <h1 class="zone-title">ETE MineraÃ§Ã£o</h1>
+            <h1 class="zone-title">ETE Mineração</h1>
             <div class="zone-content">
                 <div class="mineracao-wrapper">
                     <span class="badge-premium" id="badge-price">Upgrade Premium: R$ 29,90</span>
@@ -414,23 +414,23 @@
                         <div class="tank-silhouette"></div>
                     </div>
                     <div class="mineracao-glass" id="mineracao-glass">
-                        <p style="color: rgba(212,168,83,0.9); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">MÃ³dulo Premium</p>
-                        <p style="color: #8b949e; font-size: 0.9rem; text-align: center; margin-bottom: 12px;">Tanques de decantaÃ§Ã£o e grÃ¡ficos de precipitaÃ§Ã£o aguardam desbloqueio.</p>
-                        <div class="potencial-badge" id="potencial-badge">Potencial estimado: 12,4 g REE Â· 0,8 kg eq.</div>
+                        <p style="color: rgba(212,168,83,0.9); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Módulo Premium</p>
+                        <p style="color: #8b949e; font-size: 0.9rem; text-align: center; margin-bottom: 12px;">Tanques de decantação e gráficos de precipitação aguardam desbloqueio.</p>
+                        <div class="potencial-badge" id="potencial-badge">Potencial estimado: 12,4 g REE · 0,8 kg eq.</div>
                         <button type="button" class="btn-upgrade" id="btn-upgrade">
-                            Desbloquear MÃ³dulo MineraÃ§Ã£o
+                            Desbloquear Módulo Mineração
                         </button>
                     </div>
                 </div>
             </div>
-            <a href="termos-uso-creditos.html" class="seal" title="Termos de Uso e CrÃ©ditos">
+            <a href="termos-uso-creditos.html" class="seal" title="Termos de Uso e Créditos">
                 <img src="assets/img/selo_pawlowsky_legado.png" alt="Selo Pawlowsky">
                 <span>Selo de Qualidade Pawlowsky</span>
             </a>
         </section>
 
         <div class="charts-row">
-            <div class="section-title">IntersecÃ§Ã£o matemÃ¡tica â€” Legado Pawlowsky</div>
+            <div class="section-title">Intersecção matemática — Legado Pawlowsky</div>
             <div id="chart-ph-mini" class="chart-mini"></div>
             <div id="chart-solubility-mini" class="chart-mini"></div>
         </div>
@@ -438,59 +438,59 @@
 
     <div class="audit-bar" id="audit-bar">
         <details>
-            <summary>Log de OperaÃ§Ã£o</summary>
+            <summary>Log de Operação</summary>
             <ul id="audit-list"></ul>
         </details>
     </div>
 
     <p style="position: fixed; bottom: 108px; left: 50%; transform: translateX(-50%); font-size: 0.8rem; color: #8b949e; z-index: 99;">
-        <a href="index.html" style="color: #58a6ff;">â† Portal</a> Â· <a href="upgrade-ouro40.html" style="color: #58a6ff;">Upgrade Ouro 4.0</a>
+        <a href="index.html" style="color: #58a6ff;">← Portal</a> · <a href="upgrade-ouro40.html" style="color: #58a6ff;">Upgrade Ouro 4.0</a>
     </p>
 
     <div class="modal-overlay" id="modal">
         <div class="modal">
             <button type="button" class="modal-close" id="modal-close" aria-label="Fechar">&times;</button>
-            <h2>Como a MineraÃ§Ã£o completa seu ciclo ambiental</h2>
-            <p class="sub">Da Ã¡gua tratada ao mineral â€” desbloqueie o protocolo.</p>
+            <h2>Como a Mineração completa seu ciclo ambiental</h2>
+            <p class="sub">Da água tratada ao mineral — desbloqueie o protocolo.</p>
             <div class="infographic">
-                <span>Ambiental<br>Ãgua tratada</span>
-                <span class="arrow">â†’</span>
-                <span>MineraÃ§Ã£o<br>Decantadores</span>
-                <span class="arrow">â†’</span>
+                <span>Ambiental<br>Água tratada</span>
+                <span class="arrow">→</span>
+                <span>Mineração<br>Decantadores</span>
+                <span class="arrow">→</span>
                 <span>Concentrado<br>REE / Ouro</span>
             </div>
             <div class="protocol-box">
-                <label>Hardware ID (Protocolo de AtivaÃ§Ã£o)</label>
+                <label>Hardware ID (Protocolo de Ativação)</label>
                 <div class="hwid" id="display-hwid">XXXX-XXXX-XXXX-XXXX</div>
-                <button type="button" class="btn-copy" id="btn-copy">Copiar ID de AtivaÃ§Ã£o</button>
+                <button type="button" class="btn-copy" id="btn-copy">Copiar ID de Ativação</button>
                 <button type="button" class="btn-copy-whatsapp" id="btn-copy-whatsapp">Copiar Hardware ID para WhatsApp</button>
             </div>
             <div class="pix-box">
-                <strong>Cara-Core InformÃ¡tica</strong><br>
+                <strong>Cara-Core Informática</strong><br>
                 CNPJ (PIX): <span id="modal-cnpj">23.969.028/0001-37</span><br>
                 Valor: <span id="modal-valor">R$ 29,90</span><br>
                 Envie este ID + comprovante PIX pelo WhatsApp ou Telegram para receber sua license.key.
             </div>
-            <p style="margin-top: 12px;"><button type="button" class="btn-copy" id="btn-simular-ativacao" style="background: rgba(0,245,160,0.2); color: #00f5a0;">Simular ativaÃ§Ã£o (protÃ³tipo)</button></p>
+            <p style="margin-top: 12px;"><button type="button" class="btn-copy" id="btn-simular-ativacao" style="background: rgba(0,245,160,0.2); color: #00f5a0;">Simular ativação (protótipo)</button></p>
         </div>
     </div>
 
     <div class="modal-overlay" id="modal-termos">
         <div class="modal modal-termos">
             <button type="button" class="modal-close" id="modal-termos-close" aria-label="Fechar">&times;</button>
-            <h3>Termos de Uso e CrÃ©ditos â€” Antes da ativaÃ§Ã£o Premium</h3>
+            <h3>Termos de Uso e Créditos — Antes da ativação Premium</h3>
             <div class="terms-text">
-                <p><strong>AtribuiÃ§Ã£o de honra:</strong> O nome e o legado do Prof. Pawlowsky sÃ£o usados em homenagem Ã  sua contribuiÃ§Ã£o Ã  UFPR e Ã  engenharia brasileira.</p>
-                <p><strong>Propriedade do software:</strong> CÃ³digo-fonte, interface (UI/UX) e marcas Minerador 4.0 / Ouro 4.0 sÃ£o propriedade exclusiva da Cara-Core InformÃ¡tica (CNPJ 23.969.028/0001-37).</p>
-                <p><strong>IsenÃ§Ã£o de responsabilidade:</strong> Os resultados sÃ£o simulaÃ§Ãµes computacionais. A famÃ­lia do professor e a universidade nÃ£o possuem responsabilidade tÃ©cnica ou comercial pelas decisÃµes dos usuÃ¡rios.</p>
-                <p><strong>Uso de imagem:</strong> Qualquer imagem ou selo em memÃ³ria do professor Ã© para fins estritamente educativos, respeitando o direito de imagem da famÃ­lia.</p>
+                <p><strong>Atribuição de honra:</strong> O nome e o legado do Prof. Pawlowsky são usados em homenagem à sua contribuição à UFPR e à engenharia brasileira.</p>
+                <p><strong>Propriedade do software:</strong> Código-fonte, interface (UI/UX) e marcas Minerador 4.0 / Ouro 4.0 são propriedade exclusiva da Cara-Core Informática (CNPJ 23.969.028/0001-37).</p>
+                <p><strong>Isenção de responsabilidade:</strong> Os resultados são simulações computacionais. A família do professor e a universidade não possuem responsabilidade técnica ou comercial pelas decisões dos usuários.</p>
+                <p><strong>Uso de imagem:</strong> Qualquer imagem ou selo em memória do professor é para fins estritamente educativos, respeitando o direito de imagem da família.</p>
             </div>
-            <p style="margin-bottom: 12px;"><a href="termos-uso-creditos.html" target="_blank" rel="noopener">Ler Termos de Uso e CrÃ©ditos completos</a></p>
+            <p style="margin-bottom: 12px;"><a href="termos-uso-creditos.html" target="_blank" rel="noopener">Ler Termos de Uso e Créditos completos</a></p>
             <label>
                 <input type="checkbox" id="terms-accept" name="terms-accept">
-                <span>Li e aceito os Termos de Uso e CrÃ©ditos acima.</span>
+                <span>Li e aceito os Termos de Uso e Créditos acima.</span>
             </label>
-            <button type="button" class="btn-continuar" id="btn-termos-continuar" disabled>Continuar para ativaÃ§Ã£o</button>
+            <button type="button" class="btn-continuar" id="btn-termos-continuar" disabled>Continuar para ativação</button>
         </div>
     </div>
 
@@ -509,7 +509,7 @@
             }
 
             function auditLog(msg) {
-                var line = new Date().toLocaleString('pt-BR') + ' â€” ' + msg;
+                var line = new Date().toLocaleString('pt-BR') + ' — ' + msg;
                 var list = [];
                 try {
                     var raw = localStorage.getItem(STORAGE_AUDIT);
@@ -532,7 +532,7 @@
                 localStorage.setItem(STORAGE_LICENSE, val ? 'true' : '');
                 applyGatekeeper();
                 if (val) {
-                    auditLog('LicenÃ§a ativada (validaÃ§Ã£o license.key simulada)');
+                    auditLog('Licença ativada (validação license.key simulada)');
                 }
             }
 
@@ -542,7 +542,7 @@
                 if (!glass) return;
                 if (isAuthorized()) {
                     glass.style.display = 'none';
-                    if (badge) badge.textContent = 'MÃ³dulo MineraÃ§Ã£o ativo';
+                    if (badge) badge.textContent = 'Módulo Mineração ativo';
                 } else {
                     glass.style.display = 'flex';
                     if (badge) badge.textContent = 'Upgrade Premium: ' + formatPrice();
@@ -567,12 +567,12 @@
             document.getElementById('btn-copy').onclick = function() {
                 navigator.clipboard.writeText(hwid.replace(/-/g, '')).then(function() {
                     document.getElementById('btn-copy').textContent = 'Copiado!';
-                    setTimeout(function() { document.getElementById('btn-copy').textContent = 'Copiar ID de AtivaÃ§Ã£o'; }, 2000);
+                    setTimeout(function() { document.getElementById('btn-copy').textContent = 'Copiar ID de Ativação'; }, 2000);
                 });
             };
 
             document.getElementById('btn-copy-whatsapp').onclick = function() {
-                var msg = 'OlÃ¡! Quero o upgrade Ouro 4.0 (MÃ³dulo MineraÃ§Ã£o).\nValor: ' + formatPrice() + '\nMeu ID de AtivaÃ§Ã£o: ' + hwid.replace(/-/g, '') + '\nEnvio o comprovante PIX em seguida.';
+                var msg = 'Olá! Quero o upgrade Ouro 4.0 (Módulo Mineração).\nValor: ' + formatPrice() + '\nMeu ID de Ativação: ' + hwid.replace(/-/g, '') + '\nEnvio o comprovante PIX em seguida.';
                 navigator.clipboard.writeText(msg).then(function() {
                     var btn = document.getElementById('btn-copy-whatsapp');
                     btn.textContent = 'Copiado!';
@@ -657,7 +657,7 @@
                     ...darkLayout,
                     xaxis: { ...darkLayout.xaxis, title: 'Vol. titulante (mL)' },
                     yaxis: { ...darkLayout.yaxis, title: 'pH', range: [2, 12] },
-                    title: { text: 'TitulaÃ§Ã£o pH', font: { size: 11, color: '#d4a853' } }
+                    title: { text: 'Titulação pH', font: { size: 11, color: '#d4a853' } }
                 }, { responsive: true, displayModeBar: false });
 
                 var solPts = [];
@@ -690,8 +690,8 @@
         })();
     </script>
     <script src="assets/js/loja.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="VersÃ£o de teste oficial">Seed<span class="evo-beta-tooltip">Esta Ã© uma versÃ£o oficial de teste da Cara Core InformÃ¡tica para parceiros do Plano Premium+.</span></span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">PrÃ³ximos passos</p><ul class="evo-roadmap-list"><li>DomÃ­nio prÃ³prio <span class="evo-roadmap-tag">MarÃ§o/2026</span></li><li>IntegraÃ§Ã£o PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Versão de teste oficial">Seed<span class="evo-beta-tooltip">Esta é uma versão oficial de teste da Cara Core Informática para parceiros do Plano Premium+.</span></span></div>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Março/2026</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
     <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" target="_blank" rel="noopener noreferrer" aria-label="Sugira uma melhoria pelo WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>

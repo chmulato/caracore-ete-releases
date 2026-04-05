@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -125,7 +125,7 @@
             max-height: 1000px;
         }
         
-        /* CombinaÃ§Ãµes especÃ­ficas */
+        /* Combinações específicas */
         .img-center img.img-large.img-wide {
             max-width: 85%;
             max-height: 600px;
@@ -268,275 +268,275 @@
     <div class="page cover">
         <div class="img-center">
             <img src="assets/images/aulas/prompt_00_capa_apostila.png" alt="Capa da Apostila ETE Lodos Ativados" class="img-large img-tall">
-            <div class="img-caption">Capa: EstaÃ§Ãµes de Tratamento de Efluentes com Lodos Ativados â€“ Engenharia, CiÃªncia e Sustentabilidade.</div>
+            <div class="img-caption">Capa: Estações de Tratamento de Efluentes com Lodos Ativados – Engenharia, Ciência e Sustentabilidade.</div>
         </div>
-        <h1>Apostila de SimulaÃ§Ã£o e Tratamento de Efluentes</h1>
+        <h1>Apostila de Simulação e Tratamento de Efluentes</h1>
         <h2>Sistema Completo de Lodos Ativados</h2>
-        <p>Um compÃªndio baseado na documentaÃ§Ã£o do projeto "CHI".</p>
+        <p>Um compêndio baseado na documentação do projeto "CHI".</p>
     </div>
 
     <div class="page toc">
-        <h1>Ãndice</h1>
+        <h1>Índice</h1>
         <ol>
-            <li><a href="#cap-intro">IntroduÃ§Ã£o</a></li>
-            <li><a href="#cap-1">Aula - ReforÃ§o de Conceitos</a></li>
-            <li><a href="#cap-2">Aula - Inventividade no Processo: A FÃ­sica da RecirculaÃ§Ã£o</a></li>
-            <li><a href="#cap-3">Aula - RecirculaÃ§Ã£o de Lodo e Idade do Lodo (Î¸c)</a></li>
-            <li><a href="#cap-4">Aula - Dimensionamento de Decantador SecundÃ¡rio</a></li>
+            <li><a href="#cap-intro">Introdução</a></li>
+            <li><a href="#cap-1">Aula - Reforço de Conceitos</a></li>
+            <li><a href="#cap-2">Aula - Inventividade no Processo: A Física da Recirculação</a></li>
+            <li><a href="#cap-3">Aula - Recirculação de Lodo e Idade do Lodo (θc)</a></li>
+            <li><a href="#cap-4">Aula - Dimensionamento de Decantador Secundário</a></li>
             <li><a href="#cap-5">README Geral do Sistema</a>
                 <ul>
                     <li><a href="#cap-5">Interface Visual do Simulador</a></li>
                 </ul>
             </li>
             <li><a href="#cap-6">README - Conformidade Legal</a></li>
-            <li><a href="#cap-7">README - ValidaÃ§Ã£o TermodinÃ¢mica</a></li>
-            <li><a href="#cap-8">PrÃ³ximos Passos Implementados</a></li>
-            <li><a href="#cap-9">Matriz de Petersen - Teoria e Modelo DinÃ¢mico</a></li>
-            <li><a href="#cap-10">Matriz de Petersen - ImplementaÃ§Ã£o e IntegraÃ§Ã£o</a></li>
-            <li><a href="#cap-conc">ConclusÃ£o</a></li>
+            <li><a href="#cap-7">README - Validação Termodinâmica</a></li>
+            <li><a href="#cap-8">Próximos Passos Implementados</a></li>
+            <li><a href="#cap-9">Matriz de Petersen - Teoria e Modelo Dinâmico</a></li>
+            <li><a href="#cap-10">Matriz de Petersen - Implementação e Integração</a></li>
+            <li><a href="#cap-conc">Conclusão</a></li>
         </ol>
     </div>
 
     <div class="page" id="cap-intro">
-        <h1>IntroduÃ§Ã£o</h1>
-        <p>Esta apostila consolida a documentaÃ§Ã£o tÃ©cnica do "Simulador de Efluentes", um sistema completo para simulaÃ§Ã£o e dimensionamento de EstaÃ§Ãµes de Tratamento de Efluentes (ETE) utilizando o processo de Lodos Ativados.</p>
-        <p>O conteÃºdo abrange desde os princÃ­pios fundamentais da engenharia quÃ­mica e sanitÃ¡ria, como balanÃ§o de massa e cinÃ©tica biolÃ³gica, atÃ© a implementaÃ§Ã£o prÃ¡tica em cÃ³digo, incluindo o dimensionamento de reatores, decantadores, sistemas de lodo, e a verificaÃ§Ã£o de conformidade com as normas ambientais.</p>
-        <p>O objetivo Ã© servir como um guia de estudo e referÃªncia, refletindo a filosofia de "FÃ­sica antes da LÃ³gica", onde a compreensÃ£o dos fenÃ´menos precede a escrita do cÃ³digo. Cada seÃ§Ã£o representa um mÃ³dulo da documentaÃ§Ã£o original do projeto, organizada de forma lÃ³gica para facilitar o aprendizado.</p>
+        <h1>Introdução</h1>
+        <p>Esta apostila consolida a documentação técnica do "Simulador de Efluentes", um sistema completo para simulação e dimensionamento de Estações de Tratamento de Efluentes (ETE) utilizando o processo de Lodos Ativados.</p>
+        <p>O conteúdo abrange desde os princípios fundamentais da engenharia química e sanitária, como balanço de massa e cinética biológica, até a implementação prática em código, incluindo o dimensionamento de reatores, decantadores, sistemas de lodo, e a verificação de conformidade com as normas ambientais.</p>
+        <p>O objetivo é servir como um guia de estudo e referência, refletindo a filosofia de "Física antes da Lógica", onde a compreensão dos fenômenos precede a escrita do código. Cada seção representa um módulo da documentação original do projeto, organizada de forma lógica para facilitar o aprendizado.</p>
     </div>
 
     <div class="page" id="cap-1">
         <div class="img-center">
             <img src="assets/images/aulas/prompt_01.png" alt="Fluxograma do Processo de Lodos Ativados" class="img-large img-wide">
-            <div class="img-caption">Figura 1: Fluxograma do Processo de Lodos Ativados, destacando reator, decantador e recirculaÃ§Ã£o de lodo.</div>
+            <div class="img-caption">Figura 1: Fluxograma do Processo de Lodos Ativados, destacando reator, decantador e recirculação de lodo.</div>
         </div>
-        <h1>CapÃ­tulo 1: Aula - ReforÃ§o de Conceitos</h1>
-        <p>Esta seÃ§Ã£o revisa os conceitos fundamentais que formam a base do tratamento de efluentes por lodos ativados.</p>
+        <h1>Capítulo 1: Aula - Reforço de Conceitos</h1>
+        <p>Esta seção revisa os conceitos fundamentais que formam a base do tratamento de efluentes por lodos ativados.</p>
         <hr>
         
-        <h2>1. RELATÃ“RIO DE STATUS - O QUE O CÃ“DIGO JÃ FAZ</h2>
+        <h2>1. RELATÓRIO DE STATUS - O QUE O CÓDIGO JÁ FAZ</h2>
 
-        <h3>1.1 BalanÃ§o de Massa (ConservaÃ§Ã£o de Lavoisier)</h3>
-        <p>O sistema realiza balanÃ§os de massa estequiomÃ©tricos baseados no princÃ­pio de conservaÃ§Ã£o de massa de Lavoisier. Isso significa que: <code>Massa que entra = Massa que sai + Massa acumulada + Massa consumida</code>.</p>
-        <pre><code># Exemplo de cÃ¡lculo de carga
-Carga = ConcentraÃ§Ã£o Ã— VazÃ£o Ã— Fator de conversÃ£o
-Demanda Oâ‚‚ (DBO): 1 kg DBO requer 1.42 kg Oâ‚‚
-Demanda Oâ‚‚ (NitrificaÃ§Ã£o): 1 kg N requer 4.57 kg Oâ‚‚</code></pre>
+        <h3>1.1 Balanço de Massa (Conservação de Lavoisier)</h3>
+        <p>O sistema realiza balanços de massa estequiométricos baseados no princípio de conservação de massa de Lavoisier. Isso significa que: <code>Massa que entra = Massa que sai + Massa acumulada + Massa consumida</code>.</p>
+        <pre><code># Exemplo de cálculo de carga
+Carga = Concentração × Vazão × Fator de conversão
+Demanda O₂ (DBO): 1 kg DBO requer 1.42 kg O₂
+Demanda O₂ (Nitrificação): 1 kg N requer 4.57 kg O₂</code></pre>
         <div class="quadro">
-            <b>BalanÃ§o de Massa:</b> O sistema realiza balanÃ§os de massa estequiomÃ©tricos baseados no princÃ­pio de conservaÃ§Ã£o de massa de Lavoisier.<br>
+            <b>Balanço de Massa:</b> O sistema realiza balanços de massa estequiométricos baseados no princípio de conservação de massa de Lavoisier.<br>
             <code>Massa que entra = Massa que sai + Massa acumulada + Massa consumida</code>
-            <pre><code># Exemplo de cÃ¡lculo de carga
-    Carga = ConcentraÃ§Ã£o Ã— VazÃ£o Ã— Fator de conversÃ£o
-    Demanda Oâ‚‚ (DBO): 1 kg DBO requer 1.42 kg Oâ‚‚
-    Demanda Oâ‚‚ (NitrificaÃ§Ã£o): 1 kg N requer 4.57 kg Oâ‚‚</code></pre>
+            <pre><code># Exemplo de cálculo de carga
+    Carga = Concentração × Vazão × Fator de conversão
+    Demanda O₂ (DBO): 1 kg DBO requer 1.42 kg O₂
+    Demanda O₂ (Nitrificação): 1 kg N requer 4.57 kg O₂</code></pre>
         </div>
         
-        <h3>1.2 IntegraÃ§Ã£o com SQLite</h3>
-        <p>O banco de dados armazena: Efluentes, Aeradores, Normas Ambientais (CONAMA 430), e Limites FÃ­sicos para validaÃ§Ã£o.</p>
+        <h3>1.2 Integração com SQLite</h3>
+        <p>O banco de dados armazena: Efluentes, Aeradores, Normas Ambientais (CONAMA 430), e Limites Físicos para validação.</p>
 
-        <h3>1.3 ValidaÃ§Ã£o de Dados (ConsistÃªncia TermodinÃ¢mica)</h3>
-        <p>O sistema bloqueia cÃ¡lculos com dados fisicamente impossÃ­veis, como DBO > DQO, pH fora da faixa biolÃ³gica, ou vazÃ£o nula. Isso previne o erro "Garbage In, Garbage Out" (GIGO).</p>
+        <h3>1.3 Validação de Dados (Consistência Termodinâmica)</h3>
+        <p>O sistema bloqueia cálculos com dados fisicamente impossíveis, como DBO > DQO, pH fora da faixa biológica, ou vazão nula. Isso previne o erro "Garbage In, Garbage Out" (GIGO).</p>
         <div class="quadro">
-            <b>ValidaÃ§Ã£o de Dados:</b> O sistema bloqueia cÃ¡lculos com dados fisicamente impossÃ­veis, como DBO &gt; DQO, pH fora da faixa biolÃ³gica, ou vazÃ£o nula.<br>
+            <b>Validação de Dados:</b> O sistema bloqueia cálculos com dados fisicamente impossíveis, como DBO &gt; DQO, pH fora da faixa biológica, ou vazão nula.<br>
             <i>Isso previne o erro "Garbage In, Garbage Out" (GIGO).</i>
         </div>
 
-        <h2>2. REVISÃƒO DE CONCEITOS FUNDAMENTAIS</h2>
+        <h2>2. REVISÃO DE CONCEITOS FUNDAMENTAIS</h2>
         
-        <h3>2.1 DQO vs DBO - A DiferenÃ§a Essencial</h3>
-        <p><b>DBO (Demanda BioquÃ­mica de OxigÃªnio):</b> Mede a porÃ§Ã£o da matÃ©ria orgÃ¢nica que Ã© biodegradÃ¡vel.</p>
-        <p><b>DQO (Demanda QuÃ­mica de OxigÃªnio):</b> Mede TODA a matÃ©ria orgÃ¢nica oxidÃ¡vel, incluindo a nÃ£o biodegradÃ¡vel. Por isso, <strong>DQO â‰¥ DBO sempre</strong>.</p>
+        <h3>2.1 DQO vs DBO - A Diferença Essencial</h3>
+        <p><b>DBO (Demanda Bioquímica de Oxigênio):</b> Mede a porção da matéria orgânica que é biodegradável.</p>
+        <p><b>DQO (Demanda Química de Oxigênio):</b> Mede TODA a matéria orgânica oxidável, incluindo a não biodegradável. Por isso, <strong>DQO ≥ DBO sempre</strong>.</p>
         <div class="quadro">
-            <b>DBO (Demanda BioquÃ­mica de OxigÃªnio):</b> Mede a porÃ§Ã£o da matÃ©ria orgÃ¢nica que Ã© biodegradÃ¡vel.<br>
-            <b>DQO (Demanda QuÃ­mica de OxigÃªnio):</b> Mede TODA a matÃ©ria orgÃ¢nica oxidÃ¡vel, incluindo a nÃ£o biodegradÃ¡vel. <strong>DQO â‰¥ DBO sempre</strong>.
+            <b>DBO (Demanda Bioquímica de Oxigênio):</b> Mede a porção da matéria orgânica que é biodegradável.<br>
+            <b>DQO (Demanda Química de Oxigênio):</b> Mede TODA a matéria orgânica oxidável, incluindo a não biodegradável. <strong>DQO ≥ DBO sempre</strong>.
         </div>
         
         <h3>2.2 F/M (Alimento/Microrganismo) - O "Apetite" do Reator</h3>
-        <p>Ã‰ a relaÃ§Ã£o entre o alimento (Carga de DBO) e a massa de microrganismos. Controla a eficiÃªncia e o tamanho do reator.</p>
+        <p>É a relação entre o alimento (Carga de DBO) e a massa de microrganismos. Controla a eficiência e o tamanho do reator.</p>
         <div class="quadro">
-            <b>F/M (Alimento/Microrganismo):</b> Ã‰ a relaÃ§Ã£o entre o alimento (Carga de DBO) e a massa de microrganismos. Controla a eficiÃªncia e o tamanho do reator.
+            <b>F/M (Alimento/Microrganismo):</b> É a relação entre o alimento (Carga de DBO) e a massa de microrganismos. Controla a eficiência e o tamanho do reator.
         </div>
-        <pre><code>F/M = (Q Ã— Sâ‚€) / (V Ã— X)</code></pre>
+        <pre><code>F/M = (Q × S₀) / (V × X)</code></pre>
         <ul>
             <li>F/M alto: Reator menor, menos eficiente.</li>
             <li>F/M baixo: Reator maior, mais eficiente.</li>
         </ul>
         
-        <h3>2.3 Idade do Lodo (Theta_c) - O "RelÃ³gio BiolÃ³gico" da ETE</h3>
-        <p>Ã‰ o tempo mÃ©dio que uma bactÃ©ria permanece no sistema. Controla quais tipos de bactÃ©rias prosperam.</p>
+        <h3>2.3 Idade do Lodo (Theta_c) - O "Relógio Biológico" da ETE</h3>
+        <p>É o tempo médio que uma bactéria permanece no sistema. Controla quais tipos de bactérias prosperam.</p>
         <div class="quadro">
-            <b>Idade do Lodo (Î¸c):</b> Ã‰ o tempo mÃ©dio que uma bactÃ©ria permanece no sistema. Controla quais tipos de bactÃ©rias prosperam.
+            <b>Idade do Lodo (θc):</b> É o tempo médio que uma bactéria permanece no sistema. Controla quais tipos de bactérias prosperam.
         </div>
-        <pre><code>Î¸c = Massa de lodo no sistema / Massa de lodo descartada por dia</code></pre>
+        <pre><code>θc = Massa de lodo no sistema / Massa de lodo descartada por dia</code></pre>
         <ul>
-            <li><b>Î¸c = 5-10 dias:</b> RemoÃ§Ã£o de DBO, risco de bulking.</li>
-            <li><b>Î¸c = 15-30 dias:</b> NitrificaÃ§Ã£o completa, lodo mais estÃ¡vel.</li>
+            <li><b>θc = 5-10 dias:</b> Remoção de DBO, risco de bulking.</li>
+            <li><b>θc = 15-30 dias:</b> Nitrificação completa, lodo mais estável.</li>
         </ul>
         <hr>
-        <p><b>O que falta implementar nesta etapa:</b> CÃ¡lculo do volume do reator baseado em F/M, cÃ¡lculo de Î¸c, e dimensionamento do sistema de decantaÃ§Ã£o e recirculaÃ§Ã£o.</p>
+        <p><b>O que falta implementar nesta etapa:</b> Cálculo do volume do reator baseado em F/M, cálculo de θc, e dimensionamento do sistema de decantação e recirculação.</p>
     </div>
 
     <div class="page" id="cap-2">
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_02.png" alt="BalanÃ§o de Massa em ETE" class="img-large img-wide">
-            <div class="img-caption">Figura 2: IlustraÃ§Ã£o do balanÃ§o de massa em uma ETE, mostrando entradas, saÃ­das e acÃºmulo.</div>
+            <img src="assets/images/aulas/prompt_02.png" alt="Balanço de Massa em ETE" class="img-large img-wide">
+            <div class="img-caption">Figura 2: Ilustração do balanço de massa em uma ETE, mostrando entradas, saídas e acúmulo.</div>
         </div>
-        <h1>CapÃ­tulo 2: Aula - Inventividade no Processo</h1>
-        <p>Esta seÃ§Ã£o explora o conceito de "Inventividade no Processo", focando em como a recirculaÃ§Ã£o de lodo otimiza o tratamento.</p>
+        <h1>Capítulo 2: Aula - Inventividade no Processo</h1>
+        <p>Esta seção explora o conceito de "Inventividade no Processo", focando em como a recirculação de lodo otimiza o tratamento.</p>
         <hr>
 
-        <h2>A RECIRCULAÃ‡ÃƒO COMO "INVENTIVIDADE"</h2>
-        <p>Recircular o lodo do decantador de volta para o reator Ã© uma "inventividade" pois permite manter uma alta concentraÃ§Ã£o de microrganismos (X) no reator, o que traz duas grandes vantagens:</p>
+        <h2>A RECIRCULAÇÃO COMO "INVENTIVIDADE"</h2>
+        <p>Recircular o lodo do decantador de volta para o reator é uma "inventividade" pois permite manter uma alta concentração de microrganismos (X) no reator, o que traz duas grandes vantagens:</p>
         <ol>
-            <li><b>Permite um reator menor:</b> Se a concentraÃ§Ã£o de lodo (X) aumenta, o volume do reator (V) pode diminuir para tratar a mesma carga, mantendo a relaÃ§Ã£o F/M constante.</li>
-            <li><b>Permite tratar uma carga maior:</b> Com um reator de mesmo volume, uma maior concentraÃ§Ã£o de lodo (X) permite tratar uma carga orgÃ¢nica (Q x S0) maior.</li>
+            <li><b>Permite um reator menor:</b> Se a concentração de lodo (X) aumenta, o volume do reator (V) pode diminuir para tratar a mesma carga, mantendo a relação F/M constante.</li>
+            <li><b>Permite tratar uma carga maior:</b> Com um reator de mesmo volume, uma maior concentração de lodo (X) permite tratar uma carga orgânica (Q x S0) maior.</li>
         </ol>
 
-        <h2>A FÃSICA: POR QUE R PERMITE REATOR MENOR?</h2>
-        <p>A fÃ³rmula chave Ã© a do F/M: <code>F/M = (Q Ã— S0) / (V Ã— X)</code>. Ao recircular, X aumenta de ~500 mg/L para ~3000 mg/L (um aumento de 6x). Para manter o mesmo F/M, o volume V pode ser 6x menor.</p>
+        <h2>A FÍSICA: POR QUE R PERMITE REATOR MENOR?</h2>
+        <p>A fórmula chave é a do F/M: <code>F/M = (Q × S0) / (V × X)</code>. Ao recircular, X aumenta de ~500 mg/L para ~3000 mg/L (um aumento de 6x). Para manter o mesmo F/M, o volume V pode ser 6x menor.</p>
         
-        <h3>DERIVAÃ‡ÃƒO DA FÃ“RMULA DE RECIRCULAÃ‡ÃƒO</h3>
-        <p>AtravÃ©s de um balanÃ§o de massa, chega-se Ã  fÃ³rmula da razÃ£o de recirculaÃ§Ã£o (R):</p>
+        <h3>DERIVAÇÃO DA FÓRMULA DE RECIRCULAÇÃO</h3>
+        <p>Através de um balanço de massa, chega-se à fórmula da razão de recirculação (R):</p>
         <pre><code>R = X / (Xr - X)</code></pre>
-        <p>Onde <code>X</code> Ã© a concentraÃ§Ã£o no reator e <code>Xr</code> Ã© a concentraÃ§Ã£o no lodo recirculado (do fundo do decantador), que Ã© sempre maior que X.</p>
+        <p>Onde <code>X</code> é a concentração no reator e <code>Xr</code> é a concentração no lodo recirculado (do fundo do decantador), que é sempre maior que X.</p>
 
-        <h3>EXEMPLO NUMÃ‰RICO</h3>
+        <h3>EXEMPLO NUMÉRICO</h3>
         <ul>
-            <li><b>Sem RecirculaÃ§Ã£o (X=500 mg/L):</b> Para tratar uma carga, precisa-se de um reator de <b>1000 mÂ³</b>.</li>
-            <li><b>Com RecirculaÃ§Ã£o (X=3000 mg/L):</b> Para tratar a mesma carga, precisa-se de um reator de <b>167 mÂ³</b>. Uma economia de 83% no volume!</li>
+            <li><b>Sem Recirculação (X=500 mg/L):</b> Para tratar uma carga, precisa-se de um reator de <b>1000 m³</b>.</li>
+            <li><b>Com Recirculação (X=3000 mg/L):</b> Para tratar a mesma carga, precisa-se de um reator de <b>167 m³</b>. Uma economia de 83% no volume!</li>
         </ul>
         <div class="quadro">
-            <b>Exemplo NumÃ©rico:</b>
+            <b>Exemplo Numérico:</b>
             <ul>
-                <li><b>Sem RecirculaÃ§Ã£o (X=500 mg/L):</b> Para tratar uma carga, precisa-se de um reator de <b>1000 mÂ³</b>.</li>
-                <li><b>Com RecirculaÃ§Ã£o (X=3000 mg/L):</b> Para tratar a mesma carga, precisa-se de um reator de <b>167 mÂ³</b>. Uma economia de 83% no volume!</li>
+                <li><b>Sem Recirculação (X=500 mg/L):</b> Para tratar uma carga, precisa-se de um reator de <b>1000 m³</b>.</li>
+                <li><b>Com Recirculação (X=3000 mg/L):</b> Para tratar a mesma carga, precisa-se de um reator de <b>167 m³</b>. Uma economia de 83% no volume!</li>
             </ul>
         </div>
 
         <h2>RESUMO PARA O ENGENHEIRO</h2>
-        <p>Aumentar a razÃ£o de recirculaÃ§Ã£o (R) aumenta a concentraÃ§Ã£o de lodo (X) no reator. Isso permite ou diminuir o volume (V) do reator ou aumentar a carga (Q x S0) a ser tratada.</p>
+        <p>Aumentar a razão de recirculação (R) aumenta a concentração de lodo (X) no reator. Isso permite ou diminuir o volume (V) do reator ou aumentar a carga (Q x S0) a ser tratada.</p>
     </div>
     
     <div class="page" id="cap-3">
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_03.png" alt="ComparaÃ§Ã£o F/M" class="img-large img-wide">
-            <div class="img-caption">Figura 3: ComparaÃ§Ã£o visual entre reatores com alta e baixa relaÃ§Ã£o F/M.</div>
+            <img src="assets/images/aulas/prompt_03.png" alt="Comparação F/M" class="img-large img-wide">
+            <div class="img-caption">Figura 3: Comparação visual entre reatores com alta e baixa relação F/M.</div>
         </div>
-        <h1>CapÃ­tulo 3: Aula - RecirculaÃ§Ã£o e Idade do Lodo</h1>
-        <p>Esta seÃ§Ã£o detalha os cÃ¡lculos envolvidos no sistema de lodo, incluindo recirculaÃ§Ã£o, produÃ§Ã£o, descarte e a idade do lodo (Î¸c).</p>
+        <h1>Capítulo 3: Aula - Recirculação e Idade do Lodo</h1>
+        <p>Esta seção detalha os cálculos envolvidos no sistema de lodo, incluindo recirculação, produção, descarte e a idade do lodo (θc).</p>
         <hr>
         
-        <h2>1. RECIRCULAÃ‡ÃƒO DE LODO</h2>
-        <p>Ã‰ o processo de bombear lodo do decantador de volta para o reator para manter a concentraÃ§Ã£o de microrganismos (X) e controlar a Idade do Lodo (Î¸c).</p>
-        <p>A RazÃ£o de RecirculaÃ§Ã£o (R) Ã© calculada por: <code>R = X / (Xr - X)</code>.</p>
+        <h2>1. RECIRCULAÇÃO DE LODO</h2>
+        <p>É o processo de bombear lodo do decantador de volta para o reator para manter a concentração de microrganismos (X) e controlar a Idade do Lodo (θc).</p>
+        <p>A Razão de Recirculação (R) é calculada por: <code>R = X / (Xr - X)</code>.</p>
         
-        <h2>2. PRODUÃ‡ÃƒO DE LODO</h2>
-        <p>As bactÃ©rias crescem ao consumir DBO, mas tambÃ©m morrem (respiraÃ§Ã£o endÃ³gena). A produÃ§Ã£o lÃ­quida de lodo (Px) deve ser descartada para manter o equilÃ­brio.</p>
-        <pre><code>Px = Y Ã— (Sâ‚€ - S) Ã— Q - kd Ã— X Ã— V</code></pre>
+        <h2>2. PRODUÇÃO DE LODO</h2>
+        <p>As bactérias crescem ao consumir DBO, mas também morrem (respiração endógena). A produção líquida de lodo (Px) deve ser descartada para manter o equilíbrio.</p>
+        <pre><code>Px = Y × (S₀ - S) × Q - kd × X × V</code></pre>
         <ul>
             <li><b>Termo de crescimento:</b> Lodo produzido ao remover DBO.</li>
-            <li><b>Termo de morte:</b> Lodo perdido por respiraÃ§Ã£o endÃ³gena.</li>
+            <li><b>Termo de morte:</b> Lodo perdido por respiração endógena.</li>
         </ul>
         
         <h2>3. DESCARTE DE LODO</h2>
-        <p>O descarte (Qw) Ã© necessÃ¡rio para controlar a idade do lodo. A vazÃ£o de descarte Ã© calculada para remover a produÃ§Ã£o lÃ­quida de lodo (Px).</p>
+        <p>O descarte (Qw) é necessário para controlar a idade do lodo. A vazão de descarte é calculada para remover a produção líquida de lodo (Px).</p>
         <pre><code>Qw = Px / Xr</code></pre>
         
-        <h2>4. IDADE DO LODO (Î¸c)</h2>
-        <p>Ã‰ o tempo mÃ©dio que uma bactÃ©ria fica no sistema. Ã‰ o parÃ¢metro de controle mais importante.</p>
-        <pre><code>Î¸c = (V Ã— X) / (Qw Ã— Xr)</code></pre>
-        <p>A idade do lodo determina quais bactÃ©rias dominam o sistema:</p>
+        <h2>4. IDADE DO LODO (θc)</h2>
+        <p>É o tempo médio que uma bactéria fica no sistema. É o parâmetro de controle mais importante.</p>
+        <pre><code>θc = (V × X) / (Qw × Xr)</code></pre>
+        <p>A idade do lodo determina quais bactérias dominam o sistema:</p>
         <ul>
-            <li><b>Î¸c < 5 dias:</b> Sistema instÃ¡vel, tratamento ineficiente.</li>
-            <li><b>Î¸c = 5-10 dias:</b> Boa remoÃ§Ã£o de DBO. Risco de bulking. NitrificaÃ§Ã£o limitada.</li>
-            <li><b>Î¸c = 15-30 dias:</b> NitrificaÃ§Ã£o completa. Lodo estÃ¡vel. Ideal para remoÃ§Ã£o de nitrogÃªnio.</li>
+            <li><b>θc < 5 dias:</b> Sistema instável, tratamento ineficiente.</li>
+            <li><b>θc = 5-10 dias:</b> Boa remoção de DBO. Risco de bulking. Nitrificação limitada.</li>
+            <li><b>θc = 15-30 dias:</b> Nitrificação completa. Lodo estável. Ideal para remoção de nitrogênio.</li>
         </ul>
-        <p>Para que a nitrificaÃ§Ã£o ocorra, <b>Î¸c deve ser, no mÃ­nimo, 10-12 dias</b>, pois as bactÃ©rias nitrificantes crescem muito lentamente.</p>
+        <p>Para que a nitrificação ocorra, <b>θc deve ser, no mínimo, 10-12 dias</b>, pois as bactérias nitrificantes crescem muito lentamente.</p>
     </div>
 
     <div class="page" id="cap-4">
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_04.png" alt="RecirculaÃ§Ã£o de Lodo" class="img-large img-tall">
-            <div class="img-caption">Figura 4: Esquema da recirculaÃ§Ã£o de lodo do decantador para o reator biolÃ³gico.</div>
+            <img src="assets/images/aulas/prompt_04.png" alt="Recirculação de Lodo" class="img-large img-tall">
+            <div class="img-caption">Figura 4: Esquema da recirculação de lodo do decantador para o reator biológico.</div>
         </div>
-        <h1>CapÃ­tulo 4: Aula - Dimensionamento de Decantador</h1>
-        <p>Esta seÃ§Ã£o aborda o dimensionamento do decantador secundÃ¡rio, uma etapa crucial para garantir a clarificaÃ§Ã£o do efluente final.</p>
+        <h1>Capítulo 4: Aula - Dimensionamento de Decantador</h1>
+        <p>Esta seção aborda o dimensionamento do decantador secundário, uma etapa crucial para garantir a clarificação do efluente final.</p>
         <hr>
 
-        <h2>1. VELOCIDADE DE SEDIMENTAÃ‡ÃƒO (Vs)</h2>
-        <p>Ã‰ a velocidade com que os flocos de lodo "caem" no decantador. Fatores que afetam Vs:</p>
+        <h2>1. VELOCIDADE DE SEDIMENTAÇÃO (Vs)</h2>
+        <p>É a velocidade com que os flocos de lodo "caem" no decantador. Fatores que afetam Vs:</p>
         <ul>
-            <li><b>ConcentraÃ§Ã£o de lodo (X):</b> Se muito alta, as partÃ­culas interferem umas nas outras, diminuindo a Vs.</li>
-            <li><b>Qualidade do lodo:</b> Lodo com "bulking" (muitas bactÃ©rias filamentosas) sedimenta mal.</li>
-            <li><b>Temperatura:</b> Ãgua mais quente Ã© menos viscosa, facilitando a sedimentaÃ§Ã£o.</li>
+            <li><b>Concentração de lodo (X):</b> Se muito alta, as partículas interferem umas nas outras, diminuindo a Vs.</li>
+            <li><b>Qualidade do lodo:</b> Lodo com "bulking" (muitas bactérias filamentosas) sedimenta mal.</li>
+            <li><b>Temperatura:</b> Água mais quente é menos viscosa, facilitando a sedimentação.</li>
         </ul>
         
-        <h2>2. DIMENSIONAMENTO DA ÃREA DO DECANTADOR</h2>
-        <p>A Ã¡rea do decantador (A) deve ser grande o suficiente para que o tempo de sedimentaÃ§Ã£o seja menor que o tempo de detenÃ§Ã£o.</p>
-        <pre><code>A â‰¥ Q / Vs</code></pre>
-        <p>Onde <code>Q</code> Ã© a vazÃ£o total (efluente + recirculaÃ§Ã£o) e <code>Vs</code> Ã© a velocidade de sedimentaÃ§Ã£o. Um fator de seguranÃ§a Ã© aplicado.</p>
+        <h2>2. DIMENSIONAMENTO DA ÁREA DO DECANTADOR</h2>
+        <p>A área do decantador (A) deve ser grande o suficiente para que o tempo de sedimentação seja menor que o tempo de detenção.</p>
+        <pre><code>A ≥ Q / Vs</code></pre>
+        <p>Onde <code>Q</code> é a vazão total (efluente + recirculação) e <code>Vs</code> é a velocidade de sedimentação. Um fator de segurança é aplicado.</p>
 
-        <h2>3. TAXA DE APLICAÃ‡ÃƒO SUPERFICIAL (TAS)</h2>
-        <p>Ã‰ a vazÃ£o aplicada por unidade de Ã¡rea. Ã‰ um parÃ¢metro de projeto importante para evitar sobrecarga hidrÃ¡ulica.</p>
-        <pre><code>TAS = Q / A  (em mÂ³/mÂ²Â·dia)</code></pre>
+        <h2>3. TAXA DE APLICAÇÃO SUPERFICIAL (TAS)</h2>
+        <p>É a vazão aplicada por unidade de área. É um parâmetro de projeto importante para evitar sobrecarga hidráulica.</p>
+        <pre><code>TAS = Q / A  (em m³/m²·dia)</code></pre>
         <ul>
-            <li><b>TAS muito alta:</b> Lodo Ã© arrastado para fora do decantador.</li>
+            <li><b>TAS muito alta:</b> Lodo é arrastado para fora do decantador.</li>
             <li><b>TAS muito baixa:</b> Decantador superdimensionado e caro.</li>
         </ul>
         
-        <h2>4. ÃNDICE DE VOLUME DE LODO (IVL)</h2>
-        <p>Mede a "qualidade" e a capacidade de compactaÃ§Ã£o do lodo. Ã‰ a principal ferramenta para diagnosticar problemas de sedimentaÃ§Ã£o.</p>
+        <h2>4. ÍNDICE DE VOLUME DE LODO (IVL)</h2>
+        <p>Mede a "qualidade" e a capacidade de compactação do lodo. É a principal ferramenta para diagnosticar problemas de sedimentação.</p>
         <pre><code>IVL = (Volume de lodo sedimentado em 30 min) / (Massa de lodo)</code></pre>
         <ul>
             <li><b>IVL = 50-150 mL/g:</b> Lodo ideal, sedimenta e compacta bem.</li>
-            <li><b>IVL > 200 mL/g:</b> Indica <strong>BULKING</strong>. O lodo estÃ¡ "fofo", nÃ£o compacta e Ã© facilmente arrastado para fora.</li>
+            <li><b>IVL > 200 mL/g:</b> Indica <strong>BULKING</strong>. O lodo está "fofo", não compacta e é facilmente arrastado para fora.</li>
         </ul>
 
         <h2>5. BULKING - O PROBLEMA</h2>
-        <p>Ocorre quando bactÃ©rias filamentosas crescem excessivamente, criando uma estrutura que impede a compactaÃ§Ã£o do lodo. Causa turbidez no efluente final e perda de sÃ³lidos.</p>
+        <p>Ocorre quando bactérias filamentosas crescem excessivamente, criando uma estrutura que impede a compactação do lodo. Causa turbidez no efluente final e perda de sólidos.</p>
         
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_05.png" alt="Decantador SecundÃ¡rio - CondiÃ§Ã£o Normal vs. Bulking" class="img-large img-wide">
-            <div class="img-caption">Figura 5: ComparaÃ§Ã£o visual entre decantador em condiÃ§Ã£o normal (esquerda) e em situaÃ§Ã£o de bulking (direita). A imagem mostra a diferenÃ§a na sedimentaÃ§Ã£o, interface lodo/Ã¡gua, compactaÃ§Ã£o do lodo e qualidade do efluente, incluindo indicadores de IVL (Ãndice de Volume de Lodo) e causas do problema (Î¸c baixo, falta de nutrientes, baixa concentraÃ§Ã£o de Oâ‚‚).</div>
+            <img src="assets/images/aulas/prompt_05.png" alt="Decantador Secundário - Condição Normal vs. Bulking" class="img-large img-wide">
+            <div class="img-caption">Figura 5: Comparação visual entre decantador em condição normal (esquerda) e em situação de bulking (direita). A imagem mostra a diferença na sedimentação, interface lodo/água, compactação do lodo e qualidade do efluente, incluindo indicadores de IVL (Índice de Volume de Lodo) e causas do problema (θc baixo, falta de nutrientes, baixa concentração de O₂).</div>
         </div>
         
-        <p>A imagem acima ilustra claramente a diferenÃ§a entre um decantador operando normalmente e um em situaÃ§Ã£o de bulking. No decantador normal, observa-se sedimentaÃ§Ã£o adequada, interface lodo/Ã¡gua bem definida, lodo compactado no fundo e efluente clarificado. No decantador com bulking, o lodo nÃ£o sedimenta adequadamente, a interface Ã© difusa, o lodo ocupa grande volume e o efluente sai turvo, indicando risco de arraste de sÃ³lidos.</p>
+        <p>A imagem acima ilustra claramente a diferença entre um decantador operando normalmente e um em situação de bulking. No decantador normal, observa-se sedimentação adequada, interface lodo/água bem definida, lodo compactado no fundo e efluente clarificado. No decantador com bulking, o lodo não sedimenta adequadamente, a interface é difusa, o lodo ocupa grande volume e o efluente sai turvo, indicando risco de arraste de sólidos.</p>
         
         <div class="quadro">
-            <b>DiagnÃ³stico e PrevenÃ§Ã£o de Bulking:</b><br>
+            <b>Diagnóstico e Prevenção de Bulking:</b><br>
             <ul>
-                <li><b>IVL ideal:</b> 50-150 mL/g (sedimentaÃ§Ã£o adequada)</li>
+                <li><b>IVL ideal:</b> 50-150 mL/g (sedimentação adequada)</li>
                 <li><b>Alerta:</b> IVL > 200 mL/g (risco de bulking)</li>
-                <li><b>Causas principais:</b> Î¸c muito baixo (&lt; 5 dias), falta de nutrientes, baixa concentraÃ§Ã£o de Oâ‚‚</li>
-                <li><b>SoluÃ§Ãµes preventivas:</b> Manter Î¸c adequado (10-30 dias), garantir Oâ‚‚ suficiente, monitorar IVL regularmente</li>
+                <li><b>Causas principais:</b> θc muito baixo (&lt; 5 dias), falta de nutrientes, baixa concentração de O₂</li>
+                <li><b>Soluções preventivas:</b> Manter θc adequado (10-30 dias), garantir O₂ suficiente, monitorar IVL regularmente</li>
             </ul>
         </div>
     </div>
 
     <div class="page" id="cap-5">
-        <h1>CapÃ­tulo 5: README Geral do Sistema</h1>
-        <p>VisÃ£o geral do Simulador de Efluentes, um sistema completo para simulaÃ§Ã£o e dimensionamento de ETEs de Lodos Ativados.</p>
+        <h1>Capítulo 5: README Geral do Sistema</h1>
+        <p>Visão geral do Simulador de Efluentes, um sistema completo para simulação e dimensionamento de ETEs de Lodos Ativados.</p>
         <hr>
 
         <h2>Interface Visual do Simulador</h2>
-        <p>O sistema oferece uma interface visual completa desenvolvida com Streamlit, permitindo entrada interativa de dados e visualizaÃ§Ã£o imediata dos resultados de dimensionamento.</p>
+        <p>O sistema oferece uma interface visual completa desenvolvida com Streamlit, permitindo entrada interativa de dados e visualização imediata dos resultados de dimensionamento.</p>
         
         <div class="img-center">
             <img src="assets/images/aulas/simulador_ete.png" alt="Interface do Simulador de Efluentes" class="img-medium">
-            <div class="img-caption">Figura 5.1: Interface visual do Simulador de Efluentes mostrando entrada de dados na barra lateral, resultados principais em cards, grÃ¡fico de DBO (Entrada vs SaÃ­da vs Limite CONAMA), e detalhes completos do sistema (reator, decantador, lodo, demanda de oxigÃªnio).</div>
+            <div class="img-caption">Figura 5.1: Interface visual do Simulador de Efluentes mostrando entrada de dados na barra lateral, resultados principais em cards, gráfico de DBO (Entrada vs Saída vs Limite CONAMA), e detalhes completos do sistema (reator, decantador, lodo, demanda de oxigênio).</div>
         </div>
         
-        <h3>CaracterÃ­sticas da Interface</h3>
+        <h3>Características da Interface</h3>
         <ul>
-            <li><b>Entrada de Dados Interativa:</b> Barra lateral com campos para vazÃ£o, DBO, TKN, temperatura, pH e parÃ¢metros de dimensionamento.</li>
-            <li><b>SimulaÃ§Ã£o AutomÃ¡tica:</b> OpÃ§Ã£o para atualizaÃ§Ã£o em tempo real dos resultados ao alterar parÃ¢metros.</li>
-            <li><b>Modelo CinÃ©tico:</b> Checkbox para escolher entre mÃ©todo estÃ¡tico (rÃ¡pido) ou Matriz de Petersen (dinÃ¢mico e exato).</li>
-            <li><b>VisualizaÃ§Ã£o de Resultados:</b> Cards com mÃ©tricas principais, grÃ¡ficos comparativos e tabelas detalhadas.</li>
-            <li><b>AnÃ¡lise de Conformidade:</b> VerificaÃ§Ã£o automÃ¡tica contra normas CONAMA 430/2011.</li>
-            <li><b>Dimensionamento Completo:</b> CÃ¡lculo de reator, decantador, recirculaÃ§Ã£o, produÃ§Ã£o de lodo e demanda de oxigÃªnio.</li>
+            <li><b>Entrada de Dados Interativa:</b> Barra lateral com campos para vazão, DBO, TKN, temperatura, pH e parâmetros de dimensionamento.</li>
+            <li><b>Simulação Automática:</b> Opção para atualização em tempo real dos resultados ao alterar parâmetros.</li>
+            <li><b>Modelo Cinético:</b> Checkbox para escolher entre método estático (rápido) ou Matriz de Petersen (dinâmico e exato).</li>
+            <li><b>Visualização de Resultados:</b> Cards com métricas principais, gráficos comparativos e tabelas detalhadas.</li>
+            <li><b>Análise de Conformidade:</b> Verificação automática contra normas CONAMA 430/2011.</li>
+            <li><b>Dimensionamento Completo:</b> Cálculo de reator, decantador, recirculação, produção de lodo e demanda de oxigênio.</li>
         </ul>
         
         <h3>Como Executar</h3>
-        <pre><code># Instalar dependÃªncias
+        <pre><code># Instalar dependências
 pip install -r requirements.txt
 
 # Executar interface
@@ -547,409 +547,409 @@ streamlit run interface.py
 
         <h2>Funcionalidades Principais</h2>
         <ul>
-            <li><b>CÃ¡lculo da Demanda de OxigÃªnio Total (OT):</b> Para DBO e NitrificaÃ§Ã£o.</li>
-            <li><b>Dimensionamento do Reator BiolÃ³gico:</b> Baseado em F/M, calcula Volume, TDH e Carga VolumÃ©trica.</li>
-            <li><b>Sistema de RecirculaÃ§Ã£o de Lodo:</b> Calcula RazÃ£o (R) e VazÃ£o (Qr) de recirculaÃ§Ã£o.</li>
-            <li><b>ProduÃ§Ã£o e Descarte de Lodo:</b> Calcula produÃ§Ã£o (Px), descarte (Qw) e Idade do Lodo (Î¸c).</li>
-            <li><b>Dimensionamento do Decantador SecundÃ¡rio:</b> Calcula Ã¡rea, Vs, TAS e valida o risco de bulking via IVL.</li>
-            <li><b>ValidaÃ§Ã£o de Conformidade Legal:</b> Contra a norma CONAMA 430/2011.</li>
-            <li><b>ValidaÃ§Ã£o de ConsistÃªncia TermodinÃ¢mica:</b> Previne GIGO.</li>
-            <li><b>Interface Visual (Streamlit):</b> Para simulaÃ§Ã£o interativa.</li>
+            <li><b>Cálculo da Demanda de Oxigênio Total (OT):</b> Para DBO e Nitrificação.</li>
+            <li><b>Dimensionamento do Reator Biológico:</b> Baseado em F/M, calcula Volume, TDH e Carga Volumétrica.</li>
+            <li><b>Sistema de Recirculação de Lodo:</b> Calcula Razão (R) e Vazão (Qr) de recirculação.</li>
+            <li><b>Produção e Descarte de Lodo:</b> Calcula produção (Px), descarte (Qw) e Idade do Lodo (θc).</li>
+            <li><b>Dimensionamento do Decantador Secundário:</b> Calcula área, Vs, TAS e valida o risco de bulking via IVL.</li>
+            <li><b>Validação de Conformidade Legal:</b> Contra a norma CONAMA 430/2011.</li>
+            <li><b>Validação de Consistência Termodinâmica:</b> Previne GIGO.</li>
+            <li><b>Interface Visual (Streamlit):</b> Para simulação interativa.</li>
         </ul>
 
         <h2>Estrutura do Projeto</h2>
-        <p>O projeto Ã© modular, separando responsabilidades:</p>
+        <p>O projeto é modular, separando responsabilidades:</p>
         <pre><code>database.py         # Banco de dados
-calculos.py         # CÃ¡lculos centrais
+calculos.py         # Cálculos centrais
 dimensionamento.py    # Dimensionamento de reator/decantador
-recirculacao.py     # LÃ³gica de lodo
+recirculacao.py     # Lógica de lodo
 conformidade.py     # Regras da CONAMA
-validacao.py        # ValidaÃ§Ã£o de dados de entrada
+validacao.py        # Validação de dados de entrada
 interface.py        # UI com Streamlit</code></pre>
     </div>
     
     <div class="page" id="cap-6">
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_06.png" alt="VerificaÃ§Ã£o de Conformidade Legal" class="img-large img-tall">
-            <div class="img-caption">Figura 6: Diagrama de verificaÃ§Ã£o de conformidade legal do efluente segundo a norma CONAMA 430/2011.</div>
+            <img src="assets/images/aulas/prompt_06.png" alt="Verificação de Conformidade Legal" class="img-large img-tall">
+            <div class="img-caption">Figura 6: Diagrama de verificação de conformidade legal do efluente segundo a norma CONAMA 430/2011.</div>
         </div>
-        <h1>CapÃ­tulo 6: README - Conformidade Legal</h1>
-        <p>Detalhes do mÃ³dulo que verifica a conformidade legal do efluente tratado, com base na norma CONAMA 430/2011.</p>
+        <h1>Capítulo 6: README - Conformidade Legal</h1>
+        <p>Detalhes do módulo que verifica a conformidade legal do efluente tratado, com base na norma CONAMA 430/2011.</p>
         <hr>
 
-        <h2>LÃ³gica de VerificaÃ§Ã£o</h2>
-        <p>Um efluente Ã© considerado <strong>CONFORME</strong> se atender a <strong>pelo menos um</strong> dos seguintes critÃ©rios:</p>
+        <h2>Lógica de Verificação</h2>
+        <p>Um efluente é considerado <strong>CONFORME</strong> se atender a <strong>pelo menos um</strong> dos seguintes critérios:</p>
         <ol>
-            <li>A concentraÃ§Ã£o do poluente na saÃ­da for <strong>menor ou igual</strong> ao limite mÃ¡ximo estabelecido (ex: DBO â‰¤ 120 mg/L).</li>
-            <li>A eficiÃªncia de remoÃ§Ã£o do poluente for <strong>maior ou igual</strong> Ã  eficiÃªncia mÃ­nima exigida (ex: RemoÃ§Ã£o de DBO â‰¥ 60%).</li>
+            <li>A concentração do poluente na saída for <strong>menor ou igual</strong> ao limite máximo estabelecido (ex: DBO ≤ 120 mg/L).</li>
+            <li>A eficiência de remoção do poluente for <strong>maior ou igual</strong> à eficiência mínima exigida (ex: Remoção de DBO ≥ 60%).</li>
         </ol>
 
-        <h2>DÃ©ficit de Engenharia</h2>
-        <p>Quando o efluente Ã© considerado INCONFORME, o sistema calcula o "DÃ©ficit de Engenharia". Este valor representa a carga poluidora (em kg/dia) que estÃ¡ sendo lanÃ§ada no corpo receptor acima do permitido por lei, caracterizando um problema ambiental e de engenharia a ser corrigido.</p>
+        <h2>Déficit de Engenharia</h2>
+        <p>Quando o efluente é considerado INCONFORME, o sistema calcula o "Déficit de Engenharia". Este valor representa a carga poluidora (em kg/dia) que está sendo lançada no corpo receptor acima do permitido por lei, caracterizando um problema ambiental e de engenharia a ser corrigido.</p>
         
         <h2>Uso</h2>
-        <p>O mÃ³dulo pode ser usado tanto via uma interface de terminal interativa (`menu_conformidade.py`) quanto programaticamente, integrando-se aos outros mÃ³dulos de cÃ¡lculo para uma verificaÃ§Ã£o automÃ¡tica ao final de cada simulaÃ§Ã£o.</p>
+        <p>O módulo pode ser usado tanto via uma interface de terminal interativa (`menu_conformidade.py`) quanto programaticamente, integrando-se aos outros módulos de cálculo para uma verificação automática ao final de cada simulação.</p>
     </div>
 
     <div class="page" id="cap-7">
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_07.png" alt="ValidaÃ§Ã£o TermodinÃ¢mica" class="img-large img-wide">
-            <div class="img-caption">Figura 7: IlustraÃ§Ã£o da validaÃ§Ã£o termodinÃ¢mica e bloqueio de dados inconsistentes no sistema.</div>
+            <img src="assets/images/aulas/prompt_07.png" alt="Validação Termodinâmica" class="img-large img-wide">
+            <div class="img-caption">Figura 7: Ilustração da validação termodinâmica e bloqueio de dados inconsistentes no sistema.</div>
         </div>
-        <h1>CapÃ­tulo 7: README - ValidaÃ§Ã£o TermodinÃ¢mica</h1>
-        <p>Este mÃ³dulo atua como um "guardiÃ£o" do sistema, garantindo que nenhum cÃ¡lculo seja realizado com dados fisicamente impossÃ­veis ou inconsistentes.</p>
+        <h1>Capítulo 7: README - Validação Termodinâmica</h1>
+        <p>Este módulo atua como um "guardião" do sistema, garantindo que nenhum cálculo seja realizado com dados fisicamente impossíveis ou inconsistentes.</p>
         <hr>
 
         <h2>Objetivo</h2>
-        <p>Evitar o princÃ­pio de "Garbage In, Garbage Out" (GIGO), bloqueando a execuÃ§Ã£o de cÃ¡lculos se os dados de entrada violarem leis fundamentais da fÃ­sica e da quÃ­mica.</p>
+        <p>Evitar o princípio de "Garbage In, Garbage Out" (GIGO), bloqueando a execução de cálculos se os dados de entrada violarem leis fundamentais da física e da química.</p>
         
-        <h2>ValidaÃ§Ãµes CrÃ­ticas (Bloqueiam o Sistema)</h2>
+        <h2>Validações Críticas (Bloqueiam o Sistema)</h2>
         <ul>
-            <li><b>VazÃ£o Inexistente:</b> <code>vazao_m3_dia â‰¤ 0</code>. Fluxo de massa requer vazÃ£o positiva.</li>
-            <li><b>pH IncompatÃ­vel:</b> <code>pH < 2.0</code> ou <code>pH > 12.0</code>. Fora da faixa de sobrevivÃªncia da biomassa.</li>
-            <li><b>Impossibilidade EstequiomÃ©trica:</b> <code>DBO > DQO</code>. A parte (DBO) nÃ£o pode ser maior que o todo (DQO).</li>
-            <li><b>Limites FÃ­sicos:</b> ParÃ¢metros como DBO, DQO, Temperatura fora de uma faixa razoÃ¡vel (ex: DBO > 50.000 mg/L).</li>
+            <li><b>Vazão Inexistente:</b> <code>vazao_m3_dia ≤ 0</code>. Fluxo de massa requer vazão positiva.</li>
+            <li><b>pH Incompatível:</b> <code>pH < 2.0</code> ou <code>pH > 12.0</code>. Fora da faixa de sobrevivência da biomassa.</li>
+            <li><b>Impossibilidade Estequiométrica:</b> <code>DBO > DQO</code>. A parte (DBO) não pode ser maior que o todo (DQO).</li>
+            <li><b>Limites Físicos:</b> Parâmetros como DBO, DQO, Temperatura fora de uma faixa razoável (ex: DBO > 50.000 mg/L).</li>
         </ul>
 
-        <h2>Alertas NÃ£o CrÃ­ticos</h2>
-        <p>O sistema tambÃ©m emite alertas para dados que, embora possÃ­veis, sÃ£o suspeitos e podem indicar erros de digitaÃ§Ã£o.</p>
+        <h2>Alertas Não Críticos</h2>
+        <p>O sistema também emite alertas para dados que, embora possíveis, são suspeitos e podem indicar erros de digitação.</p>
         <ul>
-            <li><b>Temperatura Elevada (> 50Â°C):</b> Sugere a necessidade de processos termofÃ­licos.</li>
-            <li><b>RazÃ£o DBO/DQO > 0.95:</b> Incomum na prÃ¡tica, pode ser erro de mediÃ§Ã£o.</li>
+            <li><b>Temperatura Elevada (> 50°C):</b> Sugere a necessidade de processos termofílicos.</li>
+            <li><b>Razão DBO/DQO > 0.95:</b> Incomum na prática, pode ser erro de medição.</li>
         </ul>
     </div>
     
     <div class="page" id="cap-8">
         <div class="img-center">
             <img src="assets/images/aulas/prompt_08.png" alt="Roadmap de Desenvolvimento" class="img-large img-wide">
-            <div class="img-caption">Figura 8: Roadmap visual do desenvolvimento dos mÃ³dulos do sistema ETE.</div>
+            <div class="img-caption">Figura 8: Roadmap visual do desenvolvimento dos módulos do sistema ETE.</div>
         </div>
-        <h1>CapÃ­tulo 8: PrÃ³ximos Passos Implementados</h1>
-        <p>Registro do desenvolvimento do mÃ³dulo de dimensionamento do reator.</p>
+        <h1>Capítulo 8: Próximos Passos Implementados</h1>
+        <p>Registro do desenvolvimento do módulo de dimensionamento do reator.</p>
         <hr>
 
         <h2>O QUE FOI IMPLEMENTADO</h2>
-        <p>Esta etapa do projeto focou em criar a classe <code>DimensionadorReator</code> e integrÃ¡-la aos cÃ¡lculos existentes.</p>
+        <p>Esta etapa do projeto focou em criar a classe <code>DimensionadorReator</code> e integrá-la aos cálculos existentes.</p>
         <ul>
-            <li><b>Tabela `reatores` no Banco de Dados:</b> Para armazenar os parÃ¢metros dos reatores.</li>
-            <li><b>MÃ³dulo `dimensionamento.py`:</b> ContÃ©m a lÃ³gica para os seguintes cÃ¡lculos:
+            <li><b>Tabela `reatores` no Banco de Dados:</b> Para armazenar os parâmetros dos reatores.</li>
+            <li><b>Módulo `dimensionamento.py`:</b> Contém a lógica para os seguintes cálculos:
                 <ul>
-                    <li><b>CÃ¡lculo de F/M:</b> <code>F/M = (Q Ã— Sâ‚€) / (V Ã— X)</code></li>
-                    <li><b>Dimensionamento do Reator por F/M:</b> <code>V = (Q Ã— Sâ‚€) / (F/M Ã— X)</code></li>
-                    <li><b>CÃ¡lculo de TDH (Tempo de DetenÃ§Ã£o HidrÃ¡ulica):</b> <code>TDH = V / Q</code></li>
-                    <li><b>CÃ¡lculo de Carga VolumÃ©trica (Cv):</b> <code>Cv = (Q Ã— Sâ‚€) / V</code></li>
+                    <li><b>Cálculo de F/M:</b> <code>F/M = (Q × S₀) / (V × X)</code></li>
+                    <li><b>Dimensionamento do Reator por F/M:</b> <code>V = (Q × S₀) / (F/M × X)</code></li>
+                    <li><b>Cálculo de TDH (Tempo de Detenção Hidráulica):</b> <code>TDH = V / Q</code></li>
+                    <li><b>Cálculo de Carga Volumétrica (Cv):</b> <code>Cv = (Q × S₀) / V</code></li>
                 </ul>
             </li>
-            <li><b>ValidaÃ§Ã£o de Dimensionamento:</b> Verifica se os parÃ¢metros calculados (F/M, TDH, Cv) estÃ£o dentro de faixas tÃ©cnicas aceitÃ¡veis.</li>
-            <li><b>IntegraÃ§Ã£o com CÃ¡lculos Existentes:</b> CriaÃ§Ã£o de um mÃ©todo `simular_tratamento_completo()` que une a simulaÃ§Ã£o de demanda de Oâ‚‚ com o dimensionamento do reator.</li>
+            <li><b>Validação de Dimensionamento:</b> Verifica se os parâmetros calculados (F/M, TDH, Cv) estão dentro de faixas técnicas aceitáveis.</li>
+            <li><b>Integração com Cálculos Existentes:</b> Criação de um método `simular_tratamento_completo()` que une a simulação de demanda de O₂ com o dimensionamento do reator.</li>
         </ul>
         
-        <h2>PRÃ“XIMOS PASSOS (Ainda Faltam)</h2>
+        <h2>PRÓXIMOS PASSOS (Ainda Faltam)</h2>
         <ol>
-            <li><b>RecirculaÃ§Ã£o de Lodo:</b> CÃ¡lculo de R e Qr.</li>
-            <li><b>Descarte de Lodo:</b> CÃ¡lculo de Px e Qw.</li>
-            <li><b>Idade do Lodo (Î¸c):</b> CÃ¡lculo e validaÃ§Ã£o para nitrificaÃ§Ã£o.</li>
-            <li><b>Dimensionamento do Decantador:</b> CÃ¡lculo de Ã¡rea e validaÃ§Ã£o de IVL.</li>
-            <li><b>BalanÃ§o de Massa Completo:</b> Para validar a conservaÃ§Ã£o de massa em todo o sistema.</li>
+            <li><b>Recirculação de Lodo:</b> Cálculo de R e Qr.</li>
+            <li><b>Descarte de Lodo:</b> Cálculo de Px e Qw.</li>
+            <li><b>Idade do Lodo (θc):</b> Cálculo e validação para nitrificação.</li>
+            <li><b>Dimensionamento do Decantador:</b> Cálculo de área e validação de IVL.</li>
+            <li><b>Balanço de Massa Completo:</b> Para validar a conservação de massa em todo o sistema.</li>
         </ol>
     </div>
 
     <div class="page" id="cap-9">
         <div class="img-center">
             <img src="assets/images/aulas/prompt_10.png" alt="Estrutura da Matriz de Petersen" class="img-large img-wide">
-            <div class="img-caption">Figura 10: Estrutura da Matriz de Petersen mostrando processos, componentes e coeficientes estequiomÃ©tricos.</div>
+            <div class="img-caption">Figura 10: Estrutura da Matriz de Petersen mostrando processos, componentes e coeficientes estequiométricos.</div>
         </div>
-        <h1>CapÃ­tulo 9: Matriz de Petersen - Teoria e Modelo DinÃ¢mico</h1>
-        <p>Este capÃ­tulo apresenta a <strong>Matriz de Petersen</strong>, um modelo dinÃ¢mico baseado em balanÃ§o de elÃ©trons que permite cÃ¡lculo exato da demanda de oxigÃªnio. A Matriz de Petersen representa um avanÃ§o cientÃ­fico fundamental, elevando o simulador de aproximaÃ§Ãµes empÃ­ricas para cÃ¡lculos exatos baseados em princÃ­pios fundamentais da engenharia quÃ­mica.</p>
+        <h1>Capítulo 9: Matriz de Petersen - Teoria e Modelo Dinâmico</h1>
+        <p>Este capítulo apresenta a <strong>Matriz de Petersen</strong>, um modelo dinâmico baseado em balanço de elétrons que permite cálculo exato da demanda de oxigênio. A Matriz de Petersen representa um avanço científico fundamental, elevando o simulador de aproximações empíricas para cálculos exatos baseados em princípios fundamentais da engenharia química.</p>
         <hr>
 
-        <h2>1. POR QUE UM MODELO DINÃ‚MICO?</h2>
-        <p>As fÃ³rmulas estÃ¡ticas tradicionais, como <code>Oâ‚‚ = 1.42 Ã— DBO</code>, sÃ£o aproximaÃ§Ãµes empÃ­ricas baseadas em correlaÃ§Ãµes estatÃ­sticas. Embora Ãºteis para estimativas rÃ¡pidas, apresentam limitaÃ§Ãµes fundamentais:</p>
+        <h2>1. POR QUE UM MODELO DINÂMICO?</h2>
+        <p>As fórmulas estáticas tradicionais, como <code>O₂ = 1.42 × DBO</code>, são aproximações empíricas baseadas em correlações estatísticas. Embora úteis para estimativas rápidas, apresentam limitações fundamentais:</p>
         <ul>
-            <li><b>LimitaÃ§Ã£o de oxigÃªnio:</b> NÃ£o consideram que, se a concentraÃ§Ã£o de Oâ‚‚ for baixa, o crescimento microbiano Ã© limitado pela disponibilidade de oxigÃªnio (efeito de Monod).</li>
-            <li><b>ConcentraÃ§Ã£o de biomassa:</b> Ignoram que a demanda de Oâ‚‚ Ã© proporcional Ã  concentraÃ§Ã£o de microrganismos ativos (X_b) no reator.</li>
-            <li><b>Decaimento e respiraÃ§Ã£o endÃ³gena:</b> NÃ£o incluem o consumo de Oâ‚‚ pela morte natural das bactÃ©rias e sua respiraÃ§Ã£o endÃ³gena.</li>
-            <li><b>EvoluÃ§Ã£o temporal:</b> Assumem estado estacionÃ¡rio permanente, nÃ£o permitindo anÃ¡lise de transientes ou otimizaÃ§Ã£o dinÃ¢mica.</li>
-            <li><b>BalanÃ§o de elÃ©trons:</b> NÃ£o garantem matematicamente a conservaÃ§Ã£o de elÃ©trons, base fundamental da estequiometria.</li>
+            <li><b>Limitação de oxigênio:</b> Não consideram que, se a concentração de O₂ for baixa, o crescimento microbiano é limitado pela disponibilidade de oxigênio (efeito de Monod).</li>
+            <li><b>Concentração de biomassa:</b> Ignoram que a demanda de O₂ é proporcional à concentração de microrganismos ativos (X_b) no reator.</li>
+            <li><b>Decaimento e respiração endógena:</b> Não incluem o consumo de O₂ pela morte natural das bactérias e sua respiração endógena.</li>
+            <li><b>Evolução temporal:</b> Assumem estado estacionário permanente, não permitindo análise de transientes ou otimização dinâmica.</li>
+            <li><b>Balanço de elétrons:</b> Não garantem matematicamente a conservação de elétrons, base fundamental da estequiometria.</li>
         </ul>
         <div class="quadro">
-            <b>LimitaÃ§Ãµes Fundamentais da FÃ³rmula EstÃ¡tica:</b><br>
-            A fÃ³rmula <code>Oâ‚‚ = 1.42 Ã— DBO</code> Ã© uma aproximaÃ§Ã£o empÃ­rica que nÃ£o considera limitaÃ§Ã£o de Oâ‚‚, concentraÃ§Ã£o de biomassa, decaimento, evoluÃ§Ã£o temporal ou balanÃ§o de elÃ©trons. Ã‰ adequada para estimativas preliminares, mas inadequada para dimensionamento preciso ou anÃ¡lise cientÃ­fica rigorosa.
+            <b>Limitações Fundamentais da Fórmula Estática:</b><br>
+            A fórmula <code>O₂ = 1.42 × DBO</code> é uma aproximação empírica que não considera limitação de O₂, concentração de biomassa, decaimento, evolução temporal ou balanço de elétrons. É adequada para estimativas preliminares, mas inadequada para dimensionamento preciso ou análise científica rigorosa.
         </div>
 
         <h2>2. A MATRIZ DE PETERSEN (ASM1 SIMPLIFICADO)</h2>
-        <p>A <strong>Matriz de Petersen</strong> Ã© uma estrutura matemÃ¡tica sistemÃ¡tica que organiza processos biolÃ³gicos em uma matriz estequiomÃ©trica, baseada no modelo ASM1 (Activated Sludge Model 1), padrÃ£o internacional para modelagem de lodos ativados.</p>
+        <p>A <strong>Matriz de Petersen</strong> é uma estrutura matemática sistemática que organiza processos biológicos em uma matriz estequiométrica, baseada no modelo ASM1 (Activated Sludge Model 1), padrão internacional para modelagem de lodos ativados.</p>
         <p><strong>Estrutura da Matriz:</strong></p>
         <ul>
-            <li><b>Linhas (Processos):</b> Representam os processos biolÃ³gicos que ocorrem no reator:
+            <li><b>Linhas (Processos):</b> Representam os processos biológicos que ocorrem no reator:
                 <ul>
-                    <li><b>Processo 1 - Crescimento AerÃ³bio:</b> BactÃ©rias consomem substrato e oxigÃªnio para crescer e produzir nova biomassa.</li>
-                    <li><b>Processo 2 - Decaimento (Morte):</b> BactÃ©rias morrem naturalmente e consomem oxigÃªnio na respiraÃ§Ã£o endÃ³gena.</li>
+                    <li><b>Processo 1 - Crescimento Aeróbio:</b> Bactérias consomem substrato e oxigênio para crescer e produzir nova biomassa.</li>
+                    <li><b>Processo 2 - Decaimento (Morte):</b> Bactérias morrem naturalmente e consomem oxigênio na respiração endógena.</li>
                 </ul>
             </li>
-            <li><b>Colunas (Componentes):</b> Representam as espÃ©cies quÃ­micas envolvidas:
+            <li><b>Colunas (Componentes):</b> Representam as espécies químicas envolvidas:
                 <ul>
-                    <li><b>S_s (Substrato SolÃºvel):</b> MatÃ©ria orgÃ¢nica biodegradÃ¡vel (DBO solÃºvel).</li>
-                    <li><b>X_b (Biomassa):</b> ConcentraÃ§Ã£o de microrganismos ativos (SSV - SÃ³lidos Suspensos VolÃ¡teis).</li>
-                    <li><b>S_o (OxigÃªnio Dissolvido):</b> ConcentraÃ§Ã£o de oxigÃªnio disponÃ­vel no reator.</li>
+                    <li><b>S_s (Substrato Solúvel):</b> Matéria orgânica biodegradável (DBO solúvel).</li>
+                    <li><b>X_b (Biomassa):</b> Concentração de microrganismos ativos (SSV - Sólidos Suspensos Voláteis).</li>
+                    <li><b>S_o (Oxigênio Dissolvido):</b> Concentração de oxigênio disponível no reator.</li>
                 </ul>
             </li>
-            <li><b>Valores (Coeficientes EstequiomÃ©tricos):</b> Cada cÃ©lula da matriz contÃ©m o coeficiente estequiomÃ©trico que relaciona o processo Ã  espÃ©cie quÃ­mica, garantindo conservaÃ§Ã£o de massa e balanÃ§o de elÃ©trons.</li>
+            <li><b>Valores (Coeficientes Estequiométricos):</b> Cada célula da matriz contém o coeficiente estequiométrico que relaciona o processo à espécie química, garantindo conservação de massa e balanço de elétrons.</li>
         </ul>
-        <pre><code>Matriz[Processo, Componente] = Coeficiente EstequiomÃ©trico
+        <pre><code>Matriz[Processo, Componente] = Coeficiente Estequiométrico
 
-Processo 1: Crescimento AerÃ³bio
+Processo 1: Crescimento Aeróbio
   - Consome substrato: -(1/Y)
   - Produz biomassa: +1
-  - Consome oxigÃªnio: -(1-Y)/Y
+  - Consome oxigênio: -(1-Y)/Y
 
 Processo 2: Decaimento (Morte)
   - Consome biomassa: -1
-  - Consome oxigÃªnio: -f_d Ã— b (respiraÃ§Ã£o endÃ³gena)</code></pre>
+  - Consome oxigênio: -f_d × b (respiração endógena)</code></pre>
 
-        <h2>3. BALANÃ‡O DE ELÃ‰TRONS - POR QUE O CÃLCULO Ã‰ EXATO?</h2>
-        <p>O cÃ¡lculo da demanda de oxigÃªnio pela Matriz de Petersen Ã© <strong>exato</strong> porque respeita o princÃ­pio fundamental de <strong>conservaÃ§Ã£o de elÃ©trons</strong>, base da estequiometria quÃ­mica.</p>
+        <h2>3. BALANÇO DE ELÉTRONS - POR QUE O CÁLCULO É EXATO?</h2>
+        <p>O cálculo da demanda de oxigênio pela Matriz de Petersen é <strong>exato</strong> porque respeita o princípio fundamental de <strong>conservação de elétrons</strong>, base da estequiometria química.</p>
         
-        <h3>3.1 PrincÃ­pio Fundamental</h3>
-        <p>Em qualquer reaÃ§Ã£o quÃ­mica, os elÃ©trons nÃ£o podem ser criados nem destruÃ­dos. Na oxidaÃ§Ã£o biolÃ³gica:</p>
+        <h3>3.1 Princípio Fundamental</h3>
+        <p>Em qualquer reação química, os elétrons não podem ser criados nem destruídos. Na oxidação biológica:</p>
         <div class="quadro">
-            <b>BalanÃ§o de ElÃ©trons:</b><br>
-            <code>ElÃ©trons no Substrato = ElÃ©trons na Biomassa + ElÃ©trons no Oâ‚‚ consumido</code>
+            <b>Balanço de Elétrons:</b><br>
+            <code>Elétrons no Substrato = Elétrons na Biomassa + Elétrons no O₂ consumido</code>
         </div>
         
         <h3>3.2 Coeficiente de Rendimento (Y)</h3>
-        <p>O coeficiente de rendimento <code>Y</code> define exatamente qual fraÃ§Ã£o do substrato Ã© convertida em biomassa:</p>
+        <p>O coeficiente de rendimento <code>Y</code> define exatamente qual fração do substrato é convertida em biomassa:</p>
         <ul>
-            <li><b>Y = 0.6</b> significa que 60% do substrato (em termos de elÃ©trons/energia) Ã© convertido em biomassa.</li>
+            <li><b>Y = 0.6</b> significa que 60% do substrato (em termos de elétrons/energia) é convertido em biomassa.</li>
             <li>O restante <b>(1-Y) = 40%</b> precisa ser oxidado para fornecer energia ao processo.</li>
-            <li>O oxigÃªnio Ã© o agente oxidante que aceita esses elÃ©trons.</li>
+            <li>O oxigênio é o agente oxidante que aceita esses elétrons.</li>
         </ul>
         
-        <h3>3.3 CÃ¡lculo Exato do OxigÃªnio</h3>
+        <h3>3.3 Cálculo Exato do Oxigênio</h3>
         <p>Para cada kg de biomassa produzida:</p>
         <pre><code>Substrato consumido = 1/Y kg
-ElÃ©trons no substrato = ElÃ©trons na biomassa + ElÃ©trons no Oâ‚‚
+Elétrons no substrato = Elétrons na biomassa + Elétrons no O₂
 
 Como Y% vira biomassa e (1-Y)% precisa ser oxidado:
-Oâ‚‚ necessÃ¡rio = (1-Y)/Y Ã— Substrato consumido
-Oâ‚‚ necessÃ¡rio = (1-Y)/Y Ã— (1/Y) = (1-Y)/Y kg Oâ‚‚ por kg biomassa</code></pre>
-        <p>Para <code>Y = 0.6</code>: <code>Oâ‚‚ = (1-0.6)/0.6 = 0.67 kg Oâ‚‚ / kg biomassa</code></p>
+O₂ necessário = (1-Y)/Y × Substrato consumido
+O₂ necessário = (1-Y)/Y × (1/Y) = (1-Y)/Y kg O₂ por kg biomassa</code></pre>
+        <p>Para <code>Y = 0.6</code>: <code>O₂ = (1-0.6)/0.6 = 0.67 kg O₂ / kg biomassa</code></p>
         
-        <h3>3.4 Garantia MatemÃ¡tica</h3>
+        <h3>3.4 Garantia Matemática</h3>
         <div class="quadro">
-            <b>Por que Ã© Exato:</b><br>
-            1. <b>ConservaÃ§Ã£o de Massa (Lavoisier):</b> A matriz estequiomÃ©trica garante que massa que entra = massa que sai + massa acumulada.<br>
-            2. <b>BalanÃ§o de ElÃ©trons:</b> Os coeficientes sÃ£o calculados para garantir que todos os elÃ©trons do substrato sejam contabilizados (biomassa + Oâ‚‚).<br>
-            3. <b>Base em Estequiometria Real:</b> Os coeficientes nÃ£o sÃ£o aproximaÃ§Ãµes empÃ­ricas, mas valores derivados das reaÃ§Ãµes quÃ­micas reais.<br>
-            4. <b>ValidaÃ§Ã£o Experimental:</b> O modelo ASM1 foi validado em milhares de estaÃ§Ãµes de tratamento reais.<br><br>
-            <strong>ConclusÃ£o:</strong> NÃ£o Ã© aproximaÃ§Ã£o, Ã© cÃ¡lculo fundamental de Engenharia QuÃ­mica baseado em princÃ­pios fÃ­sicos e quÃ­micos imutÃ¡veis.
+            <b>Por que é Exato:</b><br>
+            1. <b>Conservação de Massa (Lavoisier):</b> A matriz estequiométrica garante que massa que entra = massa que sai + massa acumulada.<br>
+            2. <b>Balanço de Elétrons:</b> Os coeficientes são calculados para garantir que todos os elétrons do substrato sejam contabilizados (biomassa + O₂).<br>
+            3. <b>Base em Estequiometria Real:</b> Os coeficientes não são aproximações empíricas, mas valores derivados das reações químicas reais.<br>
+            4. <b>Validação Experimental:</b> O modelo ASM1 foi validado em milhares de estações de tratamento reais.<br><br>
+            <strong>Conclusão:</strong> Não é aproximação, é cálculo fundamental de Engenharia Química baseado em princípios físicos e químicos imutáveis.
         </div>
 
-        <h2>4. TAXAS DE PROCESSO (CINÃ‰TICA DE MONOD)</h2>
-        <p>A Matriz de Petersen utiliza o modelo cinÃ©tico de Monod para calcular as taxas de cada processo, considerando as limitaÃ§Ãµes reais do sistema biolÃ³gico.</p>
+        <h2>4. TAXAS DE PROCESSO (CINÉTICA DE MONOD)</h2>
+        <p>A Matriz de Petersen utiliza o modelo cinético de Monod para calcular as taxas de cada processo, considerando as limitações reais do sistema biológico.</p>
         
-        <h3>4.1 Taxa de Crescimento AerÃ³bio</h3>
-        <p>A taxa de crescimento microbiano segue o modelo de Monod, que considera limitaÃ§Ã£o simultÃ¢nea por substrato e oxigÃªnio:</p>
-        <pre><code>r_crescimento = Î¼_max Ã— (S_s / (K_s + S_s)) Ã— (S_o / (K_oh + S_o)) Ã— X_b</code></pre>
-        <p><strong>ParÃ¢metros:</strong></p>
+        <h3>4.1 Taxa de Crescimento Aeróbio</h3>
+        <p>A taxa de crescimento microbiano segue o modelo de Monod, que considera limitação simultânea por substrato e oxigênio:</p>
+        <pre><code>r_crescimento = μ_max × (S_s / (K_s + S_s)) × (S_o / (K_oh + S_o)) × X_b</code></pre>
+        <p><strong>Parâmetros:</strong></p>
         <ul>
-            <li><b>Î¼_max:</b> Taxa mÃ¡xima de crescimento especÃ­fica (1/dia). Valor tÃ­pico: 4.0 1/dia para bactÃ©rias heterotrÃ³ficas.</li>
-            <li><b>K_s:</b> Constante de meia-saturaÃ§Ã£o para substrato (mg/L). Valor tÃ­pico: 20.0 mg/L. Representa a concentraÃ§Ã£o de substrato na qual a taxa Ã© metade da mÃ¡xima.</li>
-            <li><b>K_oh:</b> Constante de meia-saturaÃ§Ã£o para oxigÃªnio (mg/L). Valor tÃ­pico: 0.5 mg/L. Representa a concentraÃ§Ã£o de Oâ‚‚ na qual a taxa Ã© metade da mÃ¡xima.</li>
-            <li><b>S_s:</b> ConcentraÃ§Ã£o atual de substrato no reator (mg/L).</li>
-            <li><b>S_o:</b> ConcentraÃ§Ã£o atual de oxigÃªnio no reator (mg/L).</li>
-            <li><b>X_b:</b> ConcentraÃ§Ã£o de biomassa ativa (mg/L). A taxa Ã© proporcional Ã  biomassa presente.</li>
+            <li><b>μ_max:</b> Taxa máxima de crescimento específica (1/dia). Valor típico: 4.0 1/dia para bactérias heterotróficas.</li>
+            <li><b>K_s:</b> Constante de meia-saturação para substrato (mg/L). Valor típico: 20.0 mg/L. Representa a concentração de substrato na qual a taxa é metade da máxima.</li>
+            <li><b>K_oh:</b> Constante de meia-saturação para oxigênio (mg/L). Valor típico: 0.5 mg/L. Representa a concentração de O₂ na qual a taxa é metade da máxima.</li>
+            <li><b>S_s:</b> Concentração atual de substrato no reator (mg/L).</li>
+            <li><b>S_o:</b> Concentração atual de oxigênio no reator (mg/L).</li>
+            <li><b>X_b:</b> Concentração de biomassa ativa (mg/L). A taxa é proporcional à biomassa presente.</li>
         </ul>
-        <p><strong>InterpretaÃ§Ã£o:</strong></p>
+        <p><strong>Interpretação:</strong></p>
         <ul>
-            <li>Se <code>S_s >> K_s</code> e <code>S_o >> K_oh</code>: Taxa mÃ¡xima (nenhuma limitaÃ§Ã£o).</li>
+            <li>Se <code>S_s >> K_s</code> e <code>S_o >> K_oh</code>: Taxa máxima (nenhuma limitação).</li>
             <li>Se <code>S_s << K_s</code>: Taxa limitada por substrato (crescimento lento).</li>
-            <li>Se <code>S_o << K_oh</code>: Taxa limitada por oxigÃªnio (crescimento anaerÃ³bio ou limitado).</li>
+            <li>Se <code>S_o << K_oh</code>: Taxa limitada por oxigênio (crescimento anaeróbio ou limitado).</li>
         </ul>
         
         <h3>4.2 Taxa de Decaimento (Morte)</h3>
-        <p>A taxa de decaimento Ã© proporcional Ã  biomassa presente, representando a morte natural e a respiraÃ§Ã£o endÃ³gena:</p>
-        <pre><code>r_decaimento = b Ã— X_b</code></pre>
-        <p><strong>ParÃ¢metros:</strong></p>
+        <p>A taxa de decaimento é proporcional à biomassa presente, representando a morte natural e a respiração endógena:</p>
+        <pre><code>r_decaimento = b × X_b</code></pre>
+        <p><strong>Parâmetros:</strong></p>
         <ul>
-            <li><b>b:</b> Taxa de decaimento especÃ­fica (1/dia). Valor tÃ­pico: 0.15 1/dia. Representa a fraÃ§Ã£o da biomassa que morre por dia.</li>
-            <li><b>X_b:</b> ConcentraÃ§Ã£o de biomassa (mg/L).</li>
+            <li><b>b:</b> Taxa de decaimento específica (1/dia). Valor típico: 0.15 1/dia. Representa a fração da biomassa que morre por dia.</li>
+            <li><b>X_b:</b> Concentração de biomassa (mg/L).</li>
         </ul>
-        <p><strong>InterpretaÃ§Ã£o:</strong> Se <code>b = 0.15 1/dia</code>, significa que 15% da biomassa morre naturalmente a cada dia, independentemente da disponibilidade de substrato.</p>
+        <p><strong>Interpretação:</strong> Se <code>b = 0.15 1/dia</code>, significa que 15% da biomassa morre naturalmente a cada dia, independentemente da disponibilidade de substrato.</p>
         
         <div class="quadro">
-            <b>Vantagem do Modelo de Monod:</b> Permite modelar situaÃ§Ãµes reais onde o crescimento Ã© limitado por substrato ou oxigÃªnio, algo impossÃ­vel com fÃ³rmulas estÃ¡ticas. Isso Ã© crucial para dimensionamento preciso de aeradores e otimizaÃ§Ã£o de operaÃ§Ã£o.
+            <b>Vantagem do Modelo de Monod:</b> Permite modelar situações reais onde o crescimento é limitado por substrato ou oxigênio, algo impossível com fórmulas estáticas. Isso é crucial para dimensionamento preciso de aeradores e otimização de operação.
         </div>
 
-        <h2>5. SIMULAÃ‡ÃƒO TEMPORAL (EQUAÃ‡Ã•ES DIFERENCIAIS)</h2>
-        <p>A Matriz de Petersen permite simular a evoluÃ§Ã£o temporal do sistema resolvendo um sistema de equaÃ§Ãµes diferenciais ordinÃ¡rias (EDOs) acopladas, representando os balanÃ§os de massa dinÃ¢micos para cada componente.</p>
+        <h2>5. SIMULAÇÃO TEMPORAL (EQUAÇÕES DIFERENCIAIS)</h2>
+        <p>A Matriz de Petersen permite simular a evolução temporal do sistema resolvendo um sistema de equações diferenciais ordinárias (EDOs) acopladas, representando os balanços de massa dinâmicos para cada componente.</p>
         
-        <h3>5.1 Sistema de EquaÃ§Ãµes Diferenciais</h3>
-        <p>Para cada componente, o balanÃ§o de massa Ã©:</p>
-        <pre><code>d[Componente]/dt = Entrada - SaÃ­da + ProduÃ§Ã£o - Consumo</code></pre>
+        <h3>5.1 Sistema de Equações Diferenciais</h3>
+        <p>Para cada componente, o balanço de massa é:</p>
+        <pre><code>d[Componente]/dt = Entrada - Saída + Produção - Consumo</code></pre>
         
         <p><strong>Para S_s (Substrato):</strong></p>
-        <pre><code>dS_s/dt = d Ã— (S_s_entrada - S_s) - (1/Y) Ã— r_crescimento</code></pre>
+        <pre><code>dS_s/dt = d × (S_s_entrada - S_s) - (1/Y) × r_crescimento</code></pre>
         <ul>
-            <li><b>Termo de entrada/saÃ­da:</b> <code>d Ã— (S_s_entrada - S_s)</code> onde <code>d = Q/V</code> Ã© a taxa de diluiÃ§Ã£o (1/dia).</li>
-            <li><b>Termo de consumo:</b> <code>-(1/Y) Ã— r_crescimento</code> representa o substrato consumido no crescimento.</li>
+            <li><b>Termo de entrada/saída:</b> <code>d × (S_s_entrada - S_s)</code> onde <code>d = Q/V</code> é a taxa de diluição (1/dia).</li>
+            <li><b>Termo de consumo:</b> <code>-(1/Y) × r_crescimento</code> representa o substrato consumido no crescimento.</li>
         </ul>
         
         <p><strong>Para X_b (Biomassa):</strong></p>
-        <pre><code>dX_b/dt = d Ã— (X_b_entrada - X_b) + r_crescimento - r_decaimento</code></pre>
+        <pre><code>dX_b/dt = d × (X_b_entrada - X_b) + r_crescimento - r_decaimento</code></pre>
         <ul>
-            <li><b>Termo de entrada/saÃ­da:</b> <code>d Ã— (X_b_entrada - X_b)</code> considera recirculaÃ§Ã£o de lodo.</li>
-            <li><b>Termo de produÃ§Ã£o:</b> <code>+r_crescimento</code> representa nova biomassa produzida.</li>
+            <li><b>Termo de entrada/saída:</b> <code>d × (X_b_entrada - X_b)</code> considera recirculação de lodo.</li>
+            <li><b>Termo de produção:</b> <code>+r_crescimento</code> representa nova biomassa produzida.</li>
             <li><b>Termo de consumo:</b> <code>-r_decaimento</code> representa biomassa que morre.</li>
         </ul>
         
-        <p><strong>Para S_o (OxigÃªnio):</strong></p>
-        <pre><code>dS_o/dt = d Ã— (S_o_entrada - S_o) + O2_transferido - O2_consumido</code></pre>
+        <p><strong>Para S_o (Oxigênio):</strong></p>
+        <pre><code>dS_o/dt = d × (S_o_entrada - S_o) + O2_transferido - O2_consumido</code></pre>
         <ul>
-            <li><b>Termo de entrada/saÃ­da:</b> <code>d Ã— (S_o_entrada - S_o)</code> considera Oâ‚‚ no efluente (geralmente baixo).</li>
-            <li><b>Termo de transferÃªncia:</b> <code>+O2_transferido</code> representa Oâ‚‚ fornecido pelos aeradores.</li>
-            <li><b>Termo de consumo:</b> <code>-O2_consumido</code> representa Oâ‚‚ consumido no crescimento e decaimento.</li>
+            <li><b>Termo de entrada/saída:</b> <code>d × (S_o_entrada - S_o)</code> considera O₂ no efluente (geralmente baixo).</li>
+            <li><b>Termo de transferência:</b> <code>+O2_transferido</code> representa O₂ fornecido pelos aeradores.</li>
+            <li><b>Termo de consumo:</b> <code>-O2_consumido</code> representa O₂ consumido no crescimento e decaimento.</li>
         </ul>
         
-        <h3>5.2 ResoluÃ§Ã£o NumÃ©rica</h3>
-        <p>O sistema de EDOs Ã© resolvido numericamente usando mÃ©todos de integraÃ§Ã£o (ex: <code>scipy.integrate.odeint</code>), permitindo:</p>
+        <h3>5.2 Resolução Numérica</h3>
+        <p>O sistema de EDOs é resolvido numericamente usando métodos de integração (ex: <code>scipy.integrate.odeint</code>), permitindo:</p>
         <ul>
-            <li><b>AnÃ¡lise de Transiente:</b> Simular partida do reator, mudanÃ§as de carga, ou perturbaÃ§Ãµes.</li>
-            <li><b>Estado EstacionÃ¡rio:</b> Determinar condiÃ§Ãµes de equilÃ­brio onde <code>d/dt = 0</code>.</li>
-            <li><b>OtimizaÃ§Ã£o:</b> Testar diferentes estratÃ©gias operacionais antes da implementaÃ§Ã£o.</li>
-            <li><b>PrevisÃ£o:</b> Antecipar problemas e ajustar parÃ¢metros preventivamente.</li>
+            <li><b>Análise de Transiente:</b> Simular partida do reator, mudanças de carga, ou perturbações.</li>
+            <li><b>Estado Estacionário:</b> Determinar condições de equilíbrio onde <code>d/dt = 0</code>.</li>
+            <li><b>Otimização:</b> Testar diferentes estratégias operacionais antes da implementação.</li>
+            <li><b>Previsão:</b> Antecipar problemas e ajustar parâmetros preventivamente.</li>
         </ul>
         
         <div class="quadro">
-            <b>Vantagem Fundamental:</b> A simulaÃ§Ã£o temporal permite analisar o comportamento dinÃ¢mico do sistema, algo impossÃ­vel com mÃ©todos estÃ¡ticos. Isso Ã© essencial para operaÃ§Ã£o otimizada, diagnÃ³stico de problemas e dimensionamento robusto que considere variaÃ§Ãµes de carga.
+            <b>Vantagem Fundamental:</b> A simulação temporal permite analisar o comportamento dinâmico do sistema, algo impossível com métodos estáticos. Isso é essencial para operação otimizada, diagnóstico de problemas e dimensionamento robusto que considere variações de carga.
         </div>
 
-        <h2>6. COMPARAÃ‡ÃƒO: ESTÃTICO vs. DINÃ‚MICO</h2>
+        <h2>6. COMPARAÇÃO: ESTÁTICO vs. DINÂMICO</h2>
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_11.png" alt="ComparaÃ§Ã£o EstÃ¡tico vs DinÃ¢mico" class="img-large img-wide">
-            <div class="img-caption">Figura 11: ComparaÃ§Ã£o visual entre cÃ¡lculo estÃ¡tico (aproximaÃ§Ã£o) e dinÃ¢mico (exato).</div>
+            <img src="assets/images/aulas/prompt_11.png" alt="Comparação Estático vs Dinâmico" class="img-large img-wide">
+            <div class="img-caption">Figura 11: Comparação visual entre cálculo estático (aproximação) e dinâmico (exato).</div>
         </div>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
             <tr style="background: #e3f2fd;">
                 <th style="padding: 10px; border: 1px solid #b3e5fc;">Aspecto</th>
-                <th style="padding: 10px; border: 1px solid #b3e5fc;">FÃ³rmula EstÃ¡tica</th>
+                <th style="padding: 10px; border: 1px solid #b3e5fc;">Fórmula Estática</th>
                 <th style="padding: 10px; border: 1px solid #b3e5fc;">Matriz de Petersen</th>
             </tr>
             <tr>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>Base</b></td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">AproximaÃ§Ã£o empÃ­rica (1.42 Ã— DBO)</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">BalanÃ§o de elÃ©trons (exato)</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">Aproximação empírica (1.42 × DBO)</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">Balanço de elétrons (exato)</td>
             </tr>
             <tr style="background: #f5f5f5;">
-                <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>LimitaÃ§Ã£o de Oâ‚‚</b></td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">âŒ NÃ£o considera</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">âœ… Considera (Monod)</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>Limitação de O₂</b></td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">❌ Não considera</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">✅ Considera (Monod)</td>
             </tr>
             <tr>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>Decaimento</b></td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">âŒ NÃ£o considera</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">âœ… Considera respiraÃ§Ã£o endÃ³gena</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">❌ Não considera</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">✅ Considera respiração endógena</td>
             </tr>
             <tr style="background: #f5f5f5;">
                 <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>Biomassa</b></td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">âŒ NÃ£o considera</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">âœ… Considera concentraÃ§Ã£o</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">❌ Não considera</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">✅ Considera concentração</td>
             </tr>
             <tr>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>Temporal</b></td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">âŒ EstÃ¡tico</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">âœ… DinÃ¢mico (varia no tempo)</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">❌ Estático</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">✅ Dinâmico (varia no tempo)</td>
             </tr>
             <tr style="background: #f5f5f5;">
-                <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>PrecisÃ£o</b></td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">AproximaÃ§Ã£o</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>Precisão</b></td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">Aproximação</td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">Exato</td>
             </tr>
         </table>
 
         <h2>7. ESTEQUIOMETRIA IMPLEMENTADA</h2>
-        <p>A matriz estequiomÃ©trica implementada no sistema segue exatamente os princÃ­pios descritos acima:</p>
+        <p>A matriz estequiométrica implementada no sistema segue exatamente os princípios descritos acima:</p>
         <pre><code>                S_s      X_b      S_o
 Crescimento   -1/Y     +1      -(1-Y)/Y
-Decaimento     0       -1      -f_dÃ—b</code></pre>
-        <p><strong>Coeficientes NumÃ©ricos (para Y=0.6, f_d=0.08, b=0.15):</strong></p>
+Decaimento     0       -1      -f_d×b</code></pre>
+        <p><strong>Coeficientes Numéricos (para Y=0.6, f_d=0.08, b=0.15):</strong></p>
         <ul>
             <li><b>Crescimento - S_s:</b> <code>-(1/Y) = -1.6667</code> kg substrato por kg biomassa</li>
             <li><b>Crescimento - X_b:</b> <code>+1.0000</code> kg biomassa produzida</li>
-            <li><b>Crescimento - S_o:</b> <code>-(1-Y)/Y = -0.6667</code> kg Oâ‚‚ por kg biomassa</li>
+            <li><b>Crescimento - S_o:</b> <code>-(1-Y)/Y = -0.6667</code> kg O₂ por kg biomassa</li>
             <li><b>Decaimento - X_b:</b> <code>-1.0000</code> kg biomassa consumida</li>
-            <li><b>Decaimento - S_o:</b> <code>-f_dÃ—b = -0.0120</code> kg Oâ‚‚ por kg biomassa (respiraÃ§Ã£o endÃ³gena)</li>
+            <li><b>Decaimento - S_o:</b> <code>-f_d×b = -0.0120</code> kg O₂ por kg biomassa (respiração endógena)</li>
         </ul>
         <div class="quadro">
-            <b>Garantia de ConservaÃ§Ã£o:</b> A multiplicaÃ§Ã£o matricial <code>Matriz^T Ã— Taxas</code> garante automaticamente que todos os balanÃ§os de massa sejam respeitados, validando matematicamente a conservaÃ§Ã£o de massa e elÃ©trons.
+            <b>Garantia de Conservação:</b> A multiplicação matricial <code>Matriz^T × Taxas</code> garante automaticamente que todos os balanços de massa sejam respeitados, validando matematicamente a conservação de massa e elétrons.
         </div>
 
-        <h2>8. BALANÃ‡O DE ELÃ‰TRONS - DIAGRAMA CONCEITUAL</h2>
+        <h2>8. BALANÇO DE ELÉTRONS - DIAGRAMA CONCEITUAL</h2>
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_13.png" alt="BalanÃ§o de ElÃ©trons" class="img-large img-wide">
-            <div class="img-caption">Figura 12: Diagrama conceitual do balanÃ§o de elÃ©trons que torna o cÃ¡lculo exato.</div>
+            <img src="assets/images/aulas/prompt_13.png" alt="Balanço de Elétrons" class="img-large img-wide">
+            <div class="img-caption">Figura 12: Diagrama conceitual do balanço de elétrons que torna o cálculo exato.</div>
         </div>
-        <p>O diagrama acima ilustra visualmente o princÃ­pio fundamental que torna o cÃ¡lculo da Matriz de Petersen exato. Os elÃ©trons do substrato sÃ£o distribuÃ­dos entre biomassa e oxigÃªnio, garantindo conservaÃ§Ã£o matemÃ¡tica.</p>
+        <p>O diagrama acima ilustra visualmente o princípio fundamental que torna o cálculo da Matriz de Petersen exato. Os elétrons do substrato são distribuídos entre biomassa e oxigênio, garantindo conservação matemática.</p>
         
         <h2>9. VANTAGENS DA MATRIZ DE PETERSEN</h2>
         <ol>
-            <li><b>CÃ¡lculo Exato:</b> Baseado em balanÃ§o de elÃ©trons, nÃ£o Ã© aproximaÃ§Ã£o.</li>
-            <li><b>Modelo DinÃ¢mico:</b> Considera evoluÃ§Ã£o temporal e permite anÃ¡lise de transiente.</li>
-            <li><b>LimitaÃ§Ãµes Realistas:</b> Considera limitaÃ§Ã£o de substrato e oxigÃªnio (Monod).</li>
-            <li><b>Base CientÃ­fica:</b> ASM1 (padrÃ£o internacional), validado em milhares de ETEs.</li>
+            <li><b>Cálculo Exato:</b> Baseado em balanço de elétrons, não é aproximação.</li>
+            <li><b>Modelo Dinâmico:</b> Considera evolução temporal e permite análise de transiente.</li>
+            <li><b>Limitações Realistas:</b> Considera limitação de substrato e oxigênio (Monod).</li>
+            <li><b>Base Científica:</b> ASM1 (padrão internacional), validado em milhares de ETEs.</li>
         </ol>
 
         <hr>
-        <p><b>Resumo:</b> A Matriz de Petersen representa um avanÃ§o cientÃ­fico no simulador, permitindo cÃ¡lculos exatos baseados em princÃ­pios fundamentais da engenharia quÃ­mica, nÃ£o em aproximaÃ§Ãµes empÃ­ricas. O sistema agora Ã© cientificamente soberano.</p>
+        <p><b>Resumo:</b> A Matriz de Petersen representa um avanço científico no simulador, permitindo cálculos exatos baseados em princípios fundamentais da engenharia química, não em aproximações empíricas. O sistema agora é cientificamente soberano.</p>
     </div>
 
     <div class="page" id="cap-10">
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_12.png" alt="SimulaÃ§Ã£o Temporal" class="img-large img-wide">
-            <div class="img-caption">Figura 13: EvoluÃ§Ã£o temporal de substrato, biomassa e oxigÃªnio ao longo do tempo usando a Matriz de Petersen.</div>
+            <img src="assets/images/aulas/prompt_12.png" alt="Simulação Temporal" class="img-large img-wide">
+            <div class="img-caption">Figura 13: Evolução temporal de substrato, biomassa e oxigênio ao longo do tempo usando a Matriz de Petersen.</div>
         </div>
-        <h1>CapÃ­tulo 10: Matriz de Petersen - ImplementaÃ§Ã£o e IntegraÃ§Ã£o</h1>
-        <p>Este capÃ­tulo detalha a implementaÃ§Ã£o prÃ¡tica da Matriz de Petersen no cÃ³digo, sua integraÃ§Ã£o com o sistema existente, e como utilizar a simulaÃ§Ã£o temporal para anÃ¡lise avanÃ§ada do comportamento do reator biolÃ³gico.</p>
+        <h1>Capítulo 10: Matriz de Petersen - Implementação e Integração</h1>
+        <p>Este capítulo detalha a implementação prática da Matriz de Petersen no código, sua integração com o sistema existente, e como utilizar a simulação temporal para análise avançada do comportamento do reator biológico.</p>
         <hr>
 
-        <h2>1. IMPLEMENTAÃ‡ÃƒO NO CÃ“DIGO</h2>
-        <p>A Matriz de Petersen foi implementada no mÃ³dulo <code>cinetica.py</code> atravÃ©s da classe <code>MatrizPetersen</code>, que encapsula toda a lÃ³gica de cÃ¡lculo dinÃ¢mico.</p>
+        <h2>1. IMPLEMENTAÇÃO NO CÓDIGO</h2>
+        <p>A Matriz de Petersen foi implementada no módulo <code>cinetica.py</code> através da classe <code>MatrizPetersen</code>, que encapsula toda a lógica de cálculo dinâmico.</p>
         
         <h3>1.1 Estrutura da Classe</h3>
         <p>A classe <code>MatrizPetersen</code> possui os seguintes componentes principais:</p>
         <ul>
-            <li><b>ParÃ¢metros CinÃ©ticos:</b> Carregados do banco de dados (Î¼_max, K_s, K_oh, Y, b, f_d)</li>
-            <li><b>Matriz EstequiomÃ©trica:</b> ConstruÃ­da automaticamente com base nos parÃ¢metros</li>
-            <li><b>MÃ©todos de CÃ¡lculo:</b> Taxas, balanÃ§os de massa e demanda de oxigÃªnio</li>
-            <li><b>SimulaÃ§Ã£o Temporal:</b> ResoluÃ§Ã£o de equaÃ§Ãµes diferenciais</li>
+            <li><b>Parâmetros Cinéticos:</b> Carregados do banco de dados (μ_max, K_s, K_oh, Y, b, f_d)</li>
+            <li><b>Matriz Estequiométrica:</b> Construída automaticamente com base nos parâmetros</li>
+            <li><b>Métodos de Cálculo:</b> Taxas, balanços de massa e demanda de oxigênio</li>
+            <li><b>Simulação Temporal:</b> Resolução de equações diferenciais</li>
         </ul>
         
         <h3>1.2 Banco de Dados</h3>
         <p>Foi criada a tabela <code>parametros_cineticos</code> no SQLite para armazenar:</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
             <tr style="background: #e3f2fd;">
-                <th style="padding: 10px; border: 1px solid #b3e5fc;">ParÃ¢metro</th>
-                <th style="padding: 10px; border: 1px solid #b3e5fc;">Valor PadrÃ£o</th>
+                <th style="padding: 10px; border: 1px solid #b3e5fc;">Parâmetro</th>
+                <th style="padding: 10px; border: 1px solid #b3e5fc;">Valor Padrão</th>
                 <th style="padding: 10px; border: 1px solid #b3e5fc;">Unidade</th>
-                <th style="padding: 10px; border: 1px solid #b3e5fc;">DescriÃ§Ã£o</th>
+                <th style="padding: 10px; border: 1px solid #b3e5fc;">Descrição</th>
             </tr>
             <tr>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>Î¼_max</b></td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>μ_max</b></td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">4.0</td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">1/dia</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">Taxa mÃ¡xima de crescimento</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">Taxa máxima de crescimento</td>
             </tr>
             <tr style="background: #f5f5f5;">
                 <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>K_s</b></td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">20.0</td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">mg/L</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">Constante de meia-saturaÃ§Ã£o substrato</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">Constante de meia-saturação substrato</td>
             </tr>
             <tr>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>K_oh</b></td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">0.5</td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">mg/L</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">Constante de meia-saturaÃ§Ã£o oxigÃªnio</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">Constante de meia-saturação oxigênio</td>
             </tr>
             <tr style="background: #f5f5f5;">
                 <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>Y</b></td>
@@ -967,35 +967,35 @@ Decaimento     0       -1      -f_dÃ—b</code></pre>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;"><b>f_d</b></td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">0.08</td>
                 <td style="padding: 10px; border: 1px solid #b3e5fc;">-</td>
-                <td style="padding: 10px; border: 1px solid #b3e5fc;">FraÃ§Ã£o de biomassa que vira inerte</td>
+                <td style="padding: 10px; border: 1px solid #b3e5fc;">Fração de biomassa que vira inerte</td>
             </tr>
         </table>
         
-        <h3>1.3 MÃ©todos Principais</h3>
-        <p><strong>1. CÃ¡lculo de Taxas:</strong></p>
+        <h3>1.3 Métodos Principais</h3>
+        <p><strong>1. Cálculo de Taxas:</strong></p>
         <pre><code>taxa_crescimento = calcular_taxa_crescimento(s_s, s_o, x_b)
 taxa_decaimento = calcular_taxa_decaimento(x_b)</code></pre>
         
-        <p><strong>2. BalanÃ§o de Massa:</strong></p>
+        <p><strong>2. Balanço de Massa:</strong></p>
         <pre><code>balancos = calcular_balanco_massa(s_s, s_o, x_b)
 # Retorna: consumo_substrato, producao_biomassa, consumo_oxigenio</code></pre>
         
-        <p><strong>3. Demanda de OxigÃªnio:</strong></p>
+        <p><strong>3. Demanda de Oxigênio:</strong></p>
         <pre><code>demanda = calcular_demanda_oxigenio(s_s, s_o, x_b, volume_m3)
 # Retorna: demanda_crescimento, demanda_decaimento, demanda_total</code></pre>
         
-        <p><strong>4. SimulaÃ§Ã£o Temporal:</strong></p>
+        <p><strong>4. Simulação Temporal:</strong></p>
         <pre><code>evolucao = simular_evolucao_temporal(
     s_s_inicial, s_o_inicial, x_b_inicial,
     vazao_m3_dia, volume_m3, tempo_simulacao_dias
 )
 # Retorna: tempo, s_s, x_b, s_o, taxas, consumo_o2</code></pre>
         
-        <h2>2. INTEGRAÃ‡ÃƒO COM CALCULOS.PY</h2>
-        <p>A integraÃ§Ã£o da Matriz de Petersen ao sistema principal foi realizada de forma que o usuÃ¡rio possa escolher entre mÃ©todo estÃ¡tico (rÃ¡pido) ou dinÃ¢mico (preciso), mantendo compatibilidade total com o cÃ³digo existente.</p>
+        <h2>2. INTEGRAÇÃO COM CALCULOS.PY</h2>
+        <p>A integração da Matriz de Petersen ao sistema principal foi realizada de forma que o usuário possa escolher entre método estático (rápido) ou dinâmico (preciso), mantendo compatibilidade total com o código existente.</p>
         
-        <h3>2.1 ModificaÃ§Ã£o do MÃ©todo Principal</h3>
-        <p>O mÃ©todo <code>calcular_demanda_oxigenio_total()</code> foi estendido para aceitar parÃ¢metros opcionais:</p>
+        <h3>2.1 Modificação do Método Principal</h3>
+        <p>O método <code>calcular_demanda_oxigenio_total()</code> foi estendido para aceitar parâmetros opcionais:</p>
         <pre><code>def calcular_demanda_oxigenio_total(
     vazao_m3_dia: float,
     dbo_mg_l: float,
@@ -1007,80 +1007,80 @@ taxa_decaimento = calcular_taxa_decaimento(x_b)</code></pre>
 ) -> Dict[str, float]</code></pre>
         <p><strong>Comportamento:</strong></p>
         <ul>
-            <li>Se <code>usar_matriz_petersen=False</code>: Usa mÃ©todo estÃ¡tico (comportamento original).</li>
-            <li>Se <code>usar_matriz_petersen=True</code>: Valida parÃ¢metros (s_o, x_b, volume_m3) e usa Matriz de Petersen.</li>
+            <li>Se <code>usar_matriz_petersen=False</code>: Usa método estático (comportamento original).</li>
+            <li>Se <code>usar_matriz_petersen=True</code>: Valida parâmetros (s_o, x_b, volume_m3) e usa Matriz de Petersen.</li>
         </ul>
         
-        <h3>2.2 IntegraÃ§Ã£o com SimulaÃ§Ã£o Completa</h3>
-        <p>O mÃ©todo <code>simular_tratamento_completo()</code> tambÃ©m aceita <code>usar_matriz_petersen</code>:</p>
+        <h3>2.2 Integração com Simulação Completa</h3>
+        <p>O método <code>simular_tratamento_completo()</code> também aceita <code>usar_matriz_petersen</code>:</p>
         <ul>
-            <li>Se ativado, dimensiona o reator primeiro para obter volume e concentraÃ§Ãµes.</li>
-            <li>Recalcula demanda de Oâ‚‚ usando Matriz de Petersen com valores corretos.</li>
-            <li>Atualiza todos os resultados com valores do modelo dinÃ¢mico.</li>
+            <li>Se ativado, dimensiona o reator primeiro para obter volume e concentrações.</li>
+            <li>Recalcula demanda de O₂ usando Matriz de Petersen com valores corretos.</li>
+            <li>Atualiza todos os resultados com valores do modelo dinâmico.</li>
         </ul>
         
         <h3>2.3 Interface Streamlit</h3>
-        <p>Na interface visual, o usuÃ¡rio pode ativar a Matriz de Petersen atravÃ©s de um checkbox no sidebar:</p>
+        <p>Na interface visual, o usuário pode ativar a Matriz de Petersen através de um checkbox no sidebar:</p>
         <ul>
-            <li><b>Checkbox "Usar Matriz de Petersen (DinÃ¢mico)":</b> Quando marcado, todos os cÃ¡lculos de demanda de Oâ‚‚ usam o modelo dinÃ¢mico.</li>
-            <li><b>ParÃ¢metros NecessÃ¡rios:</b> O sistema solicita automaticamente concentraÃ§Ã£o de Oâ‚‚ no reator (S_o), concentraÃ§Ã£o de biomassa (X_b) e volume do reator.</li>
-            <li><b>Resultados Detalhados:</b> Mostra Oâ‚‚ para crescimento e decaimento separadamente, alÃ©m do total.</li>
-            <li><b>ComparaÃ§Ã£o AutomÃ¡tica:</b> Apresenta diferenÃ§a entre mÃ©todo estÃ¡tico e dinÃ¢mico.</li>
+            <li><b>Checkbox "Usar Matriz de Petersen (Dinâmico)":</b> Quando marcado, todos os cálculos de demanda de O₂ usam o modelo dinâmico.</li>
+            <li><b>Parâmetros Necessários:</b> O sistema solicita automaticamente concentração de O₂ no reator (S_o), concentração de biomassa (X_b) e volume do reator.</li>
+            <li><b>Resultados Detalhados:</b> Mostra O₂ para crescimento e decaimento separadamente, além do total.</li>
+            <li><b>Comparação Automática:</b> Apresenta diferença entre método estático e dinâmico.</li>
         </ul>
         
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_14.png" alt="IntegraÃ§Ã£o da Matriz de Petersen no Sistema" class="img-large img-wide">
-            <div class="img-caption">Figura 14: Diagrama de integraÃ§Ã£o da Matriz de Petersen com os mÃ³dulos do sistema de simulaÃ§Ã£o.</div>
+            <img src="assets/images/aulas/prompt_14.png" alt="Integração da Matriz de Petersen no Sistema" class="img-large img-wide">
+            <div class="img-caption">Figura 14: Diagrama de integração da Matriz de Petersen com os módulos do sistema de simulação.</div>
         </div>
-        <p>A imagem acima ilustra a arquitetura de integraÃ§Ã£o, mostrando como a Matriz de Petersen se conecta com os diferentes mÃ³dulos do sistema, mantendo compatibilidade total enquanto oferece capacidades cientÃ­ficas avanÃ§adas.</p>
+        <p>A imagem acima ilustra a arquitetura de integração, mostrando como a Matriz de Petersen se conecta com os diferentes módulos do sistema, mantendo compatibilidade total enquanto oferece capacidades científicas avançadas.</p>
         
-        <h2>3. SIMULAÃ‡ÃƒO TEMPORAL</h2>
-        <p>A simulaÃ§Ã£o temporal permite analisar a evoluÃ§Ã£o do sistema ao longo do tempo, resolvendo o sistema de equaÃ§Ãµes diferenciais. A imagem acima mostra visualmente como as concentraÃ§Ãµes de substrato (S_s), biomassa (X_b) e oxigÃªnio (S_o) evoluem ao longo do tempo.</p>
+        <h2>3. SIMULAÇÃO TEMPORAL</h2>
+        <p>A simulação temporal permite analisar a evolução do sistema ao longo do tempo, resolvendo o sistema de equações diferenciais. A imagem acima mostra visualmente como as concentrações de substrato (S_s), biomassa (X_b) e oxigênio (S_o) evoluem ao longo do tempo.</p>
         
-        <h3>3.1 MÃ©todo de SimulaÃ§Ã£o</h3>
-        <p>O mÃ©todo <code>simular_evolucao_temporal()</code> em <code>cinetica.py</code> resolve o sistema de EDOs:</p>
+        <h3>3.1 Método de Simulação</h3>
+        <p>O método <code>simular_evolucao_temporal()</code> em <code>cinetica.py</code> resolve o sistema de EDOs:</p>
         <pre><code>evolucao = matriz.simular_evolucao_temporal(
     s_s_inicial=200.0,      # mg/L (DBO inicial)
     s_o_inicial=2.0,        # mg/L (O2 inicial)
     x_b_inicial=1000.0,     # mg/L (biomassa inicial)
-    vazao_m3_dia=500.0,     # mÂ³/dia
-    volume_m3=166.67,       # mÂ³
+    vazao_m3_dia=500.0,     # m³/dia
+    volume_m3=166.67,       # m³
     tempo_simulacao_dias=10.0,  # dias
     dt_dias=0.1             # passo de tempo
 )</code></pre>
         
-        <h3>3.2 Resultados da SimulaÃ§Ã£o</h3>
-        <p>O mÃ©todo retorna um dicionÃ¡rio com a evoluÃ§Ã£o temporal de cada componente:</p>
+        <h3>3.2 Resultados da Simulação</h3>
+        <p>O método retorna um dicionário com a evolução temporal de cada componente:</p>
         <ul>
-            <li><b>tempo:</b> Lista de tempos (dias) da simulaÃ§Ã£o.</li>
-            <li><b>s_s:</b> EvoluÃ§Ã£o da concentraÃ§Ã£o de substrato (mg/L).</li>
-            <li><b>x_b:</b> EvoluÃ§Ã£o da concentraÃ§Ã£o de biomassa (mg/L).</li>
-            <li><b>s_o:</b> EvoluÃ§Ã£o da concentraÃ§Ã£o de oxigÃªnio (mg/L).</li>
+            <li><b>tempo:</b> Lista de tempos (dias) da simulação.</li>
+            <li><b>s_s:</b> Evolução da concentração de substrato (mg/L).</li>
+            <li><b>x_b:</b> Evolução da concentração de biomassa (mg/L).</li>
+            <li><b>s_o:</b> Evolução da concentração de oxigênio (mg/L).</li>
             <li><b>taxa_crescimento:</b> Taxa de crescimento ao longo do tempo.</li>
-            <li><b>consumo_o2:</b> Consumo de Oâ‚‚ ao longo do tempo.</li>
+            <li><b>consumo_o2:</b> Consumo de O₂ ao longo do tempo.</li>
         </ul>
         
-        <h3>3.3 AnÃ¡lise de Estado EstacionÃ¡rio</h3>
-        <p>ApÃ³s a simulaÃ§Ã£o, Ã© possÃ­vel analisar o estado estacionÃ¡rio:</p>
+        <h3>3.3 Análise de Estado Estacionário</h3>
+        <p>Após a simulação, é possível analisar o estado estacionário:</p>
         <ul>
-            <li>Valores mÃ©dios dos Ãºltimos 10% da simulaÃ§Ã£o representam o estado estacionÃ¡rio.</li>
-            <li>Demanda de Oâ‚‚ no estado estacionÃ¡rio Ã© calculada usando esses valores.</li>
-            <li>ComparaÃ§Ã£o com fÃ³rmula estÃ¡tica mostra a diferenÃ§a real entre mÃ©todos.</li>
+            <li>Valores médios dos últimos 10% da simulação representam o estado estacionário.</li>
+            <li>Demanda de O₂ no estado estacionário é calculada usando esses valores.</li>
+            <li>Comparação com fórmula estática mostra a diferença real entre métodos.</li>
         </ul>
         
-        <h2>4. USO PRÃTICO</h2>
+        <h2>4. USO PRÁTICO</h2>
         
         <h3>4.1 Interface Streamlit</h3>
         <p>Na interface visual:</p>
         <ol>
-            <li>Marque "Usar Matriz de Petersen (DinÃ¢mico)" no sidebar.</li>
-            <li>Configure parÃ¢metros normalmente (vazÃ£o, DBO, F/M, etc.).</li>
-            <li>O sistema calcula automaticamente usando o modelo dinÃ¢mico.</li>
-            <li>Veja comparaÃ§Ã£o automÃ¡tica com fÃ³rmula estÃ¡tica.</li>
-            <li>Analise resultados detalhados (Oâ‚‚ para crescimento, decaimento, etc.).</li>
+            <li>Marque "Usar Matriz de Petersen (Dinâmico)" no sidebar.</li>
+            <li>Configure parâmetros normalmente (vazão, DBO, F/M, etc.).</li>
+            <li>O sistema calcula automaticamente usando o modelo dinâmico.</li>
+            <li>Veja comparação automática com fórmula estática.</li>
+            <li>Analise resultados detalhados (O₂ para crescimento, decaimento, etc.).</li>
         </ol>
         
-        <h3>4.2 Uso ProgramÃ¡tico</h3>
+        <h3>4.2 Uso Programático</h3>
         <pre><code>from database import DatabaseManager
 from calculos import CalculadorEfluentes
 
@@ -1095,75 +1095,75 @@ demanda = calculador.calcular_demanda_oxigenio_total(
     usar_matriz_petersen=True,
     s_o=2.0,        # mg/L (O2 no reator)
     x_b=3000.0,    # mg/L (biomassa)
-    volume_m3=166.67  # mÂ³
+    volume_m3=166.67  # m³
 )
 
 print(f"Demanda Total: {demanda['demanda_total_kg_dia']:.2f} kg O2/dia")
-print(f"MÃ©todo: {demanda['metodo_usado']}")
+print(f"Método: {demanda['metodo_usado']}")
 print(f"O2 Crescimento: {demanda['demanda_crescimento_kg_dia']:.2f} kg/dia")
 print(f"O2 Decaimento: {demanda['demanda_decaimento_kg_dia']:.2f} kg/dia")</code></pre>
         
-        <h2>5. VANTAGENS DA INTEGRAÃ‡ÃƒO</h2>
+        <h2>5. VANTAGENS DA INTEGRAÇÃO</h2>
         <div class="quadro">
-            <b>BenefÃ­cios da IntegraÃ§Ã£o Completa:</b><br>
-            1. <b>Flexibilidade:</b> UsuÃ¡rio escolhe entre mÃ©todo rÃ¡pido (estÃ¡tico) ou preciso (dinÃ¢mico).<br>
-            2. <b>Compatibilidade:</b> CÃ³digo existente continua funcionando (mÃ©todo estÃ¡tico Ã© padrÃ£o).<br>
-            3. <b>TransparÃªncia:</b> ComparaÃ§Ã£o automÃ¡tica mostra diferenÃ§as entre mÃ©todos.<br>
-            4. <b>PrecisÃ£o:</b> Modelo dinÃ¢mico oferece cÃ¡lculos exatos baseados em princÃ­pios fundamentais.<br>
-            5. <b>AnÃ¡lise AvanÃ§ada:</b> SimulaÃ§Ã£o temporal permite otimizaÃ§Ã£o e diagnÃ³stico.<br>
-            6. <b>Base CientÃ­fica:</b> Sistema agora Ã© cientificamente soberano, nÃ£o dependente de aproximaÃ§Ãµes empÃ­ricas.
+            <b>Benefícios da Integração Completa:</b><br>
+            1. <b>Flexibilidade:</b> Usuário escolhe entre método rápido (estático) ou preciso (dinâmico).<br>
+            2. <b>Compatibilidade:</b> Código existente continua funcionando (método estático é padrão).<br>
+            3. <b>Transparência:</b> Comparação automática mostra diferenças entre métodos.<br>
+            4. <b>Precisão:</b> Modelo dinâmico oferece cálculos exatos baseados em princípios fundamentais.<br>
+            5. <b>Análise Avançada:</b> Simulação temporal permite otimização e diagnóstico.<br>
+            6. <b>Base Científica:</b> Sistema agora é cientificamente soberano, não dependente de aproximações empíricas.
         </div>
         
-        <h2>6. DEPENDÃŠNCIAS</h2>
-        <p><strong>ObrigatÃ³rias:</strong></p>
+        <h2>6. DEPENDÊNCIAS</h2>
+        <p><strong>Obrigatórias:</strong></p>
         <ul>
-            <li><code>numpy>=1.21.0</code>: Para cÃ¡lculos numÃ©ricos e operaÃ§Ãµes matriciais.</li>
+            <li><code>numpy>=1.21.0</code>: Para cálculos numéricos e operações matriciais.</li>
         </ul>
         <p><strong>Opcionais:</strong></p>
         <ul>
-            <li><code>scipy>=1.7.0</code>: NecessÃ¡rio apenas para simulaÃ§Ã£o temporal (mÃ©todo <code>simular_evolucao_temporal()</code>).</li>
+            <li><code>scipy>=1.7.0</code>: Necessário apenas para simulação temporal (método <code>simular_evolucao_temporal()</code>).</li>
         </ul>
-        <p><strong>Nota:</strong> O sistema funciona completamente sem scipy, mas a simulaÃ§Ã£o temporal requer scipy para integraÃ§Ã£o numÃ©rica das EDOs.</p>
+        <p><strong>Nota:</strong> O sistema funciona completamente sem scipy, mas a simulação temporal requer scipy para integração numérica das EDOs.</p>
         
-        <h2>7. STATUS FINAL DA IMPLEMENTAÃ‡ÃƒO</h2>
+        <h2>7. STATUS FINAL DA IMPLEMENTAÇÃO</h2>
         <p><strong>Implementado com Sucesso:</strong></p>
         <ul>
-            <li>âœ… Matriz de Petersen completa (classe <code>MatrizPetersen</code> em <code>cinetica.py</code>)</li>
-            <li>âœ… IntegraÃ§Ã£o com <code>calculos.py</code> (mÃ©todo <code>calcular_demanda_oxigenio_total()</code>)</li>
-            <li>âœ… SimulaÃ§Ã£o temporal (resoluÃ§Ã£o de EDOs com <code>scipy.integrate.odeint</code>)</li>
-            <li>âœ… Interface Streamlit com opÃ§Ã£o para usar modelo dinÃ¢mico</li>
-            <li>âœ… ComparaÃ§Ã£o automÃ¡tica estÃ¡tico vs. dinÃ¢mico</li>
-            <li>âœ… Banco de dados com tabela <code>parametros_cineticos</code></li>
-            <li>âœ… DocumentaÃ§Ã£o completa e testes</li>
+            <li>✅ Matriz de Petersen completa (classe <code>MatrizPetersen</code> em <code>cinetica.py</code>)</li>
+            <li>✅ Integração com <code>calculos.py</code> (método <code>calcular_demanda_oxigenio_total()</code>)</li>
+            <li>✅ Simulação temporal (resolução de EDOs com <code>scipy.integrate.odeint</code>)</li>
+            <li>✅ Interface Streamlit com opção para usar modelo dinâmico</li>
+            <li>✅ Comparação automática estático vs. dinâmico</li>
+            <li>✅ Banco de dados com tabela <code>parametros_cineticos</code></li>
+            <li>✅ Documentação completa e testes</li>
         </ul>
         
         <p><strong>Sistema Agora:</strong></p>
         <div class="quadro">
-            <b>Conquista CientÃ­fica:</b><br>
-            - <b>Cientificamente Soberano:</b> Baseado em princÃ­pios fundamentais (balanÃ§o de elÃ©trons, conservaÃ§Ã£o de massa)<br>
-            - <b>DinÃ¢mico:</b> Considera evoluÃ§Ã£o temporal e permite anÃ¡lise de transiente<br>
-            - <b>Exato:</b> BalanÃ§o de elÃ©trons garantido matematicamente<br>
-            - <b>FlexÃ­vel:</b> UsuÃ¡rio escolhe entre mÃ©todo estÃ¡tico (rÃ¡pido) ou dinÃ¢mico (preciso)<br>
-            - <b>Validado:</b> Baseado em ASM1, padrÃ£o internacional validado em milhares de ETEs<br><br>
-            <strong>O cÃ¡lculo de Oâ‚‚ agora Ã© EXATO porque respeita o balanÃ§o de elÃ©trons, nÃ£o sendo uma aproximaÃ§Ã£o empÃ­rica!</strong>
+            <b>Conquista Científica:</b><br>
+            - <b>Cientificamente Soberano:</b> Baseado em princípios fundamentais (balanço de elétrons, conservação de massa)<br>
+            - <b>Dinâmico:</b> Considera evolução temporal e permite análise de transiente<br>
+            - <b>Exato:</b> Balanço de elétrons garantido matematicamente<br>
+            - <b>Flexível:</b> Usuário escolhe entre método estático (rápido) ou dinâmico (preciso)<br>
+            - <b>Validado:</b> Baseado em ASM1, padrão internacional validado em milhares de ETEs<br><br>
+            <strong>O cálculo de O₂ agora é EXATO porque respeita o balanço de elétrons, não sendo uma aproximação empírica!</strong>
         </div>
         
         <hr>
-        <p><b>ConclusÃ£o do CapÃ­tulo:</b> A integraÃ§Ã£o completa da Matriz de Petersen ao sistema permite que engenheiros escolham o nÃ­vel de precisÃ£o necessÃ¡rio para cada anÃ¡lise, desde estimativas rÃ¡pidas atÃ© cÃ¡lculos exatos com simulaÃ§Ã£o temporal. O sistema mantÃ©m compatibilidade total enquanto oferece capacidades cientÃ­ficas avanÃ§adas, elevando o simulador de um sistema baseado em aproximaÃ§Ãµes empÃ­ricas para um modelo dinÃ¢mico cientificamente soberano.</p>
+        <p><b>Conclusão do Capítulo:</b> A integração completa da Matriz de Petersen ao sistema permite que engenheiros escolham o nível de precisão necessário para cada análise, desde estimativas rápidas até cálculos exatos com simulação temporal. O sistema mantém compatibilidade total enquanto oferece capacidades científicas avançadas, elevando o simulador de um sistema baseado em aproximações empíricas para um modelo dinâmico cientificamente soberano.</p>
     </div>
 
     <div class="page" id="cap-conc">
         <div class="img-center">
-            <img src="assets/images/aulas/prompt_09.png" alt="ConclusÃ£o e Equipe" class="img-large img-tall">
-            <div class="img-caption">Figura 15: Equipe de engenheiros celebrando o sucesso do projeto e consolidaÃ§Ã£o do conhecimento.</div>
+            <img src="assets/images/aulas/prompt_09.png" alt="Conclusão e Equipe" class="img-large img-tall">
+            <div class="img-caption">Figura 15: Equipe de engenheiros celebrando o sucesso do projeto e consolidação do conhecimento.</div>
         </div>
-        <h1>ConclusÃ£o</h1>
-        <p>Esta apostila apresentou uma visÃ£o consolidada e estruturada da documentaÃ§Ã£o do projeto "Simulador de Efluentes". AtravÃ©s dos capÃ­tulos, exploramos desde os conceitos teÃ³ricos fundamentais atÃ© os detalhes de implementaÃ§Ã£o de cada componente do sistema de tratamento de lodos ativados.</p>
-        <p>Fica evidente a robustez do sistema, que nÃ£o apenas realiza os cÃ¡lculos de dimensionamento e operacionais, mas tambÃ©m os valida contra princÃ­pios da termodinÃ¢mica e normas legais, garantindo resultados coerentes e confiÃ¡veis.</p>
-        <p>O destaque especial vai para a implementaÃ§Ã£o da <strong>Matriz de Petersen</strong>, que eleva o simulador de um sistema baseado em aproximaÃ§Ãµes empÃ­ricas para um modelo dinÃ¢mico cientificamente soberano, baseado em balanÃ§o de elÃ©trons e princÃ­pios fundamentais da engenharia quÃ­mica.</p>
-        <p>A estrutura modular e a filosofia de desenvolvimento baseada em "FÃ­sica antes da LÃ³gica" tornam o projeto uma excelente ferramenta de estudo e um poderoso simulador para engenheiros da Ã¡rea ambiental e quÃ­mica. O material aqui compilado serve como um registro permanente e um guia de referÃªncia para o uso, manutenÃ§Ã£o e evoluÃ§Ã£o futura do sistema.</p>
+        <h1>Conclusão</h1>
+        <p>Esta apostila apresentou uma visão consolidada e estruturada da documentação do projeto "Simulador de Efluentes". Através dos capítulos, exploramos desde os conceitos teóricos fundamentais até os detalhes de implementação de cada componente do sistema de tratamento de lodos ativados.</p>
+        <p>Fica evidente a robustez do sistema, que não apenas realiza os cálculos de dimensionamento e operacionais, mas também os valida contra princípios da termodinâmica e normas legais, garantindo resultados coerentes e confiáveis.</p>
+        <p>O destaque especial vai para a implementação da <strong>Matriz de Petersen</strong>, que eleva o simulador de um sistema baseado em aproximações empíricas para um modelo dinâmico cientificamente soberano, baseado em balanço de elétrons e princípios fundamentais da engenharia química.</p>
+        <p>A estrutura modular e a filosofia de desenvolvimento baseada em "Física antes da Lógica" tornam o projeto uma excelente ferramenta de estudo e um poderoso simulador para engenheiros da área ambiental e química. O material aqui compilado serve como um registro permanente e um guia de referência para o uso, manutenção e evolução futura do sistema.</p>
         <div class="quadro">
-            <b>Conquista CientÃ­fica:</b> O cÃ¡lculo de Oâ‚‚ agora Ã© EXATO porque respeita o balanÃ§o de elÃ©trons, nÃ£o sendo uma aproximaÃ§Ã£o empÃ­rica. O sistema alcanÃ§ou soberania cientÃ­fica.
+            <b>Conquista Científica:</b> O cálculo de O₂ agora é EXATO porque respeita o balanço de elétrons, não sendo uma aproximação empírica. O sistema alcançou soberania científica.
         </div>
         
         <hr>
@@ -1171,20 +1171,20 @@ print(f"O2 Decaimento: {demanda['demanda_decaimento_kg_dia']:.2f} kg/dia")</code
         <h2>Autor</h2>
         <div class="quadro">
             <b>Christian Vladimir Uhdre Mulato</b><br>
-            Diplomado em Engenharia QuÃ­mica - Universidade Federal do ParanÃ¡ (UFPR)<br>
+            Diplomado em Engenharia Química - Universidade Federal do Paraná (UFPR)<br>
             Setor de Tecnologia da UFPR<br>
             Registro: 2338<br>
             <span  target="_blank">tecnologia.ufpr.br/cceq/graduacao/diploma/</span>
         </div>
         
         <div class="quadro">
-            <p><strong>DedicatÃ³ria:</strong></p>
-            <p style="font-style: italic; margin-top: 10px;">Ao Prof. Urivald Pawlowski, que nos ensinou que o cÃ³digo sem a fÃ­sica Ã© apenas ruÃ­do, e que a verdadeira engenharia nasce da compreensÃ£o profunda dos fenÃ´menos. Obrigado por nos mostrar o caminho da soberania tÃ©cnica.</p>
+            <p><strong>Dedicatória:</strong></p>
+            <p style="font-style: italic; margin-top: 10px;">Ao Prof. Urivald Pawlowski, que nos ensinou que o código sem a física é apenas ruído, e que a verdadeira engenharia nasce da compreensão profunda dos fenômenos. Obrigado por nos mostrar o caminho da soberania técnica.</p>
         </div>
         
-        <p>Este projeto foi desenvolvido como uma ferramenta de simulaÃ§Ã£o e dimensionamento de EstaÃ§Ãµes de Tratamento de Efluentes, combinando conhecimentos de Engenharia QuÃ­mica com desenvolvimento de software, seguindo a filosofia de "FÃ­sica antes da LÃ³gica".</p>
+        <p>Este projeto foi desenvolvido como uma ferramenta de simulação e dimensionamento de Estações de Tratamento de Efluentes, combinando conhecimentos de Engenharia Química com desenvolvimento de software, seguindo a filosofia de "Física antes da Lógica".</p>
         
-        <p><strong>Desenvolvido com rigor cientÃ­fico e paixÃ£o pela Engenharia QuÃ­mica</strong> ðŸ§ªâš—ï¸</p>
+        <p><strong>Desenvolvido com rigor científico e paixão pela Engenharia Química</strong> 🧪⚗️</p>
     </div>
 
 </body>

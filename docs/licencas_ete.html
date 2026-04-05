@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel de LicenÃ§as â€” Cara-Core InformÃ¡tica | ETE Ouro 4.0</title>
+  <title>Painel de Licenças — Cara-Core Informática | ETE Ouro 4.0</title>
   <link rel="stylesheet" href="assets/css/loja.css">
   <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
   <style>
@@ -177,11 +177,11 @@
 </head>
 <body>
   <div class="container">
-    <h1>Livro de Ouro â€” LicenÃ§as ETE Ouro 4.0</h1>
-    <p class="subtitle">Cara-Core InformÃ¡tica Â· Painel de auditoria e controle de pagamentos</p>
+    <h1>Livro de Ouro — Licenças ETE Ouro 4.0</h1>
+    <p class="subtitle">Cara-Core Informática · Painel de auditoria e controle de pagamentos</p>
 
     <div class="lgpd-notice">
-      <strong>LGPD:</strong> Esta pÃ¡gina nÃ£o armazena nomes, CPFs ou contatos. Apenas identificadores de mÃ¡quina (Hardware ID anÃ´nimo) e dados necessÃ¡rios ao controle de licenÃ§as.
+      <strong>LGPD:</strong> Esta página não armazena nomes, CPFs ou contatos. Apenas identificadores de máquina (Hardware ID anônimo) e dados necessários ao controle de licenças.
     </div>
 
     <div class="toolbar">
@@ -189,16 +189,16 @@
         <span class="btn btn-outline">Carregar log de pedidos (JSON)</span>
         <input type="file" id="input-log" accept=".json" hidden>
       </label>
-      <span class="toolbar-hint" id="hint-origem">Dados da sessÃ£o</span>
+      <span class="toolbar-hint" id="hint-origem">Dados da sessão</span>
     </div>
 
     <table id="tabela-licencas">
       <thead>
         <tr>
           <th>Data/Hora</th>
-          <th>Hardware ID AnÃ´nimo</th>
+          <th>Hardware ID Anônimo</th>
           <th>Status</th>
-          <th>AÃ§Ãµes</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody id="corpo-tabela">
@@ -207,16 +207,16 @@
     </table>
 
     <footer>
-      Painel de auditoria Â· LGPD Resguardo: exibiÃ§Ã£o apenas Data/Hora, Hardware ID anÃ´nimo e Status. Ordem decrescente; blocos mensais para fechamento contÃ¡bil.
+      Painel de auditoria · LGPD Resguardo: exibição apenas Data/Hora, Hardware ID anônimo e Status. Ordem decrescente; blocos mensais para fechamento contábil.
     </footer>
   </div>
 
   <script>
     (function () {
-      const SENHA_ADMIN = 'cara2026'; // Alterar em produÃ§Ã£o
+      const SENHA_ADMIN = 'cara2026'; // Alterar em produção
 
       const MESES = [
-        'JANEIRO', 'FEVEREIRO', 'MARÃ‡O', 'ABRIL', 'MAIO', 'JUNHO',
+        'JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO',
         'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'
       ];
 
@@ -271,7 +271,7 @@
             const data = typeof raw === 'string' ? JSON.parse(raw) : raw;
             const lista = Array.isArray(data) ? data : (data.pedidos || data.registros || []);
             if (!Array.isArray(lista) || lista.length === 0) {
-              alert('Formato invÃ¡lido. Esperado: JSON com array de objetos { dataHora, hardwareId, status [, id, chave ] }.');
+              alert('Formato inválido. Esperado: JSON com array de objetos { dataHora, hardwareId, status [, id, chave ] }.');
               return;
             }
             pedidos = lista.map(function (r) {
@@ -288,7 +288,7 @@
             renderizar();
             document.getElementById('hint-origem').textContent = 'Carregado: ' + (file && file.name ? file.name : 'arquivo');
           } catch (e) {
-            alert('Erro ao ler o arquivo: ' + (e.message || 'formato invÃ¡lido'));
+            alert('Erro ao ler o arquivo: ' + (e.message || 'formato inválido'));
           }
         };
         reader.readAsText(file);
@@ -344,12 +344,12 @@
           renderizar();
         }
         const texto = chave
-          ? `Chave de ativaÃ§Ã£o ETE Ouro 4.0:\n${chave}\n\nSalve em um arquivo chamado license.key na pasta do simulador.`
-          : `Hardware ID para ativaÃ§Ã£o: ${pedido.hardwareId}\n(Confirme o pagamento para gerar a chave.)`;
+          ? `Chave de ativação ETE Ouro 4.0:\n${chave}\n\nSalve em um arquivo chamado license.key na pasta do simulador.`
+          : `Hardware ID para ativação: ${pedido.hardwareId}\n(Confirme o pagamento para gerar a chave.)`;
         navigator.clipboard.writeText(texto).then(() => {
           const btn = document.querySelector(`.btn-copiar[data-id="${pedido.id}"]`);
           if (btn) { btn.textContent = 'Copiado!'; setTimeout(() => { btn.textContent = 'Copiar Chave para WhatsApp'; }, 2000); }
-        }).catch(() => alert('NÃ£o foi possÃ­vel copiar.'));
+        }).catch(() => alert('Não foi possível copiar.'));
       }
 
       function renderizar() {
@@ -402,8 +402,8 @@
     })();
   </script>
   <script src="assets/js/loja.js"></script>
-  <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="VersÃ£o de teste oficial">Seed<span class="evo-beta-tooltip">Esta Ã© uma versÃ£o oficial de teste da Cara Core InformÃ¡tica para parceiros do Plano Premium+.</span></span></div>
-  <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">PrÃ³ximos passos</p><ul class="evo-roadmap-list"><li>DomÃ­nio prÃ³prio <span class="evo-roadmap-tag">MarÃ§o/2026</span></li><li>IntegraÃ§Ã£o PIX nativa</li><li>IA para estoque</li></ul></footer>
+  <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Versão de teste oficial">Seed<span class="evo-beta-tooltip">Esta é uma versão oficial de teste da Cara Core Informática para parceiros do Plano Premium+.</span></span></div>
+  <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Março/2026</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
   <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" target="_blank" rel="noopener noreferrer" aria-label="Sugira uma melhoria pelo WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
