@@ -1,116 +1,116 @@
-﻿# EspecificaÃ§Ã£o: Camada comercial e licenciamento â€” Ouro 4.0 (ETE)
+# Especificação: Camada comercial e licenciamento — Ouro 4.0 (ETE)
 
-Este documento descreve a arquitetura de **paywall educativo**, **identificaÃ§Ã£o de mÃ¡quina (HID)**, **validador de licenÃ§a offline** e **dashboard de gestÃ£o** para o simulador chmulato/ETE. A implementaÃ§Ã£o Ã© feita no **repositÃ³rio ETE** (cÃ³digo-fonte); o portal caracore-ete-releases expÃµe a pÃ¡gina de upgrade e as instruÃ§Ãµes ao usuÃ¡rio.
+Este documento descreve a arquitetura de **paywall educativo**, **identificação de máquina (HID)**, **validador de licença offline** e **dashboard de gestão** para o simulador chmulato/ETE. A implementação é feita no **repositório ETE** (código-fonte); o portal caracore-ete-releases expõe a página de upgrade e as instruções ao usuário.
 
-**Objetivo:** Fase Ambiental = isca de valor (gratuita); Fase MineraÃ§Ã£o = joia da coroa (monetizada). Conformidade LGPD: nenhum dado pessoal sensÃ­vel dentro do binÃ¡rio.
+**Objetivo:** Fase Ambiental = isca de valor (gratuita); Fase Mineração = joia da coroa (monetizada). Conformidade LGPD: nenhum dado pessoal sensível dentro do binário.
 
 ---
 
-## 1. Trava lÃ³gica e tela de checkout (Paywall)
+## 1. Trava lógica e tela de checkout (Paywall)
 
-- **Gatilho:** Ao tentar acessar o **MÃ³dulo MineraÃ§Ã£o** (ex.: abrir a tela/rota da fase MineraÃ§Ã£o), o simulador deve:
-  1. Verificar se existe licenÃ§a vÃ¡lida (ver seÃ§Ã£o 3).
-  2. Se **nÃ£o** existir: exibir uma **tela de checkout** em vez do mÃ³dulo.
-- **ConteÃºdo da tela de checkout:**
-  - TÃ­tulo: "Upgrade para Ouro 4.0"
-  - Texto explicando que a fase MineraÃ§Ã£o Ã© paga; a Ambiental permanece gratuita.
+- **Gatilho:** Ao tentar acessar o **Módulo Mineração** (ex.: abrir a tela/rota da fase Mineração), o simulador deve:
+  1. Verificar se existe licença válida (ver seção 3).
+  2. Se **não** existir: exibir uma **tela de checkout** em vez do módulo.
+- **Conteúdo da tela de checkout:**
+  - Título: "Upgrade para Ouro 4.0"
+  - Texto explicando que a fase Mineração é paga; a Ambiental permanece gratuita.
   - **Dados de pagamento PIX:**  
-    **Cara-Core InformÃ¡tica** | **CNPJ (chave PIX):** 23.969.028/0001-37  
-  - BotÃ£o/link: "Copiar ID de AtivaÃ§Ã£o" (chama o mÃ³dulo HID e copia o Hardware_ID para a Ã¡rea de transferÃªncia).
-  - Link ou texto: "Envie este ID junto com o comprovante PIX pelo WhatsApp ou Telegram" (pode apontar para a pÃ¡gina do portal: `upgrade-ouro40.html` ou para o Canal de Melhorias).
-- **EstÃ©tica:** Layout elegante, consistente com a interface Sciâ€‘Fi/HUD do simulador (fundo escuro, acentos dourados/ciano).
+    **Cara-Core Informática** | **CNPJ (chave PIX):** 23.969.028/0001-37  
+  - Botão/link: "Copiar ID de Ativação" (chama o módulo HID e copia o Hardware_ID para a área de transferência).
+  - Link ou texto: "Envie este ID junto com o comprovante PIX pelo WhatsApp ou Telegram" (pode apontar para a página do portal: `upgrade-ouro40.html` ou para o Canal de Melhorias).
+- **Estética:** Layout elegante, consistente com a interface Sci‑Fi/HUD do simulador (fundo escuro, acentos dourados/ciano).
 
 ---
 
-## 2. MÃ³dulo de identificaÃ§Ã£o de mÃ¡quina (HID)
+## 2. Módulo de identificação de máquina (HID)
 
-- **Objetivo:** Gerar um **Hardware_ID** Ãºnico e **anÃ´nimo** por computador (nÃ£o deve conter nome de usuÃ¡rio, endereÃ§o, etc.).
-- **ImplementaÃ§Ã£o sugerida (Python):**
-  - Combinar dados **nÃ£o identificÃ¡veis** do hardware/OS, por exemplo:
-    - UUID da placa ou do disco (se disponÃ­vel e estÃ¡vel).
-    - Nome da mÃ¡quina (hostname) ou identificador do sistema (ex.: `platform.node()`), **hasheado** (SHA-256) para anonimizar.
-    - Outros identificadores estÃ¡veis e nÃ£o sensÃ­veis (ex.: volume serial, se acessÃ­vel de forma segura).
-  - Gerar um **hash Ãºnico** (ex.: SHA-256) da concatenaÃ§Ã£o desses valores e exibir uma versÃ£o **encurtada** ou **codificada** (ex.: primeiros 24 caracteres hex ou Base64) como "ID de AtivaÃ§Ã£o" legÃ­vel.
+- **Objetivo:** Gerar um **Hardware_ID** único e **anônimo** por computador (não deve conter nome de usuário, endereço, etc.).
+- **Implementação sugerida (Python):**
+  - Combinar dados **não identificáveis** do hardware/OS, por exemplo:
+    - UUID da placa ou do disco (se disponível e estável).
+    - Nome da máquina (hostname) ou identificador do sistema (ex.: `platform.node()`), **hasheado** (SHA-256) para anonimizar.
+    - Outros identificadores estáveis e não sensíveis (ex.: volume serial, se acessível de forma segura).
+  - Gerar um **hash único** (ex.: SHA-256) da concatenação desses valores e exibir uma versão **encurtada** ou **codificada** (ex.: primeiros 24 caracteres hex ou Base64) como "ID de Ativação" legível.
 - **API exposta ao app:**
-  - `get_hardware_id() -> str`: retorna o ID de ativaÃ§Ã£o (string) para exibiÃ§Ã£o e cÃ³pia.
-- **BotÃ£o na UI:** "Copiar ID de AtivaÃ§Ã£o" â†’ chama `get_hardware_id()`, cola na Ã¡rea de transferÃªncia (ex.: `pyperclip` ou equivalente no ambiente do app).
+  - `get_hardware_id() -> str`: retorna o ID de ativação (string) para exibição e cópia.
+- **Botão na UI:** "Copiar ID de Ativação" → chama `get_hardware_id()`, cola na área de transferência (ex.: `pyperclip` ou equivalente no ambiente do app).
 
 ---
 
-## 3. Validador de licenÃ§a offline
+## 3. Validador de licença offline
 
-- **Arquivo de licenÃ§a:** `license.key` na **pasta da aplicaÃ§Ã£o** (mesmo diretÃ³rio do executÃ¡vel ou diretÃ³rio de dados configurÃ¡vel).
+- **Arquivo de licença:** `license.key` na **pasta da aplicação** (mesmo diretório do executável ou diretório de dados configurável).
 - **Formato sugerido do arquivo (exemplo):**
-  - ConteÃºdo assinado ou criptografado, contendo pelo menos: `hardware_id` (ou hash do HID), `valid_until` (data opcional de expiraÃ§Ã£o), e assinatura ou HMAC para evitar adulteraÃ§Ã£o.
+  - Conteúdo assinado ou criptografado, contendo pelo menos: `hardware_id` (ou hash do HID), `valid_until` (data opcional de expiração), e assinatura ou HMAC para evitar adulteração.
   - Exemplo simplificado (texto):  
     `HARDWARE_ID=<id>|VALID_UNTIL=YYYY-MM-DD|SIGNATURE=<hmac_ou_assinatura>`  
-  - A **chave secreta** usada para assinatura/HMAC fica apenas no binÃ¡rio do app (ofuscada) e no script do administrador (gerador de chaves).
-- **LÃ³gica do validador (no simulador):**
+  - A **chave secreta** usada para assinatura/HMAC fica apenas no binário do app (ofuscada) e no script do administrador (gerador de chaves).
+- **Lógica do validador (no simulador):**
   1. Ler `license.key` se existir.
   2. Verificar assinatura/HMAC.
-  3. Comparar o `hardware_id` do arquivo com o `get_hardware_id()` da mÃ¡quina atual.
-  4. Se houver `valid_until`, verificar se a data atual â‰¤ `valid_until`.
-  5. Se tudo for vÃ¡lido â†’ **liberar acesso total** (incluindo MÃ³dulo MineraÃ§Ã£o); caso contrÃ¡rio â†’ manter paywall (exibir checkout ao tentar acessar MineraÃ§Ã£o).
+  3. Comparar o `hardware_id` do arquivo com o `get_hardware_id()` da máquina atual.
+  4. Se houver `valid_until`, verificar se a data atual ≤ `valid_until`.
+  5. Se tudo for válido → **liberar acesso total** (incluindo Módulo Mineração); caso contrário → manter paywall (exibir checkout ao tentar acessar Mineração).
 
 ---
 
-## 4. Dashboard de gestÃ£o (O Contador) â€” script administrador
+## 4. Dashboard de gestão (O Contador) — script administrador
 
-- **Uso:** Apenas pelo administrador; **nÃ£o** distribuÃ­do com o app.
-- **FunÃ§Ã£o:** Gerar arquivos `license.key` (ou strings de licenÃ§a) a partir dos **IDs de AtivaÃ§Ã£o (Hardware_ID)** enviados pelos clientes (ex.: apÃ³s pagamento PIX e envio do comprovante).
+- **Uso:** Apenas pelo administrador; **não** distribuído com o app.
+- **Função:** Gerar arquivos `license.key` (ou strings de licença) a partir dos **IDs de Ativação (Hardware_ID)** enviados pelos clientes (ex.: após pagamento PIX e envio do comprovante).
 - **Entrada:** Lista de Hardware_IDs (e opcionalmente data de validade).  
-**SaÃ­da:** Arquivos `.key` ou strings que o cliente cola/grava em `license.key`.
-- **Controle de ativaÃ§Ãµes (planilha ou banco local criptografado):**
-  - Colunas sugeridas: **Hardware_ID** | **Data de AtivaÃ§Ã£o** | **Canal de Origem** (ex.: WhatsApp, Telegram) | **Valid_Until** (opcional).
-  - A relaÃ§Ã£o **Hardware_ID â†” Pessoa real** (nome, e-mail, telefone) **nÃ£o** deve ficar dentro do software distribuÃ­do; pode ficar em planilha privada ou ERP, fora do repositÃ³rio do app, para conformidade LGPD.
+**Saída:** Arquivos `.key` ou strings que o cliente cola/grava em `license.key`.
+- **Controle de ativações (planilha ou banco local criptografado):**
+  - Colunas sugeridas: **Hardware_ID** | **Data de Ativação** | **Canal de Origem** (ex.: WhatsApp, Telegram) | **Valid_Until** (opcional).
+  - A relação **Hardware_ID ↔ Pessoa real** (nome, e-mail, telefone) **não** deve ficar dentro do software distribuído; pode ficar em planilha privada ou ERP, fora do repositório do app, para conformidade LGPD.
 
 ---
 
 ## 5. Conformidade LGPD
 
-- **Dentro do binÃ¡rio / no cÃ³digo do simulador:**  
-  - **NÃ£o** armazenar nome, CPF, e-mail, telefone ou qualquer dado pessoal sensÃ­vel.  
-  - O Ãºnico identificador armazenado ou lido Ã© o **Hardware_ID** (anonimizado) e o conteÃºdo do `license.key` (ID + validade + assinatura).
-- **RelaÃ§Ã£o Hardware_ID â†” Pessoa real:**  
-  - Manter **apenas** no controle financeiro/administrativo externo (ERP, planilha privada, canal de atendimento). O software nÃ£o envia o Hardware_ID para servidor obrigatÃ³rio; a ativaÃ§Ã£o Ã© offline.
-- **PolÃ­tica de privacidade:** Deixar explÃ­cito na pÃ¡gina de upgrade (e no app, se houver tela de termos) que o ID de AtivaÃ§Ã£o Ã© anÃ´nimo e que a associaÃ§Ã£o com a pessoa fica apenas no controle do titular para fins de entrega da licenÃ§a e suporte.
+- **Dentro do binário / no código do simulador:**  
+  - **Não** armazenar nome, CPF, e-mail, telefone ou qualquer dado pessoal sensível.  
+  - O único identificador armazenado ou lido é o **Hardware_ID** (anonimizado) e o conteúdo do `license.key` (ID + validade + assinatura).
+- **Relação Hardware_ID ↔ Pessoa real:**  
+  - Manter **apenas** no controle financeiro/administrativo externo (ERP, planilha privada, canal de atendimento). O software não envia o Hardware_ID para servidor obrigatório; a ativação é offline.
+- **Política de privacidade:** Deixar explícito na página de upgrade (e no app, se houver tela de termos) que o ID de Ativação é anônimo e que a associação com a pessoa fica apenas no controle do titular para fins de entrega da licença e suporte.
 
 ---
 
 ## 6. Resumo do fluxo
 
-| Etapa | Quem | AÃ§Ã£o |
+| Etapa | Quem | Ação |
 |-------|------|------|
-| 1 | UsuÃ¡rio | Usa fase Ambiental gratuita; ao tentar MineraÃ§Ã£o, vÃª tela "Upgrade Ouro 4.0" com PIX e botÃ£o "Copiar ID de AtivaÃ§Ã£o". |
-| 2 | UsuÃ¡rio | Copia ID, paga PIX (Cara-Core InformÃ¡tica, CNPJ 23.969.028/0001-37), envia ID + comprovante por WhatsApp/Telegram. |
+| 1 | Usuário | Usa fase Ambiental gratuita; ao tentar Mineração, vê tela "Upgrade Ouro 4.0" com PIX e botão "Copiar ID de Ativação". |
+| 2 | Usuário | Copia ID, paga PIX (Cara-Core Informática, CNPJ 23.969.028/0001-37), envia ID + comprovante por WhatsApp/Telegram. |
 | 3 | Admin | Recebe pedido, anota Hardware_ID e canal no controle; gera `license.key` com o script; envia o arquivo ao cliente. |
-| 4 | UsuÃ¡rio | Coloca `license.key` na pasta da aplicaÃ§Ã£o; reinicia; MÃ³dulo MineraÃ§Ã£o liberado. |
-| 5 | Software | Validador lÃª `license.key`, confere HID e assinatura; se vÃ¡lido, libera acesso total. |
+| 4 | Usuário | Coloca `license.key` na pasta da aplicação; reinicia; Módulo Mineração liberado. |
+| 5 | Software | Validador lê `license.key`, confere HID e assinatura; se válido, libera acesso total. |
 
 ---
 
-## 7. ReferÃªncias no portal caracore-ete-releases
+## 7. Referências no portal caracore-ete-releases
 
-- **PÃ¡gina de upgrade (checkout):** upgrade-ouro40.html â€” dados PIX, instruÃ§Ãµes e LGPD.
-- **Canal de Melhorias:** canal-feedback.html â€” WhatsApp, Telegram e e-mail para envio do ID e comprovante.
+- **Página de upgrade (checkout):** upgrade-ouro40.html — dados PIX, instruções e LGPD.
+- **Canal de Melhorias:** canal-feedback.html — WhatsApp, Telegram e e-mail para envio do ID e comprovante.
 
-A implementaÃ§Ã£o dos mÃ³dulos Python (HID, validador, gerador de chaves) e da UI de paywall/checkout Ã© feita no repositÃ³rio **chmulato/ETE**.
+A implementação dos módulos Python (HID, validador, gerador de chaves) e da UI de paywall/checkout é feita no repositório **chmulato/ETE**.
 
 ---
 
-## 8. EsboÃ§o de implementaÃ§Ã£o (para o repositÃ³rio ETE)
+## 8. Esboço de implementação (para o repositório ETE)
 
-### 8.1 Hardware ID (anÃ´nimo)
+### 8.1 Hardware ID (anônimo)
 
 ```python
-# Exemplo: mÃ³dulo hid.py (ou dentro do pacote do app)
+# Exemplo: módulo hid.py (ou dentro do pacote do app)
 import hashlib
 import platform
 import subprocess
 import sys
 
 def get_hardware_id() -> str:
-    """Gera um ID Ãºnico e anÃ´nimo para esta mÃ¡quina (sem dados pessoais)."""
+    """Gera um ID único e anônimo para esta máquina (sem dados pessoais)."""
     parts = []
     try:
         parts.append(platform.node())
@@ -137,7 +137,7 @@ def get_hardware_id() -> str:
     return hashlib.sha256(raw.encode()).hexdigest()[:24].upper()
 ```
 
-### 8.2 Formato da licenÃ§a e validaÃ§Ã£o
+### 8.2 Formato da licença e validação
 
 ```python
 # license.key: texto com HARDWARE_ID|VALID_UNTIL=YYYY-MM-DD|SIGNATURE=<hmac_hex>
@@ -146,7 +146,7 @@ import hashlib
 from pathlib import Path
 from datetime import datetime
 
-SECRET = b"chave-secreta-trocar-em-producao"  # Ofuscar no binÃ¡rio
+SECRET = b"chave-secreta-trocar-em-producao"  # Ofuscar no binário
 
 def _sign(payload: str) -> str:
     return hmac.new(SECRET, payload.encode(), hashlib.sha256).hexdigest()[:32]
@@ -174,7 +174,7 @@ def validate_license(app_dir: Path, get_hid: callable) -> bool:
 ### 8.3 Script do administrador (gerar license.key)
 
 ```python
-# Script separado: gerar_license.py (uso interno, nÃ£o distribuir)
+# Script separado: gerar_license.py (uso interno, não distribuir)
 # Uso: python gerar_license.py <HARDWARE_ID> [VALID_UNTIL YYYY-MM-DD]
 import hmac
 import hashlib
@@ -194,15 +194,15 @@ def main():
     out_path = Path(f"license_{hid[:12]}.key")
     out_path.write_text(license_content, encoding="utf-8")
     print(f"Gerado: {out_path}")
-    # Registrar em planilha/DB: HARDWARE_ID | Data AtivaÃ§Ã£o | Canal (WhatsApp/Telegram)
+    # Registrar em planilha/DB: HARDWARE_ID | Data Ativação | Canal (WhatsApp/Telegram)
 main()
 ```
 
-- **Planilha de controle (exemplo):** Colunas `Hardware_ID` | `Data_Ativacao` | `Canal_Origem` | `Valid_Until`. Manter fora do cÃ³digo; relaÃ§Ã£o com pessoa real apenas em ERP/planilha privada.
+- **Planilha de controle (exemplo):** Colunas `Hardware_ID` | `Data_Ativacao` | `Canal_Origem` | `Valid_Until`. Manter fora do código; relação com pessoa real apenas em ERP/planilha privada.
 
 ---
 
-## 9. IntegraÃ§Ã£o com os mÃ³dulos Ambiental e MineraÃ§Ã£o
+## 9. Integração com os módulos Ambiental e Mineração
 
-Para a **simbiose tÃ©cnica** (estado global Ambiental â†’ MineraÃ§Ã£o), **dashboard embaÃ§ado** quando sem licenÃ§a, **auditoria de conversÃ£o** e **resgate de chave** no menu de configuraÃ§Ãµes, ver a especificaÃ§Ã£o dedicada: **[ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md](ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md)**.
+Para a **simbiose técnica** (estado global Ambiental → Mineração), **dashboard embaçado** quando sem licença, **auditoria de conversão** e **resgate de chave** no menu de configurações, ver a especificação dedicada: **[ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md](ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md)**.
 
