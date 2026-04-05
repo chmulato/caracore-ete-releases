@@ -40,6 +40,25 @@
             margin: 0 auto;
         }
 
+        .breadcrumb {
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+            padding-top: 16px;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: var(--text-secondary);
+        }
+
         /* Hero */
         header {
             padding: 48px 0 40px;
@@ -244,12 +263,13 @@
         <div class="cc-i-topbar">
             <a class="cc-i-backlink" href="https://caracore.com.br/portfolio.html#ete" target="_blank" rel="noopener">Portfólio Cara Core</a>
         </div>
-    <nav class="breadcrumb" aria-label="Navegação">
-        <a href="index.html">Início</a>
-        <span> · </span>
-        <span>Cara Core</span>
-    </nav>
     <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">Início</a>
+            <span> · </span>
+            <span>Cara Core</span>
+        </nav>
+
         <header>
             <h1>Projeto chmulato/ETE</h1>
             <p class="subtitle">Simulador de Hidrometalurgia Seletiva: Aplicando a Engenharia de Processos de Efluentes no Refino de Terras Raras.</p>
