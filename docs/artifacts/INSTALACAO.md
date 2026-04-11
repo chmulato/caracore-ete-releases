@@ -37,9 +37,9 @@ Painel de Controle > Programas > Programas e Recursos > desinstalar Minerador 4.
 
 - Pagina de download: ../download.html
 - Licenca: ../licenca-uso.html
-- Suporte: https://caracore.com.br
+- Suporte: https://www.caracore.com.br
 
 ---
 
 > Versao: v4.0.0
-> Cara Core Informatica — https://caracore.com.br
+> Cara Core Informatica — https://www.caracore.com.br
