@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://ete.caracore.com.br/serie-decantadores-ph.html">
     <title>Série de Decantadores por pH — Mineração | Ouro 4.0</title>
     <meta name="description" content="Visualização em cascata: tanques com pH controlado, precipitação por estágio (Fe/Al, metais base, terras raras), curvas de solubilidade e eficiência.">
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="assets/vendor/plotly-2.27.0.min.js"></script>
     <link rel="stylesheet" href="assets/css/loja.css">
     <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
     <style>
@@ -27,7 +25,7 @@
             --ok: #00f5a0;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 20px; }
+        body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 20px; }
         .wrapper { max-width: 1200px; margin: 0 auto; }
         header { text-align: center; padding: 24px 0 32px; border-bottom: 1px solid var(--border); }
         header h1 { font-size: 1.5rem; color: var(--cyan); margin-bottom: 6px; }
@@ -89,7 +87,7 @@
             position: absolute;
             top: 8px;
             right: 8px;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: ui-monospace, Consolas, monospace;
             font-size: 0.9rem;
             color: var(--cyan);
             z-index: 2;
@@ -174,14 +172,14 @@
             border-bottom: 1px solid rgba(45,55,72,0.5);
         }
         .eff-row:last-child { border-bottom: none; }
-        .eff-pct { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+        .eff-pct { font-family: ui-monospace, Consolas, monospace; font-weight: 600; }
         .eff-pct.ok { color: var(--ok); }
         .eff-pct.warn { color: #ffd60a; }
         .eff-pct.bad { color: var(--danger); }
         .audit-log {
             max-height: 200px;
             overflow-y: auto;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: ui-monospace, Consolas, monospace;
             font-size: 0.75rem;
             color: var(--dim);
             line-height: 1.6;
@@ -193,8 +191,8 @@
         .nav-links a { color: #58a6ff; text-decoration: none; }
         .nav-links a:hover { text-decoration: underline; }
     </style>
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+  <link rel="stylesheet" href="assets/caracore-core-typography.css">
+  <link rel="stylesheet" href="assets/caracore-institutional-components.css">
 </head>
 <body>
     <div class="wrapper">

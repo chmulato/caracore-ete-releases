@@ -31,6 +31,12 @@ body.cc-i-page .cc-i-backlink:hover {
   text-decoration: underline;
 }
 
+body.cc-i-page .cc-i-topbar-sep {
+  color: var(--cc-i-muted);
+  font-weight: 400;
+  user-select: none;
+}
+
 body.cc-i-page .cc-i-muted {
   color: var(--cc-i-muted);
 }

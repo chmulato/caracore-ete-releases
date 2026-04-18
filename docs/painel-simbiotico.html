@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://ete.caracore.com.br/painel-simbiotico.html">
     <title>Painel de Controle Simbiótico — Ambiental ↔ Mineração | Ouro 4.0</title>
     <meta name="description" content="Protótipo: interface unificada ETE Ambiental e Mineração, fluxo água tratada, glassmorphism e upgrade Premium. Gatekeeper e gráficos de intersecção Pawlowsky.">
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="assets/vendor/plotly-2.27.0.min.js"></script>
     <link rel="stylesheet" href="assets/css/loja.css">
     <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
     <style>
@@ -25,7 +23,7 @@
             --glass-border: rgba(212, 168, 83, 0.3);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: #e6edf3; min-height: 100vh; overflow-x: hidden; }
+        body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: #e6edf3; min-height: 100vh; overflow-x: hidden; }
 
         .dashboard {
             display: grid;
@@ -239,7 +237,7 @@
         }
         .protocol-box label { font-size: 0.75rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; }
         .protocol-box .hwid {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: ui-monospace, Consolas, monospace;
             font-size: 0.8rem;
             color: #e6edf3;
             margin: 8px 0;
@@ -319,7 +317,7 @@
             right: 0;
             background: #0a0e14;
             border-top: 1px solid var(--glass-border);
-            font-family: 'JetBrains Mono', monospace;
+            font-family: ui-monospace, Consolas, monospace;
             font-size: 0.7rem;
             color: #8b949e;
             max-height: 100px;
@@ -380,8 +378,8 @@
         .modal-termos .btn-continuar:not(:disabled):hover { filter: brightness(1.1); }
         .modal-termos a { color: var(--cyan); }
     </style>
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+  <link rel="stylesheet" href="assets/caracore-core-typography.css">
+  <link rel="stylesheet" href="assets/caracore-institutional-components.css">
 </head>
 <body>
     <div class="dashboard">
