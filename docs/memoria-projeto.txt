@@ -10,11 +10,11 @@ Data da última atualização: 2026-04-25
 
 | Pilar | O que é | Onde |
 |-------|--------|------|
-| **Conhecimento (vitrine)** | Conteúdo HTML: ciência das terras raras, refino de óxidos, manifesto de descoberta. | Publicação: [ete.caracore.com.br](https://ete.caracore.com.br/) (domínio institucional; espelho GitHub Pages opcional). |
+| **Conhecimento (vitrine)** | Conteúdo HTML: ciência das terras raras, refino de óxidos, manifesto de descoberta. | Loja oficial: [ete.caracore.com.br](https://ete.caracore.com.br/) (`caracore-ete-releases/docs`). |
 | **True Engine (ferramenta)** | Aplicativo desktop: cálculos reais em Python, química mineral e ambiental; interface de centro de refino. | minerador_40/; instalador Windows (.exe) via Releases. |
 
 - **Site público (releases):** [ete.caracore.com.br](https://ete.caracore.com.br/) — vitrine e download.
-- **Instalador Windows:** Minerador 4.0 (.exe) — [Releases ETE](https://github.com/chmulato/ETE/releases) / ETE-releases.
+- **Instalador Windows:** Minerador 4.0 (.exe) — releases da loja `caracore-ete-releases`.
 
 ---
 
@@ -63,8 +63,8 @@ I Motor Químico (Kps, balanço de massa, precipitados). II Seletividade por pH 
 
 ---
 
-## Loja e limpeza visual
+## Loja e alinhamento recente
 
-- **Loja oficial:** https://ete.caracore.com.br/ (`caracore-ete-releases/docs`).
-- **Oficina:** `caracore-ete`, responsável por motores, scripts, documentação técnica e geração de artefatos.
-- 2026-04-25: removidos da home da loja o topbar redundante `ete.caracore.com.br · Wiki` e o breadcrumb `Início · Cara Core`, porque repetiam informação sem função navegável para o usuário.
+- **Oficina:** `caracore-ete` — código, motores, documentação técnica e geração de artefatos.
+- **Loja:** `caracore-ete-releases` — vitrine pública em `ete.caracore.com.br`, download, licença, canal de feedback, wiki e artefatos.
+- 2026-04-25: removido da home da loja o bloco redundante `ete.caracore.com.br · Wiki` e o breadcrumb `Início · Cara Core`, mantendo a página inicial mais direta para o Minerador 4.0 (ETE).
