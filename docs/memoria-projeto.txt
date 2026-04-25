@@ -2,7 +2,7 @@
 
 Documento de referência rápida sobre o estado atual do projeto. Atualizar quando houver mudanças relevantes de stack, entrega ou decisões.
 
-Data da última atualização: 2026-02-08
+Data da última atualização: 2026-04-25
 
 ---
 
@@ -60,3 +60,11 @@ I Motor Químico (Kps, balanço de massa, precipitados). II Seletividade por pH 
 
 - Página de formação/recrutamento: docs/laboratorio_campo_largo.html — IFPR Campo Largo, Jornada em Materiais, Skill Tree, Oráculo, Blueprint, dedicatória ao Prof. Urivald Pawlowsky (UFPR).
 - Manual de Iniciação em PDF: docs/assets/pdf/Manual_Iniciacao_Ouro40.pdf.
+
+---
+
+## Loja e limpeza visual
+
+- **Loja oficial:** https://ete.caracore.com.br/ (`caracore-ete-releases/docs`).
+- **Oficina:** `caracore-ete`, responsável por motores, scripts, documentação técnica e geração de artefatos.
+- 2026-04-25: removidos da home da loja o topbar redundante `ete.caracore.com.br · Wiki` e o breadcrumb `Início · Cara Core`, porque repetiam informação sem função navegável para o usuário.
