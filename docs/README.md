@@ -2,7 +2,7 @@
 
 Esta pasta contém os arquivos HTML que serão publicados no GitHub Pages (repositório público **chmulato/ETE-releases**).
 
-**Portal publicado em:** [https://chmulato.github.io/ETE-releases/](https://chmulato.github.io/ETE-releases/)
+**Portal publicado em:** [https://ete.caracore.com.br/](https://ete.caracore.com.br/)
 
 ## Estrutura
 
