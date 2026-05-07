@@ -1,6 +1,6 @@
 # Páginas Web - GitHub Pages
 
-Esta pasta contém os arquivos HTML que serão publicados no GitHub Pages (repositório público **chmulato/ETE-releases**).
+Esta pasta contém os arquivos HTML publicados na **Loja ETE** (repositório público **chmulato/caracore-ete-releases**; domínio **ete.caracore.com.br**). O código e a CI do Minerador 4.0 ficam na oficina **chmulato/ETE**.
 
 **Portal publicado em:** [https://ete.caracore.com.br/](https://ete.caracore.com.br/)
 
