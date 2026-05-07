@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://ete.caracore.com.br/upgrade-ouro40.html">
-    <title>Upgrade para Ouro 4.0 — Módulo Mineração | Minerador 4.0</title>
-    <meta name="description" content="Desbloqueie o Módulo Mineração do simulador: pagamento PIX, ID de Ativação e envio do comprovante. Cara-Core Informática.">
+    <title>Upgrade Ouro 4.0 — Premium Minerador 4.0 v1.1.10 | Módulo Mineração</title>
+    <meta name="description" content="Minerador 4.0 v1.1.10: upgrade Premium (Ouro 4.0). PIX R$ 29,90, ID de Ativação, license.key. Biblioteca operacional, Nd/Pr, cascata de refino. Cara-Core Informática.">
     <link rel="stylesheet" href="assets/css/loja.css">
     <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
     <style>
@@ -77,10 +77,21 @@
 <body>
     <div class="wrapper">
         <header>
-            <span class="badge">Módulo Mineração</span>
+            <span class="badge">Premium · Ouro 4.0</span>
             <h1>Upgrade para Ouro 4.0</h1>
-            <p>Desbloqueie a fase Mineração do simulador: refino de terras raras, cascata de decantadores e análise de pureza. A fase Ambiental continua gratuita.</p>
+            <p>O mesmo instalador <strong>Minerador 4.0</strong> (release <strong>v1.1.10</strong>) roda em modo <strong>Free</strong> ou <strong>Premium</strong>. Este upgrade libera o <strong>Módulo Mineração</strong> e a camada operacional: refino de terras raras, cascata de decantadores, janelas Nd/Pr, balanço e viabilidade. A trilha ambiental/didática permanece acessível no Free.</p>
         </header>
+
+        <div class="block">
+            <h2>O que o Premium desbloqueia</h2>
+            <p style="color: var(--text); margin-bottom: 10px;">Além do paywall do <strong>Módulo Mineração</strong>, você obtém profundidade operacional e acervo premium na interface:</p>
+            <ul style="margin-left: 20px; font-size: 0.9rem; color: var(--dim); line-height: 1.55;">
+                <li>Janelas <strong>Nd/Pr</strong>, <strong>K<sub>p,s</sub></strong>, curvas de solubilidade e precipitação seletiva.</li>
+                <li>Cascata <strong>Fe/Al → metais base → terras raras</strong>; balanço de massa, pureza acumulada e perdas.</li>
+                <li>Viabilidade <strong>OPEX/VBP</strong> e plano de ensaios no fluxo do laboratório.</li>
+                <li>Biblioteca e análises em tier <strong>Premium</strong> (conteúdo completo na UI; didática sem vazar texto na listagem pública).</li>
+            </ul>
+        </div>
 
         <div class="block">
             <h2>Pagamento PIX</h2>
@@ -91,7 +102,7 @@
                 <div class="valor" id="display-valor">R$ 29,90</div>
                 <p class="hint">Chave PIX: CNPJ — copie e cole no app do seu banco</p>
             </div>
-            <p style="margin-top: 12px;"><button type="button" class="btn-whatsapp" id="btn-copiar-whatsapp">Copiar Hardware ID para WhatsApp</button></p>
+            <p style="margin-top: 12px;"><button type="button" class="btn-whatsapp" id="btn-copiar-whatsapp">Copiar mensagem para WhatsApp (ID de Ativação)</button></p>
             <p class="hint-whatsapp">Copie a mensagem pronta e, no simulador, use «Copiar ID de Ativação»; depois cole o ID na mensagem e envie com o comprovante PIX.</p>
         </div>
 
@@ -137,14 +148,14 @@
                 navigator.clipboard.writeText(msg).then(function() {
                     var btn = document.getElementById('btn-copiar-whatsapp');
                     btn.textContent = 'Mensagem copiada!';
-                    setTimeout(function() { btn.textContent = 'Copiar Hardware ID para WhatsApp'; }, 2500);
+                    setTimeout(function() { btn.textContent = 'Copiar mensagem para WhatsApp (ID de Ativação)'; }, 2500);
                 }).catch(function() { alert('Não foi possível copiar.'); });
             };
         })();
     </script>
     <script src="assets/js/loja.js"></script>
     <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Versão de teste oficial">Seed<span class="evo-beta-tooltip">Esta é uma versão oficial de teste da Cara Core Informática para parceiros do Plano Premium+.</span></span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Março/2026</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Março/2026</span></li><li>Checkout PIX manual hoje; QR/link automatizado em roadmap</li><li>IA para estoque</li></ul></footer>
     <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" target="_blank" rel="noopener noreferrer" aria-label="Sugira uma melhoria pelo WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>

@@ -1,4 +1,6 @@
-# Minerador 4.0 - Instalacao (Windows)
+# Minerador 4.0 — Instalação (Windows)
+
+**Versão do pacote (semver):** 1.1.10 — produto comercial **Minerador 4.0** (Campo Largo); mesmo instalador suporta modo **Free** e ativação **Premium** via `license.key`.
 
 Arquivos desta entrega:
 - Minerador40.exe
@@ -41,5 +43,5 @@ Painel de Controle > Programas > Programas e Recursos > desinstalar Minerador 4.
 
 ---
 
-> Versao: v4.0.0
-> Cara Core Informatica — https://www.caracore.com.br
+> Versão do instalador: 1.1.10 (produto Minerador 4.0)
+> Cara Core Informática — https://www.caracore.com.br

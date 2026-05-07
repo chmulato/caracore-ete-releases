@@ -42,7 +42,7 @@ Referência de implementação: [ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md](AR
 - **Modal de upgrade (portal e protótipo):**
   - **CNPJ exibido dinamicamente:** 23.969.028/0001-37 (configurável via constante).
   - **Valor configurável:** Constante `PREMIUM_PRICE` ou `CONFIG.VALOR` (ex.: 29.90) exibida em “R$ 29,90”.
-- **Botão “Copiar Hardware ID para WhatsApp”:** Gera mensagem pronta (valor + ID de Ativação + texto para envio com comprovante PIX), reduzindo a fricção entre desejo de compra e confirmação do PIX.
+- **Botão “Copiar mensagem para WhatsApp (ID de Ativação)”:** Gera mensagem pronta (valor + ID de Ativação + texto para envio com comprovante PIX), reduzindo a fricção entre desejo de compra e confirmação do PIX.
 - Página estática de referência: upgrade-ouro40.html.
 
 ---
