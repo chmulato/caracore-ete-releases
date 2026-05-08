@@ -1,11 +1,13 @@
 # Minerador 4.0 — Instalação (Windows)
 
+> Para Linux e macOS, use o guia `INSTALACAO_MULTIPLATAFORMA.md`.
+
 **Versão do pacote (semver):** 1.1.10 — produto comercial **Minerador 4.0** (Campo Largo); mesmo instalador suporta modo **Free** e ativação **Premium** via `license.key`.
 
-Arquivos desta entrega:
-- Minerador40.exe
-- checksum.sha256
-- checksum.md5
+Arquivos desta entrega (Windows):
+- Minerador40-windows-x64.exe
+- checksums.sha256
+- checksums.md5
 - INSTALACAO.md (este arquivo)
 
 ## Validacao de integridade
@@ -13,8 +15,8 @@ Arquivos desta entrega:
 No PowerShell, na pasta de artefatos:
 
 ```powershell
-Get-FileHash -Path .\Minerador40.exe -Algorithm SHA256
-Get-FileHash -Path .\Minerador40.exe -Algorithm MD5
+Get-FileHash -Path .\Minerador40-windows-x64.exe -Algorithm SHA256
+Get-FileHash -Path .\Minerador40-windows-x64.exe -Algorithm MD5
 ```
 
 Compare os valores com os arquivos `checksum.sha256` e `checksum.md5`.
@@ -27,7 +29,7 @@ Compare os valores com os arquivos `checksum.sha256` e `checksum.md5`.
 
 ## Execucao
 
-1. Execute `Minerador40.exe` em duplo clique.
+1. Execute `Minerador40-windows-x64.exe` em duplo clique.
 2. Conclua o assistente de instalacao.
 3. Abra o atalho criado no Desktop para iniciar o simulador.
 
