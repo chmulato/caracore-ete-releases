@@ -1,6 +1,6 @@
 # Minerador 4.0 — Instalacao Multiplataforma
 
-Versao da release: 1.1.10
+Versao da release: 1.2.1
 
 Este guia define os artefatos oficiais para distribuicao do Minerador 4.0 em Linux, Windows e macOS.
 

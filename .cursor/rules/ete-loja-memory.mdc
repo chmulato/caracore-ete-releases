@@ -24,6 +24,12 @@ alwaysApply: true
 - **Wiki:** scripts em `docs/wiki/assets/js/` (ex.: `wiki.js`); folhas wiki referenciam **`../assets/css/wiki*.css`** (centralizadas na pasta css da loja).
 - **JS vitrine:** `docs/assets/js/vitrine-shell.js`.
 
+## Alinhamento com a oficina
+
+- **Espelho de `docs/`:** após alterações na oficina, sincronizar para esta loja com `robocopy caracore-ete\docs caracore-ete-releases\docs /E /IS /IT` (sem `/MIR`, para não apagar páginas só da loja: wiki, upgrade, painéis, `artifacts/` próprios).
+- **Versão canónica:** o número em **`caracore-ete/VERSION`** deve coincidir com **`docs/artifacts/VERSION`** e com referências em páginas comerciais (`upgrade-ouro40.html`, wiki, texto do portal quando mencionar release).
+- **Checksums na release:** os ficheiros em `docs/artifacts/checksum.*` são atualizados pelo pipeline de release — não editar manualmente salvo correção pontual.
+
 ## Convenções
 
 - Ao atualizar a vitrine HTML/CSS, verificar se a **oficina** (`caracore-ete/docs`) precisa do mesmo conjunto e se links no **caracore-site** (portfolio, ecossistema) continuam corretos.

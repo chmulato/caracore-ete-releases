@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://ete.caracore.com.br/download.html">
   <title>Download — Minerador 4.0 | Loja oficial</title>
-  <meta name="description" content="Instaladores Windows, Linux e macOS na loja caracore-ete-releases; checksums e guia de instalação em HTML.">
+  <meta name="description" content="Baixe o Minerador 4.0 — Windows, Linux e macOS. Pacotes oficiais, integridade verificável e guias para colocar o simulador a trabalhar na sua organização ou sala de aula.">
   <link rel="stylesheet" href="assets/css/vitrine-ete.css">
   <link rel="stylesheet" href="assets/css/portal-responsive.css">
   <script src="assets/js/vitrine-shell.js" defer></script>
@@ -14,7 +14,8 @@
   <div class="dl-wrap">
     <header>
       <h1>Download — Minerador 4.0</h1>
-      <p>Pacotes validados no CI (PyTest + build multiplataforma). Descarregue sempre da <strong>release oficial</strong> e verifique os hashes antes de executar.</p>
+      <p><strong>Experimente grátis</strong> ou utilize o mesmo instalador com licença <strong>Premium Ouro&nbsp;4.0</strong>. Descarregue <strong>só da release oficial</strong> — assim garante ficheiros conferidos pela nossa esteira e documentação alinhada a esta loja.</p>
+      <p style="margin-top: 12px; font-size: 0.95rem; color: var(--vitrine-muted); max-width: 560px; margin-left: auto; margin-right: auto;">Para <strong>gestores e instituições</strong>: após instalar, combine o aplicativo com o <a href="investidores_onepager.html" style="color: var(--vitrine-blue);">one-pager de negócio</a> para apresentações internas.</p>
     </header>
 
     <section class="dl-hero">
@@ -22,7 +23,7 @@
         Abrir última release na loja (GitHub)
       </a>
       <p style="margin-top: 18px; font-size: 0.9rem; color: var(--vitrine-muted); max-width: 520px; margin-left: auto; margin-right: auto;">
-        Na release encontrará <code>Minerador40-windows-x64.exe</code>, <code>Minerador40-linux-x86_64.tar.gz</code>, <code>Minerador40-macos-universal.dmg</code>, <code>checksums.sha256</code>, <code>checksums.md5</code> e <code>INSTALACAO_MULTIPLATAFORMA.md</code> (espelho do guia; a vitrine em HTML está em <a href="instalacao_multiplataforma.html" style="color: var(--vitrine-blue);">Instalação multiplataforma</a>).
+        Na página da release estão os instaladores por sistema, ficheiros de <strong>checksum</strong> para sua TI confirmar integridade, e documentação. O guia passo a passo em português na vitrine: <a href="instalacao_multiplataforma.html" style="color: var(--vitrine-blue);">instalação multiplataforma</a>.
       </p>
       <a class="btn-release-secondary" href="instalacao_multiplataforma.html">Guia de instalação (HTML)</a>
     </section>
@@ -30,28 +31,31 @@
     <div class="dl-grid">
       <div class="dl-card">
         <strong>Windows</strong>
-        <code>Minerador40-windows-x64.exe</code>
-        <p style="margin-top: 8px; color: var(--vitrine-muted);">WebView2 pode ser necessário. Ver <a href="instalacao_windows.html" style="color: var(--vitrine-blue);">guia Windows</a>.</p>
+        <span style="display:block; font-size:0.85rem; color: var(--vitrine-muted); margin-top: 4px;">Executável pronto para desktops corporativos e laboratórios.</span>
+        <code style="display:block; margin-top:8px;">Minerador40-windows-x64.exe</code>
+        <p style="margin-top: 8px; color: var(--vitrine-muted);">Pré-requisito comum em ambientes Microsoft: WebView2. <a href="instalacao_windows.html" style="color: var(--vitrine-blue);">Guia Windows</a></p>
       </div>
       <div class="dl-card">
         <strong>Linux</strong>
-        <code>Minerador40-linux-x86_64.tar.gz</code>
-        <p style="margin-top: 8px; color: var(--vitrine-muted);">Extrair e executar <code>Minerador40/Minerador40</code>. Ver <a href="instalacao_linux.html" style="color: var(--vitrine-blue);">guia Linux</a>.</p>
+        <span style="display:block; font-size:0.85rem; color: var(--vitrine-muted); margin-top: 4px;">Pacote compactado — adequado a estações de trabalho e servidores de turma.</span>
+        <code style="display:block; margin-top:8px;">Minerador40-linux-x86_64.tar.gz</code>
+        <p style="margin-top: 8px; color: var(--vitrine-muted);">Extrair e executar o binário na pasta indicada. <a href="instalacao_linux.html" style="color: var(--vitrine-blue);">Guia Linux</a></p>
       </div>
       <div class="dl-card">
         <strong>macOS</strong>
-        <code>Minerador40-macos-universal.dmg</code>
-        <p style="margin-top: 8px; color: var(--vitrine-muted);">Gatekeeper na primeira execução. Ver <a href="instalacao_macos.html" style="color: var(--vitrine-blue);">guia macOS</a>.</p>
+        <span style="display:block; font-size:0.85rem; color: var(--vitrine-muted); margin-top: 4px;">Universal — útil em salas com Apple Silicon ou Intel.</span>
+        <code style="display:block; margin-top:8px;">Minerador40-macos-universal.dmg</code>
+        <p style="margin-top: 8px; color: var(--vitrine-muted);">Na primeira abertura pode ser preciso autorizar nas preferências de segurança. <a href="instalacao_macos.html" style="color: var(--vitrine-blue);">Guia macOS</a></p>
       </div>
     </div>
 
     <section class="dl-meta">
-      <p><strong>Integridade (exemplo PowerShell no Windows):</strong></p>
+      <p><strong>Confiança para sua TI — verificar integridade (exemplo Windows / PowerShell):</strong></p>
       <pre style="background:#0d1117;border:1px solid var(--vitrine-border);border-radius:8px;padding:14px;font-size:0.82rem;overflow-x:auto;margin-top:10px;"><code>Get-FileHash -Path .\Minerador40-windows-x64.exe -Algorithm SHA256</code></pre>
       <p style="margin-top:14px;">Compare o resultado com o ficheiro <code>checksums.sha256</code> na mesma release.</p>
       <ul>
-        <li><strong>MVP financeiro e decisão:</strong> <a href="investidores_onepager.html" style="color: var(--vitrine-blue);">One-pager</a> · <a href="mvp_financeiro_v1.html" style="color: var(--vitrine-blue);">MVP financeiro v1</a></li>
-        <li><strong>Código-fonte:</strong> repositório privado <code>chmulato/caracore-ete</code>; esta vitrine e binários são públicos.</li>
+        <li><strong>Material para negócio e investimento:</strong> <a href="investidores_onepager.html" style="color: var(--vitrine-blue);">One-pager</a> · <a href="mvp_financeiro_v1.html" style="color: var(--vitrine-blue);">MVP financeiro v1</a></li>
+        <li><strong>Transparência:</strong> código da oficina em repositório privado <code>chmulato/caracore-ete</code>; <strong>esta loja</strong> e os instaladores são públicos para download e documentação.</li>
       </ul>
     </section>
 
