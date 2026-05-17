@@ -1,29 +1,33 @@
-WIZARD STREAMLIT ETE MINERAÇÃO — VERIFICAÇÃO MANUAL E E2E
+TESTES SELENIUM VERSUS WIZARD STREAMLIT MINERAÇÃO
 
-Os testes Selenium em tests/selenium/ sobem o servidor Flask do Minerador 4.0
-(minerador_40). Não executam o aplicativo Streamlit run_mineracao.py.
+Os testes em tests/selenium/ sobem o servidor Flask do Minerador 4.0 em minerador_40. Avaliam regras de negócio expostas pela aplicação desktop empacotada nesse modo.
 
-A etapa Painéis decisório existe apenas no wizard Streamlit em
-src/ete_mineracao/app_mineracao.py.
+Esses testes não executam streamlit run sobre src/ete_mineracao/app_mineracao.py.
 
 
-CHECKLIST MANUAL
+ONDE ESTÁ A ETAPA PAINÉIS DECISÓRIO
 
-1. Na raiz: streamlit run run_mineracao.py (ou comando equivalente do projeto).
-
-2. Percorrer: Setup, Simulação (executar), Resultados, Painéis decisório.
-
-3. Confirmar expansores: custos por etapa, margem por elemento, modular versus
-   SX, curva de aprendizado quando disponível.
-
-4. Viabilidade, Relatório, exportar HTML e conferir secções dos painéis.
+A etapa Painéis decisório e a integração profunda com Viabilidade vivem só no aplicativo Streamlit Mineração.
 
 
-AUTOMAÇÃO FUTURA
+CHECKLIST MANUAL RECOMENDADO PARA O STREAMLIT
 
-E2E contra Streamlit exigiria subprocesso na porta típica 8501 e Playwright ou
-Selenium 4. O CI atual não inclui fixture para isso; o teste
-tests/selenium/test_streamlit_mineracao_wizard_skip.py permanece em skip até
-haver infraestrutura.
+Executar na raiz do repositório:
+
+streamlit run src/ete_mineracao/app_mineracao.py
+
+Percorrer o assistente: Setup, Simulação com execução, Resultados, Painéis decisório, Viabilidade, Relatório.
+
+Confirmar expansores de custos por etapa, margem por elemento, comparativos modular versus SX e curva de aprendizado quando visíveis.
+
+Exportar relatório HTML e verificar secções geradas pelos painéis.
+
+
+AUTOMAÇÃO
+
+End-to-end directamente contra Streamlit exigiria subprocesso na porta por defeito 8501 e controlador tipo Playwright ou Selenium 4 dedicado.
+
+O CI actual não inclui essa infraestrutura. O ficheiro tests/selenium/test_streamlit_mineracao_wizard_skip.py permanece marcado como skip até haver suporte.
+
 
 Última revisão: 2026-05-17

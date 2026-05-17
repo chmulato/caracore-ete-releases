@@ -1,38 +1,36 @@
-ASSETS EM docs/assets/
+ASSETS SOB docs/assets/
 
-CSS, JavaScript e imagens usados pelas páginas HTML sob docs/.
-
-
-ESTRUTURA TÍPICA
-
-docs/assets/css/
-  Folhas de estilo (ex.: laboratorio.css para laboratorio_campo_largo.html).
-
-docs/assets/js/
-  Scripts partilhados (ex.: main.js).
-
-docs/assets/img/
-  Imagens específicas das páginas em docs/ quando não usam a pasta global do
-  repositório.
-
-docs/assets/pdf/
-  Manual de iniciação e outros PDF gerados pelo projeto.
+Finalidade: folhas de estilo, scripts e media referenciados pelas páginas HTML em docs/.
 
 
-USO NAS PÁGINAS
+SUBPASTAS USUAIS
 
-CSS: link relativo à página, por exemplo assets/css/laboratorio.css quando a
-página está em docs/.
+css/
+  laboratorio.css — tema escuro partilhado por várias páginas do portal.
+  portal-responsive.css — camadas responsivas carregadas depois de laboratorio.css onde aplicável.
 
-JS: script src="assets/js/main.js" quando aplicável.
+js/
+  main.js — quando uma página referencia scripts locais.
 
-Imagens locais a esta pasta: assets/img/nome.png
+img/
+  Imagens usadas directamente pelos HTML em docs/ sem duplicar toda a árvore global do repo (exemplo: capturas do protótipo de degustação).
+
+pdf/
+  Manual de iniciação e outros PDF versionados junto do portal.
+
+README.md nesta pasta resume convenções para contribuidores web.
 
 
-IMAGENS NA RAIZ DO REPOSITÓRIO
+CAMINHOS NAS PÁGINAS
 
-index.html, index_v2.html e artigo_ete_v3.html podem referenciar ficheiros em
-assets/images/ (aulas, artigos) na raiz do repositório; não são duplicados sob
-docs/assets/img.
+Um HTML em docs/ usa normalmente prefixos do tipo assets/css/..., assets/img/..., assets/pdf/...
+
+Algumas páginas podem apontar para outras árvores conforme histórico do documento; conferir sempre o HTML antes de mover ficheiros.
+
+
+DEPLOY
+
+O workflow deploy_site_ete_releases pode copiar assets/images da raiz do caracore-ete para docs/assets/images no repositório ETE-releases quando essa pasta existir no checkout. Manter caminhos nos HTML coerentes com o que foi efectivamente publicado.
+
 
 Última revisão: 2026-05-17

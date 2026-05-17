@@ -1,62 +1,55 @@
-MVP FINANCEIRO V1 (ETE MINERAÇÃO)
+MVP FINANCEIRO V1 — ETE MINERAÇÃO
 
-Escopo alinhado a docs/proximos_passos.txt (Fase 1). Fixa o que entra na
-primeira versão de decisão económica sem prometer precisão de estudo de
-engenharia de detalhe (FEED).
+Âmbito alinhado a docs/proximos_passos.txt (fundamentos de decisão económica na primeira onda). Não substitui estudo FEED nem parecer externo de investimento.
 
 
 OBJECTIVO
 
-Responder de forma coerente sobre: CAPEX, OPEX, payback, VPL, TIR, três
-cenários de receita e sensibilidade mínima a custos (energia, reagentes,
-logística proxy).
+Responder de forma consistente sobre CAPEX, OPEX, payback, VPL, TIR, três cenários de receita e uma grelha reduzida de sensibilidade a custos (energia, reagentes, proxy de logística).
 
 
-O QUE ENTRA NO MVP V1
+ENTREGUES NO PRODUTO DESDE v1.2.0
 
-Premissas documentadas — pasta docs/premissas/, inventário versionado.
+Premissas documentadas em docs/premissas/ com inventário versionado.
 
-CAPEX modular em faixa — AnalisadorEconomico.estimar_capex_planta (classe 5);
-detalhe na Auditoria quando aplicável.
+CAPEX modular por classe de estimativa via AnalisadorEconomico.estimar_capex_planta.
 
-OPEX por tonelada — derivado de volume mensal e produção; KPI custo por kg como
-aproximação.
+OPEX derivado de volume e produção com indicadores por tonelada e por kg onde aplicável.
 
-Payback — calcular_payback com fluxo mensal uniforme.
+Payback com fluxo mensal uniforme conforme implementação em analise_economica.py.
 
-VPL — calcular_vpl_fluxo_mensal_uniforme (CAPEX em t=0, lucro mensal constante,
-taxa configurável na UI).
+VPL com CAPEX em t zero e lucro mensal uniforme, taxa de desconto configurável na UI.
 
-TIR — calcular_tir_anual_fluxo_mensal_uniforme (pode ser None se não houver
-raiz válida).
+TIR anual derivada do mesmo fluxo quando existe raiz economicamente válida.
 
-Cenários pessimista, base e otimista — calcular_triplo_cenario_preco_receita;
-factores 0,85 / 1,00 / 1,15 sobre receita; OPEX mantido.
+Cenários pessimista, base e optimista sobre receita com factores configurados na função de triplo cenário.
 
-Sensibilidade — matriz_sensibilidade_minima; choques +20% energia, +15%
-reagentes, +10% disposição (proxy de logística).
+Sensibilidade mínima com choques definidos em código sobre energia, reagentes e disposição.
 
-Painéis Fase 2 na UI Streamlit — etapa Painéis decisório em
-src/ete_mineracao/app_mineracao.py (issues #5 a #7).
+Painéis da Fase 2 na etapa Viabilidade do wizard Streamlit em src/ete_mineracao/app_mineracao.py.
 
 
-FORA DO MVP V1 (FASE POSTERIOR)
+FORA DO ÂMBITO IMEDIATO DO MVP V1
 
-VPL e TIR por cenário de preço com granularidade total (para já: tabela de
-lucro por cenário).
+VPL e TIR completos por cada cenário de preço com todas as combinações.
 
-Sensibilidade cruzada ou distribuição probabilística.
+Sensibilidade cruzada ou modelação probabilística.
 
-OPEX indexado ao cenário de preço de mercado.
+OPEX indexado automaticamente a cada cenário de mercado.
 
-Comparativo modular versus centralizado com dois fluxos simulados lado a lado.
+Comparação simultânea dupla de planta modular versus centralizada com dois motores em paralelo na mesma vista.
 
 
-REFERÊNCIAS DE CÓDIGO
+REFERÊNCIAS DE IMPLEMENTAÇÃO
 
-analise_economica.py — funções económicas consolidadas.
-src/ete_mineracao/app_mineracao.py — etapa Viabilidade e relatório HTML.
+analise_economica.py
+src/ete_mineracao/app_mineracao.py
+src/ete_mineracao/financeiro_paineis.py quando aplicável
 
-Revisão mensal: documentar responsável em docs/proximos_passos.txt secção 6.
+
+GOVERNANÇA
+
+Revisões periódicas e responsáveis descritos em docs/proximos_passos.txt secção de operações quando existir.
+
 
 Última revisão: 2026-05-17

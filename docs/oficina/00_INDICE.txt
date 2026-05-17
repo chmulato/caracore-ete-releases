@@ -1,40 +1,42 @@
-CARACORE ETE — DOCUMENTAÇÃO DA OFICINA (TEXTO PURO)
+CARACORE ETE — DOCUMENTAÇÃO DA OFICINA
 
-Índice dos ficheiros em docs/oficina/. Formato: texto simples, sem Markdown,
-sem emojis e sem asteriscos de ênfase. Use UTF-8.
+Pasta: docs/oficina/
+Formato: texto simples, UTF-8, sem Markdown, sem emojis e sem asteriscos.
+
+Conteúdo deste pacote
 
 MEMORIA_PROJETO.txt
-  Estado do ecossistema, estrutura do repositório, comandos úteis e pilares técnicos.
+  Estado do ecossistema, árvore útil do repositório caracore-ete, comandos e âmbito técnico.
 
 GITHUB_PAGES.txt
-  Publicação do site em docs/ via GitHub Pages (branch, pasta, URLs).
-
-PREMISSAS_PACOTE.txt
-  Pacote de premissas econômicas, inventário YAML e testes de preços congelados.
-
-ASSETS_WEB.txt
-  Organização de CSS, JS e imagens sob docs/assets.
-
-MVP_FINANCEIRO_V1.txt
-  Escopo do MVP financeiro na etapa Viabilidade (ETE Mineração).
-
-TESTES_SELENIUM_STREAMLIT.txt
-  Diferença entre testes Selenium no Flask Minerador e o wizard Streamlit.
+  Como o site público ligado a docs/ é produzido e onde o Pages deve estar configurado.
 
 INSTALACAO_REFERENCIA.txt
-  Resumo dos artefactos de distribuição e onde está o guia completo por sistema.
+  Onde estão os guias completos por sistema operativo e que artefactos esperar nas releases.
 
-Documentos relacionados fora desta pasta (mantêm formato original):
+ASSETS_WEB.txt
+  CSS, JavaScript, imagens e PDF sob docs/assets/.
 
-  library/README.md — índice técnico Markdown da pasta library/ (entrega ETE-releases +
-    loja caracore-ete-releases, blindagem, feedback, teoria, negócios, operacional). Use este
-    ficheiro quando precisar do mapa dos .md fora de docs/oficina/.
+PREMISSAS_PACOTE.txt
+  Pacote de premissas em docs/premissas/, alinhamento com analise_economica.py e testes.
 
-  docs/proximos_passos.txt — plano estratégico e roadmap (já em texto simples).
-  docs/ETE_RELEASES_LICENSE.txt — licença da loja de releases.
-  docs/INSTALACAO_WINDOWS.md — guia Windows (Markdown).
-  docs/INSTALACAO_LINUX.md — guia Linux (Markdown).
-  docs/INSTALACAO_MACOS.md — guia macOS (Markdown).
-  docs/INSTALACAO_MULTIPLATAFORMA.md — índice multiplataforma (Markdown).
+MVP_FINANCEIRO_V1.txt
+  Âmbito do MVP de decisão económica na etapa Viabilidade do Streamlit Mineração.
 
-Última revisão do índice: 2026-05-17
+TESTES_SELENIUM_STREAMLIT.txt
+  Distinção entre testes Selenium no Flask Minerador 4.0 e o wizard Streamlit Mineração.
+
+Documentação complementar fora desta pasta
+
+library/README.md — índice da pasta library/ (Markdown).
+
+docs/proximos_passos.txt — roadmap em texto simples.
+
+docs/ETE_RELEASES_LICENSE.txt — texto de licença usado na pipeline com a loja.
+
+docs/INSTALACAO_WINDOWS.md
+docs/INSTALACAO_LINUX.md
+docs/INSTALACAO_MACOS.md
+docs/INSTALACAO_MULTIPLATAFORMA.md — guias de instalação para utilizadores.
+
+Última revisão: 2026-05-17

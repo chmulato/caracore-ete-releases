@@ -1,29 +1,39 @@
-DISTRIBUIÇÃO — REFERÊNCIA RÁPIDA PARA A OFICINA
+DISTRIBUIÇÃO — REFERÊNCIA PARA A OFICINA
 
-Guia completo por sistema permanece em Markdown na pasta docs/ (links e
-formatação para utilizadores finais).
+Os guias completos por sistema estão em Markdown na pasta docs/ para utilizadores finais.
+Versão do pacote: ver ficheiro VERSION na raiz e tag v correspondente na release.
 
-Windows
-  Ficheiro típico na release: Minerador40-windows-x64.exe (PyInstaller onefile
-  no CI). Runtime WebView2 quando necessário.
-  Guia: docs/INSTALACAO_WINDOWS.md
 
-Linux
-  Ficheiro típico: Minerador40-linux-x86_64.tar.gz (extrair pasta Minerador40;
-  executável Minerador40 junto de _internal). Dependências GTK/WebKitGTK para
-  pywebview conforme distribuição.
-  Guia: docs/INSTALACAO_LINUX.md
+WINDOWS
 
-macOS
-  Ficheiro típico: Minerador40-macos-universal.dmg (conteúdo em modo pasta).
-  Gatekeeper pode exigir confirmação na primeira execução.
-  Guia: docs/INSTALACAO_MACOS.md
+Artefacto típico na release: Minerador40-windows-x64.exe (PyInstaller onefile no fluxo de CI).
+Runtime WebView2 quando aplicável ao pywebview.
+Guia: docs/INSTALACAO_WINDOWS.md
 
-Índice e checksums
-  docs/INSTALACAO_MULTIPLATAFORMA.md
-  Em cada release: checksums.sha256 e checksums.md5.
 
-Build local
-  scripts/build_dist_local.py — ver comentários no script e INSTALACAO_WINDOWS.
+LINUX
+
+Artefacto típico: Minerador40-linux-x86_64.tar.gz — extrair pasta Minerador40, executável junto de _internal.
+Dependências de sistema para GTK ou WebKitGTK conforme distro para pywebview.
+Guia: docs/INSTALACAO_LINUX.md
+
+
+MACOS
+
+Artefacto típico: Minerador40-macos-universal.dmg com conteúdo em modo pasta.
+Primeira execução pode exigir confirmação no Gatekeeper.
+Guia: docs/INSTALACAO_MACOS.md
+
+
+ÍNDICE E INTEGRIDADE
+
+docs/INSTALACAO_MULTIPLATAFORMA.md — índice geral.
+Em cada release: checksums SHA-256 e MD5 junto dos binários.
+
+
+BUILD LOCAL
+
+scripts/build_dist_local.py — opções documentadas no próprio script e nos guias.
+
 
 Última revisão: 2026-05-17

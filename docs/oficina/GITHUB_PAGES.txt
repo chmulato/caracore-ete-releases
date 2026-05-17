@@ -1,41 +1,42 @@
-GITHUB PAGES — PUBLICAÇÃO DO SITE (PASTA docs/)
+PUBLICAÇÃO DO SITE HTML
 
-Esta pasta docs/ no repositório caracore-ete é servida como site público quando
-o GitHub Pages aponta para ela.
+URL de referência do produto: https://ete.caracore.com.br/
 
-Portal publicado: https://ete.caracore.com.br/
-
-
-FICHEIROS PRINCIPAIS
-
-index.html — Portal / entrada
-index_v2.html — Apostila HTML (Terras Raras)
-artigo_ete_v3.html — Artigo executivo
-laboratorio_campo_largo.html — Laboratório Ouro 4.0
-canal-feedback.html — Canal de feedback
-download.html — Ligações de download
-investidores_onepager.html — Resumo para decisão
+Este repositório (caracore-ete) mantém o conteúdo fonte sob docs/. O GitHub Pages que serve o domínio público deve estar configurado no repositório de destino para onde o workflow copia os ficheiros, não necessariamente aqui.
 
 
-CONFIGURAÇÃO (INTERFACE WEB)
+FLUXO AUTOMÁTICO
 
-1. Repositório GitHub: Settings, menu Pages.
-2. Source: Deploy from a branch.
-3. Branch: main (ou master).
-4. Folder: /docs (ou conforme o repositório de releases estiver configurado;
-   no projeto ETE público verifique se a raiz é /docs ou /web).
-5. Guardar.
+Ficheiro: .github/workflows/deploy_site_ete_releases.yml
 
-Alternativa: Source = GitHub Actions se existir workflow dedicado de deploy;
-após push o deploy corre automaticamente.
+Dispara em push às branches main ou master quando mudam ficheiros sob docs/ ou index.html na raiz do repositório caso exista. Também aceita workflow_dispatch manual.
+
+Passos relevantes: clone do repositório chmulato/ETE-releases com um token, cópia do conteúdo de docs/ para docs/ nesse repositório, cópia opcional de assets/images da raiz deste repo para docs/assets/images no destino quando a pasta existir, commit e push no destino.
+
+Secret obrigatório no caracore-ete: TOKEN_DELIVERY_CHMULATO_ETE_TO_REALEASES com permissão de escrita no repositório ETE-releases.
 
 
-CAMINHOS DE IMAGENS
+CONFIGURAÇÃO NO REPOSITÓRIO DE DESTINO
 
-Imagens em docs/assets/ ou caminhos relativos para ../assets/images/ conforme
-cada página. Manter consistência com a raiz servida pelo Pages.
+No GitHub do repositório chmulato/ETE-releases: Settings, Pages, Source Deploy from a branch, pasta docs na branch publicada (main ou master conforme política desse repo).
 
-Instruções detalhadas adicionais: library/GUIA_GITHUB_PAGES.md na raiz do
-repositório caracore-ete.
+
+PÁGINAS PRINCIPAIS NESTE REPOSITÓRIO
+
+index.html — entrada do portal
+index_v2.html — apostila técnica terras raras
+artigo_ete_v3.html — artigo executivo
+laboratorio_campo_largo.html — laboratório Ouro 4.0
+prototipo_degustacao_minerador.html — maquete estática do fluxo do dashboard
+canal-feedback.html — página estática de feedback
+download.html — download
+investidores_onepager.html — resumo para decisão de negócio
+apostila_efluentes.html — apostila de efluentes ligada pelo portal
+
+
+PRÉ-VISUALIZAÇÃO LOCAL
+
+Servir a pasta docs/ com um servidor HTTP simples ou abrir ficheiros pontuais tendo em conta caminhos relativos definidos em cada HTML.
+
 
 Última revisão: 2026-05-17

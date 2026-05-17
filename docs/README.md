@@ -39,6 +39,6 @@ Caminhos relativos; artigos e apostilas podem usar `../assets/images/aulas/` ou 
 
 ## Documentação adicional
 
-Guia detalhado: `library/GUIA_GITHUB_PAGES.md` na raiz do repositório caracore-ete.
+Referência operacional do site e do deploy: `docs/oficina/GITHUB_PAGES.txt` e índice `docs/oficina/00_INDICE.txt`.
 
-Versão operacional em texto puro: `docs/oficina/GITHUB_PAGES.txt`
+Guia histórico em Markdown (pode estar desalinhado com o workflow actual): `library/GUIA_GITHUB_PAGES.md`.
