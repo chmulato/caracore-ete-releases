@@ -1,0 +1,216 @@
+/* Escopo: investidores_onepager.html */
+:root {
+      --gold: #c99716;
+      --gold-heading: #92400e;
+      --gold-soft: #fff7ed;
+      --ink: #0f1419;
+      --muted: #3f4a5c;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #252a30 0%, #1a1d21 40%, #111418 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+    header.hero {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      border-left: 6px solid var(--gold);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    }
+    h1 {
+      margin: 0 0 0.35rem 0;
+      font-size: clamp(1.35rem, 4vw, 1.85rem);
+      color: var(--ink);
+    }
+    .tagline { color: var(--muted); font-size: 0.98rem; margin: 0; }
+    .hero a:not(.btn),
+    .card a:not(.btn) {
+      color: #1e3a8a;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .hero a:not(.btn):hover,
+    .card a:not(.btn):hover {
+      color: #172554;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    @media (min-width: 700px) {
+      .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    }
+    section.card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.15rem 1.35rem;
+      border: 1px solid var(--border);
+    }
+    h2 {
+      margin: 0 0 0.65rem 0;
+      font-size: 1.05rem;
+      color: var(--gold-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    ul { margin: 0; padding-left: 1.15rem; color: var(--muted); }
+    ul li { margin-bottom: 0.35rem; }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 0.65rem 1.15rem;
+      background: var(--gold);
+      color: var(--ink) !important;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    a.btn:hover {
+      filter: brightness(1.05);
+    }
+    a.btn.secondary {
+      background: var(--gold-soft);
+      border: 2px solid #b45309;
+      color: #7c2d12 !important;
+    }
+    a.btn.secondary:hover {
+      background: #ffedd5;
+      filter: none;
+    }
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 0 1rem 2rem;
+    }
+    footer a {
+      color: #fde68a;
+      font-weight: 600;
+      text-underline-offset: 2px;
+    }
+    footer a:hover {
+      color: #fef3c7;
+    }
+    .kbd {
+      font-family: ui-monospace, monospace;
+      font-size: 0.85em;
+      background: #f3f4f6;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+    }
+    .trust-strip {
+      margin-top: 0.85rem;
+      padding: 0.65rem 0.85rem;
+      background: #f1f5f9;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .five-q {
+      margin-top: 1rem;
+    }
+    .five-q ol {
+      margin: 0.5rem 0 0 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+    }
+    .five-q li {
+      margin-bottom: 0.65rem;
+      line-height: 1.5;
+    }
+    .five-q strong { color: var(--ink); }
+    .where {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.82rem;
+      color: #475569;
+    }
+    .offer-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 0.5rem;
+    }
+    .offer-table th, .offer-table td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.65rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .offer-table th {
+      background: #fef3c7;
+      color: #78350f;
+      font-weight: 600;
+    }
+    .offer-table td { color: var(--muted); }
+    dl.bridge {
+      margin: 0.35rem 0 0 0;
+      font-size: 0.88rem;
+    }
+    dl.bridge dt {
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 0.55rem;
+    }
+    dl.bridge dt:first-child { margin-top: 0; }
+    dl.bridge dd {
+      margin: 0.15rem 0 0 0;
+      color: var(--muted);
+      padding-left: 0;
+    }
+    dd.biz {
+      border-left: 3px solid var(--gold);
+      padding-left: 0.65rem !important;
+      margin-top: 0.35rem !important;
+      font-size: 0.84rem;
+    }
+    .limit-callout {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      font-size: 0.88rem;
+      color: #78350f;
+      margin-top: 0.5rem;
+      line-height: 1.55;
+    }
+    .card code,
+    .hero code {
+      font-family: ui-monospace, monospace;
+      font-size: 0.88em;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 0.12rem 0.35rem;
+      border-radius: 4px;
+    }
+    /* Barra vitrine (fundo escuro): links um pouco mais legíveis */
+    body.ete-portal-invest .vitrine-links a {
+      color: #adb5bd;
+    }
+    body.ete-portal-invest .vitrine-links a:hover {
+      color: #93c5fd;
+    }

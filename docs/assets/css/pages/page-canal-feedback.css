@@ -1,0 +1,100 @@
+/* Escopo: canal-feedback.html */
+:root {
+            --bg-dark: #0a0c0e;
+            --bg-card: #13171c;
+            --bg-elevated: #1a1f26;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-green: #059669;
+            --accent-cyan: #06b6d4;
+            --accent-amber: #f59e0b;
+            --whatsapp: #25d366;
+            --telegram: #0088cc;
+            --border: #2d333b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-dark);
+            min-height: 100vh;
+            padding: 0 20px 40px;
+        }
+        .wrapper { max-width: 640px; margin: 0 auto; }
+        header {
+            padding: 40px 0 32px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        header .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .intro {
+            margin: 28px 0 24px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+        .intro p { margin-bottom: 10px; }
+        .intro p:last-child { margin-bottom: 0; }
+        .intro strong { color: var(--accent-cyan); }
+        .channels {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 28px 0;
+        }
+        .channel-card {
+            display: block;
+            padding: 20px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .channel-card:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+        }
+        .channel-card.whatsapp:hover { border-color: var(--whatsapp); box-shadow: 0 0 20px rgba(37, 211, 102, 0.15); }
+        .channel-card.telegram:hover { border-color: var(--telegram); box-shadow: 0 0 20px rgba(0, 136, 204, 0.2); }
+        .channel-card.email:hover { border-color: var(--accent-cyan); box-shadow: 0 0 20px rgba(6, 182, 212, 0.2); }
+        .channel-card .icon { font-size: 1.75rem; margin-bottom: 8px; }
+        .channel-card .title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+        .channel-card .desc { font-size: 0.9rem; color: var(--text-secondary); }
+        .lgpd {
+            margin: 28px 0;
+            padding: 16px 20px;
+            background: rgba(5, 150, 105, 0.08);
+            border: 1px solid rgba(5, 150, 105, 0.35);
+            border-radius: 10px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .lgpd strong { color: var(--accent-green); }
+        .back {
+            text-align: center;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+        .back a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back a:hover { text-decoration: underline; }

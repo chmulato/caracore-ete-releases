@@ -4,7 +4,8 @@ CSS, JS e imagens usados pelas páginas HTML sob `docs/`.
 
 ## Estrutura
 
-- `css/` — Folhas de estilo (ex.: `laboratorio.css`)
+- `css/` — Folhas de estilo partilhadas (`laboratorio.css`, `loja.css`, `portal-responsive.css`, `vitrine-ete.css`, `caracore-core-typography.css`, `caracore-institutional-components.css`, `evolution-status.css`, `wiki*.css`, etc.)
+- `css/pages/` — Estilos extraídos por página (`page-*.css`), referenciados pelos HTML em `docs/`
 - `js/` — Scripts (ex.: `main.js`)
 - `img/` — Imagens específicas das páginas em `docs/`
 - `pdf/` — PDF gerados (manual Ouro 4.0)
