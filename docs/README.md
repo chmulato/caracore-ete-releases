@@ -1,44 +1,25 @@
-# Páginas Web — GitHub Pages
+# Páginas públicas do portal ETE
 
-Esta pasta contém os ficheiros HTML publicados no GitHub Pages (repositório público chmulato/ETE-releases ou equivalente configurado no repo de releases).
+Esta pasta (`docs/`) é a fonte do site publicado na loja e vitrine (fluxo automático para `chmulato/ETE-releases`, domínio típico https://ete.caracore.com.br/).
 
-Portal publicado: https://ete.caracore.com.br/
+## Foco de negócio
 
-Documentação da oficina em formato TXT (comandos, premissas, memória): pasta `oficina/` dentro de `docs/`. Começar por `oficina/00_INDICE.txt`.
+A primeira impressão deve orientar decisão e produto Minerador 4.0: `index.html`, `investidores_onepager.html`, protótipo de degustação, download e narrativa executiva. Documentação interna da equipa pertence a `library/` (Markdown), não a `docs/`.
 
-## Estrutura
+## Entradas principais
 
-- `index.html` — Portal / página inicial
-- `index_v2.html` — Apostila HTML (Terras Raras)
-- `artigo_ete_v3.html` — Artigo executivo
-- `laboratorio_campo_largo.html` — Laboratório Ouro 4.0
-- `canal-feedback.html` — Canal de feedback
-- `download.html` — Download do instalador
+- `index.html` — Portal
+- `investidores_onepager.html` — decisão e oferta
+- `prototipo_degustacao_minerador.html` — maquete do fluxo do produto
+- `download.html` — instaladores
+- `artigo_ete_v3.html` — artigo executivo
+- `laboratorio_campo_largo.html` — laboratório Campo Largo Ouro 4.0
+- Guias de instalação: `INSTALACAO_WINDOWS.md`, `INSTALACAO_LINUX.md`, `INSTALACAO_MACOS.md`, `INSTALACAO_MULTIPLATAFORMA.md`
 
-## Configuração do GitHub Pages (interface web)
+## Publicação e operações
 
-1. Settings → Pages
-2. Source: Deploy from a branch
-3. Branch: main (ou master)
-4. Folder: `/docs` conforme o repositório (no projeto de releases pode ser `/web`; verificar em Settings)
-5. Save
+Ver `library/publicacao_site_loja.md`.
 
-Com GitHub Actions: definir Source como GitHub Actions se existir workflow de deploy automático.
+## Imagens
 
-## URLs resultantes
-
-Após a configuração, exemplos típicos:
-
-- `https://[usuario].github.io/[repositorio]/` — entrada
-- `.../index_v2.html` — apostila técnica
-- `.../artigo_ete_v3.html` — artigo executivo
-
-## Caminhos de imagens
-
-Caminhos relativos; artigos e apostilas podem usar `../assets/images/aulas/` ou `../assets/images/artigos/` conforme a página.
-
-## Documentação adicional
-
-Referência operacional do site e do deploy: `docs/oficina/GITHUB_PAGES.txt` e índice `docs/oficina/00_INDICE.txt`.
-
-Guia histórico em Markdown (pode estar desalinhado com o workflow actual): `library/GUIA_GITHUB_PAGES.md`.
+Caminhos relativos conforme cada HTML; ver `docs/assets/README.md`.

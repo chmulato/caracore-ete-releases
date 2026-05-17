@@ -1,1 +1,9 @@
-/* ETE — Páginas loja utilizam assets/css. Este arquivo pode ser linkado para conformidade. */
+/**
+ * ETE — vitrine caracore-ete-releases (loja).
+ * Responsividade principal: assets/css/portal-responsive.css (carregar depois).
+ */
+body.ete-portal-loja button,
+body.ete-portal-loja .btn-upgrade,
+body.ete-portal-loja .btn-whatsapp {
+  touch-action: manipulation;
+}

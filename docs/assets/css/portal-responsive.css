@@ -256,12 +256,190 @@ body.ete-portal-course .chapter-image {
 body.ete-portal-loja {
   padding-left: max(12px, env(safe-area-inset-left));
   padding-right: max(12px, env(safe-area-inset-right));
+  padding-bottom: max(24px, env(safe-area-inset-bottom));
   box-sizing: border-box;
+}
+
+body.ete-portal-loja:has(.audit-bar) {
+  padding-bottom: max(120px, calc(96px + env(safe-area-inset-bottom)));
+}
+
+.table-responsive-loja {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0.75rem 0;
 }
 
 @media (max-width: 639px) {
   body.ete-portal-loja .wrapper {
     max-width: 100%;
+  }
+
+  body.ete-portal-loja header h1 {
+    font-size: clamp(1.15rem, 5vw, 1.5rem);
+    word-break: break-word;
+  }
+
+  body.ete-portal-loja .block,
+  body.ete-portal-loja .panel-section {
+    padding: 18px 16px;
+    margin-top: 18px;
+  }
+
+  body.ete-portal-loja .chart-container {
+    height: min(52vh, 320px);
+    min-height: 220px;
+  }
+
+  body.ete-portal-loja .controls {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Painel simbiótico — grelha 3 colunas → coluna única */
+  body.ete-portal-loja .dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  body.ete-portal-loja .zone {
+    padding: 16px;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 1px solid rgba(45, 55, 72, 0.55);
+  }
+
+  body.ete-portal-loja .zone-mineracao {
+    border-bottom: none;
+  }
+
+  body.ete-portal-loja .flow-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    padding: 10px 12px;
+    gap: 10px;
+    border-bottom: 1px solid rgba(45, 55, 72, 0.35);
+  }
+
+  body.ete-portal-loja .flow-line {
+    min-height: 4px;
+    width: min(120px, 40vw);
+    flex: 0 0 auto;
+    background: linear-gradient(
+      90deg,
+      var(--green-mid, #10b981),
+      var(--transition, #84cc16),
+      var(--gold, #d4a853)
+    );
+  }
+
+  body.ete-portal-loja .charts-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 14px 16px !important;
+  }
+
+  body.ete-portal-loja .chart-mini {
+    height: min(42vh, 220px);
+    min-height: 160px;
+  }
+
+  body.ete-portal-loja .badge-premium {
+    position: static;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  body.ete-portal-loja .mineracao-wrapper {
+    padding-top: 4px;
+  }
+
+  body.ete-portal-loja .potencial-badge {
+    white-space: normal;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  body.ete-portal-loja .modal .infographic {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body.ete-portal-loja .modal .infographic .arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  body.ete-portal-loja .loja-bottom-links {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    text-align: center;
+    margin: 16px 12px 100px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #8b949e;
+  }
+
+  body.ete-portal-loja .loja-bottom-links a {
+    color: #58a6ff;
+  }
+
+  body.ete-portal-loja .audit-bar {
+    font-size: 0.62rem;
+    padding-left: max(10px, env(safe-area-inset-left));
+    padding-right: max(10px, env(safe-area-inset-right));
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+
+  /* Série de decantadores — cascata horizontal → vertical */
+  body.ete-portal-loja .cascade {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body.ete-portal-loja .flow-arrow {
+    transform: rotate(90deg);
+    margin: 6px auto;
+    align-self: center;
+  }
+
+  body.ete-portal-loja .tank-wrap {
+    max-width: none;
+    width: 100%;
+  }
+
+  body.ete-portal-loja .tank-wrap.step2,
+  body.ete-portal-loja .tank-wrap.step3 {
+    margin-top: 0 !important;
+  }
+
+  body.ete-portal-loja .chart-solubility {
+    height: min(48vh, 260px);
+    min-height: 200px;
+  }
+
+  body.ete-portal-loja .container {
+    padding: 16px 14px !important;
+    max-width: 100%;
+  }
+
+  body.ete-portal-loja #tabela-licencas {
+    font-size: 12px;
+  }
+
+  body.ete-portal-loja #tabela-licencas th,
+  body.ete-portal-loja #tabela-licencas td {
+    padding: 8px 10px;
   }
 }
 
@@ -269,10 +447,75 @@ body.ete-portal-loja {
   body.ete-portal-loja .wrapper {
     max-width: min(100%, 720px);
   }
+
+  body.ete-portal-loja .dashboard {
+    grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr);
+  }
+
+  body.ete-portal-loja .charts-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.ete-portal-loja .chart-container {
+    height: 340px;
+  }
 }
 
-/* Wiki Bootstrap — safe-area apenas */
+@media (min-width: 640px) {
+  body.ete-portal-loja .loja-bottom-links {
+    position: fixed;
+    bottom: max(108px, calc(88px + env(safe-area-inset-bottom)));
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    font-size: 0.8rem;
+    color: #8b949e;
+    margin: 0;
+    padding: 0 12px;
+    max-width: calc(100vw - 24px);
+    text-align: center;
+  }
+
+  body.ete-portal-loja .loja-bottom-links a {
+    color: #58a6ff;
+  }
+}
+
+/* Wiki Bootstrap — safe-area + refinamentos mobile */
 body.ete-portal-wiki {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
+}
+
+@media (max-width: 639px) {
+  body.ete-portal-wiki .wiki-container {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+
+  body.ete-portal-wiki .wiki-content h1 {
+    font-size: 1.35rem;
+    word-break: break-word;
+  }
+
+  body.ete-portal-wiki .wiki-nav .navbar-brand {
+    font-size: 0.9rem;
+    max-width: 70vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  body.ete-portal-wiki .wiki-content .lead {
+    font-size: 1rem;
+  }
+
+  body.ete-portal-wiki .wiki-content .d-flex.flex-wrap.gap-2 {
+    flex-direction: column;
+  }
+
+  body.ete-portal-wiki .wiki-content .d-flex.flex-wrap.gap-2 .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }

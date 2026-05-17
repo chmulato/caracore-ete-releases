@@ -38,3 +38,25 @@
 .evo-feedback-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 16px -4px rgba(212, 168, 83, 0.35); color: #0f0d09; }
 .evo-feedback-btn:focus { outline: 2px solid var(--evo-emerald-500); outline-offset: 2px; }
 .evo-feedback-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+@media (max-width: 639px) {
+  .evo-feedback-fab {
+    bottom: max(12px, env(safe-area-inset-bottom));
+    right: max(10px, env(safe-area-inset-right));
+    left: auto;
+  }
+
+  .evo-feedback-btn {
+    padding: 10px 14px;
+    font-size: 0.8125rem;
+  }
+
+  .evo-beta-tooltip {
+    width: min(280px, calc(100vw - 28px));
+    max-width: calc(100vw - 28px);
+  }
+
+  .evo-roadmap-footer {
+    padding: 16px 14px max(20px, env(safe-area-inset-bottom));
+  }
+}

@@ -1,8 +1,6 @@
 # MVP financeiro v1 (ETE Mineração)
 
-Texto operacional em TXT (oficina): `docs/oficina/MVP_FINANCEIRO_V1.txt`
-
-Documento de escopo alinhado a `docs/proximos_passos.txt` (Fase 1). Serve para congelar o que entra na primeira versão “decisão econômica” sem prometer precisão de FEED.
+Documento de escopo alinhado a `library/roadmap_ete.md` (Fase 1). Serve para congelar o que entra na primeira versão “decisão econômica” sem prometer precisão de FEED.
 
 ## Objetivo
 
@@ -36,4 +34,4 @@ Dar resposta coerente às perguntas: investimento (CAPEX), custo operacional (OP
 
 ## Responsável e revisão
 
-Preencher nome e data em `docs/proximos_passos.txt` (secção 6) na revisão mensal.
+Preencher nome e data em `library/roadmap_ete.md` (secção 6) na revisão mensal.

@@ -2,8 +2,6 @@
 
 CSS, JS e imagens usados pelas páginas HTML sob `docs/`.
 
-Versão em texto puro para a oficina: `docs/oficina/ASSETS_WEB.txt`
-
 ## Estrutura
 
 - `css/` — Folhas de estilo (ex.: `laboratorio.css`)

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto chmulato/ETE — Simulador de Hidrometalurgia Seletiva</title>
+    <title>Campo Largo ETE — decisão de negócio e Minerador 4.0</title>
     <style>
         :root {
             --bg-dark: #1a1d21;
@@ -56,6 +56,11 @@
         header .release-note strong {
             color: var(--accent-gold);
             font-weight: 600;
+        }
+
+        .nav-card.nav-card-destaque {
+            border: 1px solid rgba(212, 168, 83, 0.4);
+            box-shadow: 0 0 0 1px rgba(212, 168, 83, 0.12);
         }
 
         header h1 {
@@ -335,8 +340,8 @@
 <body class="ete-portal-index">
     <div class="wrapper">
         <header>
-            <h1>Projeto chmulato/ETE</h1>
-            <p class="release-note">Portal e documentação alinhados ao <strong>Minerador 4.0 v1.2.0</strong> — layout responsivo (mobile, tablet, desktop).</p>
+            <h1>Campo Largo ETE</h1>
+            <p class="release-note">Apresentação centrada em <strong>decisão de negócio</strong> e no <strong>Minerador 4.0 v1.2.0</strong> — portal responsivo.</p>
             <p class="subtitle">Simulador de Hidrometalurgia Seletiva: Aplicando a Engenharia de Processos de Efluentes no Refino de Terras Raras.</p>
             <p class="tagline">O Brasil possui o conhecimento e as reservas; este projeto entrega a ferramenta de simulação para viabilizar a separação seletiva com custos competitivos.</p>
         </header>
@@ -361,7 +366,7 @@
                 <li>O que muda em cenário adversário (preço, energia, logística)?</li>
                 <li>O que continua fora do modelo (licenças, FEED, contratos)?</li>
             </ol>
-            <p class="biz-see">Respostas detalhadas e limites do MVP: <a href="investidores_onepager.html">One-pager para negócio</a> · Fluxo técnico-económico no Streamlit ETE‑Mineração e em <code>docs/mvp_financeiro_v1.md</code>.</p>
+            <p class="biz-see">Respostas detalhadas e limites do MVP: <a href="investidores_onepager.html">One-pager para negócio</a> · síntese técnica em <a href="mvp_financeiro_v1.md">MVP financeiro v1</a> · fluxo completo no Streamlit ETE‑Mineração (instalação local).</p>
             <p class="honesty-note"><strong>Transparência:</strong> o ecossistema entrega estudo prévio com premissas versionadas — não substitui parecer de investimento nem promessa de retorno.</p>
         </section>
 
@@ -369,99 +374,61 @@
             <h2 id="learn-heading">Trilha sugerida (30–45 min)</h2>
             <div class="learning-steps">
                 <div class="learning-step">
-                    <strong>Nível 0 — Contexto</strong>
-                    Leia o manifesto e o artigo executivo. Entenda soberania em terras raras e por que a arquitetura ETE importa para custo modular.
-                    <div style="margin-top:8px;"><a href="artigo_ete_v3.html">Artigo executivo</a> · <a href="laboratorio_campo_largo.html">Laboratório Ouro 4.0</a></div>
+                    <strong>Nível 0 — Decisão e narrativa</strong>
+                    Comece pelo one-pager e pelo artigo executivo: CAPEX, OPEX, retorno, risco e enquadramento do produto Minerador 4.0.
+                    <div style="margin-top:8px;"><a href="investidores_onepager.html">One-pager negócio</a> · <a href="artigo_ete_v3.html">Artigo executivo</a></div>
                 </div>
                 <div class="learning-step">
-                    <strong>Nível 1 — Produto</strong>
+                    <strong>Nível 1 — Contexto pedagógico</strong>
+                    Laboratório Campo Largo e soberania em materiais críticos (complemento à decisão).
+                    <div style="margin-top:8px;"><a href="laboratorio_campo_largo.html">Laboratório Ouro 4.0</a></div>
+                </div>
+                <div class="learning-step">
+                    <strong>Nível 2 — Produto</strong>
                     Percorra o protótipo HTML ou instale o Minerador 4.0. Veja ambiental → Premium → lab → resultado como narrativa única.
                     <div style="margin-top:8px;"><a href="prototipo_degustacao_minerador.html">Degustação HTML</a> · <a href="download.html">Download</a></div>
                 </div>
                 <div class="learning-step">
-                    <strong>Nível 2 — Viabilidade</strong>
+                    <strong>Nível 3 — Viabilidade</strong>
                     Abra o simulador Mineração no Streamlit; gere relatório com bloco económico (VPL/TIR, cenários). Cruze com o one-pager.
                     <div style="margin-top:8px;"><a href="#mineracao">Instruções Streamlit Mineração</a> · <a href="investidores_onepager.html">One-pager</a></div>
                 </div>
             </div>
         </section>
 
-        <p class="nav-section-title">Navegação Estratégica</p>
+        <p class="nav-section-title">Negócio e Minerador 4.0</p>
         <div class="nav-grid">
-            <a href="#residencial" id="link-residencial" class="nav-card nav-card-ambiental" title="Saltar para instruções do simulador ETE-Residual (executar localmente: streamlit run src/ete_residencial/app_residencial.py)">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                </span>
-                <h3>Solução Ambiental</h3>
-                <p>Simulador ETE-Residual: conformidade, descarte seguro, redução de impacto ambiental (mg/L). Tema verde/sustentável.</p>
-            </a>
-            <a href="#mineracao" id="link-mineracao" class="nav-card nav-card-mineracao" title="Saltar para instruções do simulador ETE-Mineração (executar localmente: streamlit run src/ete_mineracao/app_mineracao.py)">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="6" height="5" rx="0.5"/><rect x="2" y="15" width="6" height="5" rx="0.5"/>
-                        <rect x="10" y="4" width="6" height="5" rx="0.5"/><rect x="10" y="15" width="6" height="5" rx="0.5"/>
-                        <rect x="18" y="4" width="4" height="5" rx="0.5"/><rect x="18" y="15" width="4" height="5" rx="0.5"/>
-                    </svg>
-                </span>
-                <h3>Refino Mineral</h3>
-                <p>Simulador ETE-Mineração: pureza comercial, ROI, g óxido/t, margem bruta (g/L, %). Tema industrial/sóbrio.</p>
-            </a>
-            <a href="prototipo_degustacao_minerador.html" class="nav-card" title="Maquete HTML do fluxo do Minerador 4.0 antes de instalar">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
-                    </svg>
-                </span>
-                <h3>Degustação (protótipo HTML)</h3>
-                <p>Percorra o mesmo roteiro do instalador em formato web estático: Ambiente, Golden Gate, Campo, Lab e Mercado.</p>
-            </a>
-            <a href="download.html" class="nav-card" title="Baixar o instalador Windows do Minerador 4.0">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                </span>
-                <h3>Download — Minerador 4.0</h3>
-                <p>Instalador Windows (.exe) do simulador. Versão estável, checksums SHA-256 e guia de instalação.</p>
-            </a>
-            <a href="laboratorio_campo_largo.html" class="nav-card nav-card-campo-largo" title="Laboratório Campo Largo: Ouro 4.0 — Rochas, Python e Futuro">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/>
-                    </svg>
-                </span>
-                <h3>Laboratório Campo Largo: Ouro 4.0</h3>
-                <p>Rochas &amp; cerâmicas, Python + química, IFPR: onde o código vira matéria. Jornada para mentes jovens.</p>
-            </a>
-            <a href="investidores_onepager.html" class="nav-card">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                    </svg>
-                </span>
-                <h3>Negócio &amp; investimento</h3>
-                <p>Cinco perguntas da decisão, oferta Free/Premium/Enterprise (roadmap), glossário técnico→financeiro e limites do modelo.</p>
-            </a>
-            <a href="index_v2.html" class="nav-card">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>
-                    </svg>
-                </span>
-                <h3>Apostila de P&D</h3>
-                <p>Documentação técnica para capacitação em Hidrometalurgia de Terras Raras.</p>
+            <a href="investidores_onepager.html" class="nav-card nav-card-destaque">
+                <h3>Negócio e investimento</h3>
+                <p>Cinco perguntas da decisão, oferta Free e Premium, glossário técnico para financeiro e limites explícitos do modelo.</p>
             </a>
             <a href="artigo_ete_v3.html" class="nav-card">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 3v18h18"/><path d="M18 9v6"/><path d="M13 9v6"/><path d="M8 9v6"/><path d="M3 14h15"/>
-                    </svg>
-                </span>
-                <h3>Artigo Executivo</h3>
-                <p>Visão de negócios sobre Soberania em Terras Raras e valor da metodologia ETE.</p>
+                <h3>Artigo executivo</h3>
+                <p>Soberania em terras raras e valor da metodologia ETE aplicada ao refino.</p>
+            </a>
+            <a href="prototipo_degustacao_minerador.html" class="nav-card">
+                <h3>Degustação em HTML</h3>
+                <p>Roteiro estático do dashboard: ambiente, paywall, narrativa Campo Largo, laboratório e resultado.</p>
+            </a>
+            <a href="download.html" class="nav-card">
+                <h3>Download</h3>
+                <p>Instaladores por sistema operativo, checksums e guias de instalação na loja oficial.</p>
+            </a>
+            <a href="laboratorio_campo_largo.html" class="nav-card nav-card-campo-largo">
+                <h3>Laboratório Campo Largo Ouro 4.0</h3>
+                <p>Ponte entre formação técnica e narrativa do produto.</p>
+            </a>
+            <a href="index_v2.html" class="nav-card">
+                <h3>Apostila técnica P&amp;D</h3>
+                <p>Fundamentos de hidrometalurgia em formato curso (uso avançado).</p>
+            </a>
+            <a href="#residencial" id="link-residencial" class="nav-card nav-card-ambiental">
+                <h3>Simulador ambiental (ETE‑Residual)</h3>
+                <p>Instruções para executar localmente o tema residual e relatório ambiental.</p>
+            </a>
+            <a href="#mineracao" id="link-mineracao" class="nav-card nav-card-mineracao">
+                <h3>Simulador mineração (ETE‑Mineração)</h3>
+                <p>Instruções para Viabilidade, painéis e relatório económico no Streamlit.</p>
             </a>
         </div>
 
