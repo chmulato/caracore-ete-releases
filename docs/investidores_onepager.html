@@ -6,10 +6,11 @@
   <title>Caracore ETE — One-pager investidores</title>
   <style>
     :root {
-      --gold: #d4a012;
-      --gold-soft: #f5e6c5;
-      --ink: #1a1d21;
-      --muted: #4b5565;
+      --gold: #c99716;
+      --gold-heading: #92400e;
+      --gold-soft: #fff7ed;
+      --ink: #0f1419;
+      --muted: #3f4a5c;
       --card: #ffffff;
       --border: #e5e7eb;
     }
@@ -40,6 +41,17 @@
       color: var(--ink);
     }
     .tagline { color: var(--muted); font-size: 0.98rem; margin: 0; }
+    .hero a:not(.btn),
+    .card a:not(.btn) {
+      color: #1e3a8a;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .hero a:not(.btn):hover,
+    .card a:not(.btn):hover {
+      color: #172554;
+    }
     .grid {
       display: grid;
       gap: 1rem;
@@ -57,7 +69,7 @@
     h2 {
       margin: 0 0 0.65rem 0;
       font-size: 1.05rem;
-      color: var(--gold);
+      color: var(--gold-heading);
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
@@ -80,17 +92,32 @@
       font-weight: 600;
       font-size: 0.95rem;
     }
+    a.btn:hover {
+      filter: brightness(1.05);
+    }
     a.btn.secondary {
-      background: transparent;
-      border: 2px solid var(--gold);
-      color: var(--gold-soft) !important;
+      background: var(--gold-soft);
+      border: 2px solid #b45309;
+      color: #7c2d12 !important;
+    }
+    a.btn.secondary:hover {
+      background: #ffedd5;
+      filter: none;
     }
     footer {
       margin-top: 1.5rem;
       font-size: 0.82rem;
-      color: #9ca3af;
+      color: #cbd5e1;
       text-align: center;
       padding: 0 1rem 2rem;
+    }
+    footer a {
+      color: #fde68a;
+      font-weight: 600;
+      text-underline-offset: 2px;
+    }
+    footer a:hover {
+      color: #fef3c7;
     }
     .kbd {
       font-family: ui-monospace, monospace;
@@ -102,9 +129,9 @@
     .trust-strip {
       margin-top: 0.85rem;
       padding: 0.65rem 0.85rem;
-      background: #f8fafc;
+      background: #f1f5f9;
       border-radius: 8px;
-      border: 1px solid var(--border);
+      border: 1px solid #cbd5e1;
       font-size: 0.82rem;
       color: var(--muted);
       line-height: 1.45;
@@ -126,7 +153,7 @@
       display: block;
       margin-top: 0.2rem;
       font-size: 0.82rem;
-      color: #64748b;
+      color: #475569;
     }
     .offer-table {
       width: 100%;
@@ -141,8 +168,8 @@
       vertical-align: top;
     }
     .offer-table th {
-      background: #fefce8;
-      color: #854d0e;
+      background: #fef3c7;
+      color: #78350f;
       font-weight: 600;
     }
     .offer-table td { color: var(--muted); }
@@ -177,6 +204,22 @@
       margin-top: 0.5rem;
       line-height: 1.55;
     }
+    .card code,
+    .hero code {
+      font-family: ui-monospace, monospace;
+      font-size: 0.88em;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 0.12rem 0.35rem;
+      border-radius: 4px;
+    }
+    /* Barra vitrine (fundo escuro): links um pouco mais legíveis */
+    body.ete-portal-invest .vitrine-links a {
+      color: #adb5bd;
+    }
+    body.ete-portal-invest .vitrine-links a:hover {
+      color: #93c5fd;
+    }
   </style>
   <link rel="stylesheet" href="assets/css/portal-responsive.css">
   <link rel="stylesheet" href="assets/css/vitrine-ete.css">
@@ -188,7 +231,7 @@
       <h1>Simulador ETE Mineração — decisão econômica em hidrometalurgia seletiva</h1>
       <p class="tagline">
         Produto compilado multiplataforma + código-fonte: do cenário químico ao CAPEX/OPEX,
-        payback, VPL/TIR, cenários de preço e painéis por estágio (ver <a href="mvp_financeiro_v1.html" style="color: #1e40af; font-weight: 600;">MVP financeiro v1</a>).
+        payback, VPL/TIR, cenários de preço e painéis por estágio (ver <a href="mvp_financeiro_v1.html">MVP financeiro v1</a>).
         Apresentação em HTML responsivo servido ou exportado localmente — sem CDN na interface.
       </p>
       <p class="trust-strip">
@@ -204,7 +247,7 @@
 
     <section class="card five-q" style="margin-top: 1rem;">
       <h2>As cinco perguntas do negócio</h2>
-      <p style="margin: 0 0 0.35rem 0; font-size: 0.9rem; color: var(--muted);">Cada pergunta traduz o simulador em decisão. Use o Streamlit <strong>ETE‑Mineração</strong> (relatório + Viabilidade) e a página <a href="mvp_financeiro_v1.html" style="color: #1e40af; font-weight: 600;">MVP financeiro v1 (HTML)</a> como referência.</p>
+      <p style="margin: 0 0 0.35rem 0; font-size: 0.9rem; color: var(--muted);">Cada pergunta traduz o simulador em decisão. Use o Streamlit <strong>ETE‑Mineração</strong> (relatório + Viabilidade) e a página <a href="mvp_financeiro_v1.html">MVP financeiro v1 (HTML)</a> como referência.</p>
       <ol>
         <li><strong>Quanto investir?</strong> Ordem de grandeza de CAPEX (classe de estimativa).
           <span class="where">Onde responde: painéis económicos / CAPEX Classe 5 no fluxo Mineração e relatório HTML exportável.</span></li>
@@ -278,14 +321,13 @@
             <td>Ótimo para formação e estudos de screening; contratos corporativos são caminho separado.</td>
           </tr>
           <tr>
-            <td><strong>Enterprise</strong> <span style="font-size:0.75rem;font-weight:normal;color:#64748b;">(roadmap)</span></td>
+            <td><strong>Enterprise</strong> <span style="font-size:0.75rem;font-weight:normal;color:#475569;">(roadmap)</span></td>
             <td>Mineração, refino, banco, consultoria</td>
             <td>Dados reais do cliente, SLA, integrações, relatórios sob marca — a definir por proposta.</td>
             <td>É o nível esperado quando o board exige auditoria, dados proprietários e responsabilização formal.</td>
           </tr>
         </tbody>
       </table>
-      </div>
     </section>
 
     <section class="card" style="margin-top: 1rem;">
@@ -317,11 +359,11 @@
   </div>
   <footer>
     <p style="margin: 0 0 10px;">
-      <a href="index.html" style="color:#d4a012;">Portal ETE</a> ·
-      <a href="laboratorio_campo_largo.html" style="color:#d4a012;">Laboratório</a> ·
-      <a href="download.html" style="color:#d4a012;">Download</a> ·
-      <a href="artigo_ete_v3.html" style="color:#d4a012;">Artigo executivo</a> ·
-      <a href="canal-feedback.html" style="color:#d4a012;">Feedback</a>
+      <a href="index.html">Portal ETE</a> ·
+      <a href="laboratorio_campo_largo.html">Laboratório</a> ·
+      <a href="download.html">Download</a> ·
+      <a href="artigo_ete_v3.html">Artigo executivo</a> ·
+      <a href="canal-feedback.html">Feedback</a>
     </p>
     Caracore ETE · One-pager alinhado ao MVP financeiro v1 · Maio/2026 · Atualize premissas antes de qualquer roadshow.
   </footer>
