@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://ete.caracore.com.br/instalacao_windows.html">
+  <title>Instalação Windows — Minerador 4.0</title>
+  <meta name="description" content="Pré-requisitos WebView2, SmartScreen, onefile vs onedir, dados em %APPDATA%, integridade.">
+  <link rel="stylesheet" href="assets/css/vitrine-ete.css">
+  <link rel="stylesheet" href="assets/css/portal-responsive.css">
+  <script src="assets/js/vitrine-shell.js" defer></script>
+</head>
+<body class="ete-vitrine-doc">
+  <main class="vitrine-prose-wrap">
+    <article class="vitrine-prose">
+      <h1>Minerador 4.0 — Instalação e distribuição no Windows</h1>
+      <p>Índice multiplataforma: <a href="instalacao_multiplataforma.html">Instalação multiplataforma</a>.</p>
+
+      <h2>Pré-requisitos no PC do utilizador</h2>
+      <ol>
+        <li><strong>WebView2 Runtime</strong> — O Minerador 4.0 usa <code>pywebview</code>, que no Windows depende do motor <strong>Microsoft Edge WebView2</strong>. Na maior parte dos sistemas recentes já vem instalado ou é actualizado pelo Edge/Windows Update. Se a janela não abrir ou aparecer erro de controlo WebView2, instale o runtime na <a href="https://developer.microsoft.com/microsoft-edge/webview2/" target="_blank" rel="noopener">Distribuição do Microsoft Edge WebView2</a>.</li>
+        <li><strong>Antivírus e SmartScreen</strong> — Executáveis gerados com PyInstaller <strong>não são assinados por defeito</strong>. O Windows Defender SmartScreen pode bloquear ou pedir «Mais informações → Executar na mesma». Isto é esperado até existir assinatura de código (certificado EV/OV).</li>
+        <li><strong>Rede</strong> — O servidor Flask corre em <strong>localhost</strong> (por exemplo <code>127.0.0.1</code>). Não é necessário abrir portas na firewall para uso normal.</li>
+      </ol>
+
+      <h2>Dados da aplicação</h2>
+      <ul>
+        <li>Estado da licença e ficheiros da app: tipicamente <code>%APPDATA%\Minerador40</code> (<code>C:\Users\&lt;utilizador&gt;\AppData\Roaming\Minerador40</code>).</li>
+        <li>Desinstalar/apagar manualmente essa pasta remove dados locais da app (faça cópia se precisar).</li>
+      </ul>
+
+      <h2>Tipos de artefacto</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Modo</th>
+            <th>Descrição</th>
+            <th>Notas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Onefile</strong></td>
+            <td>Um único <code>Minerador40.exe</code></td>
+            <td>Extração temporária ao arranque; primeiro arranque mais lento; maior probabilidade de falsos positivos em antivírus</td>
+          </tr>
+          <tr>
+            <td><strong>Onedir (pasta)</strong></td>
+            <td>Pasta <code>Minerador40\</code> com <code>.exe</code> + <code>_internal\</code></td>
+            <td>Arranque mais rápido; distribuir como <code>.zip</code> da pasta inteira</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Para gerar localmente (na raiz do repositório fonte):</p>
+      <pre><code>python scripts/build_dist_local.py --deps desktop
+python scripts/build_dist_local.py --deps desktop --onedir --zip</code></pre>
+
+      <h2>Integridade</h2>
+      <p>Os ficheiros <code>checksum.md5</code> e <code>checksum.sha256</code> junto ao <code>.exe</code> referem-se ao executável principal. Após extrair um <code>.zip</code>, volte a verificar checksums no destino se distribuir ficheiros alterados.</p>
+
+      <h2>Feedback</h2>
+      <p>Para reportar evolução ou suporte, ver <a href="canal-feedback.html">Canal de feedback</a> e a secção «Reportar Evolução» na interface (com servidor HTTP local).</p>
+
+      <div class="doc-footer-links">
+        <a href="instalacao_multiplataforma.html">← Multiplataforma</a> ·
+        <a href="download.html">Download</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

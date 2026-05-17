@@ -12,9 +12,9 @@ Também são publicados `checksums.sha256`, `checksums.md5` e este guia como ref
 
 ## Guias detalhados
 
-- [Windows](INSTALACAO_WINDOWS.md)
-- [Linux](INSTALACAO_LINUX.md)
-- [macOS](INSTALACAO_MACOS.md)
+- [Windows](instalacao_windows.html)
+- [Linux](instalacao_linux.html)
+- [macOS](instalacao_macos.html)
 
 ## Integridade
 

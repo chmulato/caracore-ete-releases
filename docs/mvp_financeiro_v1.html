@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://ete.caracore.com.br/mvp_financeiro_v1.html">
+  <title>MVP financeiro v1 — Minerador 4.0 (ETE Mineração)</title>
+  <meta name="description" content="Escopo do MVP económico: CAPEX, OPEX, payback, VPL, TIR, cenários e sensibilidade na etapa Viabilidade do simulador ETE Mineração.">
+  <link rel="stylesheet" href="assets/css/vitrine-ete.css">
+  <link rel="stylesheet" href="assets/css/portal-responsive.css">
+  <script src="assets/js/vitrine-shell.js" defer></script>
+</head>
+<body class="ete-vitrine-doc">
+  <main class="vitrine-prose-wrap">
+    <article class="vitrine-prose">
+      <h1>MVP financeiro v1 (ETE Mineração)</h1>
+      <p>Documento de escopo alinhado ao roadmap interno da equipa (<code>library/roadmap_ete.md</code>, Fase&nbsp;1). Congela o que entra na primeira versão «decisão económica» sem prometer precisão de FEED. Versão Markdown mantida no repositório para revisões (<code>docs/mvp_financeiro_v1.md</code>).</p>
+
+      <h2>Objetivo</h2>
+      <p>Dar resposta coerente às perguntas: investimento (CAPEX), custo operacional (OPEX), retorno simples (payback), retorno descontado (VPL), taxa implícita (TIR), faixa de mercado (três cenários de receita) e choques mínimos de custo (sensibilidade).</p>
+
+      <h2>O que entra no MVP v1</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Elemento</th>
+            <th>Implementação</th>
+            <th>Observação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Premissas documentadas</td>
+            <td><code>docs/premissas/</code></td>
+            <td>Inventário versionado; actualizar data ao mudar número</td>
+          </tr>
+          <tr>
+            <td>CAPEX modular (faixa)</td>
+            <td><code>AnalisadorEconomico.estimar_capex_planta</code></td>
+            <td>Classe 5; breakdown na Auditoria</td>
+          </tr>
+          <tr>
+            <td>OPEX / tonelada</td>
+            <td>Derivado de <code>volume_mes_m3</code> e produção</td>
+            <td>KPI «custo por kg» como proxy</td>
+          </tr>
+          <tr>
+            <td>Payback</td>
+            <td><code>calcular_payback</code></td>
+            <td>Fluxo mensal constante</td>
+          </tr>
+          <tr>
+            <td>VPL</td>
+            <td><code>calcular_vpl_fluxo_mensal_uniforme</code></td>
+            <td>CAPEX em t=0; lucro mensal igual; taxa configurável na UI</td>
+          </tr>
+          <tr>
+            <td>TIR</td>
+            <td><code>calcular_tir_anual_fluxo_mensal_uniforme</code></td>
+            <td>Mesmo fluxo; pode ser <code>None</code> se não houver raiz</td>
+          </tr>
+          <tr>
+            <td>Cenários pessimista / base / optimista</td>
+            <td><code>calcular_triplo_cenario_preco_receita</code></td>
+            <td>Factores 0,85 / 1,00 / 1,15 sobre <strong>receita</strong>; OPEX fixo</td>
+          </tr>
+          <tr>
+            <td>Sensibilidade</td>
+            <td><code>matriz_sensibilidade_minima</code></td>
+            <td>Choques +20% energia, +15% reagentes, +10% disposição (proxy logística)</td>
+          </tr>
+          <tr>
+            <td>Painéis Fase 2 (UI)</td>
+            <td>Nova etapa <strong>Painéis decisório</strong> no Streamlit Mineração</td>
+            <td>Issues #5–#7; expansores empilham bem em mobile</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Fora do MVP v1 (Fase 1b / Fase 2)</h2>
+      <ul>
+        <li>VPL/TIR <strong>por cenário</strong> de preço (apenas tabela de lucro mensal por cenário).</li>
+        <li>Sensibilidade cruzada ou distribuição probabilística.</li>
+        <li>OPEX variando com cenário de preço (reagentes indexados a mercado).</li>
+        <li>Comparativo modular vs centralizado com <strong>dois</strong> fluxos simulados lado a lado (Fase&nbsp;2).</li>
+      </ul>
+
+      <h2>Referências de código</h2>
+      <ul>
+        <li><code>analise_economica.py</code> — funções novas no final do ficheiro.</li>
+        <li><code>src/ete_mineracao/app_mineracao.py</code> — etapa <strong>Viabilidade</strong> e secções extras no relatório HTML.</li>
+      </ul>
+
+      <h2>Responsável e revisão</h2>
+      <p>Preencher nome e data em <code>library/roadmap_ete.md</code> (secção&nbsp;6) na revisão mensal.</p>
+
+      <div class="doc-footer-links">
+        <a href="investidores_onepager.html">One-pager negócio</a> ·
+        <a href="index.html">Portal</a> ·
+        <a href="download.html">Download</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://ete.caracore.com.br/instalacao_linux.html">
+  <title>Instalação Linux — Minerador 4.0</title>
+  <meta name="description" content="tar.gz onedir, dependências GTK/WebKitGTK pywebview, integridade SHA-256.">
+  <link rel="stylesheet" href="assets/css/vitrine-ete.css">
+  <link rel="stylesheet" href="assets/css/portal-responsive.css">
+  <script src="assets/js/vitrine-shell.js" defer></script>
+</head>
+<body class="ete-vitrine-doc">
+  <main class="vitrine-prose-wrap">
+    <article class="vitrine-prose">
+      <h1>Minerador 4.0 — Linux (x86_64)</h1>
+      <p>Índice: <a href="instalacao_multiplataforma.html">Instalação multiplataforma</a>.</p>
+
+      <h2>Formato da distribuição</h2>
+      <p>O pacote de release é um ficheiro compactado (<code>Minerador40-linux-x86_64.tar.gz</code>), não um AppImage. Contém a pasta <code>Minerador40/</code> gerada pelo PyInstaller em modo <strong>pasta (onedir)</strong> — inclui o binário principal e a subpasta <code>_internal/</code> com bibliotecas.</p>
+
+      <h2>Instalação rápida</h2>
+      <pre><code>tar -xzf Minerador40-linux-x86_64.tar.gz
+chmod +x Minerador40/Minerador40
+./Minerador40/Minerador40</code></pre>
+      <p>Mantenha <code>Minerador40</code> e <code>_internal</code> no mesmo nível (não mova só o binário).</p>
+
+      <h2>Dependências de sistema (pywebview)</h2>
+      <p>O <code>pywebview</code> no Linux usa normalmente <strong>GTK 3</strong> e <strong>WebKitGTK</strong>. Em distribuições Debian/Ubuntu:</p>
+      <pre><code>sudo apt-get update
+sudo apt-get install -y python3-gi gir1.2-gtk-3.0 gir1.2-webkit2-4.1 libgtk-3-0</code></pre>
+      <p>Nomes dos pacotes variam (Fedora: <code>gtk3</code>, <code>webkitgtk4</code>; Arch: <code>webkitgtk-4.1</code>). Se a janela não abrir, instale o binding WebKitGTK correspondente à sua distro.</p>
+
+      <h2>Servidor local</h2>
+      <p>O Flask corre em <code>127.0.0.1</code> (porta por defeito <strong>5150</strong>). Não é necessário expor portas na firewall para uso normal.</p>
+
+      <h2>Dados da aplicação</h2>
+      <p>Ficheiros de estado/licença ficam tipicamente em <code>~/.local/share/Minerador40</code> ou equivalente conforme XDG (<code>XDG_DATA_HOME</code>).</p>
+
+      <h2>Integridade</h2>
+      <p>Compare o SHA-256 do <code>.tar.gz</code> com o ficheiro <code>checksums.sha256</code> da release.</p>
+
+      <div class="doc-footer-links">
+        <a href="instalacao_multiplataforma.html">← Multiplataforma</a> ·
+        <a href="download.html">Download</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
