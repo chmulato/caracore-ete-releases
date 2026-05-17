@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://ete.caracore.com.br/instalacao_macos.html">
+  <title>Instalação macOS — Minerador 4.0</title>
+  <meta name="description" content="DMG onedir, Gatekeeper, WebKit, integridade shasum.">
+  <link rel="stylesheet" href="assets/css/vitrine-ete.css">
+  <link rel="stylesheet" href="assets/css/portal-responsive.css">
+  <script src="assets/js/vitrine-shell.js" defer></script>
+</head>
+<body class="ete-vitrine-doc">
+  <main class="vitrine-prose-wrap">
+    <article class="vitrine-prose">
+      <h1>Minerador 4.0 — macOS</h1>
+      <p>Índice: <a href="instalacao_multiplataforma.html">Instalação multiplataforma</a>.</p>
+
+      <h2>Formato da distribuição</h2>
+      <p>A release inclui um ficheiro de disco (<code>Minerador40-macos-universal.dmg</code>). Ao montar, verá a pasta <strong><code>Minerador40</code></strong> com o binário e <code>_internal/</code> (modo PyInstaller <strong>onedir</strong>). Não apague <code>_internal/</code>.</p>
+
+      <h2>Instalação rápida</h2>
+      <ol>
+        <li>Abra o <code>.dmg</code> e arraste a pasta <code>Minerador40</code> para <code>Applications</code> ou para uma pasta à sua escolha.</li>
+        <li>Execute o programa <strong>Minerador40</strong> dentro dessa pasta.</li>
+      </ol>
+
+      <h2>Gatekeeper e apps não assinados</h2>
+      <p>Binários gerados em CI <strong>não são assinados</strong> com Apple Developer ID por defeito. Na primeira execução o macOS pode bloquear:</p>
+      <ul>
+        <li><strong>Definições → Privacidade e segurança</strong> → permitir a execução, ou</li>
+        <li>Clicar com o botão direito no binário → <strong>Abrir</strong> → confirmar.</li>
+      </ul>
+      <p>Se descarregou via browser e aparecer erro de ficheiro isolado:</p>
+      <pre><code>xattr -cr /caminho/para/Minerador40</code></pre>
+      <p>(substitua pelo caminho real da pasta)</p>
+
+      <h2>WebView</h2>
+      <p>O <code>pywebview</code> no macOS usa o motor WebKit do sistema. Mantenha o macOS actualizado.</p>
+
+      <h2>Servidor local</h2>
+      <p>O Flask corre em <code>127.0.0.1</code> (porta <strong>5150</strong>).</p>
+
+      <h2>Dados da aplicação</h2>
+      <p>Estado e licença: tipicamente em <code>~/Library/Application Support/Minerador40</code>.</p>
+
+      <h2>Integridade</h2>
+      <pre><code>shasum -a 256 Minerador40-macos-universal.dmg</code></pre>
+      <p>Compare com <code>checksums.sha256</code> na mesma release.</p>
+
+      <div class="doc-footer-links">
+        <a href="instalacao_multiplataforma.html">← Multiplataforma</a> ·
+        <a href="download.html">Download</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

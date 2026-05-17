@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://ete.caracore.com.br/instalacao_multiplataforma.html">
+  <title>Instalação multiplataforma — Minerador 4.0</title>
+  <meta name="description" content="Guia oficial: Windows (.exe), Linux (.tar.gz), macOS (.dmg), checksums e loja caracore-ete-releases.">
+  <link rel="stylesheet" href="assets/css/vitrine-ete.css">
+  <link rel="stylesheet" href="assets/css/portal-responsive.css">
+  <script src="assets/js/vitrine-shell.js" defer></script>
+</head>
+<body class="ete-vitrine-doc">
+  <main class="vitrine-prose-wrap">
+    <article class="vitrine-prose">
+      <h1>Minerador 4.0 — Instalação multiplataforma</h1>
+      <p>Distribuição oficial por release na loja <a href="https://github.com/chmulato/caracore-ete-releases/releases/latest" target="_blank" rel="noopener">caracore-ete-releases</a>.</p>
+
+      <h2>Artefactos por plataforma</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Plataforma</th>
+            <th>Ficheiro</th>
+            <th>Notas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Windows</strong></td>
+            <td><code>Minerador40-windows-x64.exe</code></td>
+            <td>Executável publicado no CI. WebView2 Runtime pode ser necessário se o sistema não o tiver.</td>
+          </tr>
+          <tr>
+            <td><strong>Linux</strong></td>
+            <td><code>Minerador40-linux-x86_64.tar.gz</code></td>
+            <td>Extrair; executar <code>Minerador40/Minerador40</code>. Requer GTK/WebKitGTK para pywebview.</td>
+          </tr>
+          <tr>
+            <td><strong>macOS</strong></td>
+            <td><code>Minerador40-macos-universal.dmg</code></td>
+            <td>Montar; usar a pasta <code>Minerador40</code>. Gatekeeper pode exigir confirmação na primeira execução.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Também são publicados <code>checksums.sha256</code>, <code>checksums.md5</code> e o guia multiplataforma na própria release.</p>
+
+      <h2>Guias detalhados (HTML)</h2>
+      <div class="vitrine-anchor-row">
+        <a href="instalacao_windows.html">Windows</a>
+        <a href="instalacao_linux.html">Linux</a>
+        <a href="instalacao_macos.html">macOS</a>
+      </div>
+
+      <h2>Integridade</h2>
+      <p>Valide sempre os hashes antes de executar:</p>
+      <pre><code># Linux (tar.gz ou qualquer ficheiro)
+sha256sum Minerador40-linux-x86_64.tar.gz</code></pre>
+      <pre><code># Windows (PowerShell)
+Get-FileHash -Path .\Minerador40-windows-x64.exe -Algorithm SHA256</code></pre>
+      <pre><code># macOS
+shasum -a 256 Minerador40-macos-universal.dmg</code></pre>
+      <p>Compare com <code>checksums.sha256</code> incluído na release.</p>
+
+      <h2>Modo Free × Premium</h2>
+      <p>O mesmo binário corre em modo <strong>Free</strong> (paywall na interface) e <strong>Premium</strong> após ativação. Estado da licença é guardado localmente no sistema.</p>
+
+      <h2>Gerar instaladores localmente (desenvolvimento)</h2>
+      <p><strong>Windows</strong> (na raiz do repo, Python&nbsp;3.10 recomendado):</p>
+      <pre><code>python scripts/build_dist_local.py --onedir --require-python-310</code></pre>
+      <p>Saída típica: pasta <code>dist/Minerador40/</code> com <code>Minerador40.exe</code>, checksums e opcional <code>--zip</code>.</p>
+      <p><strong>Linux ou macOS</strong> (bash, na raiz do repo):</p>
+      <pre><code>chmod +x scripts/build_dist_local_unix.sh
+./scripts/build_dist_local_unix.sh</code></pre>
+      <ul>
+        <li>Linux: <code>dist/Minerador40-linux-x86_64.tar.gz</code> (+ checksums desse ficheiro).</li>
+        <li>macOS: <code>dist/Minerador40-macos-universal.dmg</code> (+ checksums).</li>
+      </ul>
+      <p>Em Linux instale dependências GTK/WebKit para a janela nativa (ver <a href="instalacao_linux.html">guia Linux</a>). Num PC <strong>Windows</strong>, este bash não corre nativamente; para <code>.tar.gz</code> / <code>.dmg</code> use WSL2, VM Linux, um Mac, ou o CI do GitHub.</p>
+      <p><strong>Três plataformas sem máquinas mistas:</strong> GitHub → Actions → <strong>Build Minerador 4.0 (test + exe + release)</strong> → <em>Run workflow</em>. Para pacotes iguais aos da loja pública, crie uma tag <code>vX.Y.Z</code> e siga <code>library/DELIVERY_ETE_RELEASES.md</code> no repositório fonte.</p>
+
+      <div class="doc-footer-links">
+        <a href="download.html">Download</a> ·
+        <a href="index.html">Portal</a> ·
+        <a href="https://github.com/chmulato/caracore-ete-releases/releases/latest" target="_blank" rel="noopener">Última release (GitHub)</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

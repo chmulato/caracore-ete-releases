@@ -1,5 +1,7 @@
 # MVP financeiro v1 (ETE Mineração)
 
+**Leitura na vitrine (GitHub Pages):** [mvp_financeiro_v1.html](mvp_financeiro_v1.html) — use o ficheiro `.html` no site público; este `.md` permanece para revisão no repositório.
+
 Documento de escopo alinhado a `library/roadmap_ete.md` (Fase 1). Serve para congelar o que entra na primeira versão “decisão econômica” sem prometer precisão de FEED.
 
 ## Objetivo

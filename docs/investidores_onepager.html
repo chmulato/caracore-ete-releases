@@ -179,6 +179,8 @@
     }
   </style>
   <link rel="stylesheet" href="assets/css/portal-responsive.css">
+  <link rel="stylesheet" href="assets/css/vitrine-ete.css">
+  <script src="assets/js/vitrine-shell.js" defer></script>
 </head>
 <body class="ete-portal-invest">
   <div class="wrap">
@@ -186,7 +188,7 @@
       <h1>Simulador ETE Mineração — decisão econômica em hidrometalurgia seletiva</h1>
       <p class="tagline">
         Produto compilado multiplataforma + código-fonte: do cenário químico ao CAPEX/OPEX,
-        payback, VPL/TIR, cenários de preço e painéis por estágio (ver <span class="kbd">docs/mvp_financeiro_v1.md</span>).
+        payback, VPL/TIR, cenários de preço e painéis por estágio (ver <a href="mvp_financeiro_v1.html" style="color: #1e40af; font-weight: 600;">MVP financeiro v1</a>).
         Apresentação em HTML responsivo servido ou exportado localmente — sem CDN na interface.
       </p>
       <p class="trust-strip">
@@ -196,13 +198,13 @@
       <div class="cta-row">
         <a class="btn" href="./assets/pdf/Manual_Iniciacao_Ouro40.pdf">Manual de iniciação (PDF no pacote)</a>
         <a class="btn secondary" href="./laboratorio_campo_largo.html">Laboratório Campo Largo (HTML local)</a>
-        <a class="btn secondary" href="./index.html">Portal ETE</a>
+        <a class="btn secondary" href="mvp_financeiro_v1.html">MVP financeiro v1 (HTML)</a>
       </div>
     </header>
 
     <section class="card five-q" style="margin-top: 1rem;">
       <h2>As cinco perguntas do negócio</h2>
-      <p style="margin: 0 0 0.35rem 0; font-size: 0.9rem; color: var(--muted);">Cada pergunta traduz o simulador em decisão. Use o Streamlit <strong>ETE‑Mineração</strong> (relatório + Viabilidade) e o documento <span class="kbd">mvp_financeiro_v1.md</span> como referência.</p>
+      <p style="margin: 0 0 0.35rem 0; font-size: 0.9rem; color: var(--muted);">Cada pergunta traduz o simulador em decisão. Use o Streamlit <strong>ETE‑Mineração</strong> (relatório + Viabilidade) e a página <a href="mvp_financeiro_v1.html" style="color: #1e40af; font-weight: 600;">MVP financeiro v1 (HTML)</a> como referência.</p>
       <ol>
         <li><strong>Quanto investir?</strong> Ordem de grandeza de CAPEX (classe de estimativa).
           <span class="where">Onde responde: painéis económicos / CAPEX Classe 5 no fluxo Mineração e relatório HTML exportável.</span></li>
@@ -211,7 +213,7 @@
         <li><strong>Quando recupero o capital?</strong> Payback simples e retorno descontado.
           <span class="where">Onde responde: VPL e TIR com taxa de desconto configurável; triplo cenário (pessimista / base / otimista).</span></li>
         <li><strong>E se o mercado piorar?</strong> Choques em preço de óxidos, energia ou logística.
-          <span class="where">Onde responde: cenários e sensibilidade mínima; premissas versionadas em <span class="kbd">docs/premissas/</span>.</span></li>
+          <span class="where">Onde responde: cenários e sensibilidade mínima; premissas versionadas no pacote fonte (<code>docs/premissas/</code>).</span></li>
         <li><strong>O que falta para decidir em comité?</strong> Licenças, amostra real, FEED, garantias de mercado.
           <span class="where">Explicitamente <em>não</em> coberto pelo MVP: trate como lista de diligência fora do modelo.</span></li>
       </ol>

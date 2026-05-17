@@ -14,7 +14,8 @@ A primeira impressão deve orientar decisão e produto Minerador 4.0: `index.htm
 - `download.html` — instaladores
 - `artigo_ete_v3.html` — artigo executivo
 - `laboratorio_campo_largo.html` — laboratório Campo Largo Ouro 4.0
-- Guias de instalação: `INSTALACAO_WINDOWS.md`, `INSTALACAO_LINUX.md`, `INSTALACAO_MACOS.md`, `INSTALACAO_MULTIPLATAFORMA.md`
+- Guias de instalação (vitrine em HTML): `instalacao_multiplataforma.html`, `instalacao_windows.html`, `instalacao_linux.html`, `instalacao_macos.html`. Cópias Markdown (`INSTALACAO_*.md`) mantêm-se para o repositório e releases.
+- MVP financeiro: `mvp_financeiro_v1.html` (vitrine); síntese em Markdown em `mvp_financeiro_v1.md`.
 
 ## Publicação e operações
 
