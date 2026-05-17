@@ -4,7 +4,7 @@ Referência para a oficina: stack, entrega e decisões. Atualizar quando mudar o
 
 Última revisão: 2026-05-17
 
-Versão nominal do instalador alinhada ao ficheiro VERSION na raiz do repositório (actualmente 1.2.0). Tag de release no formato vX.Y.Z.
+Versão nominal do instalador: ficheiro VERSION na raiz do repositório (uma linha sem prefixo v). Tag de release no formato vX.Y.Z.
 
 
 ECOSSISTEMA DE TRÊS CAMADAS

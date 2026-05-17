@@ -27,7 +27,7 @@ AUTOMAÇÃO
 
 End-to-end directamente contra Streamlit exigiria subprocesso na porta por defeito 8501 e controlador tipo Playwright ou Selenium 4 dedicado.
 
-O CI actual não inclui essa infraestrutura. O ficheiro tests/selenium/test_streamlit_mineracao_wizard_skip.py permanece marcado como skip até haver suporte.
+O CI atual não inclui essa infraestrutura. O ficheiro tests/selenium/test_streamlit_mineracao_wizard_skip.py permanece marcado como skip até haver suporte.
 
 
 Última revisão: 2026-05-17
