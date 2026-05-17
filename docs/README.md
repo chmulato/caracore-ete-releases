@@ -21,6 +21,15 @@ A primeira impressão deve orientar decisão e produto Minerador 4.0: `index.htm
 
 Ver `library/publicacao_site_loja.md`.
 
+## Alinhamento oficina ↔ loja (`caracore-ete-releases`)
+
+- **Fonte da vitrine partilhada:** editar primeiro em **`caracore-ete/docs`** (HTML, `assets/css/` incl. `pages/`, JS da vitrine, `premissas/`, MD espelhados).
+- **Loja:** `caracore-ete-releases/docs` inclui o mesmo conjunto **mais** páginas só da loja (`wiki/`, upgrade, termos, licenças, painéis, `artifacts/`, `loja.css`, etc.).
+- **Sincronizar oficina → loja (PowerShell):**  
+  `robocopy D:\dev\caracore-ete\docs D:\dev\caracore-ete-releases\docs /E /IS /IT`  
+  **Não** usar `/MIR` — assim não se apagam ficheiros exclusivos da loja.
+- **Após cada release:** o número em **`docs/artifacts/VERSION`** na loja deve coincidir com **`VERSION`** na raiz da oficina.
+
 ## Imagens
 
 Caminhos relativos conforme cada HTML; ver `docs/assets/README.md`.
