@@ -3,25 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://ete.caracore.com.br/">
-    <title>Laboratório Campo Largo: Ouro 4.0 — Loja ETE Cara Core</title>
-    <!-- OpenGraph / Social: imagem e título ao compartilhar (WhatsApp, LinkedIn, etc.) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Minha Jornada em Materiais: Campo Largo 2026">
-    <meta property="og:description" content="O projeto ETE não é sobre software, é sobre pessoas. Se você é de Campo Largo e quer construir o hardware do amanhã, você já faz parte.">
-    <meta property="og:image" content="https://ete.caracore.com.br/assets/img/o_arquiteto_da_realidade.png">
-    <meta property="og:url" content="https://ete.caracore.com.br/laboratorio_campo_largo.html">
-    <meta property="og:locale" content="pt_BR">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Minha Jornada em Materiais: Campo Largo 2026">
-    <meta name="twitter:description" content="O projeto ETE não é sobre software, é sobre pessoas. Se você é de Campo Largo e quer construir o hardware do amanhã, você já faz parte.">
-    <meta name="twitter:image" content="https://ete.caracore.com.br/assets/img/o_arquiteto_da_realidade.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <title>Laboratório Campo Largo: Ouro 4.0 — chmulato/ETE-releases</title>
     <link href="assets/css/laboratorio.css" rel="stylesheet">
+    <link href="assets/css/portal-responsive.css" rel="stylesheet">
 </head>
-<body>
+<body class="laboratorio-page">
     <div class="wrapper">
         <header>
             <span class="badge">Laboratório Campo Largo · Ouro 4.0</span>
@@ -161,12 +147,12 @@
                 </div>
 
                 <div class="blueprint-ementa-img">
-                    <a href="https://campolargo.ifpr.edu.br/" target="_blank" rel="noopener">
+                    <a href="ifpr_campo_largo.html" title="Referência ao IFPR Campus Campo Largo (página local do pacote)">
                         <img src="assets/img/a_ementa.png" alt="Ementa IFPR Campo Largo" width="400" height="auto">
                     </a>
                 </div>
                 <div class="blueprint-actions">
-                    <a href="https://campolargo.ifpr.edu.br/" class="btn-ementa" target="_blank" rel="noopener">
+                    <a href="ifpr_campo_largo.html" class="btn-ementa" title="Contexto institucional — navegação interna ao pacote docs/">
                         <span class="btn-ementa-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
                         Explorar Ementa Oficial do IFPR Campo Largo
                     </a>
@@ -225,7 +211,7 @@
             </div>
 
             <div class="oraculo-dados glass">
-                <p>Alimente o sistema com dados reais do solo usando os modelos publicados na documentação da loja. Consulte a página de <a href="acesso-codigo-fonte.html">transparência de código-fonte</a> para entender a governança dos artefatos públicos.</p>
+                <p>Alimente o sistema com dados reais do solo: ficheiros CSV/JSON incluídos na pasta do projeto ou definidos pela sua equipa.</p>
             </div>
         </section>
 
@@ -255,12 +241,12 @@
                     <ul class="roadmap-checklist">
                         <li><span class="checkbox" aria-hidden="true">[ ]</span> <strong>Setup:</strong> Instalar VS Code + Extensão Python.</li>
                         <li><span class="checkbox" aria-hidden="true">[ ]</span> <strong>Exploração:</strong> Visitar o laboratório de Química do IFPR Campo Largo.</li>
-                        <li><span class="checkbox" aria-hidden="true">[ ]</span> <strong>Contribuição:</strong> Enviar sua primeira melhoria pelo <a href="canal-feedback.html">canal de feedback</a> com evidências de uso (prints, dados, cenário testado).</li>
+                        <li><span class="checkbox" aria-hidden="true">[ ]</span> <strong>Contribuição:</strong> Abrir sua primeira Issue ou Pull Request no repositório interno da distribuição que você recebeu.</li>
                     </ul>
 
                     <div class="nivel0-buttons">
                         <a href="assets/pdf/Manual_Iniciacao_Ouro40.pdf" class="btn-manual" target="_blank" rel="noopener">Baixar Manual de Iniciação (PDF/Apostila)</a>
-                        <a href="canal-feedback.html" class="btn-mentor">Falar com o Mentor (Canal oficial)</a>
+                        <a href="canal-feedback.html" class="btn-mentor">Canal de feedback (documentação local)</a>
                     </div>
                 </div>
             </div>
@@ -368,16 +354,17 @@
                 <svg class="icon-gear icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09a1.65 1.65 0 0 0 1-1.51 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
                 Download Central — Dashboard de Controle
             </h2>
-            <p class="download-central-sub">Versão estável do simulador Minerador 4.0, validada por testes automatizados e publicada no GitHub Releases.</p>
+            <p class="download-central-sub">Versão estável do Minerador 4.0: utilize o executável e checksums incluídos na sua distribuição ou gere localmente com o pipeline do repositório (sem depender de badge ou CDN remotos ao visualizar esta página).</p>
             <div class="download-central-panel dashboard-panel">
                 <div class="download-status">
-                    <span class="status-label"><svg class="icon-check icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Versão validada e publicada nos Releases oficiais</span>
+                    <span class="build-badge" role="img" aria-label="Build local">Build local / offline</span>
+                    <span class="status-label"><svg class="icon-check icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Pacote validado no seu ambiente</span>
                 </div>
-                <a href="https://github.com/chmulato/caracore-ete-releases/releases/latest" class="btn-download-stable" target="_blank" rel="noopener">
+                <a href="download.html" class="btn-download-stable">
                     <svg class="icon-check icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                    Baixar versão estável v1.1.15 (Linux, Windows e macOS)
+                    Instruções de download (documentação local)
                 </a>
-                <p class="download-hint">Pacotes .AppImage, .exe e .dmg + checksums SHA-256/MD5 disponíveis na página do Release.</p>
+                <p class="download-hint">Ou execute <code>python run_minerador40.py</code> na raiz do projeto após instalar dependências Python.</p>
             </div>
             <div class="artefatos-confianca dashboard-panel">
                 <h3 class="artefatos-title">
@@ -394,9 +381,11 @@
 
         <section class="cta-box">
             <h2>Chamada para ação</h2>
-            <p>Estude no IFPR. Contribua com evidências de uso e sugestões de evolução pelo canal oficial. Seja quem transforma a terra vermelha em soberania tecnológica, uma melhoria por vez.</p>
+            <p>Estude no IFPR. Avance com o pacote ETE local. Seja quem transforma a terra vermelha em soberania tecnológica — linha de código e reação química de cada vez.</p>
+            <p style="margin-top:12px;font-size:0.92rem;color:var(--text-secondary);">Para <strong>decisores</strong> e roadshows: <a href="investidores_onepager.html" style="color:var(--accent-blue);">One-pager negócio</a> — cinco perguntas, oferta do produto e o que o modelo não promete.</p>
             <div class="links">
-                <a href="acesso-codigo-fonte.html" class="primary">Transparência de código-fonte</a>
+                <a href="ifpr_campo_largo.html" class="primary">Referência IFPR Campo Largo (HTML local)</a>
+                <a href="investidores_onepager.html" class="secondary">Visão produto (HTML local)</a>
                 <a href="index.html" class="secondary">Voltar ao portal ETE</a>
             </div>
         </section>

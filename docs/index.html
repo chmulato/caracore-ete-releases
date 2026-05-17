@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://ete.caracore.com.br/">
     <title>Projeto chmulato/ETE — Simulador de Hidrometalurgia Seletiva</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #1a1d21;
@@ -20,6 +16,10 @@
             --border: #373e47;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +27,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             background: var(--bg-dark);
@@ -45,6 +45,17 @@
             padding: 48px 0 40px;
             text-align: center;
             border-bottom: 1px solid var(--border);
+        }
+
+        header .release-note {
+            margin-top: 12px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        header .release-note strong {
+            color: var(--accent-gold);
+            font-weight: 600;
         }
 
         header h1 {
@@ -169,15 +180,6 @@
         }
         .nav-card-campo-largo h3 { color: #f59e0b; }
 
-        .nav-card-loja {
-            border-left: 4px solid var(--accent-gold);
-        }
-        .nav-card-loja:hover {
-            border-color: var(--accent-gold);
-            background: rgba(212, 168, 83, 0.1);
-        }
-        .nav-card-loja h3 { color: var(--accent-gold); }
-
         .nav-card .icon {
             width: 40px;
             height: 40px;
@@ -244,12 +246,97 @@
         footer .apostila-rodape a {
             color: var(--accent-gold);
         }
+
+        .biz-strip {
+            margin: 32px 0 28px;
+            padding: 22px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+        }
+        .biz-strip h2 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+        }
+        .biz-strip ol {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+        .biz-strip li { margin-bottom: 8px; }
+        .biz-strip .biz-see {
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .biz-strip .biz-see a { font-weight: 600; }
+
+        .learning-track {
+            margin-bottom: 36px;
+            padding: 22px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-gold);
+        }
+        .learning-track h2 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--accent-gold);
+            margin-bottom: 14px;
+        }
+        .learning-steps {
+            display: grid;
+            gap: 14px;
+        }
+        @media (min-width: 640px) {
+            .learning-steps { grid-template-columns: repeat(3, 1fr); }
+        }
+        .learning-step {
+            padding: 14px;
+            background: var(--bg-elevated);
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        .learning-step strong {
+            display: block;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--accent-gold);
+        }
+        .honesty-note {
+            margin-top: 12px;
+            padding: 12px 14px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            background: rgba(88, 166, 255, 0.06);
+            border-radius: 6px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+            line-height: 1.5;
+        }
     </style>
+    <link rel="stylesheet" href="assets/css/portal-responsive.css">
 </head>
-<body>
+<body class="ete-portal-index">
     <div class="wrapper">
         <header>
             <h1>Projeto chmulato/ETE</h1>
+            <p class="release-note">Portal e documentação alinhados ao <strong>Minerador 4.0 v1.2.0</strong> — layout responsivo (mobile, tablet, desktop).</p>
             <p class="subtitle">Simulador de Hidrometalurgia Seletiva: Aplicando a Engenharia de Processos de Efluentes no Refino de Terras Raras.</p>
             <p class="tagline">O Brasil possui o conhecimento e as reservas; este projeto entrega a ferramenta de simulação para viabilizar a separação seletiva com custos competitivos.</p>
         </header>
@@ -265,9 +352,43 @@
             </div>
         </section>
 
+        <section class="biz-strip" aria-labelledby="biz-five-heading">
+            <h2 id="biz-five-heading">Decisão de investimento — cinco perguntas</h2>
+            <ol>
+                <li>Quanto investir (CAPEX, classe de estimativa)?</li>
+                <li>Quanto custa operar (OPEX na vazão de projeto)?</li>
+                <li>Quando recupero o capital (payback, VPL, TIR)?</li>
+                <li>O que muda em cenário adversário (preço, energia, logística)?</li>
+                <li>O que continua fora do modelo (licenças, FEED, contratos)?</li>
+            </ol>
+            <p class="biz-see">Respostas detalhadas e limites do MVP: <a href="investidores_onepager.html">One-pager para negócio</a> · Fluxo técnico-económico no Streamlit ETE‑Mineração e em <code>docs/mvp_financeiro_v1.md</code>.</p>
+            <p class="honesty-note"><strong>Transparência:</strong> o ecossistema entrega estudo prévio com premissas versionadas — não substitui parecer de investimento nem promessa de retorno.</p>
+        </section>
+
+        <section class="learning-track" aria-labelledby="learn-heading">
+            <h2 id="learn-heading">Trilha sugerida (30–45 min)</h2>
+            <div class="learning-steps">
+                <div class="learning-step">
+                    <strong>Nível 0 — Contexto</strong>
+                    Leia o manifesto e o artigo executivo. Entenda soberania em terras raras e por que a arquitetura ETE importa para custo modular.
+                    <div style="margin-top:8px;"><a href="artigo_ete_v3.html">Artigo executivo</a> · <a href="laboratorio_campo_largo.html">Laboratório Ouro 4.0</a></div>
+                </div>
+                <div class="learning-step">
+                    <strong>Nível 1 — Produto</strong>
+                    Percorra o protótipo HTML ou instale o Minerador 4.0. Veja ambiental → Premium → lab → resultado como narrativa única.
+                    <div style="margin-top:8px;"><a href="prototipo_degustacao_minerador.html">Degustação HTML</a> · <a href="download.html">Download</a></div>
+                </div>
+                <div class="learning-step">
+                    <strong>Nível 2 — Viabilidade</strong>
+                    Abra o simulador Mineração no Streamlit; gere relatório com bloco económico (VPL/TIR, cenários). Cruze com o one-pager.
+                    <div style="margin-top:8px;"><a href="#mineracao">Instruções Streamlit Mineração</a> · <a href="investidores_onepager.html">One-pager</a></div>
+                </div>
+            </div>
+        </section>
+
         <p class="nav-section-title">Navegação Estratégica</p>
         <div class="nav-grid">
-            <a href="#" id="link-residencial" class="nav-card nav-card-ambiental" title="Abre o simulador ETE-Residual (tema verde/sustentável). Execute local: streamlit run src/ete_residencial/app_residencial.py">
+            <a href="#residencial" id="link-residencial" class="nav-card nav-card-ambiental" title="Saltar para instruções do simulador ETE-Residual (executar localmente: streamlit run src/ete_residencial/app_residencial.py)">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -276,7 +397,7 @@
                 <h3>Solução Ambiental</h3>
                 <p>Simulador ETE-Residual: conformidade, descarte seguro, redução de impacto ambiental (mg/L). Tema verde/sustentável.</p>
             </a>
-            <a href="#" id="link-mineracao" class="nav-card nav-card-mineracao" title="Abre o simulador ETE-Mineração (tema industrial). Execute local: streamlit run src/ete_mineracao/app_mineracao.py">
+            <a href="#mineracao" id="link-mineracao" class="nav-card nav-card-mineracao" title="Saltar para instruções do simulador ETE-Mineração (executar localmente: streamlit run src/ete_mineracao/app_mineracao.py)">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="4" width="6" height="5" rx="0.5"/><rect x="2" y="15" width="6" height="5" rx="0.5"/>
@@ -287,23 +408,23 @@
                 <h3>Refino Mineral</h3>
                 <p>Simulador ETE-Mineração: pureza comercial, ROI, g óxido/t, margem bruta (g/L, %). Tema industrial/sóbrio.</p>
             </a>
-            <a href="download.html" class="nav-card" title="Baixar o instalador do Minerador 4.0 para Linux, Windows e macOS">
+            <a href="prototipo_degustacao_minerador.html" class="nav-card" title="Maquete HTML do fluxo do Minerador 4.0 antes de instalar">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+                    </svg>
+                </span>
+                <h3>Degustação (protótipo HTML)</h3>
+                <p>Percorra o mesmo roteiro do instalador em formato web estático: Ambiente, Golden Gate, Campo, Lab e Mercado.</p>
+            </a>
+            <a href="download.html" class="nav-card" title="Baixar o instalador Windows do Minerador 4.0">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
                     </svg>
                 </span>
                 <h3>Download — Minerador 4.0</h3>
-                <p>Distribuição multiplataforma (Linux, Windows e macOS), release atual v1.1.15, checksums SHA-256/MD5 e guia de instalação.</p>
-            </a>
-            <a href="upgrade-ouro40.html" class="nav-card nav-card-loja" title="Comece no Free e desbloqueie Premium — upgrade Ouro 4.0">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                </span>
-                <h3>Free × Premium — Ouro 4.0</h3>
-                <p>Use o simulador completo no modo Free; desbloqueie o Módulo Mineração e a camada operacional Premium por PIX (R$ 29,90).</p>
+                <p>Instalador Windows (.exe) do simulador. Versão estável, checksums SHA-256 e guia de instalação.</p>
             </a>
             <a href="laboratorio_campo_largo.html" class="nav-card nav-card-campo-largo" title="Laboratório Campo Largo: Ouro 4.0 — Rochas, Python e Futuro">
                 <span class="icon" aria-hidden="true">
@@ -314,23 +435,14 @@
                 <h3>Laboratório Campo Largo: Ouro 4.0</h3>
                 <p>Rochas &amp; cerâmicas, Python + química, IFPR: onde o código vira matéria. Jornada para mentes jovens.</p>
             </a>
-            <a href="acesso-codigo-fonte.html" class="nav-card">
+            <a href="investidores_onepager.html" class="nav-card">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                     </svg>
                 </span>
-                <h3>Acesso ao código-fonte</h3>
-                <p>Entenda por que a oficina de desenvolvimento é privada e quais artefatos públicos estão disponíveis para uso com confiança.</p>
-            </a>
-            <a href="https://github.com/chmulato/caracore-ete-releases/releases/latest" class="nav-card" target="_blank" rel="noopener">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                </span>
-                <h3>Releases multiplataforma</h3>
-                <p><strong>caracore-ete-releases</strong> — pacotes Linux (.AppImage), Windows (.exe) e macOS (.dmg), com checksums e guia oficial.</p>
+                <h3>Negócio &amp; investimento</h3>
+                <p>Cinco perguntas da decisão, oferta Free/Premium/Enterprise (roadmap), glossário técnico→financeiro e limites do modelo.</p>
             </a>
             <a href="index_v2.html" class="nav-card">
                 <span class="icon" aria-hidden="true">
@@ -355,9 +467,9 @@
 
         <section id="download-simulador" class="methodology" style="margin-top: 2rem;">
             <div class="card" style="border-left: 4px solid var(--accent-gold);">
-                <h2>Download do simulador (Linux, Windows e macOS)</h2>
-                <p>O aplicativo <strong>Minerador 4.0</strong> (Campo Largo: Terras Raras), release <strong>v1.1.15</strong>, está no GitHub <strong>caracore-ete-releases</strong> com distribuição multiplataforma: <strong>.AppImage</strong> (Linux), <strong>.exe</strong> (Windows) e <strong>.dmg</strong> (macOS). Modo <strong>Free</strong>: design system, biblioteca em tier Free, tooltips com fontes acadêmicas, glossário e conformidade ambiental. <strong>Premium (Ouro 4.0)</strong>: Módulo Mineração e camada operacional — <a href="upgrade-ouro40.html" style="color: var(--accent-blue); font-weight: 500;">ver upgrade</a>. Checksums SHA-256 e MD5.</p>
-                <p style="margin-top: 12px;"><a href="download.html" style="color: var(--accent-blue); font-weight: 500;">Ir para a página de download →</a></p>
+                <h2>Download do simulador (multiplataforma)</h2>
+                <p>O aplicativo <strong>Minerador 4.0</strong> (Campo Largo: Terras Raras) está disponível como pacote por sistema operativo na release da loja (Windows <code>.exe</code>, Linux <code>.tar.gz</code>, macOS <code>.dmg</code>). Cálculos validados por PyTest; checksums para verificação de integridade.</p>
+                <p style="margin-top: 12px;"><a href="download.html" style="color: var(--accent-blue); font-weight: 500;">Ir para a página de download →</a> · <a href="INSTALACAO_MULTIPLATAFORMA.md" style="color: var(--accent-blue); font-weight: 500;">Guia multiplataforma</a></p>
             </div>
         </section>
 
@@ -372,22 +484,11 @@
             </div>
         </section>
 
-        <script>
-            document.getElementById('link-residencial').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('residencial').scrollIntoView({ behavior: 'smooth' });
-            });
-            document.getElementById('link-mineracao').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('mineracao').scrollIntoView({ behavior: 'smooth' });
-            });
-        </script>
-
         <footer>
-            <p><a href="acesso-codigo-fonte.html">Transparência de código-fonte</a> · <a href="https://github.com/chmulato/caracore-ete-releases/releases" target="_blank" rel="noopener">Instalador: caracore-ete-releases</a></p>
+            <p>Código-fonte: pasta raiz da distribuição que você instalou (sem URL remota obrigatória nesta build).</p>
             <p>Soberania Técnica: metodologia de processo (ETE) transferida para refino de concentrados minerais e PLS; não se aplica a tratamento de esgoto doméstico.</p>
             <p class="soberania">Desenvolvido para o setor de Mineração e Hidrometalurgia Especializada.</p>
-            <p class="apostila-rodape">Material de apoio: <a href="assets/pdf/Manual_Iniciacao_Ouro40.pdf" target="_blank" rel="noopener">Manual de Iniciação — Ouro 4.0</a> (PDF) · <a href="laboratorio_campo_largo.html">Laboratório Campo Largo</a> · <a href="download.html">Download</a> · <a href="upgrade-ouro40.html">Upgrade Premium</a>.</p>
+            <p class="apostila-rodape">Decisão &amp; ensino: <a href="investidores_onepager.html">One-pager negócio</a> · Material de apoio: <a href="assets/pdf/Manual_Iniciacao_Ouro40.pdf" target="_blank" rel="noopener">Manual de Iniciação — Ouro 4.0</a> (PDF) · <a href="laboratorio_campo_largo.html">Laboratório Campo Largo</a> · <a href="prototipo_degustacao_minerador.html">Protótipo de degustação (HTML)</a> · <a href="download.html">Download do Minerador 4.0</a> · <a href="apostila_efluentes.html">Apostila de efluentes</a> · <a href="canal-feedback.html">Canal de feedback</a>.</p>
         </footer>
     </div>
 </body>

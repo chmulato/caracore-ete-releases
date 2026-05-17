@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo de degustação — Minerador 4.0 | chmulato/ETE</title>
+    <meta name="description" content="Degustação do Minerador 4.0 com screenshots reais do dashboard (Ambiental, Golden Gate, Galeria, Lab, resultado). Entenda o instalador Windows antes de executar o Python empacotado.">
+    <link href="assets/css/laboratorio.css" rel="stylesheet">
+    <link href="assets/css/portal-responsive.css" rel="stylesheet">
+    <style>
+        body.degustacao-page { padding-bottom: 64px; }
+        .degustacao-page .wrapper { max-width: 920px; }
+        .proto-note {
+            margin-top: 20px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: rgba(245, 158, 11, 0.08);
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            text-align: left;
+        }
+        .proto-note strong { color: var(--accent-amber); }
+
+        .artifact-grid {
+            display: grid;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        @media (min-width: 700px) {
+            .artifact-grid { grid-template-columns: 1fr 1fr; }
+        }
+        .artifact-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+        }
+        .artifact-card h3 {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .artifact-card ul { margin-left: 1.15rem; color: var(--text-secondary); font-size: 0.92rem; }
+        .artifact-card li { margin-bottom: 8px; }
+
+        .proto-deck {
+            margin-top: 40px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--bg-card);
+        }
+        .proto-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px;
+            background: #12161c;
+            border-bottom: 1px solid var(--border);
+        }
+        .proto-tab {
+            font-family: inherit;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+        .proto-tab:hover { color: var(--text-primary); border-color: var(--accent-gold); }
+        .proto-tab.is-active {
+            background: rgba(212, 168, 83, 0.15);
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+        .proto-panel {
+            display: none;
+            padding: 22px;
+            min-height: 280px;
+        }
+        .proto-panel.is-active { display: block; }
+
+        .proto-shot-wrap {
+            margin-top: 8px;
+        }
+        .proto-shot {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+            background: var(--bg-dark);
+        }
+        .proto-shot-caption {
+            margin-top: 12px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        .proto-shot-meta {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .compare-table-wrap { overflow-x: auto; margin-top: 36px; }
+        table.compare {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+        table.compare th, table.compare td {
+            border: 1px solid var(--border);
+            padding: 12px 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+        table.compare th { background: var(--bg-elevated); color: var(--accent-gold); font-weight: 600; }
+        table.compare td { color: var(--text-secondary); }
+
+        .cta-row {
+            margin-top: 36px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .cta-row a {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: transform 0.12s, filter 0.12s;
+        }
+        .cta-row a:hover { transform: translateY(-1px); filter: brightness(1.06); }
+        .cta-primary { background: var(--accent-amber); color: #0d0f12; }
+        .cta-secondary {
+            background: transparent;
+            color: var(--accent-blue);
+            border: 1px solid var(--border);
+        }
+
+        .deg-back { margin-top: 40px; font-size: 0.9rem; }
+        .deg-back a { color: var(--text-secondary); text-decoration: none; }
+        .deg-back a:hover { color: var(--accent-gold); }
+
+        .pitch-fundo {
+            margin-top: 28px;
+            padding: 20px 22px;
+            border-radius: 12px;
+            border: 1px solid var(--accent-gold);
+            background: rgba(212, 168, 83, 0.08);
+        }
+        .pitch-fundo h2 {
+            font-size: 1.05rem;
+            color: var(--accent-gold);
+            margin: 0 0 12px 0;
+            font-weight: 600;
+        }
+        .pitch-fundo ul {
+            margin: 0;
+            padding-left: 1.15rem;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+        .pitch-fundo li { margin-bottom: 10px; }
+        .pitch-fundo .pitch-tail {
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .pitch-fundo a { color: var(--accent-blue); }
+    </style>
+</head>
+<body class="degustacao-page">
+    <div class="wrapper">
+        <header>
+            <span class="badge">Capturas reais do dashboard · esta página não executa o motor</span>
+            <h1>Degustação — Minerador 4.0</h1>
+            <p class="impact">Explore em <strong>formato HTML</strong> o mesmo roteiro cognitivo do instalador Windows: validação ambiental, paywall Premium (Golden Gate), inventário visual da narrativa Campo Largo, laboratório de precipitação e resultado da simulação (métricas ligadas a valor). O objetivo é <strong>entender o artefacto Python empacotado</strong> antes de o distribuir ou instalar.</p>
+            <p class="proto-note"><strong>Atenção:</strong> esta página não corre o simulador — apenas mostra <strong>screenshots</strong> gerados a partir do Flask do Minerador 4.0. Os valores visíveis correspondem a uma sessão de captura (headless Chrome); na sua máquina os números mudam com as entradas.</p>
+        </header>
+
+        <section class="artifact-grid" aria-labelledby="artifact-heading">
+            <h2 id="artifact-heading" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;">Composição do artefacto</h2>
+            <div class="artifact-card">
+                <h3>O que recebe quem instala</h3>
+                <ul>
+                    <li><strong>Minerador40.exe</strong> — executável Windows (stack empacotada, sem precisar de Python instalado no PC do utilizador).</li>
+                    <li>Servidor local <strong>Flask</strong> em <code>127.0.0.1:5150</code> — API e páginas do centro de controle.</li>
+                    <li><strong>Motor de simulação</strong> — mesma família de módulos do repositório ETE (massa, precipitação em cascata, indicadores).</li>
+                    <li><strong>Licença persistente</strong> — modo Free (fase ambiental) e desbloqueio Premium conforme política do produto.</li>
+                </ul>
+            </div>
+            <div class="artifact-card">
+                <h3>O que este HTML substitui na demo</h3>
+                <ul>
+                    <li>Substitui a <strong>primeira abertura</strong> do app para explicar hierarquia de ecrãs e expectativas.</li>
+                    <li>Não inclui <strong>PyInstaller</strong>, <strong>webview</strong> nem ficheiros da pasta <code>dist/</code>.</li>
+                    <li>Útil para <strong>professores, decisores e QA</strong> alinharem linguagem com o manual e com o PDF de instalação.</li>
+                    <li>Após a degustação, o próximo passo natural é <a href="download.html" style="color:var(--accent-blue);">obter o pacote</a> ou gerar o .exe a partir do código-fonte.</li>
+                </ul>
+            </div>
+        </section>
+
+        <h2 style="margin-top: 48px; font-size: 1.25rem; color: var(--accent-gold); font-weight: 600;">Roteiro interativo (capturas PNG)</h2>
+        <p style="margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem;">Use os separadores para seguir a ordem típica no desktop. Imagens em <code>docs/assets/img/</code>; para regenerar: <code>python scripts/capture_degustacao_screenshots.py</code> na raiz do repositório (Chrome + Selenium).</p>
+
+        <section class="proto-deck" aria-label="Painéis da degustação">
+            <div class="proto-tabs" role="tablist">
+                <button type="button" class="proto-tab is-active" role="tab" aria-selected="true" data-panel="panel-env" id="tab-env">1 · Ambiente</button>
+                <button type="button" class="proto-tab" role="tab" aria-selected="false" data-panel="panel-gate" id="tab-gate">2 · Golden Gate</button>
+                <button type="button" class="proto-tab" role="tab" aria-selected="false" data-panel="panel-campo" id="tab-campo">3 · Campo</button>
+                <button type="button" class="proto-tab" role="tab" aria-selected="false" data-panel="panel-lab" id="tab-lab">4 · Lab</button>
+                <button type="button" class="proto-tab" role="tab" aria-selected="false" data-panel="panel-mercado" id="tab-mercado">5 · Mercado</button>
+            </div>
+
+            <div id="panel-env" class="proto-panel is-active" role="tabpanel" aria-labelledby="tab-env">
+                <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:16px;">Primeira experiência: painel <strong>Fase 1 — Guardião Ambiental</strong>. Validação de pH, DBO e feedback do motor; ao aprovar, o passo Mineração desbloqueia o botão de simulação.</p>
+                <figure class="proto-shot-wrap">
+                    <img class="proto-shot" src="assets/img/degustacao_minerador_01_ambiente.png" width="1400" height="900" alt="Screenshot do painel ETE Ambiental no Minerador 4.0: conformidade, tanques e resultado da validação." loading="lazy" decoding="async">
+                    <figcaption class="proto-shot-caption">Captura real — viewport do dashboard com foco no cartão ambiental (Chrome headless 1400×900).</figcaption>
+                </figure>
+            </div>
+
+            <div id="panel-gate" class="proto-panel" role="tabpanel" aria-labelledby="tab-gate" hidden>
+                <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:16px;"><strong>Golden Gate / Premium:</strong> no cartão Mineração, overlay com upgrade Ouro 4.0, PIX simbólico e campo de chave <code>MIN40-…</code>. No instalador, a licença persiste localmente após ativação.</p>
+                <figure class="proto-shot-wrap">
+                    <img class="proto-shot" src="assets/img/degustacao_minerador_02_golden_gate.png" width="1400" height="900" alt="Screenshot do painel Mineração com overlay Golden Gate e vidro antes do Premium." loading="lazy" decoding="async">
+                    <figcaption class="proto-shot-caption">Estado Free antes da ativação — mesmo painel onde o utilizador cola a chave ou segue o fluxo de desbloqueio.</figcaption>
+                </figure>
+            </div>
+
+            <div id="panel-campo" class="proto-panel" role="tabpanel" aria-labelledby="tab-campo" hidden>
+                <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:16px;"><strong>Campo (narrativa visual):</strong> no produto atual, o inventário de imagens estratégicas abre no modal <strong>Galeria Estratégica</strong> — conecta Campo Largo, selos, fluxos ETE→Mineração e materiais didáticos.</p>
+                <figure class="proto-shot-wrap">
+                    <img class="proto-shot" src="assets/img/degustacao_minerador_03_campo_galeria.png" width="1400" height="900" alt="Screenshot do modal Galeria Estratégica com grelha de cartões de imagem." loading="lazy" decoding="async">
+                    <figcaption class="proto-shot-caption">Captura do modal em sessão real após carregar os cartões via API <code>/api/asset-cards</code>.</figcaption>
+                </figure>
+            </div>
+
+            <div id="panel-lab" class="proto-panel" role="tabpanel" aria-labelledby="tab-lab" hidden>
+                <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:16px;"><strong>Lab:</strong> entradas de volume e pH, cascata de tanques e série de decantadores — o Flask chama o motor ao clicar em «Simular processo (Mineração)».</p>
+                <figure class="proto-shot-wrap">
+                    <img class="proto-shot" src="assets/img/degustacao_minerador_04_lab.png" width="1400" height="900" alt="Screenshot da zona Lab com cascata de pH e decantadores." loading="lazy" decoding="async">
+                    <figcaption class="proto-shot-caption">Trecho do painel Mineração após Premium + validação ambiental (mesmos controlos do .exe).</figcaption>
+                </figure>
+            </div>
+
+            <div id="panel-mercado" class="proto-panel" role="tabpanel" aria-labelledby="tab-mercado" hidden>
+                <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:16px;"><strong>Mercado / resultado:</strong> após a simulação, o cartão de resultado lista métricas (pureza, massas, receita em R$ onde aplicável) e liga à soberania mineral — leitura económica alinhada ao discurso do produto.</p>
+                <figure class="proto-shot-wrap">
+                    <img class="proto-shot" src="assets/img/degustacao_minerador_05_mercado_resultado.png" width="1400" height="900" alt="Screenshot da caixa de resultado da simulação de mineração com métricas." loading="lazy" decoding="async">
+                    <figcaption class="proto-shot-caption">Resultado de uma simulação na mesma sessão de captura (valores dependem das entradas e da versão do motor).</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <p class="proto-shot-meta">Regeneração das imagens: na raiz do repo, com dependências de desenvolvimento instaladas, execute <code>python scripts/capture_degustacao_screenshots.py</code>. O script sobe o Flask em porta efémera, usa chave de demonstração <code>MIN40-DEMO0-99999-FULL0</code> apenas para obter o estado Premium nas capturas, e grava PNG em <code>docs/assets/img/</code>.</p>
+
+        <div class="compare-table-wrap">
+            <h2 style="font-size: 1.15rem; color: var(--accent-gold); margin-bottom: 14px;">Protótipo HTML vs instalador</h2>
+            <table class="compare">
+                <thead>
+                    <tr>
+                        <th scope="col">Este ficheiro (degustação)</th>
+                        <th scope="col">Minerador40.exe (artefacto)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Navegador, sem instalação.</td>
+                        <td>Windows, empacotado com motor e dependências.</td>
+                    </tr>
+                    <tr>
+                        <td>Imagens estáticas (PNG) de uma sessão de captura — atualizáveis por script.</td>
+                        <td>Cálculos e UI dinâmicos ao mudar entradas (motor Python no binário).</td>
+                    </tr>
+                    <tr>
+                        <td>Ideal para onboarding e alinhamento de equipas.</td>
+                        <td>Ideal para alunos, laboratório e demonstrações completas.</td>
+                    </tr>
+                    <tr>
+                        <td>Pode ser enviado por e-mail ou hospedado em GitHub Pages.</td>
+                        <td>Distribuído com checksums (<code>checksum.sha256</code>) e guia <code>INSTALACAO.md</code>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="pitch-fundo" aria-labelledby="pitch-heading">
+            <h2 id="pitch-heading">Pitch de 2 minutos (modelo para um fundo ou patrocinador)</h2>
+            <p style="margin:0 0 12px 0;font-size:0.9rem;color:var(--text-secondary);">Copie ou adapte estas três frases depois de mostrar o roteiro acima. Numere com os dados da sua sessão real no Minerador ou no Streamlit Mineração.</p>
+            <ul>
+                <li><strong>Tese:</strong> «Separação modular de terras raras com lógica ETE reduz barreira de CAPEX frente a SX centralizada — o simulador quantifica pureza, custo e receita na mesma cascata.»</li>
+                <li><strong>Pedido:</strong> «Precisamos de X para validar amostra real / piloto — o MVP já dá ordem de grandeza de CAPEX/OPEX e VPL/TIR sob premissas documentadas.»</li>
+                <li><strong>Risco honesto:</strong> «Isto é estudo prévio Classe 5, não FEED; decisão final exige diligência jurídica, mercado e licenciamento fora do software.»</li>
+            </ul>
+            <p class="pitch-tail">Quadro completo de perguntas do comité e limites do modelo: <a href="investidores_onepager.html">One-pager para negócio</a>.</p>
+        </section>
+
+        <div class="cta-row">
+            <a class="cta-primary" href="download.html">Ir para download do pacote</a>
+            <a class="cta-secondary" href="index.html">Voltar ao portal ETE</a>
+            <a class="cta-secondary" href="laboratorio_campo_largo.html">Laboratório Ouro 4.0</a>
+        </div>
+
+        <p class="deg-back"><a href="index.html">← Portal principal</a> · <a href="investidores_onepager.html">Código &amp; decisão</a> · <a href="apostila_efluentes.html">Apostila efluentes</a> · <a href="artigo_ete_v3.html">Artigo executivo</a> · <a href="canal-feedback.html">Feedback</a></p>
+    </div>
+
+    <script>
+        (function () {
+            var tabs = document.querySelectorAll('.proto-tab');
+            var panels = document.querySelectorAll('.proto-panel');
+
+            function activate(id) {
+                tabs.forEach(function (t) {
+                    var on = t.getAttribute('data-panel') === id;
+                    t.classList.toggle('is-active', on);
+                    t.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+                panels.forEach(function (p) {
+                    var on = p.id === id;
+                    p.classList.toggle('is-active', on);
+                    if (on) { p.removeAttribute('hidden'); }
+                    else { p.setAttribute('hidden', 'hidden'); }
+                });
+            }
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    activate(tab.getAttribute('data-panel'));
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

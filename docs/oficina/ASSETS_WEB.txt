@@ -1,0 +1,38 @@
+ASSETS EM docs/assets/
+
+CSS, JavaScript e imagens usados pelas páginas HTML sob docs/.
+
+
+ESTRUTURA TÍPICA
+
+docs/assets/css/
+  Folhas de estilo (ex.: laboratorio.css para laboratorio_campo_largo.html).
+
+docs/assets/js/
+  Scripts partilhados (ex.: main.js).
+
+docs/assets/img/
+  Imagens específicas das páginas em docs/ quando não usam a pasta global do
+  repositório.
+
+docs/assets/pdf/
+  Manual de iniciação e outros PDF gerados pelo projeto.
+
+
+USO NAS PÁGINAS
+
+CSS: link relativo à página, por exemplo assets/css/laboratorio.css quando a
+página está em docs/.
+
+JS: script src="assets/js/main.js" quando aplicável.
+
+Imagens locais a esta pasta: assets/img/nome.png
+
+
+IMAGENS NA RAIZ DO REPOSITÓRIO
+
+index.html, index_v2.html e artigo_ete_v3.html podem referenciar ficheiros em
+assets/images/ (aulas, artigos) na raiz do repositório; não são duplicados sob
+docs/assets/img.
+
+Última revisão: 2026-05-17

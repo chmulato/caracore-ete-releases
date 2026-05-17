@@ -1,70 +1,11 @@
-# Memória do Projeto — ETE (Minerador 4.0 / Ouro 4.0)
+OFICINA — memória do projeto
 
-Documento de referência rápida sobre o estado atual do projeto. Atualizar quando houver mudanças relevantes de stack, entrega ou decisões.
+O texto integral foi consolidado em formato TXT (sem Markdown nem asteriscos):
 
-Data da última atualização: 2026-04-25
+  docs/oficina/MEMORIA_PROJETO.txt
 
----
+Índice de toda a documentação operacional da oficina:
 
-## Ecossistema
+  docs/oficina/00_INDICE.txt
 
-| Pilar | O que é | Onde |
-|-------|--------|------|
-| **Conhecimento (vitrine)** | Conteúdo HTML: ciência das terras raras, refino de óxidos, manifesto de descoberta. | Loja oficial: [ete.caracore.com.br](https://ete.caracore.com.br/) (`caracore-ete-releases/docs`). |
-| **True Engine (ferramenta)** | Aplicativo desktop: cálculos reais em Python, química mineral e ambiental; interface de centro de refino. | minerador_40/; instalador Windows (.exe) via Releases. |
-
-- **Site público (releases):** [ete.caracore.com.br](https://ete.caracore.com.br/) — vitrine e download.
-- **Instalador Windows:** Minerador 4.0 (.exe) — releases da loja `caracore-ete-releases`.
-
----
-
-## Escopo e tese
-
-- **ETE** aqui = transferência de tecnologia: lógica de decantação/tratamento de lodos (ETEs) aplicada ao **refino de concentrados minerais** (monazita, bastnasita) e **reciclagem de eletrônicos**. Não é tratamento de esgoto para obtenção de metais.
-- **Insumo:** Soluções Ricas de Lixiviação (PLS) de alta concentração (jazidas, concentrados, mineração urbana).
-- **Tese:** Quebra de paradigma econômico — ETE reduz CAPEX e torna viáveis jazidas economicamente marginais; escalabilidade modular.
-
----
-
-## Estrutura do repositório (caracore-ete)
-
-- **docs/** — Site exposto no GitHub Pages: index.html (portal), laboratorio_campo_largo.html (Ouro 4.0), apostila, artigo, assets (CSS, img, js, pdf). Links relativos (sem base href).
-- **library/** — Documentação técnica (P&D): teoria (Kps, cascata), negócios (viabilidade, feedstock), operacional (deploy).
-- **minerador_40/** — App desktop Minerador 4.0: centro de controle gamificado (Campo, Lab, Mercado), motor ETE no back-end. Flask + pywebview ou Electron.
-- **src/** — core_engine.py; ete_residencial/ (mg/L, Descarte Seguro); ete_mineracao/ (g/L, %, Pureza 99.9%).
-- **aulas/** — Módulos em Markdown (INDEX.md, INDEX_JORNADA.md, MODULO_01–05).
-- **Raiz** — calculos.py, engine_v2.py, cinetica.py, conformidade.py, analise_economica.py, feedstock_profiles.py; run_residencial.py, run_mineracao.py, run_minerador40.py.
-- **scripts/** — build_dist_local.py (gera dist/Minerador40.exe e checksums).
-- **electron/** — Shell Electron opcional: cd electron && npm start.
-- **CHANGELOG.md**, **library/** (DELIVERY_ETE_RELEASES.md, BLINDAGEM_IP_RELEASE.md, etc.).
-
----
-
-## Comandos úteis
-
-- **Minerador 4.0 (desktop):** `python run_minerador40.py` (pywebview). Ou Electron: `cd electron && npm install && npm start`.
-- **Instalador Windows:** `python scripts/build_dist_local.py` → dist/Minerador40.exe (recomendado Python 3.10.x para alinhar com CI).
-- **ETE Residencial (mg/L):** `python run_residencial.py` ou `streamlit run src/ete_residencial/app_residencial.py`.
-- **ETE Mineração (g/L, pureza):** `python run_mineracao.py` ou `streamlit run src/ete_mineracao/app_mineracao.py`.
-- **Manual PDF (Ouro 4.0):** `python gerar_manual_ouro40_pdf.py` → docs/assets/pdf/Manual_Iniciacao_Ouro40.pdf.
-
----
-
-## Pilares tecnológicos (cinco fases)
-
-I Motor Químico (Kps, balanço de massa, precipitados). II Seletividade por pH (janelas por lantanídio). III Cascata industrial (tanques em série, pureza). IV Análise de viabilidade (OPEX, CAPEX, ROI). V Interface e apostila (Streamlit, HTML, Minerador 4.0).
-
----
-
-## Laboratório Campo Largo · Ouro 4.0
-
-- Página de formação/recrutamento: docs/laboratorio_campo_largo.html — IFPR Campo Largo, Jornada em Materiais, Skill Tree, Oráculo, Blueprint, dedicatória ao Prof. Urivald Pawlowsky (UFPR).
-- Manual de Iniciação em PDF: docs/assets/pdf/Manual_Iniciacao_Ouro40.pdf.
-
----
-
-## Loja e alinhamento recente
-
-- **Oficina:** `caracore-ete` — código, motores, documentação técnica e geração de artefatos.
-- **Loja:** `caracore-ete-releases` — vitrine pública em `ete.caracore.com.br`, download, licença, canal de feedback, wiki e artefatos.
-- 2026-04-25: removido da home da loja o bloco redundante `ete.caracore.com.br · Wiki` e o breadcrumb `Início · Cara Core`, mantendo a página inicial mais direta para o Minerador 4.0 (ETE).
+Última atualização do encaminhamento: 2026-05-17

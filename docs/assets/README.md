@@ -1,26 +1,24 @@
-# Assets da pasta web/
+# Assets em docs/assets
 
-Estrutura de CSS, JS e imagens usadas pelas páginas dentro de `web/`.
+CSS, JS e imagens usados pelas páginas HTML sob `docs/`.
+
+Versão em texto puro para a oficina: `docs/oficina/ASSETS_WEB.txt`
 
 ## Estrutura
 
-```
-web/assets/
-├── css/          # Folhas de estilo por página ou compartilhadas
-│   └── laboratorio.css   # Laboratório Campo Largo: Ouro 4.0
-├── js/           # Scripts (compartilhados ou por página)
-│   └── main.js
-├── img/          # Imagens específicas das páginas web (ex.: IFPR)
-│   └── ifpr.png
-└── README.md     # Este arquivo
-```
+- `css/` — Folhas de estilo (ex.: `laboratorio.css`)
+- `js/` — Scripts (ex.: `main.js`)
+- `img/` — Imagens específicas das páginas em `docs/`
+- `pdf/` — PDF gerados (manual Ouro 4.0)
 
 ## Uso nas páginas
 
-- **CSS:** `<link href="assets/css/laboratorio.css" rel="stylesheet">` (caminho relativo à página em `web/`).
-- **JS:** `<script src="assets/js/main.js"></script>` (quando necessário).
-- **Imagens:** `assets/img/nome.png` para arquivos nesta pasta.
+CSS: caminho relativo, por exemplo `assets/css/laboratorio.css` a partir de uma página em `docs/`.
 
-## Imagens em outros lugares
+JS: `assets/js/main.js` quando necessário.
 
-As páginas **index.html**, **index_v2.html** e **artigo_ete_v3.html** usam imagens do repositório em `../assets/images/` (aulas, artigos). Esses arquivos continuam na raiz do projeto em `assets/images/`; não são duplicados aqui.
+Imagens nesta pasta: `assets/img/nome.png`
+
+## Imagens no resto do repositório
+
+Várias páginas usam ainda `assets/images/` na raiz do projeto (aulas, artigos); não são duplicadas aqui.

@@ -1,0 +1,278 @@
+/**
+ * Portal ETE — responsivo (mobile, tablet, desktop).
+ * Carregar depois de laboratorio.css nas páginas que o usam.
+ * Base: mobile-first; breakpoints ~640px e ~1024px.
+ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0.5rem 0;
+}
+
+/* ----- Páginas escuras (laboratorio.css family) ----- */
+body.laboratorio-page {
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+}
+
+@media (max-width: 639px) {
+  body.laboratorio-page {
+    padding: 0 max(10px, env(safe-area-inset-left)) 40px max(10px, env(safe-area-inset-right));
+  }
+
+  body.laboratorio-page .wrapper {
+    max-width: 100%;
+  }
+
+  body.laboratorio-page header {
+    padding: 36px 0 28px;
+  }
+
+  body.laboratorio-page header h1 {
+    font-size: 1.45rem;
+  }
+
+  body.laboratorio-page header .impact {
+    font-size: 0.98rem;
+  }
+
+  body.laboratorio-page .blueprint-grid,
+  body.laboratorio-page .blueprint-inner {
+    flex-direction: column;
+  }
+
+  body.laboratorio-page .blueprint-ementa-img img {
+    max-width: 100%;
+  }
+
+  body.laboratorio-page .cta-box .links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body.laboratorio-page .cta-box .links a {
+    text-align: center;
+  }
+}
+
+body.degustacao-page {
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+}
+
+@media (max-width: 639px) {
+  body.degustacao-page .proto-tabs {
+    flex-direction: column;
+  }
+
+  body.degustacao-page .proto-tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  body.degustacao-page .cta-row {
+    flex-direction: column;
+  }
+
+  body.degustacao-page .cta-row a {
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+body.download-page .wrapper {
+  max-width: 100%;
+}
+
+@media (max-width: 639px) {
+  body.download-page header h1 {
+    font-size: 1.35rem;
+  }
+
+  body.download-page .download-hero {
+    padding: 22px 16px;
+  }
+}
+
+/* ----- Portal index (classe no body) ----- */
+body.ete-portal-index .wrapper {
+  max-width: 100%;
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+  box-sizing: border-box;
+}
+
+@media (max-width: 639px) {
+  body.ete-portal-index header h1 {
+    font-size: 1.35rem;
+  }
+
+  body.ete-portal-index .nav-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  body.ete-portal-index .learning-steps {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.ete-portal-index .methodology .card {
+    padding: 20px 18px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  body.ete-portal-index .nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----- One-pager investidores ----- */
+body.ete-portal-invest .wrap {
+  max-width: 100%;
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+  box-sizing: border-box;
+}
+
+@media (max-width: 639px) {
+  body.ete-portal-invest header.hero {
+    padding: 1.15rem;
+  }
+
+  body.ete-portal-invest h1 {
+    font-size: 1.25rem !important;
+  }
+
+  body.ete-portal-invest .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body.ete-portal-invest .cta-row a {
+    text-align: center;
+  }
+
+  body.ete-portal-invest .offer-table {
+    font-size: 0.8rem;
+  }
+
+  body.ete-portal-invest .offer-table th,
+  body.ete-portal-invest .offer-table td {
+    padding: 0.45rem 0.5rem;
+  }
+}
+
+/* ----- Canal feedback ----- */
+@media (max-width: 639px) {
+  body.ete-portal-canal .wrapper {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
+
+/* ----- Referências IFPR / UFPR (laboratorio.css) ----- */
+@media (max-width: 639px) {
+  body.ete-portal-ref.ref-page .wrapper {
+    max-width: 100%;
+  }
+
+  body.ete-portal-ref.ref-page header h1 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ----- Artigo executivo ----- */
+@media (max-width: 639px) {
+  body.ete-portal-artigo .container {
+    padding: 32px 18px;
+    max-width: 100%;
+  }
+
+  body.ete-portal-artigo .header h1 {
+    font-size: 1.45rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  body.ete-portal-artigo .container {
+    padding: 48px 28px;
+  }
+}
+
+/* ----- Apostila efluentes ----- */
+body.ete-portal-apostila {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+@media (max-width: 639px) {
+  body.ete-portal-apostila .page {
+    padding: 20px 14px !important;
+    margin: 14px auto 20px !important;
+    border-radius: 12px;
+    max-width: calc(100% - 20px);
+  }
+
+  body.ete-portal-apostila .img-center img.img-tall,
+  body.ete-portal-apostila .img-center img.img-very-large {
+    max-width: 100%;
+    max-height: 70vh;
+  }
+
+  body.ete-portal-apostila pre {
+    font-size: 13px;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
+
+/* ----- Curso técnico index_v2 (sidebar empilhada em CSS próprio + refinamentos) ----- */
+body.ete-portal-course .chapter-image {
+  max-width: 100%;
+}
+
+/* ----- Loja (loja.css / páginas comerciais neste site) ----- */
+body.ete-portal-loja {
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+  box-sizing: border-box;
+}
+
+@media (max-width: 639px) {
+  body.ete-portal-loja .wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  body.ete-portal-loja .wrapper {
+    max-width: min(100%, 720px);
+  }
+}
+
+/* Wiki Bootstrap — safe-area apenas */
+body.ete-portal-wiki {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}

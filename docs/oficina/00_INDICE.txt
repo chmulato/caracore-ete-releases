@@ -1,0 +1,40 @@
+CARACORE ETE — DOCUMENTAÇÃO DA OFICINA (TEXTO PURO)
+
+Índice dos ficheiros em docs/oficina/. Formato: texto simples, sem Markdown,
+sem emojis e sem asteriscos de ênfase. Use UTF-8.
+
+MEMORIA_PROJETO.txt
+  Estado do ecossistema, estrutura do repositório, comandos úteis e pilares técnicos.
+
+GITHUB_PAGES.txt
+  Publicação do site em docs/ via GitHub Pages (branch, pasta, URLs).
+
+PREMISSAS_PACOTE.txt
+  Pacote de premissas econômicas, inventário YAML e testes de preços congelados.
+
+ASSETS_WEB.txt
+  Organização de CSS, JS e imagens sob docs/assets.
+
+MVP_FINANCEIRO_V1.txt
+  Escopo do MVP financeiro na etapa Viabilidade (ETE Mineração).
+
+TESTES_SELENIUM_STREAMLIT.txt
+  Diferença entre testes Selenium no Flask Minerador e o wizard Streamlit.
+
+INSTALACAO_REFERENCIA.txt
+  Resumo dos artefactos de distribuição e onde está o guia completo por sistema.
+
+Documentos relacionados fora desta pasta (mantêm formato original):
+
+  library/README.md — índice técnico Markdown da pasta library/ (entrega ETE-releases +
+    loja caracore-ete-releases, blindagem, feedback, teoria, negócios, operacional). Use este
+    ficheiro quando precisar do mapa dos .md fora de docs/oficina/.
+
+  docs/proximos_passos.txt — plano estratégico e roadmap (já em texto simples).
+  docs/ETE_RELEASES_LICENSE.txt — licença da loja de releases.
+  docs/INSTALACAO_WINDOWS.md — guia Windows (Markdown).
+  docs/INSTALACAO_LINUX.md — guia Linux (Markdown).
+  docs/INSTALACAO_MACOS.md — guia macOS (Markdown).
+  docs/INSTALACAO_MULTIPLATAFORMA.md — índice multiplataforma (Markdown).
+
+Última revisão do índice: 2026-05-17

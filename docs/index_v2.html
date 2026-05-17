@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://ete.caracore.com.br/">
     <title>Curso Técnico: Fundamentos de Hidrometalurgia de Terras Raras</title>
     <style>
         * {
@@ -286,17 +285,54 @@
             margin-bottom: 15px;
         }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
+        /* Responsividade — sidebar fixa → empilhada (tablet / telemóvel) */
+        @media (max-width: 900px) {
+            body {
+                flex-direction: column;
+            }
+
             .sidebar {
                 width: 100%;
                 height: auto;
+                max-height: min(50vh, 420px);
                 position: relative;
+                flex-shrink: 0;
+                box-shadow: none;
+                border-bottom: 2px solid #34495e;
             }
 
             .main-content {
                 margin-left: 0;
-                padding: 20px;
+                max-width: 100%;
+                padding: 28px 22px;
+            }
+
+            .header h1 {
+                font-size: 1.85em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                max-height: min(45vh, 360px);
+                padding: 14px 0;
+                font-size: 0.95em;
+            }
+
+            .main-content {
+                padding: 18px 14px;
+            }
+
+            .header h1 {
+                font-size: 1.45em;
+            }
+
+            .chapter h2 {
+                font-size: 1.45em;
+            }
+
+            .introduction {
+                padding: 18px;
             }
         }
 
@@ -335,10 +371,21 @@
             text-align: center;
         }
     </style>
+    <link rel="stylesheet" href="assets/css/portal-responsive.css">
 </head>
-<body>
+<body class="ete-portal-course">
     <!-- Sidebar de Navegação -->
     <nav class="sidebar">
+        <div style="padding: 0 20px 16px; border-bottom: 2px solid #34495e; margin-bottom: 14px;">
+            <p style="margin: 0 0 10px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: #95a5a6;">Site estático</p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.88rem;">
+                <li style="margin: 6px 0;"><a href="index.html" style="color: #3498db;">Portal ETE</a></li>
+                <li style="margin: 6px 0;"><a href="laboratorio_campo_largo.html" style="color: #3498db;">Laboratório Ouro 4.0</a></li>
+                <li style="margin: 6px 0;"><a href="download.html" style="color: #3498db;">Download</a></li>
+                <li style="margin: 6px 0;"><a href="artigo_ete_v3.html" style="color: #3498db;">Artigo executivo</a></li>
+                <li style="margin: 6px 0;"><a href="canal-feedback.html" style="color: #3498db;">Canal de feedback</a></li>
+            </ul>
+        </div>
         <h2>Índice</h2>
         <ul>
             <li><a href="#introducao">Introdução</a></li>

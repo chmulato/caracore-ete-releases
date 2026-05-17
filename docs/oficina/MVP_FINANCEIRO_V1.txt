@@ -1,0 +1,62 @@
+MVP FINANCEIRO V1 (ETE MINERAÇÃO)
+
+Escopo alinhado a docs/proximos_passos.txt (Fase 1). Fixa o que entra na
+primeira versão de decisão económica sem prometer precisão de estudo de
+engenharia de detalhe (FEED).
+
+
+OBJECTIVO
+
+Responder de forma coerente sobre: CAPEX, OPEX, payback, VPL, TIR, três
+cenários de receita e sensibilidade mínima a custos (energia, reagentes,
+logística proxy).
+
+
+O QUE ENTRA NO MVP V1
+
+Premissas documentadas — pasta docs/premissas/, inventário versionado.
+
+CAPEX modular em faixa — AnalisadorEconomico.estimar_capex_planta (classe 5);
+detalhe na Auditoria quando aplicável.
+
+OPEX por tonelada — derivado de volume mensal e produção; KPI custo por kg como
+aproximação.
+
+Payback — calcular_payback com fluxo mensal uniforme.
+
+VPL — calcular_vpl_fluxo_mensal_uniforme (CAPEX em t=0, lucro mensal constante,
+taxa configurável na UI).
+
+TIR — calcular_tir_anual_fluxo_mensal_uniforme (pode ser None se não houver
+raiz válida).
+
+Cenários pessimista, base e otimista — calcular_triplo_cenario_preco_receita;
+factores 0,85 / 1,00 / 1,15 sobre receita; OPEX mantido.
+
+Sensibilidade — matriz_sensibilidade_minima; choques +20% energia, +15%
+reagentes, +10% disposição (proxy de logística).
+
+Painéis Fase 2 na UI Streamlit — etapa Painéis decisório em
+src/ete_mineracao/app_mineracao.py (issues #5 a #7).
+
+
+FORA DO MVP V1 (FASE POSTERIOR)
+
+VPL e TIR por cenário de preço com granularidade total (para já: tabela de
+lucro por cenário).
+
+Sensibilidade cruzada ou distribuição probabilística.
+
+OPEX indexado ao cenário de preço de mercado.
+
+Comparativo modular versus centralizado com dois fluxos simulados lado a lado.
+
+
+REFERÊNCIAS DE CÓDIGO
+
+analise_economica.py — funções económicas consolidadas.
+src/ete_mineracao/app_mineracao.py — etapa Viabilidade e relatório HTML.
+
+Revisão mensal: documentar responsável em docs/proximos_passos.txt secção 6.
+
+Última revisão: 2026-05-17

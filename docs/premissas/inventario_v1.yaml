@@ -1,0 +1,115 @@
+versao: "1.3"
+data_atualizacao: "2026-05-17"
+nota_legal: >
+  Referências abaixo são para transparência metodológica. Os valores USD/kg dos óxidos
+  usados na valoração seguem o arquivo JSON «congelamento_precos_oxidos.json» (validado
+  nos testes com json da biblioteca padrão Python), em espelho de
+  analise_economica.PRECOS_OXIDOS_USD_KG_CONGELADOS. Revisões de mercado devem atualizar
+  data, JSON e código em conjunto (commit «rebenchmark»).
+
+# --- Congelamento único dos defaults USD/kg (valoração no simulador) ---
+congelamento_precos_oxidos_usd_kg:
+  data_congelamento: "2025-02-15"
+  arquivo_paridade_testes: "congelamento_precos_oxidos.json"
+  unidade: "USD/kg (referência interna Classe 5)"
+  campo_codigo: "analise_economica.PRECOS_OXIDOS_USD_KG_CONGELADOS"
+  constante_data_codigo: "analise_economica.PRECO_OXIDO_DATA_CONGELAMENTO"
+  referencia_metodologica: >
+    Parâmetros calibrados à ordem de grandeza das fontes listadas em fontes_terras_raras
+    (panorama USGS 2025 + janela de cotações China fev/2025). Não substituem assessment
+    comercial formal (ex.: Fastmarkets) nem cotação do dia.
+
+# --- Fontes de mercado (terras raras) ---
+fontes_terras_raras:
+  - id: usgs_mcs_2025
+    titulo: "USGS Mineral Commodity Summaries 2025 — Rare Earths"
+    tipo: "Panorama anual oficial (EUA), séries e contexto de oferta/demanda"
+    url: "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-rare-earths.pdf"
+    data_publicacao: "2025-01"
+    uso_no_produto: "Contexto e revisão periódica dos defaults de preço; não fixa spot diário."
+
+  - id: fastmarkets_methodology
+    titulo: "Fastmarkets — metodologia / novas avaliações de terras raras"
+    tipo: "Metodologia de assessment de preços de mercado"
+    url: "https://www.fastmarkets.com/insights/launch-of-five-new-rare-earth-prices/"
+    data_consulta: "2026-05"
+    uso_no_produto: "Referência de mercado institucional para justificar uso de séries spot em USD."
+
+  - id: china_spot_window_q1_2025
+    titulo: "Cotações domésticas China — janela citada na imprensa especializada (Nd/Dy)"
+    tipo: "Spot / atacado óxidos (referência regional)"
+    exemplos_consulta:
+      - url: "https://www.ctia.com.cn/en/news/37889.html"
+        descricao: "Tendência mensal produtos terras raras (contexto fev/2025)."
+        data_observacao: "2025-02"
+      - url: "https://www.epomaterial.com/news/rare-earth-product-price-on-feb-18-2025/"
+        descricao: "Faixas publicadas para óxidos (referência comercial)."
+        data_observacao: "2025-02-18"
+    uso_no_produto: >
+      Calibrar ordens de grandeza para Nd₂O₃ / Dy₂O₃ ao revisar precos_oxidos_usd_kg;
+      sempre converter moeda e pureza antes de alimentar o simulador.
+
+# --- Insumos e utilidades (Brasil / conversão) ---
+fontes_insumos_utilidades:
+  - id: cambio_usd_brl
+    titulo: "Câmbio USD/BRL — série Bacen / mercado"
+    tipo: "Taxa de conversão"
+    url_oficial: "https://www.bcb.gov.br/conversao"
+    uso_no_produto: "Campo Setup «Câmbio USD/BRL»; default histórico no código quando aplicável."
+
+  - id: energia_eletrica_br
+    titulo: "ANEEL — dados agregados do setor elétrico (referência macro)"
+    tipo: "Benchmark energético nacional"
+    url: "https://www.aneel.gov.br/"
+    uso_no_produto: >
+      Justificar revisões do custo marginal de energia em analise_economica.custo_energia_por_m3
+      e choques da matriz de sensibilidade (+20%).
+
+  - id: soda_calculo_reagentes
+    titulo: "Preços NaOH / cal hidratada — listas de distribuidores químicos BR"
+    tipo: "Ordem de grandeza BRL/kg (varia por regão e grade)"
+    observacao: "Valores em analise_economica.custos_reagentes são ilustrativos; RFQ local substitui."
+    uso_no_produto: "calcular_custo_reagentes e custos_por_estagio_rows na UI Fase 2."
+
+# --- Parâmetros fixados no MVP v1 (documentação cruzada) ---
+premissas:
+  - id: cenários_preço_óxidos
+    uso: "Triplo cenário na UI (receita mensal)"
+    pessimista: 0.85
+    base: 1.0
+    otimista: 1.15
+    hipotese: "Stress de receita; OPEX mensal fixo no MVP."
+    origem: "docs/mvp_financeiro_v1.md"
+    issue_github: 3
+
+  - id: sensibilidade_custos
+    uso: "Matriz na etapa Viabilidade"
+    choque_energia_pct: 0.20
+    choque_reagentes_pct: 0.15
+    choque_logistica_pct: 0.10
+    hipotese: "Logística proxy = disposição de lodo mensal do breakdown OPEX."
+    issue_github: 4
+
+  - id: taxa_desconto_vpl_default
+    uso: "Slider Viabilidade (VPL)"
+    valor_percent_ao_ano: 12.0
+    hipotese: "Placeholder até WACC do projeto."
+    issue_github: 2
+
+  - id: benchmarks_capex
+    uso: "AnalisadorEconomico.BenchmarksCapex"
+    hipotese: "Regra 0,6 + pacotes equipamento + fator EPC + majoritariedade química."
+    links_internos_codigo: "analise_economica.BenchmarksCapex.referencia_*"
+    issue_github: 2
+
+  - id: precos_oxidos_usd_kg_codigo
+    uso: "Valoração na simulação"
+    campo_codigo: "analise_economica.PRECOS_OXIDOS_USD_KG_CONGELADOS"
+    arquivo_paridade: "docs/premissas/congelamento_precos_oxidos.json"
+    reconciliacao: "pytest tests/test_precos_oxidos_congelamento.py valida JSON ↔ código (stdlib json)."
+    issue_github: 1
+
+  - id: paineis_fase2_ui
+    uso: "Etapa Streamlit «Painéis decisório» + export HTML"
+    elementos: "Custos por estágio; margem por elemento; break-even vazão; modular vs SX; curva aprendizado CAPEX"
+    issue_github: [5, 6, 7]

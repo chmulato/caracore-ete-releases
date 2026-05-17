@@ -15,7 +15,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.65;
     color: var(--text-primary);
     background: var(--bg-dark);
@@ -224,6 +224,21 @@ header .impact strong { color: var(--accent-gold); }
 .download-status .build-badge {
     height: 22px;
     width: auto;
+}
+
+.download-status span.build-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--accent-green);
+    height: auto;
 }
 
 .download-status .status-label {
@@ -1321,7 +1336,7 @@ header .impact strong { color: var(--accent-gold); }
 }
 
 .dedicatoria-title {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: rgba(212, 168, 83, 0.95);
@@ -1331,7 +1346,7 @@ header .impact strong { color: var(--accent-gold); }
 }
 
 .dedicatoria-texto {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     line-height: 1.75;
     color: #e0dcd4;
@@ -1348,7 +1363,7 @@ header .impact strong { color: var(--accent-gold); }
 }
 
 .dedicatoria-citacao {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     font-style: italic;
     line-height: 1.65;

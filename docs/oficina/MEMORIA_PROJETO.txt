@@ -1,0 +1,115 @@
+MEMÓRIA DO PROJETO — ETE (MINERADOR 4.0 / OURO 4.0)
+
+Referência rápida para a oficina: stack, entrega e decisões. Atualizar quando
+houver mudança relevante.
+
+Última atualização: 2026-05-17
+
+
+ECOSSISTEMA
+
+Conhecimento (vitrine)
+  Conteúdo HTML: terras raras, refino de óxidos, laboratório Campo Largo.
+  Loja pública: https://ete.caracore.com.br/
+  Repositório de entrega: caracore-ete-releases (pages + instaladores).
+
+Motor (ferramenta)
+  Aplicação desktop Minerador 4.0: Python, química mineral e ambiental;
+  interface tipo centro de controlo.
+  Código: minerador_40/
+  Runtime mínimo empacotado: requirements-minerador40-desktop.txt (Flask,
+  pywebview, cryptography). CI de release usa esse perfil mais PyInstaller.
+
+
+ESCOPO E TESE
+
+ETE no projeto designa transferência de lógica de tratamento em tanques e
+separação em fases para refino de concentrados (monazita, bastnasita, fluxos
+urbanos de reciclagem), sobre soluções ricas de lixiviação (PLS).
+
+Tese económica: modularidade e desenho tipo ETE podem reduzir CAPEX e viabilizar
+jazidas marginalizadas; escalabilidade por módulos.
+
+
+ESTRUTURA DO REPOSITÓRIO CARACORE-ETE
+
+docs/
+  Site para GitHub Pages: portal, laboratório Ouro 4.0, apostila, artigo,
+  canal de feedback, guias de instalação em Markdown. Imagens relativas.
+
+docs/oficina/
+  Documentação operacional em TXT para a equipa (esta pasta).
+
+library/
+  Documentação técnica de apoio (P&D, entrega, blindagem).
+
+minerador_40/
+  Backend Flask, templates, motor exposto ao dashboard (Campo, Laboratório,
+  Mercado). Launcher: pywebview ou Electron opcional.
+
+src/
+  core_engine.py; ete_residencial (mg/L); ete_mineracao (g/L, pureza).
+
+Raiz
+  analise_economica.py, feedstock_profiles.py, scripts de simulação,
+  run_residencial.py, run_mineracao.py, run_minerador40.py.
+
+scripts/
+  build_dist_local.py — gera dist/ (exe ou pasta conforme flags; deps desktop
+  ou full; opcional ZIP).
+
+electron/
+  Shell Electron opcional sobre o mesmo servidor local.
+
+.build / artefactos CI
+  Linux: ficheiro Minerador40-linux-x86_64.tar.gz (pasta Minerador40 onedir).
+  Windows: Minerador40-windows-x64.exe (PyInstaller onefile no fluxo atual).
+  macOS: Minerador40-macos-universal.dmg (conteúdo onedir).
+  Workflow: .github/workflows/build_exe.yml
+
+
+COMANDOS ÚTEIS
+
+Minerador 4.0 em desenvolvimento
+  python -m minerador_40.main
+  ou: python run_minerador40.py
+
+Pacote desktop local
+  python scripts/build_dist_local.py
+  python scripts/build_dist_local.py --onedir --zip
+
+ETE Residencial
+  python run_residencial.py
+  ou: streamlit run src/ete_residencial/app_residencial.py
+
+ETE Mineração
+  python run_mineracao.py
+  ou: streamlit run src/ete_mineracao/app_mineracao.py
+
+Manual PDF Ouro 4.0
+  python gerar_manual_ouro40_pdf.py
+  Saída: docs/assets/pdf/Manual_Iniciacao_Ouro40.pdf
+
+Python recomendado para alinhar com CI: 3.10.x
+
+
+PILARES TÉCNICOS (RESUMO)
+
+I   Motor químico (Kps, balanço de massa, precipitados).
+II  Seletividade por pH por família de lantanídeos.
+III Cascata industrial (tanques em série, pureza).
+IV  Viabilidade (CAPEX, OPEX, payback, VPL, TIR, cenários).
+V   Interface e materiais didácticos (Streamlit, HTML, Minerador).
+
+
+LABORATÓRIO CAMPO LARGO · OURO 4.0
+
+  docs/laboratorio_campo_largo.html — formação, IFPR, jornada em materiais,
+  referência ao Prof. Urivald Pawlowsky (UFPR).
+  Manual PDF em docs/assets/pdf/Manual_Iniciacao_Ouro40.pdf
+
+
+OFICINA E LOJA
+
+Oficina: caracore-ete (código, motores, testes, documentação técnica).
+Loja: caracore-ete-releases — vitrine, downloads, checksums, licença em TXT.

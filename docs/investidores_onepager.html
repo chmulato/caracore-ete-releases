@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caracore ETE — One-pager investidores</title>
+  <style>
+    :root {
+      --gold: #d4a012;
+      --gold-soft: #f5e6c5;
+      --ink: #1a1d21;
+      --muted: #4b5565;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #252a30 0%, #1a1d21 40%, #111418 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+    header.hero {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      border-left: 6px solid var(--gold);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    }
+    h1 {
+      margin: 0 0 0.35rem 0;
+      font-size: clamp(1.35rem, 4vw, 1.85rem);
+      color: var(--ink);
+    }
+    .tagline { color: var(--muted); font-size: 0.98rem; margin: 0; }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    @media (min-width: 700px) {
+      .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    }
+    section.card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.15rem 1.35rem;
+      border: 1px solid var(--border);
+    }
+    h2 {
+      margin: 0 0 0.65rem 0;
+      font-size: 1.05rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    ul { margin: 0; padding-left: 1.15rem; color: var(--muted); }
+    ul li { margin-bottom: 0.35rem; }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 0.65rem 1.15rem;
+      background: var(--gold);
+      color: var(--ink) !important;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    a.btn.secondary {
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold-soft) !important;
+    }
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: #9ca3af;
+      text-align: center;
+      padding: 0 1rem 2rem;
+    }
+    .kbd {
+      font-family: ui-monospace, monospace;
+      font-size: 0.85em;
+      background: #f3f4f6;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+    }
+    .trust-strip {
+      margin-top: 0.85rem;
+      padding: 0.65rem 0.85rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .five-q {
+      margin-top: 1rem;
+    }
+    .five-q ol {
+      margin: 0.5rem 0 0 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+    }
+    .five-q li {
+      margin-bottom: 0.65rem;
+      line-height: 1.5;
+    }
+    .five-q strong { color: var(--ink); }
+    .where {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+    .offer-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 0.5rem;
+    }
+    .offer-table th, .offer-table td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.65rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .offer-table th {
+      background: #fefce8;
+      color: #854d0e;
+      font-weight: 600;
+    }
+    .offer-table td { color: var(--muted); }
+    dl.bridge {
+      margin: 0.35rem 0 0 0;
+      font-size: 0.88rem;
+    }
+    dl.bridge dt {
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 0.55rem;
+    }
+    dl.bridge dt:first-child { margin-top: 0; }
+    dl.bridge dd {
+      margin: 0.15rem 0 0 0;
+      color: var(--muted);
+      padding-left: 0;
+    }
+    dd.biz {
+      border-left: 3px solid var(--gold);
+      padding-left: 0.65rem !important;
+      margin-top: 0.35rem !important;
+      font-size: 0.84rem;
+    }
+    .limit-callout {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      font-size: 0.88rem;
+      color: #78350f;
+      margin-top: 0.5rem;
+      line-height: 1.55;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/portal-responsive.css">
+</head>
+<body class="ete-portal-invest">
+  <div class="wrap">
+    <header class="hero">
+      <h1>Simulador ETE Mineração — decisão econômica em hidrometalurgia seletiva</h1>
+      <p class="tagline">
+        Produto compilado multiplataforma + código-fonte: do cenário químico ao CAPEX/OPEX,
+        payback, VPL/TIR, cenários de preço e painéis por estágio (ver <span class="kbd">docs/mvp_financeiro_v1.md</span>).
+        Apresentação em HTML responsivo servido ou exportado localmente — sem CDN na interface.
+      </p>
+      <p class="trust-strip">
+        <strong>Confiança operacional:</strong> motor exercitado por testes automatizados no CI (PyTest); pacotes de instalador publicados com checksums SHA-256 / MD5;
+        número de versão oficial no ficheiro <span class="kbd">VERSION</span> na raiz — deve coincidir com a tag <span class="kbd">vX.Y.Z</span> da release.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="./assets/pdf/Manual_Iniciacao_Ouro40.pdf">Manual de iniciação (PDF no pacote)</a>
+        <a class="btn secondary" href="./laboratorio_campo_largo.html">Laboratório Campo Largo (HTML local)</a>
+        <a class="btn secondary" href="./index.html">Portal ETE</a>
+      </div>
+    </header>
+
+    <section class="card five-q" style="margin-top: 1rem;">
+      <h2>As cinco perguntas do negócio</h2>
+      <p style="margin: 0 0 0.35rem 0; font-size: 0.9rem; color: var(--muted);">Cada pergunta traduz o simulador em decisão. Use o Streamlit <strong>ETE‑Mineração</strong> (relatório + Viabilidade) e o documento <span class="kbd">mvp_financeiro_v1.md</span> como referência.</p>
+      <ol>
+        <li><strong>Quanto investir?</strong> Ordem de grandeza de CAPEX (classe de estimativa).
+          <span class="where">Onde responde: painéis económicos / CAPEX Classe 5 no fluxo Mineração e relatório HTML exportável.</span></li>
+        <li><strong>Quanto custa operar?</strong> OPEX por período ou por tonelada na vazão de projeto.
+          <span class="where">Onde responde: custos por etapa, reagentes, energia e sensibilidade nos cenários.</span></li>
+        <li><strong>Quando recupero o capital?</strong> Payback simples e retorno descontado.
+          <span class="where">Onde responde: VPL e TIR com taxa de desconto configurável; triplo cenário (pessimista / base / otimista).</span></li>
+        <li><strong>E se o mercado piorar?</strong> Choques em preço de óxidos, energia ou logística.
+          <span class="where">Onde responde: cenários e sensibilidade mínima; premissas versionadas em <span class="kbd">docs/premissas/</span>.</span></li>
+        <li><strong>O que falta para decidir em comité?</strong> Licenças, amostra real, FEED, garantias de mercado.
+          <span class="where">Explicitamente <em>não</em> coberto pelo MVP: trate como lista de diligência fora do modelo.</span></li>
+      </ol>
+    </section>
+
+    <div class="grid cols-2">
+      <section class="card">
+        <h2>Problema</h2>
+        <ul>
+          <li>Plantas de óxidos de terras raras dependem de rotas caras (ex.: SX) e pouco transparentes em classe inicial.</li>
+          <li>Investidores precisam de linguagem financeira: CAPEX, OPEX/t, payback, VPL, TIR, cenários e sensibilidade.</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Solução (MVP v1)</h2>
+        <ul>
+          <li>Cascata hidrometalúrgica modelada com relatório técnico + bloco econômico consistente.</li>
+          <li>Painéis Fase 2: custos por etapa, margem por elemento, break-even de vazão, modular vs SX, curva de aprendizado.</li>
+          <li>Exportação HTML responsiva com CTA para releases — imprimível em PDF no navegador.</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Métricas que respondemos</h2>
+        <ul>
+          <li>Quanto investir (CAPEX Classe 5) e custo operacional mensal na vazão de projeto.</li>
+          <li>Retorno simples (payback) e retorno descontado (VPL / TIR com taxa configurável).</li>
+          <li>Cenários pessimista / base / otimista na receita e choques em energia, reagentes e logística.</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Risco &amp; transparência</h2>
+        <ul>
+          <li>Estudo prévio — não é FEED nem promessa de retorno.</li>
+          <li>Premissas versionadas (<span class="kbd">inventario_v1.yaml</span> + <span class="kbd">congelamento_precos_oxidos.json</span>) com fontes USGS, mercado e insumos BR.</li>
+          <li>Roadmap Enterprise: dados reais, relatórios avançados e integrações (ver issues #5–#7).</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top: 1rem;">
+      <h2>Oferta do produto</h2>
+      <table class="offer-table">
+        <thead>
+          <tr>
+            <th scope="col">Tier</th>
+            <th scope="col">Destinatário</th>
+            <th scope="col">O que recebe</th>
+            <th scope="col">Limite para decisão em comité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free</strong></td>
+            <td>Aluno, curioso, professor</td>
+            <td>Trilha ambiental, biblioteca em modo gratuito, paywall na experiência Premium na UI.</td>
+            <td>Aprendizagem e demo; não substitui diligence com dados do ativo.</td>
+          </tr>
+          <tr>
+            <td><strong>Premium</strong></td>
+            <td>Profissional individual, pequena equipa</td>
+            <td>Mesmo binário com licença; desbloqueio do núcleo Mineração e relatórios conforme versão.</td>
+            <td>Ótimo para formação e estudos de screening; contratos corporativos são caminho separado.</td>
+          </tr>
+          <tr>
+            <td><strong>Enterprise</strong> <span style="font-size:0.75rem;font-weight:normal;color:#64748b;">(roadmap)</span></td>
+            <td>Mineração, refino, banco, consultoria</td>
+            <td>Dados reais do cliente, SLA, integrações, relatórios sob marca — a definir por proposta.</td>
+            <td>É o nível esperado quando o board exige auditoria, dados proprietários e responsabilização formal.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: 1rem;">
+      <h2>Do técnico ao negócio</h2>
+      <p style="margin: 0 0 0.25rem 0; font-size: 0.88rem; color: var(--muted);">Pontes curtas para quem não fala “PLS” no dia-a-dia.</p>
+      <dl class="bridge">
+        <dt>PLS (solução rica de lixiviação)</dt>
+        <dd>Liquido carregado em metais após lixiviação do concentrado.</dd>
+        <dd class="biz">No negócio: é o “estoque líquido” que alimenta receita futura se a separação for eficiente.</dd>
+        <dt>Pureza / recuperação</dt>
+        <dd>Métricas de qualidade do produto e quanto do metal entra no fluxo útil.</dd>
+        <dd class="biz">Impactam preço realizável e penalidades contratuais com off-takers.</dd>
+        <dt>CAPEX Classe 5</dt>
+        <dd>Ordem de grandeza (-25% a +50% típico em projetos mineros).</dd>
+        <dd class="biz">Serve para “cabem zeros no envelope?” antes de gastar milhões em engenharia detalhada.</dd>
+        <dt>VPL / TIR</dt>
+        <dd>Retorno descontado no tempo com taxa explícita.</dd>
+        <dd class="biz">Linguagem padrão de comité de investimento e comparável entre projetos.</dd>
+      </dl>
+    </section>
+
+    <section class="card" style="margin-top: 1rem;">
+      <h2>O que é — e o que não é</h2>
+      <div class="limit-callout">
+        <strong>É um estudo prévio transparente:</strong> premissas documentadas, matemática reproduzível nos testes do repositório, outputs exportáveis para discussão interna.<br><br>
+        <strong>Não é promessa de lucro nem parecer de investimento:</strong> não substitui FEED, due diligence jurídica, amostragem de campo nem contratos comerciais. Qualquer decisão de alocar capital deve incluir diligências fora deste software.
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p style="margin: 0 0 10px;">
+      <a href="index.html" style="color:#d4a012;">Portal ETE</a> ·
+      <a href="laboratorio_campo_largo.html" style="color:#d4a012;">Laboratório</a> ·
+      <a href="download.html" style="color:#d4a012;">Download</a> ·
+      <a href="artigo_ete_v3.html" style="color:#d4a012;">Artigo executivo</a> ·
+      <a href="canal-feedback.html" style="color:#d4a012;">Feedback</a>
+    </p>
+    Caracore ETE · One-pager alinhado ao MVP financeiro v1 · Maio/2026 · Atualize premissas antes de qualquer roadshow.
+  </footer>
+</body>
+</html>

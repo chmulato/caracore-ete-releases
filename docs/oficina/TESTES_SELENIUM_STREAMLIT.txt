@@ -1,0 +1,29 @@
+WIZARD STREAMLIT ETE MINERAÇÃO — VERIFICAÇÃO MANUAL E E2E
+
+Os testes Selenium em tests/selenium/ sobem o servidor Flask do Minerador 4.0
+(minerador_40). Não executam o aplicativo Streamlit run_mineracao.py.
+
+A etapa Painéis decisório existe apenas no wizard Streamlit em
+src/ete_mineracao/app_mineracao.py.
+
+
+CHECKLIST MANUAL
+
+1. Na raiz: streamlit run run_mineracao.py (ou comando equivalente do projeto).
+
+2. Percorrer: Setup, Simulação (executar), Resultados, Painéis decisório.
+
+3. Confirmar expansores: custos por etapa, margem por elemento, modular versus
+   SX, curva de aprendizado quando disponível.
+
+4. Viabilidade, Relatório, exportar HTML e conferir secções dos painéis.
+
+
+AUTOMAÇÃO FUTURA
+
+E2E contra Streamlit exigiria subprocesso na porta típica 8501 e Playwright ou
+Selenium 4. O CI atual não inclui fixture para isso; o teste
+tests/selenium/test_streamlit_mineracao_wizard_skip.py permanece em skip até
+haver infraestrutura.
+
+Última revisão: 2026-05-17

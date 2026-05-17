@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download — Minerador 4.0 | caracore-ete-releases</title>
-    <meta name="description" content="Baixe o Minerador 4.0 v1.1.15 para Linux, Windows e macOS: release oficial, checksums SHA-256/MD5 e guia de instalação multiplataforma.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Download — Minerador 4.0 | chmulato/ETE-releases</title>
+    <meta name="description" content="Baixe o instalador Windows do simulador Campo Largo: Minerador 4.0. Versão validada por testes (PyTest). Checksums SHA-256 e MD5 para verificação de integridade.">
     <link href="assets/css/laboratorio.css" rel="stylesheet">
     <style>
-        .download-page .wrapper { max-width: 860px; }
+        .download-page .wrapper { max-width: 640px; }
         .download-page header { padding: 48px 0 32px; border-bottom: 1px solid var(--border); }
         .download-page header h1 { font-size: 1.75rem; margin-bottom: 8px; }
         .download-page header p { color: var(--text-secondary); font-size: 0.95rem; }
@@ -40,48 +37,6 @@
         .download-hero .btn-download:hover { background: #fbbf24; transform: translateY(-1px); }
         .download-hero .btn-download:focus { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
         .download-hero .version { margin-top: 16px; font-size: 0.9rem; color: var(--text-secondary); }
-        .os-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px;
-            margin-top: 18px;
-        }
-        .os-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 14px;
-            text-align: left;
-        }
-        .os-card h3 {
-            font-size: 1rem;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
-        .os-card p {
-            margin-bottom: 10px;
-            color: var(--text-secondary);
-            font-size: 0.88rem;
-        }
-        .os-card .btn-mini {
-            display: inline-block;
-            padding: 8px 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.86rem;
-            color: #0d0f12;
-            background: var(--accent-amber);
-        }
-        .os-card .btn-mini:hover {
-            background: #fbbf24;
-        }
-        .os-filename {
-            display: block;
-            margin-top: 8px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
         .download-meta {
             font-size: 0.9rem;
             color: var(--text-secondary);
@@ -96,65 +51,35 @@
         .download-back a { color: var(--text-secondary); text-decoration: none; }
         .download-back a:hover { color: var(--accent-gold); }
     </style>
+    <link href="assets/css/portal-responsive.css" rel="stylesheet">
 </head>
 <body class="download-page">
     <div class="wrapper">
         <header>
             <h1>Download — Minerador 4.0</h1>
-            <p>Distribuição oficial do simulador Campo Largo para <strong>Linux, Windows e macOS</strong>. Release atual <strong>v1.1.15</strong> (GitHub Releases — <em>latest</em>), validado por testes automatizados e esteiras CI.</p>
+            <p>Instalador Windows do simulador Campo Largo: Terras Raras e ETE. Uma única versão estável, validada por testes automatizados.</p>
         </header>
 
         <section class="download-hero">
-            <a href="https://github.com/chmulato/caracore-ete-releases/releases/latest" class="btn-download" target="_blank" rel="noopener">
+            <p class="btn-download" style="cursor:default; justify-content:center;">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Ir para a página oficial de Releases
-            </a>
-            <p class="version">Você também pode baixar direto por plataforma usando os links abaixo. Os nomes dos artefatos seguem um padrão fixo para automação de distribuição.</p>
-
-            <div class="os-grid">
-                <div class="os-card">
-                    <h3>Windows x64</h3>
-                    <p>Instalador nativo para Windows 10/11 64 bits.</p>
-                    <a class="btn-mini" href="https://github.com/chmulato/caracore-ete-releases/releases/latest/download/Minerador40-windows-x64.exe" target="_blank" rel="noopener">Baixar .exe</a>
-                    <span class="os-filename">Minerador40-windows-x64.exe</span>
-                </div>
-                <div class="os-card">
-                    <h3>Linux x86_64</h3>
-                    <p>Pacote portátil para distribuições Linux modernas.</p>
-                    <a class="btn-mini" href="https://github.com/chmulato/caracore-ete-releases/releases/latest/download/Minerador40-linux-x86_64.AppImage" target="_blank" rel="noopener">Baixar .AppImage</a>
-                    <span class="os-filename">Minerador40-linux-x86_64.AppImage</span>
-                </div>
-                <div class="os-card">
-                    <h3>macOS Universal</h3>
-                    <p>Imagem de instalação para Apple Silicon e Intel.</p>
-                    <a class="btn-mini" href="https://github.com/chmulato/caracore-ete-releases/releases/latest/download/Minerador40-macos-universal.dmg" target="_blank" rel="noopener">Baixar .dmg</a>
-                    <span class="os-filename">Minerador40-macos-universal.dmg</span>
-                </div>
-            </div>
-
-            <p class="version" style="margin-top: 12px;"><strong>Free × Premium:</strong> o mesmo instalador inclui o modo Free (didática, biblioteca em tier Free, glossário, paywall transparente) e permite desbloquear o <strong>Módulo Mineração</strong> e a camada operacional Premium com chave <code>license.key</code> — veja <a href="upgrade-ouro40.html" style="color: var(--accent-blue); font-weight: 500;">Upgrade Ouro 4.0</a>.</p>
-            <p class="version" style="margin-top: 8px;">Se algum link direto retornar 404, a release atual ainda não recebeu o artefato daquela plataforma. Use a página oficial de Releases para confirmar a publicação.</p>
+                Pacote local — sem transferência automática da Internet
+            </p>
+            <p class="version">Coloque o ficheiro <strong>Minerador40.exe</strong> (e os checksums) na pasta <strong>dist/</strong> da sua distribuição ou gere-os com <code>python scripts/build_dist_local.py</code>. Compare o SHA-256 com o ficheiro incluído no pacote.</p>
         </section>
 
         <div class="download-meta">
-            <p><strong>Na página do Release você encontra:</strong></p>
+            <p><strong>No pacote entregue você encontra:</strong></p>
             <ul>
-                <li><strong>Minerador40-windows-x64.exe</strong> — instalador Windows</li>
-                <li><strong>Minerador40-linux-x86_64.AppImage</strong> — pacote Linux</li>
-                <li><strong>Minerador40-macos-universal.dmg</strong> — instalador macOS</li>
-                <li><strong>checksums.sha256</strong> e <strong>checksums.md5</strong> — validação de integridade</li>
-                <li><strong>INSTALACAO_MULTIPLATAFORMA.md</strong> — guia rápido por sistema operacional</li>
+                <li><strong>Minerador40.exe</strong> — instalador (executar no Windows)</li>
+                <li><strong>checksum.sha256</strong> — para validar o arquivo (recomendado)</li>
+                <li><strong>checksum.md5</strong> — alternativa de verificação</li>
+                <li><strong>INSTALACAO.md</strong> — guia rápido de instalação e uso</li>
             </ul>
-            <p style="margin-top: 16px;">Validação SHA-256 por sistema:</p>
-            <ul>
-                <li><strong>Windows (PowerShell):</strong> <code style="font-size: 0.85em;">Get-FileHash -Path .\Minerador40-windows-x64.exe -Algorithm SHA256</code></li>
-                <li><strong>Linux:</strong> <code style="font-size: 0.85em;">sha256sum Minerador40-linux-x86_64.AppImage</code></li>
-                <li><strong>macOS:</strong> <code style="font-size: 0.85em;">shasum -a 256 Minerador40-macos-universal.dmg</code></li>
-            </ul>
-            <p>Compare os valores com o arquivo <strong>checksums.sha256</strong> publicado no mesmo release.</p>
+            <p style="margin-top: 16px;">Para verificar o SHA-256 no PowerShell: <code style="font-size: 0.85em;">Get-FileHash -Path .\Minerador40.exe -Algorithm SHA256</code>. Compare o resultado com o valor em checksum.sha256.</p>
         </div>
 
-        <p class="download-back"><a href="index.html">← Voltar ao portal</a> · <a href="upgrade-ouro40.html">Upgrade Premium</a> · <a href="laboratorio_campo_largo.html">Laboratório Campo Largo: Ouro 4.0</a></p>
+        <p class="download-back"><a href="index.html">← Voltar ao portal</a> · <a href="prototipo_degustacao_minerador.html">Protótipo de degustação (HTML)</a> · <a href="laboratorio_campo_largo.html">Laboratório Campo Largo: Ouro 4.0</a> · <a href="apostila_efluentes.html">Apostila de efluentes</a> · <a href="artigo_ete_v3.html">Artigo executivo</a></p>
     </div>
 </body>
 </html>

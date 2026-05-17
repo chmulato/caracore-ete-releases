@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://ete.caracore.com.br/">
     <title>Apostila de Tratamento de Efluentes</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono&display=swap');
-
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #e0f7fa 0%, #e3f2fd 100%);
             margin: 0;
             padding: 0;
@@ -208,7 +205,7 @@
         }
 
         code {
-            font-family: 'Roboto Mono', monospace;
+            font-family: Consolas, 'Courier New', monospace;
             background-color: #e0e0e0;
             padding: 2px 5px;
             border-radius: 3px;
@@ -259,8 +256,9 @@
             color: #01579b;
         }
     </style>
+    <link href="assets/css/portal-responsive.css" rel="stylesheet">
 </head>
-<body>
+<body class="ete-portal-apostila">
 
     <div class="page cover">
         <div class="img-center">
@@ -539,8 +537,8 @@ pip install -r requirements.txt
 # Executar interface
 streamlit run interface.py
 
-# Acessar no navegador
-# http://localhost:8501</code></pre>
+# Abrir no navegador o endereço que o Streamlit imprimir no terminal
+# (servidor local; porta habitual 8501 se não estiver ocupada)</code></pre>
 
         <h2>Funcionalidades Principais</h2>
         <ul>
@@ -1171,13 +1169,15 @@ print(f"O2 Decaimento: {demanda['demanda_decaimento_kg_dia']:.2f} kg/dia")</code
             Diplomado em Engenharia Química - Universidade Federal do Paraná (UFPR)<br>
             Setor de Tecnologia da UFPR<br>
             Registro: 2338<br>
-            <a href="https://tecnologia.ufpr.br/cceq/graduacao/diploma/" target="_blank">tecnologia.ufpr.br/cceq/graduacao/diploma/</a>
+            <a href="referencia_ufpr_eng_quimica.html">Referência académica UFPR — Eng. Química (página local)</a>
         </div>
         
         <div class="quadro">
             <p><strong>Dedicatória:</strong></p>
             <p style="font-style: italic; margin-top: 10px;">Ao Prof. Urivald Pawlowski, que nos ensinou que o código sem a física é apenas ruído, e que a verdadeira engenharia nasce da compreensão profunda dos fenômenos. Obrigado por nos mostrar o caminho da soberania técnica.</p>
         </div>
+        
+        <p><strong>Navegação no pacote:</strong> <a href="index.html">Portal ETE</a> · <a href="index_v2.html">Apostila de P&amp;D (TR)</a> · <a href="laboratorio_campo_largo.html">Laboratório Ouro 4.0</a> · <a href="download.html">Download</a> · <a href="canal-feedback.html">Canal de feedback</a> · <a href="referencia_ufpr_eng_quimica.html">Referência UFPR (local)</a></p>
         
         <p>Este projeto foi desenvolvido como uma ferramenta de simulação e dimensionamento de Estações de Tratamento de Efluentes, combinando conhecimentos de Engenharia Química com desenvolvimento de software, seguindo a filosofia de "Física antes da Lógica".</p>
         

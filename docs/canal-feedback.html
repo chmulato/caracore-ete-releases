@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canal de Feedback — Sugestões, Bugs e Insights | Minerador 4.0 / Loja ETE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Canal de Feedback — Minerador 4.0 / ETE</title>
     <style>
         :root {
             --bg-dark: #0a0c0e;
@@ -23,7 +20,7 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             background: var(--bg-dark);
@@ -108,42 +105,47 @@
         }
         .back a:hover { text-decoration: underline; }
     </style>
+    <link rel="stylesheet" href="assets/css/portal-responsive.css">
 </head>
-<body>
+<body class="ete-portal-canal">
     <div class="wrapper">
         <header>
             <h1>Canal de Feedback — Jovem Aprendista e Entusiasta</h1>
             <p class="subtitle">Sugestões, bugs, desabafos e insights para evoluir o Minerador 4.0 e a soberania mineral.</p>
         </header>
         <section class="intro">
-            <p><strong>Este canal está aberto na internet</strong> para você que usa o simulador, estuda terras raras ou quer ver o produto melhorar.</p>
-            <p>Envie pelo <strong>WhatsApp</strong>, <strong>Telegram</strong> ou <strong>e-mail</strong>: relatos de problema, ideias de melhoria, críticas construtivas ou só um desabafo sobre a experiência. Sua voz ajuda a priorizar o próximo release.</p>
+            <p><strong>Pacote local.</strong> Esta página não carrega tipos nem scripts da internet — apenas CSS embutido e tipografia do sistema operacional.</p>
+            <p>Para feedback em modo offline ou intranet, utilize os contactos definidos no README da sua distribuição ou no processo interno de suporte. Os cartões abaixo são lembrete de canal (sem hiperligação a serviços externos nesta build).</p>
+            <p>Com o <strong>Minerador 4.0</strong> em execução no seu computador, abra a secção <strong>Reportar evolução</strong> dentro da própria janela da aplicação (não é necessário um URL absoluto no navegador).</p>
         </section>
         <section class="channels">
-            <a href="https://wa.me/5541999097797?text=Olá%2C%20vim%20pelo%20portal%20ete.caracore.com.br%20(Loja%20ETE)%20para%20enviar%20feedback%20%2F%20sugestão%20%2F%20relato%20sobre%20o%20Minerador%204.0." class="channel-card whatsapp" target="_blank" rel="noopener">
+            <div class="channel-card whatsapp" aria-disabled="true">
                 <div class="icon">💬</div>
-                <div class="title">WhatsApp — +55 (41) 9 9909-7797 (chmulato)</div>
-                <div class="desc">Toque para abrir uma conversa e enviar sua sugestão, bug ou insight. Resposta em horário comercial.</div>
-            </a>
-            <a href="https://t.me/chmulato" class="channel-card telegram" target="_blank" rel="noopener">
+                <div class="title">WhatsApp / mensagens instantâneas</div>
+                <div class="desc">Substitua pelo número ou política da sua organização (documentação incluída no volume entregue).</div>
+            </div>
+            <div class="channel-card telegram" aria-disabled="true">
                 <div class="icon">✈️</div>
-                <div class="title">Telegram — @chmulato</div>
-                <div class="desc">Entre no canal ou envie mensagem para trocar ideias, reportar problemas e acompanhar novidades do projeto.</div>
-            </a>
-            <a href="mailto:chmulato@hotmail.com?subject=Feedback%20Minerador%204.0%20%2F%20Loja%20ETE" class="channel-card email" target="_blank" rel="noopener">
+                <div class="title">Telegram / canal interno</div>
+                <div class="desc">Configure um canal corporativo ou grupo privado conforme a sua TI.</div>
+            </div>
+            <div class="channel-card email" aria-disabled="true">
                 <div class="icon">✉️</div>
-                <div class="title">E-mail — chmulato@hotmail.com</div>
-                <div class="desc">Envie sugestões, relatos de bug ou dúvidas por e-mail. Assunto já sugerido: &quot;Feedback Minerador 4.0 / Loja ETE&quot;.</div>
-            </a>
+                <div class="title">E-mail</div>
+                <div class="desc">Utilize o cliente de correio local com o destinatário indicado na sua distribuição (sem URL pré-configurada aqui).</div>
+            </div>
         </section>
         <div class="lgpd">
             <strong>Privacidade (LGPD):</strong> Ao enviar seu feedback, você autoriza o uso técnico da sugestão para evolução do projeto. Seus dados pessoais não serão expostos nem vendidos. O tratamento segue a Lei Geral de Proteção de Dados; usamos apenas o necessário para resposta e melhoria do simulador.
         </div>
         <nav class="back">
-            <a href="index.html">← Voltar ao portal</a><br>
-            <a href="acesso-codigo-fonte.html" style="font-size:0.9rem; margin-top:8px; display:inline-block;">Transparência de código-fonte</a>
-            &nbsp;·&nbsp;
-            <a href="https://github.com/chmulato/caracore-ete-releases/releases" target="_blank" rel="noopener" style="font-size:0.9rem; margin-top:8px; display:inline-block;">Releases caracore-ete-releases</a>
+            <a href="index.html">← Portal ETE (documentação estática)</a><br>
+            <a href="laboratorio_campo_largo.html">Laboratório Ouro 4.0</a> ·
+            <a href="download.html">Download</a><br>
+            <span style="font-size:0.88rem; color: var(--text-secondary); display:inline-block; margin-top:6px;">No simulador Minerador 4.0 em execução (<code>python run_minerador40.py</code>), use o botão ou secção <strong>Reportar evolução</strong> dentro da própria aplicação.</span><br>
+            <a href="investidores_onepager.html">← Visão produto (HTML na pasta docs)</a><br>
+            <span style="font-size:0.85rem; color: var(--text-secondary); display:inline-block; margin-top:8px;">Ao abrir esta página como <code>file://</code>, use primeiro o portal (<code>index.html</code>) ou volte ao simulador pelo comando na raiz do repositório.</span><br>
+            <span style="font-size:0.9rem; margin-top:8px; display:inline-block; color: var(--text-secondary);">Documentação e releases: ficheiros incluídos neste pacote (sem hiperligação obrigatória à Internet).</span>
         </nav>
     </div>
 </body>

@@ -1,53 +1,44 @@
-# Páginas Web - GitHub Pages
+# Páginas Web — GitHub Pages
 
-Esta pasta contém os arquivos HTML publicados na **Loja ETE** (repositório público **chmulato/caracore-ete-releases**; domínio **ete.caracore.com.br**). O código e a CI do Minerador 4.0 ficam na oficina **chmulato/ETE**.
+Esta pasta contém os ficheiros HTML publicados no GitHub Pages (repositório público chmulato/ETE-releases ou equivalente configurado no repo de releases).
 
-**Portal publicado em:** [https://ete.caracore.com.br/](https://ete.caracore.com.br/)
+Portal publicado: https://ete.caracore.com.br/
+
+Documentação da oficina em formato TXT (comandos, premissas, memória): pasta `oficina/` dentro de `docs/`. Começar por `oficina/00_INDICE.txt`.
 
 ## Estrutura
 
-- `index.html` - Portal / página inicial
-- `index_v2.html` - Apostila HTML (versão atual - Terras Raras)
-- `artigo_ete_v3.html` - Artigo executivo (versão revisada e validada)
-- `laboratorio_campo_largo.html` - Laboratório Ouro 4.0
-- `canal-feedback.html` - Canal de feedback (WhatsApp e Telegram) para sugestões, bugs e insights
-- `download.html` - Download do instalador
+- `index.html` — Portal / página inicial
+- `index_v2.html` — Apostila HTML (Terras Raras)
+- `artigo_ete_v3.html` — Artigo executivo
+- `laboratorio_campo_largo.html` — Laboratório Ouro 4.0
+- `canal-feedback.html` — Canal de feedback
+- `download.html` — Download do instalador
 
-## Configuração do GitHub Pages
+## Configuração do GitHub Pages (interface web)
 
-### Método 1: Via Interface Web (Mais Simples)
+1. Settings → Pages
+2. Source: Deploy from a branch
+3. Branch: main (ou master)
+4. Folder: `/docs` conforme o repositório (no projeto de releases pode ser `/web`; verificar em Settings)
+5. Save
 
-1. Acesse: **Settings → Pages**
-2. **Source:** `Deploy from a branch`
-3. **Branch:** `main` (ou `master`)
-4. **Folder:** `/web`
-5. Clique em **Save**
+Com GitHub Actions: definir Source como GitHub Actions se existir workflow de deploy automático.
 
-### Método 2: Via GitHub Actions (Automático)
+## URLs resultantes
 
-O workflow `.github/workflows/pages.yml` já está configurado. Basta:
+Após a configuração, exemplos típicos:
 
-1. **Settings → Pages**
-2. **Source:** `GitHub Actions`
-3. Fazer commit e push (deploy automático)
+- `https://[usuario].github.io/[repositorio]/` — entrada
+- `.../index_v2.html` — apostila técnica
+- `.../artigo_ete_v3.html` — artigo executivo
 
-## URLs Resultantes
+## Caminhos de imagens
 
-Após configuração, as páginas estarão disponíveis em:
+Caminhos relativos; artigos e apostilas podem usar `../assets/images/aulas/` ou `../assets/images/artigos/` conforme a página.
 
-- `https://[usuario].github.io/[repositorio]/` - Página inicial com links
-- `https://[usuario].github.io/[repositorio]/index_v2.html` - Apostila Técnica
-- `https://[usuario].github.io/[repositorio]/artigo_ete_v3.html` - Artigo Executivo
-- `https://[usuario].github.io/[repositorio]/index.html` - Apostila Legada
+## Documentação adicional
 
-## Caminhos de Imagens
+Guia detalhado: `library/GUIA_GITHUB_PAGES.md` na raiz do repositório caracore-ete.
 
-As imagens são referenciadas com caminhos relativos:
-- `../assets/images/artigos/` - Para artigos
-- `../assets/images/aulas/` - Para apostilas
-
-Estes caminhos funcionam porque o GitHub Pages serve tudo da raiz do repositório.
-
-## Documentação Completa
-
-Consulte `GUIA_GITHUB_PAGES.md` na raiz do projeto para instruções detalhadas.
+Versão operacional em texto puro: `docs/oficina/GITHUB_PAGES.txt`

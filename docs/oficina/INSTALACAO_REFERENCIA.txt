@@ -1,0 +1,29 @@
+DISTRIBUIÇÃO — REFERÊNCIA RÁPIDA PARA A OFICINA
+
+Guia completo por sistema permanece em Markdown na pasta docs/ (links e
+formatação para utilizadores finais).
+
+Windows
+  Ficheiro típico na release: Minerador40-windows-x64.exe (PyInstaller onefile
+  no CI). Runtime WebView2 quando necessário.
+  Guia: docs/INSTALACAO_WINDOWS.md
+
+Linux
+  Ficheiro típico: Minerador40-linux-x86_64.tar.gz (extrair pasta Minerador40;
+  executável Minerador40 junto de _internal). Dependências GTK/WebKitGTK para
+  pywebview conforme distribuição.
+  Guia: docs/INSTALACAO_LINUX.md
+
+macOS
+  Ficheiro típico: Minerador40-macos-universal.dmg (conteúdo em modo pasta).
+  Gatekeeper pode exigir confirmação na primeira execução.
+  Guia: docs/INSTALACAO_MACOS.md
+
+Índice e checksums
+  docs/INSTALACAO_MULTIPLATAFORMA.md
+  Em cada release: checksums.sha256 e checksums.md5.
+
+Build local
+  scripts/build_dist_local.py — ver comentários no script e INSTALACAO_WINDOWS.
+
+Última revisão: 2026-05-17

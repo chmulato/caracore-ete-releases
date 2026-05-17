@@ -1,0 +1,41 @@
+GITHUB PAGES — PUBLICAÇÃO DO SITE (PASTA docs/)
+
+Esta pasta docs/ no repositório caracore-ete é servida como site público quando
+o GitHub Pages aponta para ela.
+
+Portal publicado: https://ete.caracore.com.br/
+
+
+FICHEIROS PRINCIPAIS
+
+index.html — Portal / entrada
+index_v2.html — Apostila HTML (Terras Raras)
+artigo_ete_v3.html — Artigo executivo
+laboratorio_campo_largo.html — Laboratório Ouro 4.0
+canal-feedback.html — Canal de feedback
+download.html — Ligações de download
+investidores_onepager.html — Resumo para decisão
+
+
+CONFIGURAÇÃO (INTERFACE WEB)
+
+1. Repositório GitHub: Settings, menu Pages.
+2. Source: Deploy from a branch.
+3. Branch: main (ou master).
+4. Folder: /docs (ou conforme o repositório de releases estiver configurado;
+   no projeto ETE público verifique se a raiz é /docs ou /web).
+5. Guardar.
+
+Alternativa: Source = GitHub Actions se existir workflow dedicado de deploy;
+após push o deploy corre automaticamente.
+
+
+CAMINHOS DE IMAGENS
+
+Imagens em docs/assets/ ou caminhos relativos para ../assets/images/ conforme
+cada página. Manter consistência com a raiz servida pelo Pages.
+
+Instruções detalhadas adicionais: library/GUIA_GITHUB_PAGES.md na raiz do
+repositório caracore-ete.
+
+Última revisão: 2026-05-17

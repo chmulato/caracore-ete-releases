@@ -1,0 +1,45 @@
+PACOTE DE PREMISSAS (ETE)
+
+Objectivo: cada número usado em Viabilidade, relatório ou material para
+investidores deve poder ser rastreado até uma entrada neste pacote.
+
+Ficheiros:
+
+congelamento_precos_oxidos.json
+  Preços USD/kg congelados para valoração (UTF-8). Validado em testes:
+  pytest tests/test_precos_oxidos_congelamento.py
+
+inventario_v1.yaml
+  Metadados, fontes e hipóteses ligadas ao mesmo congelamento.
+
+analise_economica.py
+  Constante PRECOS_OXIDOS_USD_KG_CONGELADOS deve permanecer alinhada ao JSON.
+
+
+COMO USAR
+
+1. Ao alterar preços congelados, atualizar no mesmo commit:
+   analise_economica.PRECOS_OXIDOS_USD_KG_CONGELADOS,
+   docs/premissas/congelamento_precos_oxidos.json
+   e metadados em docs/premissas/inventario_v1.yaml.
+
+2. Preencher origem, data_referencia e hipótese para distinguir cotação de
+   mercado, referência bibliográfica ou suposição de engenharia.
+
+3. Quando o pacote mudar de forma relevante, subir versão ou nota em
+   docs/proximos_passos.txt.
+
+
+ISSUES GITHUB (REFERÊNCIA)
+
+Fase 1 (fundação financeira): issues #1 a #4.
+Fase 2 (painéis decisórios): issues #5 a #7.
+
+https://github.com/chmulato/caracore-ete/issues
+
+
+MATERIAL RELACIONADO
+
+docs/investidores_onepager.html — one-pager HTML (abrir no navegador).
+
+Última revisão: 2026-05-17
