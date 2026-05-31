@@ -1,0 +1,24 @@
+---
+description: Memória da loja Minerador 4.0 — caracore-ete-releases; vitrine ete.caracore.com.br
+alwaysApply: true
+---
+
+# Memória da Loja — caracore-ete-releases
+
+## Repositório e papel
+- **caracore-ete-releases:** loja (vitrine e releases) do **Minerador 4.0 (ETE)**.
+- **URL:** https://ete.caracore.com.br/
+- **Publicação:** GitHub Pages a partir de **docs/**.
+- **Oficina:** caracore-ete
+
+## Matriz
+- **Portfólio:** `portfolio.html#minerador-ete` · CTAs matriz → esta loja
+- **Produto:** Free × Premium (Ouro 4.0 R$ 29,90)
+
+## Estrutura (docs/)
+- index · download · wiki/ · canal-feedback
+- CSS: `assets/css/` + `assets/css/pages/page-*.css`
+
+## Convenções
+- Footer → `portfolio.html#minerador-ete`
+- Alinhar versão com oficina e matriz antes de deploy visível.
