@@ -22,7 +22,7 @@ Este guia descreve uma instalação **saudável** no sistema local: pré-requisi
 | Modo | Descrição | Vantagens | Notas |
 |------|-----------|-----------|--------|
 | **Onefile** | Um único `Minerador40.exe` | Fácil de enviar por e-mail/cloud | Extração temporária ao arranque; primeiro arranque mais lento; maior probabilidade de falsos positivos em antivírus |
-| **Onedir (pasta)** | Pasta `Minerador40\` com `.exe` + `_internal\` | Arranque mais rápido; estrutura mais familiar aos antivírus | Distribuir como `.zip` da pasta inteira; o utilizador extrai e executa `Minerador40.exe` dentro da pasta |
+| **Onedir (pasta)** | Pasta `Minerador40\` com `.exe` + `_internal\` | Arranque mais rápido; estrutura mais familiar aos antivírus | Na loja: `Minerador40-windows-x64.zip`. Extrair e executar `Minerador40.exe` **dentro** da pasta (nunca só o launcher) |
 
 Para gerar localmente (na raiz do repositório):
 
@@ -34,6 +34,8 @@ python scripts/build_dist_local.py --deps desktop --onedir --zip
 - **`--deps desktop`** (predefinição): instala apenas o runtime mínimo (`requirements-minerador40-desktop.txt`), adequado ao executável.
 - **`--deps full`**: usa `requirements.txt` completo (Streamlit, stacks de teste, etc.) — **não** recomendado para o pacote final; aumenta muito o tamanho.
 - **`--zip`**: compacta o resultado (`Minerador40-<versão>-windows-onedir.zip` ou `…-onefile.zip`).
+
+Na **loja** saem os dois: `Minerador40-windows-x64.exe` (onefile autónomo, dezenas de MB) e `Minerador40-windows-x64.zip` (pasta completa). Um `.exe` de ~5 MB é o launcher onedir sem `_internal` — não usar.
 
 ## Integridade
 

@@ -4,9 +4,10 @@ Distribuição oficial por release (GitHub ou loja **caracore-ete-releases**):
 
 | Plataforma | Ficheiro | Notas |
 |------------|----------|--------|
-| **Windows** | `Minerador40-windows-x64.exe` | Executável único (onefile no CI). WebView2 Runtime pode ser necessário se o sistema não o tiver. |
+| **Windows (onefile)** | `Minerador40-windows-x64.exe` | Executável único e autónomo (dezenas de MB). Duplo clique. WebView2 pode ser necessário. |
+| **Windows (pasta)** | `Minerador40-windows-x64.zip` | Extrair; correr `Minerador40\Minerador40.exe` **dentro** da pasta (leva `_internal\`). |
 | **Linux** | `Minerador40-linux-x86_64.tar.gz` | Extrair; executar `Minerador40/Minerador40`. Requer GTK/WebKitGTK para pywebview. |
-| **macOS** | `Minerador40-macos-universal.dmg` | Montar; usar a pasta `Minerador40`. Gatekeeper pode exigir confirmação na primeira execução. |
+| **macOS** | `Minerador40-macos-universal.dmg` | Montar; usar a pasta `Minerador40` (inclui `_internal/`). Gatekeeper pode exigir confirmação. |
 
 Também são publicados `checksums.sha256`, `checksums.md5` e este guia como referência rápida.
 
@@ -47,9 +48,10 @@ Três caminhos possíveis:
 
 1. **Windows** (na raiz do repo, Python 3.10 recomendado):
    ```powershell
-   python scripts/build_dist_local.py --onedir --require-python-310
+   python scripts/build_dist_local.py --deps desktop --require-python-310
+   python scripts/build_dist_local.py --deps desktop --onedir --zip --require-python-310
    ```
-   Saída típica: pasta `dist/Minerador40/` com `Minerador40.exe`, checksums e opcional `--zip`.
+   O primeiro comando gera o `.exe` onefile (igual ao da loja). O segundo gera a pasta `dist/Minerador40/` + ZIP com `_internal`.
 
 2. **Linux ou macOS** (bash, na raiz do repo):
    ```bash
@@ -65,4 +67,4 @@ Três caminhos possíveis:
 
 3. **Três plataformas sem máquinas mistas:** GitHub → Actions → **Build Minerador 4.0 (test + exe + release)** → *Run workflow*. Descarregue os artefactos de cada job (`Minerador40-Windows`, `Minerador40-Linux`, `Minerador40-macOS`). Para pacotes iguais aos da loja pública, crie uma tag `vX.Y.Z` e siga `library/DELIVERY_ETE_RELEASES.md`.
 
-O empacotamento oficial replica o job **build_multiplatform** em `.github/workflows/build_exe.yml` (PyInstaller `build_minerador40_folder.spec` + `requirements-minerador40-desktop.txt`).
+O empacotamento oficial replica o job **build_multiplatform** em `.github/workflows/build_exe.yml` (`requirements-minerador40-desktop.txt`): Linux/macOS e o ZIP Windows usam `build_minerador40_folder.spec` (pasta + `_internal`); o `.exe` Windows da loja usa `build_minerador40.spec` (onefile).

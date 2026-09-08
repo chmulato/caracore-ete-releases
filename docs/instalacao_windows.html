@@ -47,10 +47,11 @@
           <tr>
             <td><strong>Onedir (pasta)</strong></td>
             <td>Pasta <code>Minerador40\</code> com <code>.exe</code> + <code>_internal\</code></td>
-            <td>Arranque mais rápido; distribuir como <code>.zip</code> da pasta inteira</td>
+            <td>Na loja: <code>Minerador40-windows-x64.zip</code>. Extrair e executar o <code>.exe</code> <strong>dentro</strong> da pasta</td>
           </tr>
         </tbody>
       </table>
+      <p>Na <strong>loja</strong> saem os dois: <code>Minerador40-windows-x64.exe</code> (onefile autónomo, dezenas de MB) e <code>Minerador40-windows-x64.zip</code> (pasta completa). Um <code>.exe</code> de ~5&nbsp;MB é o launcher sem <code>_internal</code> — não usar.</p>
       <p>Para gerar localmente (na raiz do repositório fonte):</p>
       <pre><code>python scripts/build_dist_local.py --deps desktop
 python scripts/build_dist_local.py --deps desktop --onedir --zip</code></pre>
