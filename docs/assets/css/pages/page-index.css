@@ -52,6 +52,25 @@
             font-weight: 600;
         }
 
+        header .header-cta {
+            margin: 18px 0 0;
+        }
+
+        header .btn-download-now {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: #141517;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 12px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        header .btn-download-now:hover {
+            filter: brightness(1.08);
+        }
+
         .nav-card.nav-card-destaque {
             border: 1px solid rgba(212, 168, 83, 0.4);
             box-shadow: 0 0 0 1px rgba(212, 168, 83, 0.12);
