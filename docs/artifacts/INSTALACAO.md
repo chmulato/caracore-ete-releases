@@ -2,7 +2,7 @@
 
 > Para Linux e macOS, use o guia `INSTALACAO_MULTIPLATAFORMA.md`.
 
-**Versão do pacote (semver):** 1.2.1 — produto comercial **Minerador 4.0** (Campo Largo); mesmo instalador suporta modo **Free** e ativação **Premium** via `license.key`.
+**Versão do pacote (semver):** 1.2.3 — produto comercial **Minerador 4.0** (Campo Largo); mesmo instalador suporta modo **Free** e ativação **Premium** via `license.key`.
 
 Arquivos desta entrega (Windows):
 - Minerador40-windows-x64.exe
@@ -45,5 +45,5 @@ Painel de Controle > Programas > Programas e Recursos > desinstalar Minerador 4.
 
 ---
 
-> Versão do instalador: 1.2.1 (produto Minerador 4.0)
+> Versão do instalador: 1.2.3 (produto Minerador 4.0)
 > Cara Core Informática — https://www.caracore.com.br
